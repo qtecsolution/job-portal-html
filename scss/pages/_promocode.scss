@@ -1,0 +1,24 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.mypromocode {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(0) size(80);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(28);
+  }
+  
+  &-header {
+    padding-bottom: size(10);
+    @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+    .title {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,457 @@
+@use '../global'as *;
+@use '../partials'as *;
+
+.myappointment {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(0) size(80);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+  
+  &-header {
+    padding-bottom: size(20);
+    @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(40);
+
+    .appointlist {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include list-horizontal;
+        gap: size(10);
+        position: relative;
+        z-index: 10;
+      }
+
+      &-link {
+        background: $white;
+        @include border(solid, 0.5, rgba($primaryText, 0.3));
+        @include radius(18.5);
+        padding: size(4) size(4) size(4) size(15);
+        @include flex-center-vert;
+        gap: size(10);
+  
+        .titlebox {
+          width: calc(100% - size(40));
+          @include text-overflow;
+  
+          .title {
+            color: $headingText;
+            font-size: size(14);
+            font-weight: 400;
+          }
+        }
+  
+        .counter {
+          @include square(30);
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include circle;
+          @include setBgColor($white, $headingText);
+          font-size: size(14);
+          font-weight: 400;
+          @include flex-center;
+          text-align: center;
+        }
+  
+        &:hover:not(.active) {
+          background: $pillbg;
+        }
+  
+        &.active {
+          background: rgba($primary, 0.3);
+          border-color: rgba($primary, 0.3);
+  
+          .counter {
+            border-color: rgba($primary, 0.3);
+          }
+        }
+  
+        &:active {
+          background: rgba($primary, 0.3);
+          border-color: rgba($primary, 0.3);
+  
+          .counter {
+            border-color: rgba($primary, 0.3);
+          }
+        }
+      }
+    }
+
+    .appointmobile {
+      display: block;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .appointmobinfo {
+        position: relative;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          @include square(28);
+          padding: size(4);
+          border: none;
+          top: 70%;
+  
+          svg {
+            @include wh100;
+          }
+  
+          @include hover {
+            background: transparent;
+            border: transparent;
+          }
+        }
+  
+        .swiper-button-prev {
+          left: size(-10);
+        }
+  
+        .swiper-button-next {
+          right: size(-10);
+        }
+      }
+
+      .appointSlider {
+        max-width: 90%;
+
+        .favlist-link {
+          background: $white;
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include radius(18.5);
+          padding: size(4) size(4) size(4) size(15);
+          @include flex-center-vert;
+          gap: size(10);
+    
+          .titlebox {
+            width: calc(100% - size(40));
+            @include text-overflow;
+            max-width: calc(100% - size(40));
+    
+            .title {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 400;
+            }
+          }
+    
+          .counter {
+            @include square(30);
+            @include border(solid, 0.5, rgba($primaryText, 0.3));
+            @include circle;
+            @include setBgColor($white, $headingText);
+            font-size: size(14);
+            font-weight: 400;
+            @include flex-center;
+            text-align: center;
+          }
+    
+          &:hover:not(.active) {
+            background: $pillbg;
+          }
+    
+          &.active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+    
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+    
+          &:active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+    
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+        }
+      }
+    }
+
+    .accordion {
+      border: none;
+      @include flex-column;
+      gap: size(20);
+      background: transparent;
+
+      &-item {
+        border: none;
+        @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+        background: transparent;
+        @include radius(0);
+
+        &:first-of-type,
+        &:last-of-type {
+          .accordion-button {
+            @include radius(0);
+          }
+        }
+      }
+
+      &-button {
+        border: none;
+        @include flex-center-between;
+        padding-bottom: size(20);
+        @include radius(0);
+        flex-wrap: wrap;
+        gap: size(14);
+        position: relative;
+        box-shadow: none;
+        @include border-single(bottom, solid, 1, transparent);
+
+        &:not(.collapsed) {
+          background: transparent;
+          box-shadow: none;
+          color: inherit;
+          border-color: rgba($primaryText, 0.2);
+
+          &::after {
+            background: transparent;
+            content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6012 0.500626C11.5167 0.418836 11.4032 0.373047 11.2851 0.373047C11.167 0.373047 11.0535 0.418836 10.969 0.500626L6.23793 5.07013L1.50781 0.500626C1.4233 0.418836 1.30985 0.373047 1.19171 0.373047C1.07357 0.373047 0.960121 0.418836 0.875609 0.500626C0.8344 0.540382 0.801646 0.587915 0.779281 0.640419C0.756916 0.692923 0.745394 0.749334 0.745394 0.806323C0.745394 0.863311 0.756916 0.919723 0.779281 0.972227C0.801646 1.02473 0.8344 1.07226 0.875609 1.11202L5.90764 5.97128C5.99601 6.05662 6.11453 6.10439 6.23793 6.10439C6.36134 6.10439 6.47986 6.05662 6.56823 5.97128L11.6003 1.11202C11.6415 1.07226 11.6742 1.02473 11.6966 0.972227C11.7189 0.919723 11.7305 0.863311 11.7305 0.806323C11.7305 0.749334 11.7189 0.692923 11.6966 0.640419C11.6742 0.587915 11.6424 0.540382 11.6012 0.500626Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+          }
+        }
+
+        &::after {
+          width: auto;
+          height: auto;
+          @include square(32);
+          @include border(solid, 1, $primaryText);
+          @include circle;
+          background: transparent;
+          @include flex-center;
+          content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6012 0.500626C11.5167 0.418836 11.4032 0.373047 11.2851 0.373047C11.167 0.373047 11.0535 0.418836 10.969 0.500626L6.23793 5.07013L1.50781 0.500626C1.4233 0.418836 1.30985 0.373047 1.19171 0.373047C1.07357 0.373047 0.960121 0.418836 0.875609 0.500626C0.8344 0.540382 0.801646 0.587915 0.779281 0.640419C0.756916 0.692923 0.745394 0.749334 0.745394 0.806323C0.745394 0.863311 0.756916 0.919723 0.779281 0.972227C0.801646 1.02473 0.8344 1.07226 0.875609 1.11202L5.90764 5.97128C5.99601 6.05662 6.11453 6.10439 6.23793 6.10439C6.36134 6.10439 6.47986 6.05662 6.56823 5.97128L11.6003 1.11202C11.6415 1.07226 11.6742 1.02473 11.6966 0.972227C11.7189 0.919723 11.7305 0.863311 11.7305 0.806323C11.7305 0.749334 11.7189 0.692923 11.6966 0.640419C11.6742 0.587915 11.6424 0.540382 11.6012 0.500626Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");;
+          transition: none;
+
+          // ADDED NEW STYLE
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          @include breakpoint(mobile768) {
+            position: static;
+          }
+        }
+
+        .details {
+          @include flex-center-vert;
+          gap: size(16);
+
+          .thumbnail {
+            @include square(64);
+            @include radius(8);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+              @include wh100;
+            }
+          }
+
+          .description {
+            @include flex-column;
+
+            .title {
+              color: $headingText;
+              font-weight: 500;
+            }
+
+            .date {
+              color: $gray;
+              font-size: size(16);
+              font-weight: 400;
+            }
+
+            .time {
+              color: $gray;
+              font-size: size(16);
+              font-weight: 400;
+            }
+          }
+        }
+
+        .services,
+        .price {
+          color: $headingText;
+          font-weight: 500;
+          display: none;
+
+          @include breakpoint(mobile768) {
+            display: inline-block;
+          }
+        }
+
+        .services,
+        .price,
+        .status {
+          @include breakpoint(mobile768) {
+            margin-left: auto;
+          }
+        }
+
+        .status {
+          width: size(110);
+
+          @include breakpoint(mobile768) {
+            width: auto;
+          }
+        }
+      }
+
+      &-body {
+        padding: size(20) size(0);
+        background: transparent;
+
+        .appointdetails {
+          @include flex-column;
+          gap: size(20);
+
+          &-header {
+            .text {
+              letter-spacing: size(0.32);
+            }
+          }
+
+          &-body {
+            @include flex-center-column;
+            gap: size(10);
+
+            @include breakpoint(tab992) {
+              flex-direction: row;
+              justify-content: flex-start;
+              gap: size(20);
+            }
+
+            .bookagain {
+              @include w100;
+
+              @include breakpoint(tab992) {
+                width: size(200);
+              }
+
+              .btn-submit {
+                height: size(44);
+              }
+            }
+
+            .writereview {
+              @include w100;
+
+              .btn-review {
+                @include w100;
+              }
+
+              @include breakpoint(tab992) {
+                width: size(200);
+              }
+            }
+          }
+        }
+
+        .appointmentservice {
+          @include flex-column;
+          gap: size(20);
+
+          .services {
+            @include flex-column;
+            gap: size(10);
+            @include border-single(bottom, dashed, 1.5, rgba($headingText, 0.3));
+            padding-bottom: size(20);
+
+            .service {
+              @include flex-center-between;
+
+              .name-time {
+                @include flex-column;
+
+                .name {
+                  color: $headingText;
+                  font-size: size(16);
+                }
+
+                .time {
+                  color: $headingText;
+                  font-size: size(14);
+                }
+              }
+
+              .prices {
+                @include flex-column;
+
+                .currentprice {
+                  color: $headingText;
+                  font-size: size(16);
+                }
+
+                .previousprice {
+                  color: rgba($headingText, 0.6);
+                  font-size: size(14);
+                  text-decoration-line: line-through;
+                }
+              }
+            }
+          }
+
+          .subtotal {
+            @include flex-column;
+            gap: size(10);
+            @include border-single(bottom, dashed, 1.5, rgba($headingText, 0.3));
+            padding-bottom: size(20);
+
+            .sub {
+              @include flex-center-between;
+
+              .title,
+              .subtotalprice {
+                font-weight: 400;
+              }
+            }
+
+            .coup {
+              @include flex-center-between;
+
+              .title,
+              .couponprice {
+                color: rgba($headingText, 0.6);
+                font-weight: 400;
+              }
+            }
+          }
+
+          .total {
+            @include border-single(bottom, dashed, 1.5, rgba($headingText, 0.3));
+            padding-bottom: size(20);
+            @include flex-center-between;
+
+            .title,
+            .totalprice {
+              font-weight: 500;
+            }
+          }
+
+          .bookingid {
+            color: $primaryText;
+            font-weight: 400;
+            letter-spacing: size(0.32);
+          }
+        }
+      }
+    }
+  }
+}

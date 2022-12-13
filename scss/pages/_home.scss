@@ -1,0 +1,699 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+/**======= HOME-BANNER =======**/
+.homebanner {
+  position: relative;
+  height: 60vh;
+
+  @include breakpoint(tab992) {
+    height: calc(100vh - size(144));
+  }
+
+  .swiper {
+    @include h100;
+
+    &-slide {
+      @include h100;
+      @include flex-center-vert;
+
+      .slidebg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh100;
+        z-index: -1;
+
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+
+      .row > * {
+        flex-shrink: 1;
+      }
+    }
+  }
+
+  .slide-content {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+
+    .bannerinfo {
+      margin-bottom: size(16);
+    }
+  }
+}
+
+/**======= TOP-RATED =======**/
+.toprated {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(112) size(0);
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+  }
+}
+
+/**======= HOME-FULLBanner =======**/
+.fullbanner {
+  @include w100;
+  height: size(250);
+  @include flex-center;
+  overflow: hidden;
+
+  @include breakpoint(mobile576) {
+    height: size(320);
+  }
+
+  @include breakpoint(mobile768) {
+    height: size(400);
+  }
+
+  @include breakpoint(desktop1200) {
+    height: size(500);
+  }
+
+  img {
+    @include wh100;
+    object-fit: cover;
+  }
+}
+
+/**======= HOME-FEATURED =======**/
+.featured {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-details {
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(64);
+    }
+  }
+}
+
+/**======= MEET-SPECIALIST =======**/
+.meetspecialist {
+  padding-bottom: size(96);
+
+  @include breakpoint(desktop1200) {
+    padding-bottom: size(168);
+  }
+
+  &-content {
+    @include flex-column;
+  }
+
+  &-header {
+    @include flex-center-column;
+    text-align: center;
+
+    .titlebox {
+      position: relative;
+      // background: rebeccapurple;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include square(80);
+        @include flex-center;
+        overflow: hidden;
+        z-index: -1;
+        @include translate(-50%, -50%);
+
+        @include breakpoint(mobile768) {
+          @include square(96);
+        }
+
+        @include breakpoint(tab992) {
+          @include square(165);
+          left: 90%;
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+
+  &-body {
+    .sliderinfo {
+      @include flex-center-column;
+      gap: size(24);
+      padding-top: size(80);
+
+      @include breakpoint(desktop1200) {
+        padding-top: size(96);
+      }
+
+      .thumbnail {
+        width: size(315);
+        height: size(300);
+        position: relative;
+        @include radius(16);
+
+        @include breakpoint(mobile768) {
+          height: size(440);
+        }
+
+        img {
+          @include radius(16);
+          @include wh100;
+        }
+
+        .rating {
+          position: absolute;
+          top: size(0);
+          left: size(0);
+          @include square(64);
+          @include flex-center;
+          background: $badgebg;
+          @include circle;
+
+          @include breakpoint(mobile576) {
+            top: size(-24);
+            left: size(-24);
+          }
+
+          @include breakpoint(mobile768) {
+            top: size(-40);
+            left: size(-40);
+            @include square(80);
+          }
+
+          @include breakpoint(tab992) {
+            top: size(-48);
+            left: size(-48);
+            @include square(96);
+          }
+
+          .ratenumber {
+            @include flex-center;
+            color: $primaryText;
+            font-size: size(16);
+            font-weight: 600;
+
+            @include breakpoint(mobile576) {
+              font-size: size(18);
+            }
+
+            @include breakpoint(mobile768) {
+              font-size: size(20);
+            }
+
+            @include breakpoint(tab992) {
+              font-size: size(24);
+            }
+
+            sup {
+              @include square(12);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+        }
+      }
+
+      .detail {
+        @include flex-center-column;
+        gap: size(8);
+        text-align: center;
+
+        .title {
+          color: $headingText;
+        }
+
+        .descript {
+          @include flex-center;
+          gap: size(8);
+
+          .divider {
+            display: inline-block;
+            margin-top: size(-4);
+          }
+
+          .text {
+            font-size: size(14);
+            color: $primaryText;
+          }
+        }
+
+        .appointmentdescript {
+          margin-top: size(16);
+          display: block;
+
+          @include breakpoint(tab992) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .slidedetails {
+      padding-top: size(80);
+      @include flex-column;
+      gap: size(48);
+
+      @include breakpoint(desktop1200) {
+        padding-top: size(96);
+      }
+
+      &-header {
+        @include flex-column;
+        gap: size(16);
+        padding-bottom: size(10);
+
+        .badges {
+          @include flex-center-vert;
+          gap: size(5);
+          flex-wrap: wrap;
+        }
+
+        .titles {
+          .subtitle,
+          .title {
+            color: $headingText;
+          }
+
+          .title {
+            font-weight: 500;
+          }
+        }
+      }
+
+      &-body {
+        position: relative;
+
+        .info {
+          .text {
+            color: $primaryText;
+          }
+        }
+
+        .icon {
+          width: size(204);
+          height: size(163);
+          @include flex-center;
+          overflow: hidden;
+
+          position: absolute;
+          top: size(-48);
+          left: 0;
+          z-index: -1;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .swiper {
+      &-button-next,
+      &-button-prev {
+        border-color: $white;
+        display: none;
+
+        @include breakpoint(mobile576) {
+          display: flex;
+        }
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        @include breakpoint(mobile768) {
+          border-color: $primaryText;
+
+          svg {
+            path {
+              fill: $primaryText;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**======= POPULAR-SERVICES =======**/
+.popularservices {
+  background: $sectionbg;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(96);
+    }
+  }
+
+  &-body {
+    position: relative;
+
+    .swiper {
+      &-button-next,
+      &-button-prev {
+        border-color: $white;
+        display: none;
+
+        @include breakpoint(mobile576) {
+          display: flex;
+        }
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        @include breakpoint(mobile768) {
+          border-color: $primaryText;
+
+          svg {
+            path {
+              fill: $primaryText;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**======= JOIN-PROGRAM =======**/
+.joinprogram {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+  }
+
+  &-header {
+    @include w100;
+
+    .headerinfo {
+      @include flex-center-column;
+      gap: size(16);
+
+      .titlebox {
+        position: relative;
+        // background: rebeccapurple;
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include square(80);
+          @include flex-center;
+          overflow: hidden;
+          z-index: -1;
+          @include translate(-50%, -50%);
+
+          @include breakpoint(mobile768) {
+            @include square(96);
+          }
+
+          @include breakpoint(tab992) {
+            @include square(165);
+            left: 90%;
+          }
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+
+      .detail {
+        max-width: size(420);
+        margin-inline: auto;
+        @include flex-center;
+        text-align: center;
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+
+    .jointhumbnail {
+      @include w100;
+      height: size(240);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+}
+
+/**======= FIND-SALON =======**/
+.findsalon {
+  background: $white;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+  }
+
+  &-header {
+    @include w100;
+    text-align: center;
+  }
+
+  &-body {
+    @include w100;
+    @include flex-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+
+    .nav {
+      flex-wrap: nowrap;
+      gap: size(20);
+      justify-content: flex-start;
+      max-width: 95%;
+      overflow: hidden;
+      overflow-x: scroll;
+      // padding-bottom: size(8);
+
+      &::-webkit-scrollbar {
+        height: size(4);
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include radius(4);
+        height: size(4);
+        background: rgba($primaryText, 0.4);
+      }
+
+      @include breakpoint(tab992) {
+        gap: size(30);
+        justify-content: center;
+      }
+
+      &-tabs {
+        border: 0;
+        @include radius(0);
+
+        .nav-link {
+          margin-bottom: 0;
+          border: 0;
+          @include radius(0);
+          color: $primaryText;
+          @include font($primaryFont, 16, medium, normal, 24);
+
+          @include breakpoint(mobile768) {
+            font-size: size(19);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(21);
+          }
+
+          &.active {
+            border-color: transparent;
+            @include setBgColor(transparent, $primaryDark);
+          }
+
+          &:hover:not(.active) {
+            border-color: transparent;
+            @include setBgColor(transparent, $primaryDark);
+          }
+        }
+      }
+    }
+
+    .results {
+      @include flex-start;
+      gap: size(24);
+      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      max-width: 95%;
+      overflow: hidden;
+      overflow-x: scroll;
+      padding-bottom: size(12);
+
+      &::-webkit-scrollbar {
+        height: size(4);
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include radius(4);
+        height: size(4);
+        background: rgba($primaryText, 0.4);
+      }
+
+      @include breakpoint(tab992) {
+        gap: size(36);
+      }
+
+      .resultlist {
+        @include list-vertical;
+        gap: size(12);
+        min-width: size(176);
+      }
+    }
+  }
+}
+
+/**======= AUTO-COUNTER =======**/
+.autocounters {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(96);
+    }
+  }
+
+  &-header {
+    .counterbox {
+      @include flex-center-column;
+      gap: size(12);
+      text-align: center;
+
+      h1,
+      h4 {
+        color: $headingText;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center;
+
+    .brand {
+      @include w100;
+      height: size(80);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        filter: grayscale(100);
+        @include transitionsall;
+
+        @include hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
+/**======= BOOK-APPOINTMENT =======**/
+.bookappointment {
+  background: $sectionbg;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+}
+
+/**======= CLIENT-REVIEWS =======**/
+.clientreviews {
+  background: $white;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(40);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+  }
+}

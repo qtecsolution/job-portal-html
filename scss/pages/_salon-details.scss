@@ -1,0 +1,1002 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+/**======= HOME-BANNER =======**/
+.salonbanner {
+  padding: size(10) size(0) size(40);
+
+  @include breakpoint(tab992) {
+    padding: size(10) size(0) size(44);
+  }
+
+  .leftcontent {
+    @include flex-column;
+    gap: size(40);
+    background: rgba($primary, 0.3);
+    @include radius(8);
+    padding: size(20) size(16);
+
+    @include breakpoint(tab992) {
+      padding: size(40) size(24);
+      @include h100;
+    }
+
+    &-header {
+      @include flex-column;
+      gap: size(16);
+
+      .badges {
+        @include flex-center-vert;
+        gap: size(5);
+        flex-wrap: wrap;
+      }
+
+      .info {
+        .text {
+          letter-spacing: size(0.32);
+        }
+      }
+
+      .ratings-favorite {
+        @include flex-center-between;
+
+        .ratings {
+          @include flex-center-vert;
+          gap: size(8);
+
+          .ratinglist {
+            @include list-horizontal;
+            gap: size(4);
+
+            &-item {
+              @include square(18);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+
+          .ratingnumber {
+            color: $headingText;
+            font-weight: 400;
+          }
+        }
+
+        .favorite {
+          .btn-favorite {
+            @include flex-center-vert;
+            gap: size(4);
+
+            .icon {
+              @include square(21);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .text {
+              color: $headingText;
+              font-weight: 400;
+            }
+
+            @include hover {
+              .icon {
+                svg {
+                  path {
+                    fill: darken($primary, 20%);
+                  }
+                }
+              }
+              .text {
+                color: darken($primary, 20%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-center;
+
+      .bookinfo {
+        width: size(200);
+      }
+    }
+  }
+
+  .rightcontent {
+    @include radius(10);
+    max-height: size(480);
+    overflow: hidden;
+
+    .swiper-slide {
+      @include radius(10);
+      overflow: hidden;
+
+      img {
+        @include w100;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      @include square(36);
+      padding: size(10);
+      border-color: $white;
+      top: 55%;
+
+      @include breakpoint(tab992) {
+        top: 45%;
+        @include translateY(-50%);
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+
+      @include hover {
+        background: darken($primary, 20%);
+        border-color: darken($primary, 20%);
+      }
+    }
+
+    .swiper-button-next {
+      @include breakpoint(tab992) {
+        right: size(20);
+      }
+    }
+
+    .swiper-button-prev {
+      @include breakpoint(tab992) {
+        left: size(20);
+      }
+    }
+  }
+}
+
+/**======= FEATURED-SALON =======**/
+.featured-salon {
+  padding: size(48) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(72) size(0) size(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(36);
+    }
+  }
+
+  &-header {
+    .title {
+      font-weight: 500;
+    }
+  }
+}
+
+/**======= BOOKING-US =======**/
+.bookus {
+  position: relative;
+  height: size(410);
+  @include flex-center;
+  overflow: hidden;
+
+  &-content {
+    @include w100;
+    @include flex-center-column;
+    gap: size(24);
+
+    .info {
+      max-width: size(300);
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
+
+/**======= CUSTOMER-REVIEW =======**/
+.custreview {
+  &-content {
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(36);
+    }
+  }
+
+  &-header {
+    @include w100;
+
+    @include breakpoint(tab992) {
+      margin-bottom: size(8);
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    @include w100;
+
+    .seeall {
+      @include flex-end;
+
+      .link {
+        color: $blue;
+        @include transitionscolor;
+
+        @include hover {
+          color: darken($blue, 15%);
+        }
+      }
+    }
+  }
+
+  &-footer {
+    @include w100;
+    @include flex-center;
+
+    .reviewinfo {
+      background: $greenbg;
+      @include radius(10);
+      @include flex-center-vert;
+      gap: size(20);
+      padding: size(24);
+      width: size(445);
+      overflow: hidden;
+
+      .icon {
+        background: rgba($green, 0.15);
+        @include square(70);
+        @include circle;
+        @include flex-center;
+      }
+
+      .details {
+        @include flex-column;
+        width: calc(100% - size(94));
+
+        .title {
+          color: $headingText;
+        }
+
+        .text {
+          color: $primaryText;
+          font-size: size(15);
+        }
+      }
+    }
+  }
+}
+
+/**======= SERVICES =======**/
+.services {
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+
+  &-header {
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    .navbar {
+      position: sticky;
+      top: size(104);
+      left: 0;
+      @include w100;
+      background: $bodybg;
+      z-index: 10;
+
+      .nav-pills {
+        @include radius(0);
+      }
+
+      .nav {
+        gap: size(16);
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        max-width: 99%;
+        padding-bottom: size(10);
+
+        @include breakpoint(mobile768) {
+          overflow: hidden;
+          padding-bottom: 0;
+          max-width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+          background: transparent;
+          height: size(4);
+          @include radius(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba($primaryText, 0.3);
+          @include radius(8);
+        }
+
+        &-link {
+          background: $white;
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include radius(18.5);
+          padding: size(4) size(4) size(4) size(15);
+          @include flex-center-vert;
+          gap: size(10);
+
+          .titlebox {
+            width: calc(100% - size(40));
+
+            .title {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 400;
+              @include w100;
+              @include text-overflow;
+            }
+          }
+
+          .counter {
+            @include square(30);
+            @include border(solid, 0.5, rgba($primaryText, 0.3));
+            @include circle;
+            @include setBgColor($white, $headingText);
+            font-size: size(14);
+            font-weight: 400;
+            @include flex-center;
+            text-align: center;
+          }
+
+          &:hover:not(.active) {
+            background: $pillbg;
+          }
+
+          &.active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+
+          &:active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+        }
+      }
+    }
+
+    .scrollspy-example {
+      @include flex-column;
+      gap: size(24);
+    }
+
+    .servicetopic {
+      max-height: size(565);
+      overflow: hidden;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        // background: darken($primary, 25%);
+        @include radius(8);
+      }
+    }
+  }
+}
+
+.spycheck {
+  padding-bottom: size(16);
+  @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
+  @include h100;
+
+  .spycheckbox {
+    &:checked ~ .spylabel {
+      &::before {
+        background: $textSuccess;
+        border-color: $textSuccess;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .spylabel {
+    position: relative;
+    padding-left: size(56);
+    cursor: pointer;
+    @include flex-column;
+    gap: size(16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      // @include translateY(-50%);
+      @include square(36);
+      @include border(solid, 1, $primaryText);
+      @include circle;
+      @include transitionsall;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: size(11);
+      top: size(12);
+      width: size(15);
+      height: size(8);
+      @include border(solid, 2, $white);
+      border-top: 0;
+      border-right: 0;
+      @include rotate(-45);
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+
+    &-header {
+      @include flex-center-between;
+
+      .leftcontent {
+        width: 75%;
+
+        .servicename {
+          color: $headingText;
+          font-weight: 400;
+          @include text-overflow;
+        }
+
+        .duration {
+          color: $primaryText;
+          font-size: size(14);
+          font-weight: 400;
+        }
+      }
+
+      .rightcontent {
+        @include flex-column;
+        align-items: flex-end;
+        width: 25%;
+        text-align: right;
+
+        .currentprice {
+          color: $primaryText;
+          font-weight: 500;
+        }
+
+        .previousprice {
+          font-size: size(14);
+          color: rgba($primaryText, 0.6);
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    &-body {
+      .text {
+        color: $primaryText;
+      }
+    }
+  }
+}
+
+/**======= DOMLOADED-CONTENT =======**/
+.domloaded {
+  background: $white;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  @include w100;
+  height: size(80);
+  z-index: 500;
+  @include border-single(top, solid, 1, $signinborder);
+  @include flex-center-vert;
+  z-index: 3000;
+
+  @include breakpoint(tab992) {
+    z-index: 1900;
+  }
+
+  .default-content {
+    @include flex-center-between;
+
+    .leftcontent {
+      display: none;
+
+      @include breakpoint(tab992) {
+        display: block;
+      }
+    }
+
+    .rightcontent {
+      @include flex-center-vert;
+      gap: size(20);
+      @include w100;
+      justify-content: space-between;
+
+      @include breakpoint(tab992) {
+        width: auto;
+        justify-content: flex-end;
+      }
+
+      .bookinfo {
+        width: size(140);
+
+        @include breakpoint(tab992) {
+          width: size(200);
+        }
+      }
+    }
+  }
+
+  .changed-content {
+    @include flex-center-between;
+
+    .leftcontent {
+      @include flex-column;
+      gap: size(4);
+
+      .title {
+        color: $primaryText;
+        font-weight: 400;
+      }
+
+      .price {
+        color: $primaryText;
+        font-weight: 400;
+      }
+    }
+
+    .rightcontent {
+      @include flex-end;
+
+      @include breakpoint(tab992) {
+        width: auto;
+      }
+
+      .bookinfo {
+        width: size(140);
+
+        @include breakpoint(tab992) {
+          width: size(200);
+        }
+      }
+    }
+  }
+}
+
+/**======= ALL-REVIEWS [PAGE] =======**/
+.allreviews {
+  @include flex-column;
+  gap: size(16);
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+  }
+
+  &-header {
+    background: $bodybg;
+    @include flex-center-between;
+    padding: size(16) size(20);
+
+    .title {
+      font-weight: 500;
+    }
+
+    .btn-back {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include transitiontransform;
+        path {
+          @include transitionsall;
+        }
+      }
+
+      @include hover {
+        svg {
+          @include rotate(90);
+
+          path {
+            stroke: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(40);
+
+    .singlereview {
+      @include flex-column;
+      gap: size(16);
+      padding-bottom: size(38);
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+      &-header {
+        @include flex-center-vert;
+        gap: size(16);
+
+        .nameicon {
+          @include setBgColor($bluebg, $blue);
+          @include square(48);
+          @include circle;
+          @include flex-center;
+          font-size: size(16);
+          font-weight: 600;
+          overflow: hidden;
+          padding: size(16);
+          text-transform: uppercase;
+        }
+
+        .userinfo {
+          @include flex-column;
+
+          .username {
+            color: $headingText;
+            font-weight: 400;
+          }
+
+          .date {
+            color: $primaryText;
+            font-size: size(14);
+            font-weight: 300;
+          }
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(16);
+
+        .reviewlist {
+          @include list-horizontal;
+          gap: size(4);
+
+          &-item {
+            @include square(19);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .vendorname {
+          .name {
+            color: $headingText;
+            font-weight: 400;
+          }
+
+          .info {
+            color: $textSuccess;
+            font-weight: 300;
+          }
+        }
+
+        .reviewthumbnail {
+          @include square(150);
+          @include radius(4);
+          @include flex-center;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**======= SALON-DESCRIPTIONS =======**/
+.salondescriptions {
+  padding-bottom: size(32);
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(64);
+  }
+
+  .aboutsalon {
+    @include flex-column;
+    gap: size(24);
+
+    .title {
+      font-weight: 500;
+    }
+
+    .infolist {
+      @include list-horizontal;
+      flex-wrap: wrap;
+      gap: size(12);
+
+      @include breakpoint(tab992) {
+        gap: size(24);
+      }
+
+      &-item {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .icon {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+
+  .opening {
+    @include flex-column;
+    gap: size(16);
+
+    &-header {
+      padding-bottom: size(14);
+      @include flex-column;
+      gap: size(20);
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
+
+      .titlebox {
+        @include flex-center-vert;
+        gap: size(16);
+
+        .title {
+          font-weight: 500;
+        }
+
+        .salonbadge {
+          margin-top: size(4);
+        }
+      }
+
+      .schedulelist {
+        @include list-horizontal;
+        justify-content: space-between;
+
+        &-item {
+          .time {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-center-vert;
+
+      .location {
+        @include flex-column;
+        gap: size(4);
+
+        .text {
+          letter-spacing: size(0.32);
+        }
+
+        .link {
+          color: $blue;
+          letter-spacing: size(0.32);
+          @include transitionscolor;
+
+          @include hover {
+            color: darken($blue, 20%);
+          }
+        }
+      }
+
+      .icon {
+        @include square(66);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+}
+
+/**======= PROFILE-BANNER =======**/
+.bannerprofile {
+  padding: size(16) size(0) size(32);
+
+  @include breakpoint(tab992) {
+    padding: size(16) size(0) size(48);
+  }
+
+  &-content {
+    background: rgba($primary, 0.3);
+    @include radius(8);
+    overflow: hidden;
+    padding: size(48) size(16) size(0);
+
+    @include breakpoint(tab992) {
+      padding-top: size(64) size(0) size(0);
+    }
+  }
+
+  .leftcontent {
+    @include flex-center;
+    @include wh100;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+    }
+  }
+
+  .rightcontent {
+    @include breakpoint(tab992) {
+      padding-bottom: size(48);
+    }
+
+    .consult {
+      @include flex-column;
+      gap: size(40);
+
+      &-header {
+        @include flex-center-vert;
+        gap: size(10);
+        flex-wrap: wrap;
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(24);
+      }
+
+      &-footer {
+        @include flex-column;
+        gap: size(24);
+
+        @include breakpoint(tab992) {
+          gap: size(40);
+        }
+
+        .ratings-favorite {
+          @include flex-center;
+          gap: size(24);
+
+          @include breakpoint(mobile576) {
+            gap: size(40);
+            justify-content: flex-start;
+          }
+
+          .ratings {
+            @include flex-center-vert;
+            gap: size(8);
+
+            .ratinglist {
+              @include list-horizontal;
+              gap: size(4);
+
+              &-item {
+                @include square(18);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+            }
+
+            .ratingnumber {
+              color: $headingText;
+              font-weight: 400;
+            }
+          }
+
+          .favorite {
+            .btn-favorite {
+              @include flex-center-vert;
+              gap: size(4);
+
+              .icon {
+                @include square(21);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .text {
+                color: $headingText;
+                font-weight: 400;
+              }
+
+              @include hover {
+                .icon {
+                  svg {
+                    path {
+                      fill: darken($primary, 20%);
+                    }
+                  }
+                }
+                .text {
+                  color: darken($primary, 20%);
+                }
+              }
+            }
+          }
+        }
+
+        .bookinfo {
+          width: size(200);
+          margin-inline: auto;
+
+          @include breakpoint(mobile576) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

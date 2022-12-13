@@ -1,0 +1,46 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.card-wellness {
+  @include flex-column;
+  gap: size(16);
+  overflow: hidden;
+
+  &-header {
+    @include flex-center-vert;
+    @include square(64);
+    @include flex-center;
+    overflow: hidden;
+    position: relative;
+
+    .thumbnail {
+      @include flex-center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include wh100;
+      overflow: hidden;
+      @include transitiontransform;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .color-thumbnail {
+      @include translateX(100%);
+    }
+  }
+
+  @include hover {
+    .card-wellness-header {
+      .thumbnail {
+        @include translateX(-100%);
+      }
+  
+      .color-thumbnail {
+        @include translateX(0);
+      }
+    }
+  }
+}

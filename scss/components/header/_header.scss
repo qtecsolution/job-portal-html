@@ -1,0 +1,412 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.header {
+  background: $primaryLight;
+  @include flex-center-column;
+  @include w100;
+  z-index: 100;
+  height: size(104);
+  
+  &-content {
+    @include flex-column;
+    @include w100;
+  }
+
+  &-nav {
+    background: $white;
+    height: size(64);
+    @include w100;
+    @include flex-center-vert;
+
+    .navigation {
+      @include flex-center-between;
+    }
+
+    .hamburger {
+      @include flex-center;
+      @include square(24);
+      
+      @include breakpoint(tab992) {
+        display: none;
+      }
+      
+      .btn-hamburger {
+        @include square(24);
+        @include flex-center;
+
+        svg {
+          @include wh100;
+
+          path {
+            @include transitionsall;
+          }
+        }
+
+        @include hover {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: size(100);
+      height: size(24);
+      @include flex-center;
+      overflow: hidden;
+      margin-left: size(20);
+
+      @include breakpoint(tab992) {
+        width: size(130);
+        height: size(32);
+        margin-left: size(0);
+      }
+
+      img {
+        @include wh100;
+        object-fit: contain;
+      }
+    }
+    
+    .desktoplist {
+      display: none;
+      position: relative;
+
+      @include breakpoint(tab992) {
+        @include list-horizontal;
+      }
+
+      @include breakpoint(desktop1400) {
+        gap: size(20);
+      }
+
+      &-link {
+        color: $primaryText;
+        @include font($primaryFont, 14, normal, normal, 14);
+        @include flex-center-vert;
+        gap: size(6);
+        @include transitionsall;
+        text-transform: uppercase;
+
+        .icon {
+          @include flex-center;
+          @include square(15);
+        }
+
+        .text {
+          color: inherit;
+          font: inherit;
+        }
+
+        &.active {
+          color: $headingText;
+
+          .text {
+            color: inherit;
+          }
+
+          .icon {
+            svg {
+              path {
+                stroke: $headingText;
+              }
+            }
+          }
+        }
+
+        &:hover:not(.active) {
+          color: $headingText;
+
+          .text {
+            color:inherit;
+          }
+
+          .icon {
+            svg {
+              path {
+                stroke: $headingText;
+              }
+            }
+          }
+        }
+      }
+
+      &-item {
+        height: size(64);
+        @include flex-center;
+        padding: size(0) size(20);
+        cursor: pointer;
+        position: relative;
+
+        @include hover {
+          .subdropdown {
+            display: block;
+          }
+        }
+      }
+
+      .subdropdown {
+        background: $white;
+        position: absolute;
+        top: 100%;
+        min-width: size(180);
+        @include border-single(top, solid, 2, darken($primary, 25%));
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .submenu {
+          @include list-vertical;
+
+          &-link {
+            color: $primaryText;
+            display: inline-block;
+            @include font($primaryFont, 12, normal, normal, 12);
+            padding: size(14) size(16);
+            @include w100;
+            text-transform: uppercase;
+            @include transitionscolor;
+
+            @include hover {
+              @include setBgColor(darken($primary, 10%), $headingText);
+              @include setBgColor($primary, $headingText);
+            }
+          }
+        }
+      }
+    }
+
+    .authmenu {
+      @include list-horizontal;
+      gap: size(8);
+      position: relative;
+
+      @include breakpoint(tab992) {
+        gap: size(40);
+      }
+
+      .authitem {
+        @include flex-center-vert;
+
+        @include breakpoint(tab992) {
+          display: none;
+        }
+      }
+
+      &-link {
+        @include square(15);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          path {
+            @include transitionsall;
+          }
+        }
+
+        @include hover {
+          svg {
+            path {
+              stroke: $black;
+            }
+          }
+        }
+      }
+
+      .joinlink {
+        color: $primaryText;
+        @include font($primaryFont, 14, normal, normal, 14);
+        text-transform: uppercase;
+        @include transitionscolor;
+
+        @include hover {
+          color: $headingText;
+        }
+      }
+
+      .userlink {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: contain;
+        }
+      }
+
+      .mobuserlink {
+        @include square(32);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: contain;
+        }
+      }
+
+      .booklink {
+        width: size(96);
+        height: size(64);
+        font-weight: 500;
+        @include setBgColor($primary, $headingText);
+
+        text-align: center;
+
+        display: none;
+
+        @include breakpoint(tab992) {
+          @include flex-center;
+        }
+      }
+
+      &-item {
+        height: size(64);
+        @include flex-center-vert;
+
+        &:hover,
+        &:focus {
+          .subdropdown {
+            display: block;
+          }
+        }
+      }
+
+      .subdropdown {
+        position: absolute;
+        top: 100%;
+        left: -50%;
+        // left: 0;
+        background: $white;
+        min-width: size(220);
+        @include border-single(top, solid, 2, darken($primary, 25%));
+        @include double-radius(bottom, left, 8, bottom, right, 8);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .submenu {
+          @include flex-column;
+          gap: size(40);
+          @include double-radius(bottom, left, 8, bottom, right, 8);
+          overflow: hidden;
+
+          &-header {
+            padding: size(16) size(16) size(0);
+  
+            .userlist {
+              @include list-vertical;
+              gap: size(16);
+
+              &-link {
+                @include flex-center-vert;
+                gap: size(8);
+                
+                .icon {
+                  @include square(20);
+                  @include flex-center;
+
+                  svg {
+                    @include wh100;
+                  }
+                }
+
+                .title {
+                  color: $headingText;
+                  @include font($primaryFont, 13, light, normal, 18);
+                  text-transform: uppercase;
+                }
+
+                &:hover:not(.active) {
+                  .icon {
+                    svg {
+                      path {
+                        fill: darken($primary, 20%);
+                      }
+                    }
+                  }
+
+                  .title {
+                    color: darken($primary, 20%);
+                  }
+                }
+
+                &.active {
+                  .icon {
+                    svg {
+                      path {
+                        fill: darken($primary, 20%);
+                      }
+                    }
+                  }
+
+                  .title {
+                    color: darken($primary, 20%);
+                  }
+                }
+              }
+            }
+          }
+
+          &-body {
+            .logout {
+              background: $primary;
+              @include flex-center-vert;
+              gap: size(8);
+              padding: size(10) size(16);
+  
+              .icon {
+                @include square(20);
+                @include flex-center;
+
+                svg {
+                  @include wh100;
+                }
+              }
+  
+              .title {
+                color: $headingText;
+                @include font($primaryFont, 13, light, normal, 18);
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &-offer {
+    @include w100;
+
+    &-content {
+      @include flex-center;
+      @include w100;
+      height: size(40);
+      text-align: center;
+
+      .offertext {
+        @include font($primaryFont, 12, normal, normal, 15.6);
+    
+        @include breakpoint(mobile768) {
+          font-size: size(14);
+        }
+    
+        @include breakpoint(tab992) {
+          font-size: size(16);
+        }
+
+        .offercode {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

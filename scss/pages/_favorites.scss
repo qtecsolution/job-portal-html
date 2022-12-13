@@ -1,0 +1,192 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.favorites {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(0) size(80);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+
+  &-header {
+    padding-bottom: size(20);
+    @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(20);
+
+    .favlist {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include list-horizontal;
+        gap: size(10);
+        position: relative;
+        z-index: 10;
+      }
+
+      &-link {
+        background: $white;
+        @include border(solid, 0.5, rgba($primaryText, 0.3));
+        @include radius(18.5);
+        padding: size(4) size(4) size(4) size(15);
+        @include flex-center-vert;
+        gap: size(10);
+
+        .titlebox {
+          width: calc(100% - size(40));
+          @include text-overflow;
+
+          .title {
+            color: $headingText;
+            font-size: size(14);
+            font-weight: 400;
+          }
+        }
+
+        .counter {
+          @include square(30);
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include circle;
+          @include setBgColor($white, $headingText);
+          font-size: size(14);
+          font-weight: 400;
+          @include flex-center;
+          text-align: center;
+        }
+
+        &:hover:not(.active) {
+          background: $pillbg;
+        }
+
+        &.active {
+          background: rgba($primary, 0.3);
+          border-color: transparent;
+
+          .counter {
+            border-color: rgba($primary, 0.3);
+          }
+        }
+
+        &:active {
+          background: rgba($primary, 0.3);
+          border-color: transparent;
+
+          .counter {
+            border-color: rgba($primary, 0.3);
+          }
+        }
+      }
+    }
+
+    .favoritemobile {
+      display: block;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .favmobinfo {
+        position: relative;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          @include square(28);
+          padding: size(4);
+          border: none;
+          top: 70%;
+
+          svg {
+            @include wh100;
+          }
+
+          @include hover {
+            background: transparent;
+            border: transparent;
+          }
+        }
+
+        .swiper-button-prev {
+          left: size(-10);
+        }
+
+        .swiper-button-next {
+          right: size(-10);
+        }
+      }
+
+      .favoriteSlider {
+        max-width: 90%;
+
+        .favlist-link {
+          background: $white;
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include radius(18.5);
+          padding: size(4) size(4) size(4) size(15);
+          @include flex-center-vert;
+          gap: size(10);
+
+          .titlebox {
+            width: calc(100% - size(40));
+            @include text-overflow;
+            max-width: calc(100% - size(40));
+
+            .title {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 400;
+            }
+          }
+
+          .counter {
+            @include square(30);
+            @include border(solid, 0.5, rgba($primaryText, 0.3));
+            @include circle;
+            @include setBgColor($white, $headingText);
+            font-size: size(14);
+            font-weight: 400;
+            @include flex-center;
+            text-align: center;
+          }
+
+          &:hover:not(.active) {
+            background: $pillbg;
+          }
+
+          &.active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+
+          &:active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+
+            .counter {
+              border-color: rgba($primary, 0.3);
+            }
+          }
+        }
+      }
+    }
+
+    .card-featured {
+      @include w100;
+    }
+  }
+}

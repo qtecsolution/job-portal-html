@@ -1,0 +1,317 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.authentic-main {
+  @include w100;
+  min-height: 100vh;
+  padding: size(20);
+  @include flex-center-vert;
+
+  .authentic {
+    @include flex-column;
+    gap: size(32);
+    max-width: size(500);
+    margin-inline: auto;
+
+    &-header {
+      @include flex-center-column;
+      gap: size(24);
+
+      .headerinfo {
+        @include flex-center-column;
+        gap: size(16);
+        text-align: center;
+      }
+    }
+
+    &-body {
+      @include w100;
+
+      .login {
+        @include flex-center-column;
+        gap: size(24);
+        overflow: hidden;
+
+        &-header {
+          @include flex-column;
+          gap: size(16);
+          @include w100;
+
+          .rememberforgot {
+            @include flex-center-between;
+
+            .forgotpass {
+              .link {
+                color: $primaryText;
+                @include transitionscolor;
+
+                @include hover {
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+
+        &-body {
+          @include w100;
+          @include flex-center-column;
+          gap: size(24);
+
+          .titlebox {
+            @include flex-center-vert;
+            gap: size(14);
+
+            .title {
+              width: size(120);
+            }
+
+            .line {
+              width: calc((100% - size(134)) / 2);
+              height: size(1);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+
+          .signwithsocial {
+            @include w100;
+            @include flex-center-between;
+            gap: size(10);
+            flex-wrap: wrap;
+
+            .btn-signin {
+              background: $white;
+              @include border(solid, 1, $signinborder);
+              @include radius(4);
+              @include flex-center;
+              gap: size(10);
+              padding: size(10) size(16);
+              @include w100;
+
+              @include breakpoint(mobile768) {
+                width: calc((100% / 2) - size(10));
+              }
+
+              .icon {
+                @include square(26);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .text {
+                color: $primaryText;
+                width: calc(100% - size(36));
+              }
+            }
+          }
+        }
+      }
+
+      .forgotbox,
+      .changepassword {
+        @include flex-column;
+        gap: size(16);
+      }
+
+      .inputbox {
+        @include flex-column;
+        gap: size(8);
+
+        .inputfield {
+          @include border(solid, 1, $signinborder);
+          @include radius(4);
+          @include setBgColor($white, $primaryText);
+          @include w100;
+          padding: size(10) size(16);
+          height: size(48);
+          @include transitionsall;
+
+          &:focus {
+            border-color: $primary;
+          }
+
+          &::placeholder {
+            color: rgba($primaryText, 0.3);
+          }
+        }
+
+        .error-message {
+          display: none;
+          font-size: size(14);
+
+          .message {
+            color: $danger;
+          }
+        }
+
+        &.error {
+          .inputfield {
+            border-color: $danger;
+          }
+
+          .error-message {
+            display: block;
+          }
+
+          .inputinfo {
+            .inputfield {
+              border-color: $danger;
+            }
+          }
+        }
+
+        .inputinfo {
+          position: relative;
+
+          .passfield {
+            padding-right: size(48);
+          }
+
+          .btn-toggle {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            @include translateY(-50%);
+            right: size(20);
+
+            svg {
+              @include wh100;
+            }
+
+            .showpassicon {
+              display: block;
+            }
+
+            .hidepassicon {
+              display: none;
+            }
+
+            &.active {
+              .showpassicon {
+                display: none;
+              }
+
+              .hidepassicon {
+                display: block;
+              }
+            }
+
+            @include hover {
+              .showpassicon {
+                path {
+                  fill: $primary;
+                }
+              }
+
+              .hidepassicon {
+                g {
+                  opacity: 1;
+
+                  path {
+                    fill: $primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .infobox {
+        margin-top: size(8);
+        @include flex-center;
+        text-align: center;
+
+        .text {
+          .link {
+            font-weight: 500;
+            color: $primaryText;
+            @include transitionscolor;
+
+            @include hover {
+              color: darken($primary, 20%);
+            }
+          }
+        }
+      }
+
+      .info {
+        .text {
+          color: rgba($primaryText, 0.3);
+          font-size: size(14);
+          font-weight: 400;
+        }
+      }
+
+      .verifications {
+        .verify {
+          @include flex-center;
+          gap: size(20);
+
+          &-input {
+            @include square(68);
+            @include flex-center;
+            @include border(solid, 1, $linkborder);
+            @include radius(4);
+            @include setBgColor($white, $primaryText);
+            font-size: size(24);
+            font-weight: 500;
+            @include transitionsall;
+            text-align: center;
+
+            &:focus {
+              border-color: $primary;
+            }
+
+            &::placeholder {
+              color: rgba($primaryText, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .confirmedchanged {
+    @include flex-center-column;
+    gap: size(24);
+    margin: auto;
+    text-align: center;
+
+    .icon {
+      @include square(194);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .info {
+      @include flex-center-column;
+      gap: size(12);
+
+      .link {
+        color: $headingText;
+        @include font($primaryFont, 16, medium, normal, 24);
+        @include transitionscolor;
+
+        @include hover {
+          color: darken($primary, 20%);
+        }
+      }
+    }
+  }
+}

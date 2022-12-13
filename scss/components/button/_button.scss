@@ -1,0 +1,211 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  border: none;
+  @include transparent-button;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-appointment {
+  width: size(91);
+  height: size(36);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 10%), $white);
+  }
+}
+
+.btn-booking {
+  width: size(204);
+  height: size(54);
+  @include radius(4);
+  @include setBgColor($primary, $black);
+  @include font($primaryFont, 16, normal, normal, 22.4);
+  text-align: center;
+  position: relative;
+  @include flex-center;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(19);
+  }
+
+  @include breakpoint(desktop1200) {
+    font-size: size(21);
+  }
+
+  .btnbox {
+    position: absolute;
+    left: size(20);
+    right: size(20);
+    top: auto;
+    bottom: size(-13.5);
+    background: $primary;
+    filter: blur(size(27.5));
+    width: size(164);
+    height: size(27);
+    z-index: 10;
+  }
+
+  @include hover {
+    background: darken($primary, 10%);
+    color: $white;
+  }
+}
+
+.btn-bookappointment {
+  @include setBgColor(transparent, $headingText);
+  @include border(solid, 0.5, $primaryText);
+  @include radius(4);
+  width: size(244);
+  height: size(44);
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($headingText, $white);
+    border-color: $headingText;
+  }
+}
+
+.up-btn {
+  opacity: 1;
+  padding: size(12);
+  @include border(solid, 1, $primaryText);
+}
+
+.btn-book {
+  @include setBgColor($primary, $headingText);
+  width: size(240);
+  height: size(48);
+  @include flex-center;
+  @include radius(4);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 20%), $headingText);
+  }
+}
+
+.btn-submit {
+  @include w100;
+  height: size(48);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  font-weight: 500;
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 20%), $headingText);
+  }
+}
+
+.btn-booknow {
+  @include setBgColor(transparent, $headingText);
+  @include border(solid, 0.5, $primaryText);
+  @include radius(4);
+  @include flex-center;
+  width: size(200);
+  height: size(44);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primaryText, $white);
+  }
+}
+
+.btn-goto {
+  width: size(200);
+  height: size(44);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  font-weight: 500;
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 20%), $headingText);
+  }
+}
+
+.btn-review {
+  width: size(200);
+  height: size(44);
+  @include setBgColor(transparent, $confirmedcolor);
+  @include border(solid, 1, $confirmedcolor);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 400;
+  text-align: center;
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($confirmedcolor, $white);
+  }
+}
+
+.btn-appoint {
+  width: size(200);
+  height: size(44);
+  @include setBgColor($white, $primaryText);
+  @include border(solid, 1, $primaryText);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 400;
+  text-align: center;
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($primaryText, $white);
+  }
+}
+
+.btn-point {
+  @include setBgColor($white, $headingText);
+  @include border(solid, 0.5, $linkborder);
+  @include radius(18.5);
+  @include flex-center;
+  height: size(38);
+  font-size: size(14);
+  font-weight: 400;
+  padding: size(8) size(16);
+  text-align: center;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(16);
+  }
+
+  &:hover:not(.active) {
+    background: $btnbg;
+    border-color: transparent;
+  }
+
+  &.active {
+    background: $btnbg;
+    border-color: transparent;
+  }
+}

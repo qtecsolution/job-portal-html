@@ -1,0 +1,280 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.myprofile {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(0) size(80);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(28);
+  }
+
+  &-header {
+    padding-bottom: size(10);
+    @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    padding-left: size(8);
+    padding-right: size(8);
+  }
+
+  .profile {
+    @include flex-column;
+    gap: size(48);
+    background: $white;
+    @include border(solid, 1, $primary);
+    @include radius(8);
+    padding: 0;
+    margin-top: size(80);
+
+    &-header {
+      @include flex-center;
+      margin-top: size(-72.5);
+
+      .profile-thumbnail {
+        @include square(145);
+        background: $profilebg;
+        @include circle;
+        @include border(solid, 1, $primary);
+        @include flex-center;
+        position: relative;
+
+        .profileimage {
+          @include wh100;
+          object-fit: cover;
+        }
+
+        .icon {
+          @include square(48);
+          @include flex-center;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .filebox {
+          @include square(33);
+          @include circle;
+          @include flex-center;
+          position: absolute;
+          bottom: size(16);
+          right: 0;
+
+          .labelfile {
+            @include square(33);
+            @include border(solid, 1, $green);
+            @include circle;
+            cursor: pointer;
+            @include flex-center;
+            background: $bodybg;
+            padding: size(8);
+
+            .icon {
+              @include square(18);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(48);
+
+      @include breakpoint(tab992) {
+        gap: size(64);
+      }
+
+      .profileform {
+        padding-left: size(20);
+        padding-right: size(20);
+        @include flex-column;
+        gap: size(24);
+
+        .inputbox {
+          @include flex-column;
+          gap: size(12);
+          position: relative;
+
+          .inputlabel {
+            color: $primaryText;
+            font-size: size(14);
+            font-weight: 300;
+
+            @include breakpoint(tab992) {
+              font-size: size(16);
+            }
+          }
+
+          .inputfield {
+            font-size: size(14);
+            font-weight: 500;
+            background: transparent;
+            @include border(solid, 1, $signinborder);
+            height: size(48);
+            @include radius(4);
+            padding-left: size(16);
+            @include transitionsall;
+
+            @include breakpoint(tab992) {
+              font-size: size(16);
+            }
+
+            &:disabled {
+              border-color: transparent;
+              padding: 0;
+              height: auto;
+
+              &::placeholder {
+                color: $headingText;
+                font-size: size(16);
+                font-weight: 500;
+
+                @include breakpoint(tab992) {
+                  font-size: size(19);
+                }
+              }
+            }
+
+            &:not(:disabled) {
+              &::placeholder {
+                font-size: size(16);
+                color: rgba($primaryText, 0.6);
+                font-weight: 400;
+              }
+            }
+
+            &:not(:disabled) {
+              &:focus {
+                border-color: $primary;
+              }
+            }
+          }
+
+          .nice-select {
+            &.disabled {
+              border-color: transparent !important;
+              padding: 0;
+              height: auto;
+              line-height: 1;
+
+              .current {
+                color: $headingText;
+                font-size: size(16);
+                font-weight: 500;
+
+                @include breakpoint(tab992) {
+                  font-size: size(19);
+                }
+              }
+
+              &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                display: none;
+              }
+            }
+
+            &:not(.disabled) {
+              .current {
+                color: rgba($primaryText, 0.6);
+              }
+            }
+          }
+
+          &-header {
+            @include flex-center-between;
+
+            .inputlabel {
+              color: $primaryText;
+              font-size: size(14);
+              font-weight: 300;
+
+              @include breakpoint(tab992) {
+                font-size: size(16);
+              }
+            }
+
+            .btn-edit {
+              @include square(24);
+              @include flex-center;
+              overflow: hidden;
+
+              &:focus,
+              &:active {
+                outline: none;
+                border-color: transparent;
+              }
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+
+          &.open {
+            .calendar-popup {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .log {
+        padding: size(16) size(0);
+        @include flex-center;
+        text-align: center;
+        @include border-single(top, solid, 1, rgba($primaryText, 0.2));
+
+        &-out {
+          color: $danger;
+          font-weight: 400;
+          font-size: size(17);
+          letter-spacing: size(0.32);
+          @include transitionscolor;
+
+          @include breakpoint(tab992) {
+            font-size: size(19);
+          }
+
+          @include hover {
+            color: lighten($danger, 10%);
+          }
+        }
+
+        .btn-update {
+          color: $green;
+          font-weight: 400;
+          font-size: size(17);
+          letter-spacing: size(0.32);
+          @include transitionscolor;
+
+          @include breakpoint(tab992) {
+            font-size: size(19);
+          }
+
+          @include hover {
+            color: darken($green, 5%);
+          }
+        }
+      }
+    }
+  }
+}

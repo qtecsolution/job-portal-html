@@ -1,0 +1,80 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.popularcard {
+  @include flex-column;
+  gap: size(24);
+
+  &-header {
+    height: size(215);
+    background: $white;
+    padding: size(8);
+    @include radius(8);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  &-thumbnail {
+    @include wh100;
+    @include radius(8);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      @include transitiontransform;
+    }
+
+    @include hover {
+      img {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  .divider {
+    @include w100;
+    height: size(1);
+    background: rgba($primaryText, 0.5);
+    
+    @include breakpoint(tab992) {
+      margin-top: size(8);
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(10);
+
+    .title {
+      color: $headingText;
+      @include font($primaryFont, 16, medium, normal, 20);
+      @include transitionscolor;
+
+      @include hover {
+        color: darken($primary, 20%);
+      }
+    }
+
+    .info {
+      margin-bottom: size(10);
+      
+      .text {
+        color: $primaryText;
+        @include font($primaryFont, 14, light, normal, 18);
+      }
+    }
+
+    .priceinfo {
+      span {
+        color: $primaryText;
+        @include font($primaryFont, 14, light, normal, 18);
+      }
+
+      .price {
+        color: $headingText;
+        @include font($primaryFont, 14, semibold, normal, 18);
+      }
+    }
+  }
+}
