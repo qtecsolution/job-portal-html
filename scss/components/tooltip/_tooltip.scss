@@ -1,17 +1,41 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
-.vue-custom-tooltip {
-  &:before {
-    border-top-color: $primary !important;
-    // @include font($primaryFont, 14, medium, normal, 20);
+.tooltip {
+  &-inner {
+    background: $primary;
+    font-size: size(12);
   }
 
-  &:after {
-    background: $primary !important;
-    padding: size(8) size(16) !important;
-    font-family: $primaryFont !important;
-    font-size: size(12) !important;
-    font-weight: 500 !important;
+  &.bs-tooltip-auto[data-popper-placement^="top"] {
+    .tooltip-arrow {
+      &::before {
+        border-top-color: $primary;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] {
+    .tooltip-arrow {
+      &::before {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="left"] {
+    .tooltip-arrow {
+      &::before {
+        border-left-color: $primary;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="right"] {
+    .tooltip-arrow {
+      &::before {
+        border-right-color: $primary;
+      }
+    }
   }
 }

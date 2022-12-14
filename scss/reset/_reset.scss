@@ -103,12 +103,12 @@ video {
   margin: 0;
 
   &::selection {
-    @include setBgColor($btnbg, $headingText);
+    // @include setBgColor($btnbg, $headingText);
   }
 }
 
 body {
-  @include setBgColor($bodybg, $primaryText);
+  // @include setBgColor($bodybg, $primaryText);
   @include font($primaryFont, 14, light, normal, 19.6);
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -125,11 +125,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: $headingText;
+  // color: $headingText;
   margin: 0;
 
   &::selection {
-    @include setBgColor($btnbg, $headingText);
+    // @include setBgColor($btnbg, $headingText);
   }
 }
 

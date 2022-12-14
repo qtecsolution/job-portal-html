@@ -1,13 +1,12 @@
-@use '../global' as *;
-@use '../partials' as *;
-
+@use "../global" as *;
+@use "../partials" as *;
 
 .customcheck {
   &-box {
     &:checked ~ .customcheck-label {
       &::before {
-        background: $primaryText;
-        border-color: $primaryText;
+        // background: $primaryText;
+        // border-color: $primaryText;
       }
 
       &::after {
@@ -19,7 +18,7 @@
 
   &-label {
     position: relative;
-    color: $primaryText;
+    // color: $primaryText;
     font: inherit;
     font-weight: 300;
     padding-left: size(26);
@@ -30,23 +29,23 @@
       font-weight: 400;
       text-decoration: underline;
       @include transitionsall;
-      
+
       @include hover {
         text-decoration: none;
-        color: darken($primary, 20%);
+        // color: darken($primary, 20%);
       }
     }
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       @include absolute(top 50% left 0);
     }
 
     &::before {
       @include square(18);
       @include radius(4);
-      @include border(solid, 1, $linkborder);
+      // @include border(solid, 1, $linkborder);
       @include translateY(-50%);
       @include transitionsall;
     }
@@ -65,7 +64,7 @@
     }
 
     &::selection {
-      @include setBgColor(transparent, $primaryText);
+      // @include setBgColor(transparent, $primaryText);
     }
   }
 }
