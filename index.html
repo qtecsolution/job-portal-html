@@ -39,7 +39,7 @@
     <!-- MAIN-SECTION START -->
     <main class="mainsection">
       <!-- HEADER SECTION START -->
-      <header class="header">
+      <header class="header sticky-top">
         <!-- MOBILE-LOGO -->
         <a href="index.html" class="logo">
           <img src="assets/images/logo/logo.svg" alt="logo" />
@@ -122,7 +122,7 @@
                   </svg>
                 </span>
 
-                <span class="dark">
+                <span class="dark d-none">
                   <svg
                     width="24"
                     height="24"
@@ -163,6 +163,7 @@
                     fill="#98A2B3"
                   />
                   <circle
+                    class="circle"
                     cx="32.1734"
                     cy="8.82628"
                     r="6.71739"
@@ -174,123 +175,141 @@
               </button>
 
               <!-- NOTIFICATIONS -->
-              <div class="notification">
-                <div class="notification-header">
-                  <h5 class="title">Notifications</h5>
+              <div class="notify">
+                <div class="notification">
+                  <div class="notification-header">
+                    <h5 class="title">Notifications</h5>
 
-                  <button class="btn-clear" type="button">Clear All</button>
-                </div>
-
-                <div class="notification-body">
-                  <!-- EMPTY-NOTIFICATIONS -->
-                  <div class="emptynotification">
-                    <h5 class="emptynotification-title">
-                      No notifications found.
-                    </h5>
+                    <button class="btn-clear" type="button">Clear All</button>
                   </div>
 
-                  <!-- NOTIFICATIONS-LIST -->
-                  <ul class="notificationlist">
-                    <li class="notificationlist-item">
-                      <figure class="usericon">
-                        <img
-                          src="https://media.istockphoto.com/id/882495390/photo/happiness.jpg?s=612x612&w=0&k=20&c=SVUBI4k1eTLtc8rUcO4iWAgOo7SUcUdT8qOE7p3G9F8="
-                          alt="notification-thumbnail"
-                        />
-                      </figure>
+                  <div class="notification-body">
+                    <!-- EMPTY-NOTIFICATIONS -->
+                    <div class="emptynotification d-none">
+                      <h5 class="emptynotification-title">
+                        No notifications found.
+                      </h5>
+                    </div>
 
-                      <div class="details">
-                        <div class="info">
-                          <span class="name"> Jane Doe </span>
-
-                          <span class="text"> marked the task as done </span>
-                        </div>
-
-                        <p class="time">1 day ago</p>
-                      </div>
-                    </li>
-
-                    <li class="notificationlist-item">
-                      <figure class="usericon">
-                        <img
-                          src="https://media.istockphoto.com/id/1278978817/photo/portrait-of-happy-mature-man-smiling.jpg?s=612x612&w=0&k=20&c=GPniKSszzPgprveN7sCT5mb-_L3-RSlGAOAsmoDaafw="
-                          alt="notification-thumbnail"
-                        />
-                      </figure>
-
-                      <div class="details">
-                        <div class="info">
-                          <span class="name"> Stephan Parker </span>
-                          <span class="text">
-                            answered to your comment on the Cash Flow Forecast's
-                            graph
+                    <!-- NOTIFICATIONS-LIST -->
+                    <ul class="notificationlist">
+                      <li class="notificationlist-item">
+                        <a href="#" class="notificationlist-link">
+                          <span class="usericon">
+                            <img
+                              src="https://media.istockphoto.com/id/882495390/photo/happiness.jpg?s=612x612&w=0&k=20&c=SVUBI4k1eTLtc8rUcO4iWAgOo7SUcUdT8qOE7p3G9F8="
+                              alt="notification-thumbnail"
+                            />
                           </span>
-                        </div>
 
-                        <p class="time">2 hours ago</p>
-                      </div>
-                    </li>
+                          <span class="details">
+                            <span class="info">
+                              <span class="name"> Jane Doe </span>
 
-                    <li class="notificationlist-item">
-                      <figure class="usericon">
-                        <img
-                          src="https://media.istockphoto.com/id/891418990/photo/confident-businessman-posing-in-the-office.jpg?s=612x612&w=0&k=20&c=a3PcRJAN9QTIfOUJj566B_I4xx2LANZFnX90_-Oe7CI="
-                          alt="notification-thumbnail"
-                        />
-                      </figure>
+                              <span class="text">
+                                marked the task as done
+                              </span>
+                            </span>
 
-                      <div class="details">
-                        <div class="info">
-                          <span class="name"> Steve Roser </span>
-                          <span class="text">
-                            mentionned you in his comment on Facebook
+                            <span class="time">1 day ago</span>
                           </span>
-                        </div>
+                        </a>
+                      </li>
 
-                        <p class="time">45 minutes ago</p>
-                      </div>
-                    </li>
-
-                    <li class="notificationlist-item">
-                      <figure class="usericon">
-                        <img
-                          src="https://media.istockphoto.com/id/1218228957/photo/portrait-of-young-woman-with-curly-hair-in-the-city.jpg?s=612x612&w=0&k=20&c=OQq7It1_mOXsKbRrz2YUM80Lo3ujaLtOfDnOjUQ8cAs="
-                          alt="notification-thumbnail"
-                        />
-                      </figure>
-
-                      <div class="details">
-                        <div class="info">
-                          <span class="name"> Sophie Welch </span>
-                          <span class="text">
-                            mentioned you in her comment on Invoices
+                      <li class="notificationlist-item">
+                        <a href="#" class="notificationlist-link">
+                          <span class="usericon">
+                            <img
+                              src="https://media.istockphoto.com/id/1278978817/photo/portrait-of-happy-mature-man-smiling.jpg?s=612x612&w=0&k=20&c=GPniKSszzPgprveN7sCT5mb-_L3-RSlGAOAsmoDaafw="
+                              alt="notification-thumbnail"
+                            />
                           </span>
-                        </div>
 
-                        <p class="time">5 days ago</p>
-                      </div>
-                    </li>
+                          <span class="details">
+                            <span class="info">
+                              <span class="name"> Stephan Parker </span>
+                              <span class="text">
+                                answered to your comment on the Cash Flow
+                                Forecast's graph
+                              </span>
+                            </span>
 
-                    <li class="notificationlist-item">
-                      <figure class="usericon">
-                        <img
-                          src="https://media.istockphoto.com/id/1173300976/vector/smile-face-icon-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=x-NfEzazlDkypdO4CBbYDPJoTAOTDVFasAZy2mrDH4U="
-                          alt="notification-thumbnail"
-                        />
-                      </figure>
-
-                      <div class="details">
-                        <div class="info">
-                          <span class="name"> Brad Traversy </span>
-                          <span class="text">
-                            mentioned you in her comment on Youtube
+                            <span class="time">2 hours ago</span>
                           </span>
-                        </div>
+                        </a>
+                      </li>
 
-                        <p class="time">5 hours ago</p>
-                      </div>
-                    </li>
-                  </ul>
+                      <li class="notificationlist-item">
+                        <a href="#" class="notificationlist-link">
+                          <span class="usericon">
+                            <img
+                              src="https://media.istockphoto.com/id/891418990/photo/confident-businessman-posing-in-the-office.jpg?s=612x612&w=0&k=20&c=a3PcRJAN9QTIfOUJj566B_I4xx2LANZFnX90_-Oe7CI="
+                              alt="notification-thumbnail"
+                            />
+                          </span>
+
+                          <span class="details">
+                            <span class="info">
+                              <span class="name"> Steve Roser </span>
+                              <span class="text">
+                                mentionned you in his comment on Facebook
+                              </span>
+                            </span>
+
+                            <span class="time">45 minutes ago</span>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li class="notificationlist-item">
+                        <a href="#" class="notificationlist-link">
+                          <span class="usericon">
+                            <img
+                              src="https://media.istockphoto.com/id/1218228957/photo/portrait-of-young-woman-with-curly-hair-in-the-city.jpg?s=612x612&w=0&k=20&c=OQq7It1_mOXsKbRrz2YUM80Lo3ujaLtOfDnOjUQ8cAs="
+                              alt="notification-thumbnail"
+                            />
+                          </span>
+
+                          <span class="details">
+                            <span class="info">
+                              <span class="name"> Sophie Welch </span>
+                              <span class="text">
+                                mentioned you in her comment on Invoices
+                              </span>
+                            </span>
+
+                            <span class="time">5 days ago</span>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li class="notificationlist-item">
+                        <a href="#" class="notificationlist-link">
+                          <span class="usericon">
+                            <img
+                              src="https://media.istockphoto.com/id/1173300976/vector/smile-face-icon-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=x-NfEzazlDkypdO4CBbYDPJoTAOTDVFasAZy2mrDH4U="
+                              alt="notification-thumbnail"
+                            />
+                          </span>
+
+                          <span class="details">
+                            <span class="info">
+                              <span class="name"> Brad Traversy </span>
+                              <span class="text">
+                                mentioned you in her comment on Youtube
+                              </span>
+                            </span>
+
+                            <span class="time">5 hours ago</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="notification-footer">
+                    <a href="#" class="link">View All</a>
+                  </div>
                 </div>
               </div>
             </li>

@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-$primaryFont: 'Outfit', sans-serif;
+$primaryFont: "Inter", sans-serif;
 
 // FONT SIZE PIXEL TO REM
 @function calculateRem($size, $base: 16) {
@@ -13,7 +13,7 @@ $primaryFont: 'Outfit', sans-serif;
   $conversion-map: (
     normal: normal,
     italic: italic,
-    oblique: oblique
+    oblique: oblique,
   );
 
   @if not map-has-key($conversion-map, $keyword) {
@@ -30,8 +30,8 @@ $primaryFont: 'Outfit', sans-serif;
     light: 300,
     normal: 400,
     medium: 500,
-    semibold: 600,l
-    bold: 700
+    semibold: 600,
+    l bold: 700,
   );
 
   @if not map-has-key($conversion-map, $keyword) {
@@ -47,7 +47,7 @@ $primaryFont: 'Outfit', sans-serif;
     family: $name;
     size: calculateRem($size);
     weight: weight($weight);
-    style: style($style)
+    style: style($style);
   }
   line-height: calc($lh / $size);
 }

@@ -17,10 +17,13 @@ $textSecondary: hsl(218, 15%, 65%); //#98A2B3
 
 // BORDER-COLORS
 $headerborder: hsl(220, 17%, 93%); //#EAECF0
+$checkborder: hsl(217, 16%, 84%); //#D0D5DD
 
 // SHADOWS
+$shade-1: rgba(102, 112, 133, 0.05);
 
 // BOX-SHADOWS
+$box-shadow-1: 0.25rem 0.25rem 0.25rem $shade-1;
 
 // DARK-MODE
 $darkPrimary: hsl(200, 6%, 9%); //#161819
