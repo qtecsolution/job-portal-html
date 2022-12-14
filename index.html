@@ -21,14 +21,14 @@
 
   <body>
     <!-- SIDEBAR MENU START -->
-    <aside class="sidebar">
+    <aside class="sidebar d-none">
       <header class="sidebar-header">
         <a href="index.html" class="logo">
           <img src="assets/images/logo/logo.svg" alt="logo" />
         </a>
       </header>
 
-      <div class="sidebar-body"></div>
+      <div class="sidebar-body">This is dark mode</div>
     </aside>
     <!-- SIDEBAR MENU END -->
 
@@ -39,7 +39,339 @@
     <!-- MAIN-SECTION START -->
     <main class="mainsection">
       <!-- HEADER SECTION START -->
-      <header class="header"></header>
+      <header class="header">
+        <!-- MOBILE-LOGO -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo/logo.svg" alt="logo" />
+        </a>
+
+        <!-- DESKTOP-COLLAPSE-ICON -->
+        <div class="collapsemenu">
+          <button class="btn-toggle" type="button">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.75 2.75049H19.25C20.0094 2.75049 20.625 3.3661 20.625 4.12549V17.8755C20.625 18.6349 20.0094 19.2505 19.25 19.2505H2.75C1.99061 19.2505 1.375 18.6349 1.375 17.8755V4.12549C1.375 3.3661 1.99061 2.75049 2.75 2.75049ZM19.25 1.37549C20.7688 1.37549 22 2.60671 22 4.12549V17.8755C22 19.3943 20.7688 20.6255 19.25 20.6255H2.75C1.23122 20.6255 0 19.3943 0 17.8755V4.12549C0 2.60671 1.23122 1.37549 2.75 1.37549H19.25Z"
+                fill="#00B6AB"
+              />
+              <path
+                d="M17.875 5.50049C17.875 4.7411 17.2594 4.12549 16.5 4.12549H13.75C12.9906 4.12549 12.375 4.7411 12.375 5.50049V16.5005C12.375 17.2599 12.9906 17.8755 13.75 17.8755H16.5C17.2594 17.8755 17.875 17.2599 17.875 16.5005V5.50049Z"
+                fill="#00B6AB"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ICON-MENU START -->
+        <nav class="header-nav">
+          <ul class="iconlist">
+            <!-- DARKMODE TOGGLER -->
+            <li class="iconlist-item">
+              <button class="btn-mode" type="button">
+                <span class="light">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 9C15 12.3137 12.3137 15 9 15C5.68629 15 3 12.3137 3 9C3 5.68629 5.68629 3 9 3C12.3137 3 15 5.68629 15 9Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M9.75 0.75C9.75 1.16421 9.41421 1.5 9 1.5C8.58579 1.5 8.25 1.16421 8.25 0.75C8.25 0.335786 8.58579 0 9 0C9.41421 0 9.75 0.335786 9.75 0.75Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M9.75 17.25C9.75 17.6642 9.41421 18 9 18C8.58579 18 8.25 17.6642 8.25 17.25C8.25 16.8358 8.58579 16.5 9 16.5C9.41421 16.5 9.75 16.8358 9.75 17.25Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M17.25 9.75C16.8358 9.75 16.5 9.41421 16.5 9C16.5 8.58579 16.8358 8.25 17.25 8.25C17.6642 8.25 18 8.58579 18 9C18 9.41421 17.6642 9.75 17.25 9.75Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M0.75 9.75C0.335786 9.75 -1.81059e-08 9.41421 0 9C1.81059e-08 8.58579 0.335786 8.25 0.75 8.25C1.16421 8.25 1.5 8.58579 1.5 9C1.5 9.41421 1.16421 9.75 0.75 9.75Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M15.364 3.6967C15.0711 3.9896 14.5962 3.9896 14.3033 3.6967C14.0104 3.40381 14.0104 2.92894 14.3033 2.63604C14.5962 2.34315 15.0711 2.34315 15.364 2.63604C15.6568 2.92894 15.6568 3.40381 15.364 3.6967Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M3.69669 15.364C3.4038 15.6569 2.92893 15.6569 2.63603 15.364C2.34314 15.0711 2.34314 14.5962 2.63603 14.3033C2.92893 14.0104 3.4038 14.0104 3.69669 14.3033C3.98959 14.5962 3.98959 15.0711 3.69669 15.364Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M14.3033 15.3639C14.0104 15.071 14.0104 14.5961 14.3033 14.3032C14.5962 14.0103 15.0711 14.0103 15.364 14.3032C15.6568 14.5961 15.6568 15.071 15.364 15.3639C15.0711 15.6568 14.5962 15.6568 14.3033 15.3639Z"
+                      fill="#4C6FFF"
+                    />
+                    <path
+                      d="M2.63604 3.69663C2.34314 3.40373 2.34314 2.92886 2.63604 2.63596C2.92893 2.34307 3.4038 2.34307 3.6967 2.63597C3.98959 2.92886 3.98959 3.40373 3.6967 3.69663C3.4038 3.98952 2.92893 3.98952 2.63604 3.69663Z"
+                      fill="#4C6FFF"
+                    />
+                  </svg>
+                </span>
+
+                <span class="dark">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M21.7937 15.7945C20.617 16.2506 19.3377 16.5008 18 16.5008C12.201 16.5008 7.5 11.7998 7.5 6.00081C7.5 4.66304 7.75018 3.3837 8.2063 2.20703C4.28227 3.7281 1.5 7.53951 1.5 12.0008C1.5 17.7998 6.20101 22.5008 12 22.5008C16.4612 22.5008 20.2726 19.7185 21.7937 15.7945Z"
+                      fill="#E2E8F0"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </li>
+
+            <!-- NOTIFICATIONS -->
+            <li class="iconlist-item">
+              <button class="btn-notification active" type="button">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="20" cy="21" r="20" fill="#EAECF0" />
+                  <path
+                    d="M20 27.9565C20.9605 27.9565 21.7392 27.1779 21.7392 26.2174H18.2609C18.2609 27.1779 19.0395 27.9565 20 27.9565Z"
+                    fill="#98A2B3"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20 15.7115L19.3068 15.8515C17.7179 16.1724 16.5218 17.5779 16.5218 19.2608C16.5218 19.8068 16.405 21.1715 16.1228 22.5149C15.9827 23.1818 15.7953 23.8762 15.5462 24.4782H24.4539C24.2048 23.8762 24.0174 23.1818 23.8773 22.5149C23.5952 21.1715 23.4783 19.8068 23.4783 19.2608C23.4783 17.5779 22.2822 16.1724 20.6933 15.8515L20 15.7115ZM25.4081 24.4782C25.6023 24.8673 25.8274 25.1747 26.087 25.3478H13.9131C14.1727 25.1747 14.3978 24.8673 14.592 24.4782C15.3733 22.9125 15.6522 20.0253 15.6522 19.2608C15.6522 17.1559 17.148 15.4004 19.1347 14.9991C19.1319 14.9708 19.1305 14.9421 19.1305 14.913C19.1305 14.4328 19.5198 14.0435 20 14.0435C20.4803 14.0435 20.8696 14.4328 20.8696 14.913C20.8696 14.9421 20.8682 14.9708 20.8654 14.9991C22.8521 15.4003 24.3479 17.1559 24.3479 19.2608C24.3479 20.0253 24.6268 22.9125 25.4081 24.4782Z"
+                    fill="#98A2B3"
+                  />
+                  <circle
+                    cx="32.1734"
+                    cy="8.82628"
+                    r="6.71739"
+                    fill="#98A2B3"
+                    stroke="white"
+                    stroke-width="3"
+                  />
+                </svg>
+              </button>
+
+              <!-- NOTIFICATIONS -->
+              <div class="notification">
+                <div class="notification-header">
+                  <h5 class="title">Notifications</h5>
+
+                  <button class="btn-clear" type="button">Clear All</button>
+                </div>
+
+                <div class="notification-body">
+                  <!-- EMPTY-NOTIFICATIONS -->
+                  <div class="emptynotification">
+                    <h5 class="emptynotification-title">
+                      No notifications found.
+                    </h5>
+                  </div>
+
+                  <!-- NOTIFICATIONS-LIST -->
+                  <ul class="notificationlist">
+                    <li class="notificationlist-item">
+                      <figure class="usericon">
+                        <img
+                          src="https://media.istockphoto.com/id/882495390/photo/happiness.jpg?s=612x612&w=0&k=20&c=SVUBI4k1eTLtc8rUcO4iWAgOo7SUcUdT8qOE7p3G9F8="
+                          alt="notification-thumbnail"
+                        />
+                      </figure>
+
+                      <div class="details">
+                        <div class="info">
+                          <span class="name"> Jane Doe </span>
+
+                          <span class="text"> marked the task as done </span>
+                        </div>
+
+                        <p class="time">1 day ago</p>
+                      </div>
+                    </li>
+
+                    <li class="notificationlist-item">
+                      <figure class="usericon">
+                        <img
+                          src="https://media.istockphoto.com/id/1278978817/photo/portrait-of-happy-mature-man-smiling.jpg?s=612x612&w=0&k=20&c=GPniKSszzPgprveN7sCT5mb-_L3-RSlGAOAsmoDaafw="
+                          alt="notification-thumbnail"
+                        />
+                      </figure>
+
+                      <div class="details">
+                        <div class="info">
+                          <span class="name"> Stephan Parker </span>
+                          <span class="text">
+                            answered to your comment on the Cash Flow Forecast's
+                            graph
+                          </span>
+                        </div>
+
+                        <p class="time">2 hours ago</p>
+                      </div>
+                    </li>
+
+                    <li class="notificationlist-item">
+                      <figure class="usericon">
+                        <img
+                          src="https://media.istockphoto.com/id/891418990/photo/confident-businessman-posing-in-the-office.jpg?s=612x612&w=0&k=20&c=a3PcRJAN9QTIfOUJj566B_I4xx2LANZFnX90_-Oe7CI="
+                          alt="notification-thumbnail"
+                        />
+                      </figure>
+
+                      <div class="details">
+                        <div class="info">
+                          <span class="name"> Steve Roser </span>
+                          <span class="text">
+                            mentionned you in his comment on Facebook
+                          </span>
+                        </div>
+
+                        <p class="time">45 minutes ago</p>
+                      </div>
+                    </li>
+
+                    <li class="notificationlist-item">
+                      <figure class="usericon">
+                        <img
+                          src="https://media.istockphoto.com/id/1218228957/photo/portrait-of-young-woman-with-curly-hair-in-the-city.jpg?s=612x612&w=0&k=20&c=OQq7It1_mOXsKbRrz2YUM80Lo3ujaLtOfDnOjUQ8cAs="
+                          alt="notification-thumbnail"
+                        />
+                      </figure>
+
+                      <div class="details">
+                        <div class="info">
+                          <span class="name"> Sophie Welch </span>
+                          <span class="text">
+                            mentioned you in her comment on Invoices
+                          </span>
+                        </div>
+
+                        <p class="time">5 days ago</p>
+                      </div>
+                    </li>
+
+                    <li class="notificationlist-item">
+                      <figure class="usericon">
+                        <img
+                          src="https://media.istockphoto.com/id/1173300976/vector/smile-face-icon-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=x-NfEzazlDkypdO4CBbYDPJoTAOTDVFasAZy2mrDH4U="
+                          alt="notification-thumbnail"
+                        />
+                      </figure>
+
+                      <div class="details">
+                        <div class="info">
+                          <span class="name"> Brad Traversy </span>
+                          <span class="text">
+                            mentioned you in her comment on Youtube
+                          </span>
+                        </div>
+
+                        <p class="time">5 hours ago</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- USER-DROPDOWN -->
+            <li class="iconlist-item">
+              <button class="btn-user" type="button">
+                <svg
+                  width="15"
+                  height="19"
+                  viewBox="0 0 15 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.33333 12.0761C11.3104 12.0761 14.6667 12.7224 14.6667 15.2157C14.6667 17.71 11.2884 18.3333 7.33333 18.3333C3.35718 18.3333 0 17.6871 0 15.1937C0 12.6994 3.37827 12.0761 7.33333 12.0761ZM7.33333 0C10.0275 0 12.1862 2.15785 12.1862 4.85013C12.1862 7.54241 10.0275 9.70118 7.33333 9.70118C4.64007 9.70118 2.48051 7.54241 2.48051 4.85013C2.48051 2.15785 4.64007 0 7.33333 0Z"
+                    fill="#98A2B3"
+                  />
+                </svg>
+              </button>
+
+              <!-- DROPDOWN-MENU -->
+              <div class="userdropdown">
+                <ul class="userlist">
+                  <li class="userlist-item">
+                    <a href="profile.html" class="userlist-link">
+                      <span class="icon">
+                        <svg
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.25 5C10.25 6.10457 9.35457 7 8.25 7C7.14543 7 6.25 6.10457 6.25 5C6.25 3.89543 7.14543 3 8.25 3C9.35457 3 10.25 3.89543 10.25 5ZM8.25 8C9.90685 8 11.25 6.65685 11.25 5C11.25 3.34315 9.90685 2 8.25 2C6.59315 2 5.25 3.34315 5.25 5C5.25 6.65685 6.59315 8 8.25 8ZM14.25 13C14.25 14 13.25 14 13.25 14H3.25C3.25 14 2.25 14 2.25 13C2.25 12 3.25 9 8.25 9C13.25 9 14.25 12 14.25 13ZM13.25 12.9965C13.2486 12.7497 13.0962 12.0104 12.4179 11.3321C11.7656 10.6798 10.5391 10 8.24999 10C5.96088 10 4.73435 10.6798 4.0821 11.3321C3.40375 12.0104 3.25142 12.7497 3.25 12.9965H13.25Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </span>
+
+                      <span class="text">My Profile</span>
+                    </a>
+                  </li>
+
+                  <li class="userlist-item">
+                    <a href="login.html" class="userlist-link">
+                      <span class="icon">
+                        <svg
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.25 12.5C6.25 12.7761 6.47386 13 6.75 13L14.75 13C15.0261 13 15.25 12.7761 15.25 12.5L15.25 3.5C15.25 3.22386 15.0261 3 14.75 3L6.75 3C6.47386 3 6.25 3.22386 6.25 3.5L6.25 5.5C6.25 5.77614 6.02614 6 5.75 6C5.47386 6 5.25 5.77614 5.25 5.5L5.25 3.5C5.25 2.67157 5.92157 2 6.75 2L14.75 2C15.5784 2 16.25 2.67157 16.25 3.5L16.25 12.5C16.25 13.3284 15.5784 14 14.75 14L6.75 14C5.92157 14 5.25 13.3284 5.25 12.5L5.25 10.5C5.25 10.2239 5.47386 10 5.75 10C6.02614 10 6.25 10.2239 6.25 10.5L6.25 12.5Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.396446 8.35355C0.201184 8.15829 0.201184 7.84171 0.396446 7.64645L3.39645 4.64645C3.59171 4.45118 3.90829 4.45118 4.10355 4.64645C4.29882 4.84171 4.29882 5.15829 4.10355 5.35355L1.95711 7.5L10.75 7.5C11.0261 7.5 11.25 7.72386 11.25 8C11.25 8.27614 11.0261 8.5 10.75 8.5L1.95711 8.5L4.10355 10.6464C4.29882 10.8417 4.29882 11.1583 4.10355 11.3536C3.90829 11.5488 3.59171 11.5488 3.39645 11.3536L0.396446 8.35355Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </span>
+
+                      <span class="text">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <!-- HEADER SECTION END -->
     </main>
     <!-- MAIN-SECTION END -->

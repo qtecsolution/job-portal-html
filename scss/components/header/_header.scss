@@ -2,4 +2,55 @@
 @use "../../partials" as *;
 
 .header {
+  background: $white;
+  @include border-single(bottom, solid, 1, $headerborder);
+  @include flex-center-between;
+  padding: size(15.5) size(16);
+
+  @include breakpoint(tab992) {
+    padding: size(0);
+  }
+
+  @include darkMode {
+    background: $darkPrimary;
+  }
+
+  .logo {
+    width: size(125);
+    height: size(36);
+    @include flex-center;
+    overflow: hidden;
+
+    @include breakpoint(tab992) {
+      display: none;
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .collapsemenu {
+    display: none;
+
+    @include breakpoint(tab992) {
+      display: block;
+    }
+
+    .btn-toggle {
+      @include square(59);
+      @include border-single(right, solid, 1, $headerborder);
+      @include flex-center;
+      overflow: hidden;
+      padding: size(19);
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+
+  &-nav {
+  }
 }
