@@ -104,10 +104,6 @@ video {
 
   &::selection {
     @include setBgColor($primary, $white);
-
-    @include darkMode {
-      @include setBgColor($primary, $white);
-    }
   }
 }
 
@@ -130,10 +126,6 @@ h6 {
 
   &::selection {
     @include setBgColor($primary, $white);
-
-    @include darkMode {
-      @include setBgColor($primary, $white);
-    }
   }
 }
 

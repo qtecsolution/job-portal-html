@@ -1,0 +1,138 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.darkmode {
+  background: $darkPrimary;
+
+  .header {
+    background: $darkPrimary;
+    border-color: $lightDark;
+
+    .collapsemenu {
+      .btn-toggle {
+        border-color: $lightDark;
+      }
+    }
+
+    &-nav {
+      .iconlist {
+        &-item {
+          .btn-notification {
+            svg {
+              .circlebg {
+                fill: $lightDark;
+              }
+              .circle {
+                stroke: lighten($darkPrimary, 25%);
+              }
+            }
+          }
+
+          .btn-mode,
+          .btn-user {
+            background: $lightDark;
+          }
+
+          .notify,
+          .userdropdown {
+            background: $lightDark;
+          }
+
+          .notify {
+            .notification {
+              background: $lightDark;
+
+              &-header {
+                border-color: lighten($lightDark, 5%);
+
+                .title {
+                  color: $textSecondary;
+                }
+
+                .btn-clear {
+                  color: $textSecondary;
+                }
+              }
+
+              &-body {
+                .emptynotification {
+                  &-title {
+                    color: $textSecondary;
+                  }
+                }
+
+                .notificationlist {
+                  &-link {
+                    background: darken($lightDark, 5%);
+                    border-color: lighten($lightDark, 5%);
+
+                    .details {
+                      .info {
+                        .name {
+                          color: $primary;
+                        }
+
+                        .text {
+                          color: $white;
+                        }
+                      }
+
+                      .time {
+                        color: $textSecondary;
+                      }
+                    }
+
+                    @include hover {
+                      background: $lightDark;
+                    }
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                    background: lighten($lightDark, 15%);
+                  }
+                }
+              }
+
+              &-footer {
+                background: $lightDark;
+                border-color: lighten($lightDark, 5%);
+
+                .link {
+                  color: $textSecondary;
+
+                  @include hover {
+                    color: $primary;
+                  }
+                }
+              }
+            }
+          }
+
+          .userdropdown {
+            .userlist {
+              &-link {
+                background: $lightDark;
+                border-color: lighten($lightDark, 5%);
+
+                .icon {
+                  svg {
+                    path {
+                      fill: $textSecondary;
+                    }
+                  }
+                }
+                .text {
+                  color: $textSecondary;
+                }
+
+                @include hover {
+                  background: lighten($lightDark, 15%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
