@@ -2,7 +2,7 @@
 @use "../../partials" as *;
 
 .darkmode {
-  background: $darkPrimary;
+  background: lighten($black, 10%);
 
   .header {
     background: $darkPrimary;
@@ -131,6 +131,93 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    background: $darkPrimary;
+    border-color: $lightDark;
+
+    &-header {
+      border-color: $lightDark;
+    }
+
+    &-body {
+      .sidelist {
+        &-item {
+          &.active {
+            .sidelist-link {
+              background: $lightDark;
+
+              .icon {
+                .fillicon {
+                  path {
+                    fill: $white;
+                  }
+                }
+
+                .strokeicon {
+                  path {
+                    stroke: $white;
+                  }
+                }
+              }
+
+              .text {
+                color: $white;
+              }
+            }
+          }
+
+          &:hover:not(.active) {
+            .sidelist-link {
+              background: $lightDark;
+
+              .icon {
+                .fillicon {
+                  path {
+                    fill: $white;
+                  }
+                }
+
+                .strokeicon {
+                  path {
+                    stroke: $white;
+                  }
+                }
+              }
+
+              .text {
+                color: $white;
+              }
+            }
+          }
+        }
+
+        &-link {
+          .text {
+            color: $textSecondary;
+          }
+
+          svg {
+            &.fillicon {
+              path {
+                fill: $textSecondary;
+              }
+            }
+
+            &.strokeicon {
+              path {
+                stroke: $textSecondary;
+              }
+            }
+          }
+        }
+
+        .title {
+          color: $textSecondary;
         }
       }
     }

@@ -2,6 +2,10 @@
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector(".btn-mode");
 
+// SUN-MOON ICONS
+const sun = document.querySelector(".sun");
+const moon = document.querySelector(".moon");
+
 const enableDarkMode = () => {
   // 1. Add the class to the body
   document.body.classList.add("darkmode");
@@ -20,15 +24,14 @@ const disableDarkMode = () => {
 // start things off with it on
 if (darkMode === "enabled") {
   enableDarkMode();
+  moon.classList.remove("d-none");
+  sun.classList.add("d-none");
 }
 
 // When someone clicks the button
 darkModeToggle.addEventListener("click", () => {
   // get their darkMode setting
   darkMode = localStorage.getItem("darkMode");
-
-  const sun = document.querySelector(".sun");
-  const moon = document.querySelector(".moon");
 
   // if it not current enabled, enable it
   if (darkMode !== "enabled") {

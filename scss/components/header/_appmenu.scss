@@ -1,2 +1,17 @@
 @use "../../global" as *;
 @use "../../partials" as *;
+
+.appmenu {
+  background: $white;
+  @include border-single(top, solid, 1, $headerborder);
+  @include flex-center-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  @include w100;
+
+  @include breakpoint(tab992) {
+    display: none;
+  }
+}
