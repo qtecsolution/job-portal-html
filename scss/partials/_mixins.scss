@@ -160,6 +160,10 @@
   @include transform(rotateX(#{$deg}deg));
 }
 
+@mixin rotateY($deg) {
+  @include transform(rotateY(#{$deg}deg));
+}
+
 @mixin scale($scale) {
   @include transform(scale($scale));
 }

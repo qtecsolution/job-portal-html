@@ -21,21 +21,26 @@
 
   <body>
     <!-- SIDEBAR MENU START -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="desktopsidebar">
       <header class="sidebar-header">
         <a href="index.html" class="logo">
           <img src="assets/images/logo/logo.svg" alt="logo" class="big-logo" />
           <img
             src="assets/images/logo/favicon.svg"
             alt="logo"
-            class="big-short d-none"
+            class="icon-logo"
           />
         </a>
       </header>
 
       <div class="sidebar-body">
         <ul class="sidelist">
-          <li class="sidelist-item active">
+          <li
+            class="sidelist-item active"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Dashboard"
+          >
             <a href="index.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -76,7 +81,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Inbox"
+          >
             <a href="inbox.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -147,7 +157,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Calendar"
+          >
             <a href="calendar.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -244,7 +259,12 @@
 
           <span class="title">Recruitment</span>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Jobs"
+          >
             <a href="jobs.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -275,7 +295,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Candidates"
+          >
             <a href="candidates.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -312,7 +337,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Career site"
+          >
             <a href="careersite.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -355,7 +385,12 @@
 
           <span class="title">Organization</span>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Employee"
+          >
             <a href="employee.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -400,7 +435,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Report"
+          >
             <a href="report.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -459,7 +499,12 @@
             </a>
           </li>
 
-          <li class="sidelist-item">
+          <li
+            class="sidelist-item"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="Settings"
+          >
             <a href="settings.html" class="sidelist-link">
               <span class="icon">
                 <svg
@@ -783,7 +828,7 @@
     <!-- APP-MENU END -->
 
     <!-- MAIN-SECTION START -->
-    <main class="mainsection">
+    <main class="mainsection" id="main">
       <!-- HEADER SECTION START -->
       <header class="header sticky-top">
         <!-- MOBILE-LOGO -->
@@ -793,7 +838,7 @@
 
         <!-- DESKTOP-COLLAPSE-ICON -->
         <div class="collapsemenu">
-          <button class="btn-toggle" type="button">
+          <button id="btn-toggle" class="btn-toggle" type="button">
             <svg
               width="22"
               height="22"
@@ -1153,5 +1198,7 @@
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- DARK-MODE -->
     <script src="assets/js/darkmode/darkmode.js"></script>
+    <script src="assets/js/sidetoggle/sidetoggle.js"></script>
+    <script src="assets/js/tooltip/tooltip.js"></script>
   </body>
 </html>

@@ -218,6 +218,10 @@
 
         .title {
           color: $textSecondary;
+
+          &.active {
+            border-color: $lightDark;
+          }
         }
       }
     }

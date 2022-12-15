@@ -52,6 +52,12 @@
       svg {
         @include wh100;
       }
+
+      &.active {
+        svg {
+          @include rotateY(180);
+        }
+      }
     }
   }
 
