@@ -226,4 +226,74 @@
       }
     }
   }
+
+  .appmenu {
+    background: $darkPrimary;
+    border-color: $lightDark;
+
+    .applist {
+      &-item {
+        &:hover:not(.active) {
+          .applist-link {
+            .icon {
+              .fillicon {
+                path {
+                  fill: $white;
+                }
+              }
+              .strokeicon {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+
+            .text {
+              color: $white;
+            }
+          }
+        }
+
+        &.active {
+          .applist-link {
+            .icon {
+              .fillicon {
+                path {
+                  fill: $white;
+                }
+              }
+              .strokeicon {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+
+            .text {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &-link {
+        .icon {
+          .fillicon {
+            path {
+              fill: $textSecondary;
+            }
+          }
+          .strokeicon {
+            path {
+              stroke: $textSecondary;
+            }
+          }
+        }
+
+        .text {
+          color: $textSecondary;
+        }
+      }
+    }
+  }
 }
