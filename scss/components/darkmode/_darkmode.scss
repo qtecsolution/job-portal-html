@@ -274,6 +274,35 @@
             }
           }
         }
+
+        .mobdropdown {
+          background: $lightDark;
+
+          &-link {
+            border-color: $headingText;
+
+            .icon {
+              .fillicon {
+                path {
+                  fill: $textSecondary;
+                }
+              }
+              .strokeicon {
+                path {
+                  stroke: $textSecondary;
+                }
+              }
+            }
+
+            .text {
+              color: $textSecondary;
+            }
+
+            @include hover {
+              background: $headingText;
+            }
+          }
+        }
       }
 
       &-link {

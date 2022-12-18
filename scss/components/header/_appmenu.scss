@@ -78,6 +78,7 @@
         @extend %slideUpIn;
 
         &-link {
+          @include border-single(bottom, solid, 1, $headerborder);
           @include flex-center-vert;
           gap: size(8);
           padding: size(8) size(16);
@@ -111,6 +112,14 @@
 
           @include hover {
             background: lighten($textSecondary, 32%);
+          }
+        }
+
+        &-item {
+          &:last-of-type {
+            .mobdropdown-link {
+              border-bottom: 0;
+            }
           }
         }
       }
