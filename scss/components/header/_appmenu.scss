@@ -23,7 +23,7 @@
     &-item {
       position: relative;
       width: calc(100% / 5);
-      padding: size(11) size(8);
+      padding: size(11) size(4);
 
       &:hover:not(.active) {
         .applist-link {
