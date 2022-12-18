@@ -69,8 +69,56 @@
 
       .mobdropdown {
         position: absolute;
-        bottom: 100%;
-        right: 0;
+        bottom: calc(100% + size(1));
+        right: size(8);
+        background: $white;
+        width: size(140);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        &-link {
+          @include flex-center-vert;
+          gap: size(8);
+          padding: size(8) size(16);
+          @include transitionsbackground;
+
+          .icon {
+            @include square(18);
+            @include flex-center;
+            overflow: hidden;
+
+            .fillicon {
+              path {
+                fill: $headingText;
+              }
+            }
+            .strokeicon {
+              path {
+                stroke: $headingText;
+              }
+            }
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .text {
+            color: $headingText;
+            @include font($primaryFont, 10, medium, normal, 14);
+          }
+
+          @include hover {
+            background: lighten($textSecondary, 32%);
+          }
+        }
+      }
+
+      @include hover {
+        .mobdropdown {
+          @include list-vertical;
+        }
       }
     }
 
