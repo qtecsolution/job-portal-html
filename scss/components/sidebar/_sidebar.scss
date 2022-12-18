@@ -11,7 +11,7 @@
   z-index: 100;
   display: none;
   @include border-single(right, solid, 1, $headerborder);
-  transition: 0.2s ease-in-out;
+  @include transitionsall;
 
   @include breakpoint(tab992) {
     @include flex-column;
