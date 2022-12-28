@@ -2,3 +2,33 @@
 @use "../partials" as *;
 
 /**======= HOME-BANNER =======**/
+
+.dashboard {
+    padding: size(24) size(20) size(0) size(24);
+    &-content {
+
+    }
+    &-header {
+        @include flex-center-between;
+        .dashboard-title {
+            color: $headingText;
+            @include font($primaryFont,24,medium,normal,30);
+            @include breakpoint(mobile768) {
+            @include font($primaryFont,32,medium,normal,30);
+            }
+        }
+    }
+    &-body {
+
+    }
+} 
+.darkmode { 
+    .dashboard {
+        &-header {
+            .dashboard-title {
+                color: $white;
+                @include font($primaryFont,24,medium,normal,30);
+            }
+        }
+    }
+}
