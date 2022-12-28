@@ -213,5 +213,29 @@
         }
       }
     }
+  } 
+
+  // content loader 
+  .ph-item {
+    padding-inline: 0;
+    padding-top: size(16);
+    .ph-row {
+      .big {
+        height: size(28);
+        &.empty {
+          height: size(8);
+        }
+      }
+      &.big {
+        display: none;
+        div {
+          height: size(30);
+          display: none;
+        }
+      }
+    }
+   
+
+    
   }
 }

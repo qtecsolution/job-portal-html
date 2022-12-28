@@ -325,4 +325,21 @@
       }
     }
   }
+  .ph-item  {
+    background: $darkPrimary; 
+    border: none;
+    &:before {
+      background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 43%, 0.212) 50%, hsla(0, 0%, 100%, 0) 54%) 50% 50%;
+    }
+    .ph-row {
+      div {
+        background: lighten(#15202B, 7%)
+      }
+      .empty {
+        background: transparent;
+      }
+    }
+  }
+
+
 }
