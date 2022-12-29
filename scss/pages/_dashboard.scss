@@ -31,6 +31,20 @@
             max-height: size(480);
             overflow-y: scroll;
 
+            &::-webkit-scrollbar {
+                width: size(12);
+            }
+            &::-webkit-scrollbar-track {
+                background: #D0D5DD; 
+                @include radius(10);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $white;
+                @include border(solid,4,transparent);
+                border-radius: size(10);
+                background-clip: content-box;
+            }
+
             &-header {
                 @include flex-center-between;
                 @include border-single(bottom,solid,1,$headerborder);
@@ -80,6 +94,19 @@
                     overflow-y: visible;
                     padding: 0;
                     margin-left: 14em;
+                    &::-webkit-scrollbar {
+                        height: size(12);
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #D0D5DD; 
+                        @include radius(10);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $white;
+                        @include border(solid,4,transparent);
+                        border-radius: size(10);
+                        background-clip: content-box;
+                    }
                 } 
                 table {
                     border-collapse: collapse;
