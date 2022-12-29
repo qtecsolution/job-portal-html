@@ -28,11 +28,14 @@
             background: $white;
             @include radius(10);
             box-shadow: $box-shadow-1;
+            max-height: size(480);
+            overflow-y: scroll;
 
             &-header {
                 @include flex-center-between;
                 @include border-single(bottom,solid,1,$headerborder);
                 padding: size(14);
+                min-height: size(80);
                 @include breakpoint(mobile576) {
                     padding: size(18);
                 }
@@ -55,9 +58,71 @@
                         }
                     }
                 }
+                .right-content {
+                    .viwe-link {
+                        color: $primary;
+                        @include font($primaryFont,12,normal,normal,20); 
+                        @include breakpoint(mobile576) {
+                        @include font($primaryFont,14,normal,normal,20); 
+
+                        }
+
+
+                    }
+                }
             }
             &-body {
-
+             position: relative;
+             padding: size(12) size(24);
+                .pipeline-table {
+                    overflow-x: scroll;
+                    // margin-left: 5em;
+                    overflow-y: visible;
+                    padding: 0;
+                    margin-left: 14em;
+                } 
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                  }
+                  
+                  td,
+                  th {
+                    margin: 0;
+                  
+                    white-space: nowrap;
+                    border-top-width: 0px;
+                  } 
+                  .headcol {
+                    position: absolute;
+                    width: 14em;
+                    left: 24px;
+                    top: auto;
+                    /*only relevant for first row*/
+                    margin-top: -1px;
+                    /*compensate for top border*/
+                    @include flex-column;
+                    gap: size(4);
+                    .title {
+                        color: $headingText;
+                        @include font($primaryFont,14,medium,normal,14);
+                    }
+                    .total {
+                        color: $textPrimary;
+                        @include font($primaryFont,12,normal,normal,12);
+                    }
+                  } 
+                  .title-row {
+                    :nth-child(1) {
+                        text-align: left;
+                    }
+                    * {
+                        color: $textPrimary;
+                        @include font($primaryFont,12,medium,normal,12);
+                        padding: 10px 0;
+                        text-align: center;
+                    }
+                  }
             }
         }
     }

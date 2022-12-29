@@ -40,3 +40,13 @@ button,
     @include setBgColor(darken($primary,20%),white);
   }
 }
+
+.pipeline-empty {
+  @include setBgColor($headerborder,$headingText);
+  display: inline-block;
+  width: size(120);
+  height: size(36);
+  @include radius(8);
+  margin-inline: size(4);
+  margin-block: size(4);
+}
