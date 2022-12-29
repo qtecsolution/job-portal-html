@@ -76,7 +76,7 @@
                     .nice-select {
                         width: auto;
                         min-width: size(120);
-                        @include font($primaryFont,12,medium,normal,40);
+                        @include font($primaryFont,12,medium,normal,36);
                         
                     }
                 }
@@ -96,82 +96,8 @@
             &-body {
              position: relative;
              padding: size(12) size(24);
-                .pipeline-table {
-                    overflow-x: scroll;
-                    // margin-left: 5em;
-                    overflow-y: visible;
-                    padding: 0;
-                    margin-left: 9em;
-                    @include breakpoint(mobile768) {
-                        margin-left: 14em;
-                    }
-                    &::-webkit-scrollbar {
-                        height: size(12);
-                        // display: none;
-                    }
-                    &::-webkit-scrollbar-track {
-                        background: #D0D5DD; 
-                        @include radius(10);
-                    }
-                    &::-webkit-scrollbar-thumb {
-                        background-color: $white;
-                        @include border(solid,4,transparent);
-                        border-radius: size(10);
-                        background-clip: content-box;
-                    }
-                } 
-                table {
-                    border-collapse: collapse;
-                    border-spacing: 0;
-                  }
-                  
-                  td,
-                  th {
-                    margin: 0;
-                  
-                    white-space: nowrap;
-                    border-top-width: 0px;
-                  } 
-                  .headcol {
-                    position: absolute;
-                    width: 9em;
-                    left: 24px;
-                    top: auto;
-                    /*only relevant for first row*/
-                    margin-top: -1px;
-                    /*compensate for top border*/
-                    @include flex-column;
-                    @include breakpoint(mobile768) {
-                        width: 14em;
-                    }
-                    gap: size(4);
-                    .title {
-                        color: $headingText;
-                        @include font($primaryFont,14,medium,normal,14);
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                    .total {
-                        color: $textPrimary;
-                        @include font($primaryFont,12,normal,normal,12);
-                        b {
-                            padding-left: size(10);
-                        }
-                    }
-                  } 
-                  .title-row {
-                   
-                    :nth-child(1) {
-                        text-align: left;
-                    }
-                    * {
-                        color: $textPrimary;
-                        @include font($primaryFont,12,medium,normal,12);
-                        padding: 10px 0;
-                        text-align: center;
-                    }
-                  }
+               
+               
             } 
         }
 
@@ -187,6 +113,30 @@
                         @include wh100;
                         object-fit: contain;
                     }
+                }
+            }
+        }
+
+        .mytask {
+            .tasklist {
+                @include list-vertical;
+                gap: size(4);
+                
+                &-item {
+                    
+                    @include radius(10);
+                    
+                }
+                &-link {
+                    @include flex-between;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom: 1px solid $headerborder;
+                    @include border-single(bottom,solid,1,$headerborder);
+                    @include border-single(top,solid,1,$headerborder);
+                    @include border-single(right,solid,1,$headerborder);
+                    @include border-single(left,solid,10,#FFD831);
+                    
                 }
             }
         }

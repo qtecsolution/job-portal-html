@@ -45,13 +45,13 @@ button,
 .pipeline-empty {
   @include setBgColor($headerborder,$headingText);
   display: inline-block;
-  width: size(120);
+  width: size(100);
   height: size(36);
   @include radius(8);
   margin-inline: size(4);
   margin-block: size(4);
   @include flex-center;
-  @include font($primaryFont,12,normal,normal,14);
+  @include font($primaryFont,12,medium,normal,14);
   &.one {
     background: #eee3e7;
   }
@@ -68,4 +68,20 @@ button,
     background:#f6abb6;
   }
 
+}
+
+
+.btn-addtask {
+  @include border(solid,1,$btndarkborder);
+  width: size(90);
+  height: size(30);
+  @include flex-center;
+  gap: size(4);
+  @include radius(4);
+  color: $textPrimary;
+  @include font($primaryFont,12,medium,normal,12);
+  @include transitionsbackground;
+  @include hover {
+    background: lighten($btndarkborder, 5%);
+  }
 }

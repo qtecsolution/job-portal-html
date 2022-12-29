@@ -1774,37 +1774,138 @@
                   </div>
                  </div>
               </div>
-              <!-- hiring pipeline  -->
+              <!-- My Task  -->
               <div class="col-lg-8">
 
-                 <div class="pipeline">
+                 <div class="pipeline mytask">
                   <div class="pipeline-header">
                     <div class="left-content">
-                      <h3 class="title">Hiring Pipeline</h3>
+                      <h3 class="title">My Task</h3>
 
-                      <select id="pipeline">
-                        <option value="1">Design</option>
-                        <option value="2">Development</option>
-                        <option value="1">Design</option>
-                        <option value="2">Development</option>
-                        <option value="1">Design</option>
-                        <option value="2">Development</option>
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="today-tab" data-bs-toggle="tab" data-bs-target="#today" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Today</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Completed</button>
+                        </li>
                        
-                      </select>
+                      </ul>
+                 
 
                     </div>
                     <div class="right-content">
-                      <a href="#" class="viwe-link">View All Jobs</a>
+                      <button class="btn-addtask">
+                        <span>
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.3125 2.8125C5.3125 2.63991 5.17259 2.5 5 2.5C4.82741 2.5 4.6875 2.63991 4.6875 2.8125V4.6875H2.8125C2.63991 4.6875 2.5 4.82741 2.5 5C2.5 5.17259 2.63991 5.3125 2.8125 5.3125H4.6875V7.1875C4.6875 7.36009 4.82741 7.5 5 7.5C5.17259 7.5 5.3125 7.36009 5.3125 7.1875V5.3125H7.1875C7.36009 5.3125 7.5 5.17259 7.5 5C7.5 4.82741 7.36009 4.6875 7.1875 4.6875H5.3125V2.8125Z" fill="#667085"/>
+                          </svg>
+                        </span>
+                        <span>Add Task</span>
+                      </button>
                     </div>
                   </div>
                   <div class="pipeline-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, optio.
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="today" role="tabpanel" aria-labelledby="today-tab" tabindex="0">
+
+                        <div>
+                          <ul class="tasklist">
+
+                            <li class="tasklist-item">
+                              <a href="#" class="tasklist-link">
+
+                                <div class="left">
+                                  <div class="time">
+
+                                    <span>
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" fill="#667085"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3C7.77614 3 8 3.22386 8 3.5V8.70984L11.2481 10.5659C11.4878 10.7029 11.5711 11.0083 11.4341 11.2481C11.2971 11.4878 10.9917 11.5711 10.7519 11.4341L7.25193 9.43412C7.09614 9.3451 7 9.17943 7 9V3.5C7 3.22386 7.22386 3 7.5 3Z" fill="#667085"/>
+                                      </svg>
+                                    </span>
+
+                                    <span>07:00 - 07:45 pm</span>
+
+                                  </div>
+                                  <div class="description">
+                                    <span>Interview with applicant from product designer applicant</span>
+                                  </div>
+                                </div>
+
+                                <div class="right">
+                                  <input type="checkbox" name="" id="">
+                                </div>
+                                
+                              </a>
+                            </li>
+                            <li class="tasklist-item">
+                              <a href="#" class="tasklist-link">
+
+                                <div class="left">
+                                  <div class="time">
+
+                                    <span>
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" fill="#667085"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3C7.77614 3 8 3.22386 8 3.5V8.70984L11.2481 10.5659C11.4878 10.7029 11.5711 11.0083 11.4341 11.2481C11.2971 11.4878 10.9917 11.5711 10.7519 11.4341L7.25193 9.43412C7.09614 9.3451 7 9.17943 7 9V3.5C7 3.22386 7.22386 3 7.5 3Z" fill="#667085"/>
+                                      </svg>
+                                    </span>
+
+                                    <span>07:00 - 07:45 pm</span>
+
+                                  </div>
+                                  <div class="description">
+                                    <span>Interview with applicant from product designer applicant</span>
+                                  </div>
+                                </div>
+
+                                <div class="right">
+                                  <input type="checkbox" name="" id="">
+                                </div>
+                                
+                              </a>
+                            </li>
+                            <li class="tasklist-item">
+                              <a href="#" class="tasklist-link">
+
+                                <div class="left">
+                                  <div class="time">
+
+                                    <span>
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z" fill="#667085"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3C7.77614 3 8 3.22386 8 3.5V8.70984L11.2481 10.5659C11.4878 10.7029 11.5711 11.0083 11.4341 11.2481C11.2971 11.4878 10.9917 11.5711 10.7519 11.4341L7.25193 9.43412C7.09614 9.3451 7 9.17943 7 9V3.5C7 3.22386 7.22386 3 7.5 3Z" fill="#667085"/>
+                                      </svg>
+                                    </span>
+
+                                    <span>07:00 - 07:45 pm</span>
+
+                                  </div>
+                                  <div class="description">
+                                    <span>Interview with applicant from product designer applicant</span>
+                                  </div>
+                                </div>
+
+                                <div class="right">
+                                  <input type="checkbox" name="" id="">
+                                </div>
+                                
+                              </a>
+                            </li>
+                            
+                          </ul>
+                        </div>
+
+                      </div>
+                      <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab" tabindex="0">completed</div>
+                    </div>
                   </div>
                  </div>
 
               </div>
 
-              <!-- job jummery  -->
+              <!-- Employee -->
               <div class="col-lg-4">
                 <div class="pipeline">
                   <div class="pipeline-header">

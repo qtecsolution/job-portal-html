@@ -1,0 +1,82 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.pipeline-table {
+    overflow-x: scroll;
+    // margin-left: 5em;
+    overflow-y: visible;
+    padding: 0;
+    margin-left: 9em;
+    @include breakpoint(mobile768) {
+        margin-left: 14em;
+    }
+    &::-webkit-scrollbar {
+        height: size(12);
+        // display: none;
+    }
+    &::-webkit-scrollbar-track {
+        background: #D0D5DD; 
+        @include radius(10);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $white;
+        @include border(solid,4,transparent);
+        border-radius: size(10);
+        background-clip: content-box;
+    } 
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      
+      td,
+      th {
+        margin: 0;
+      
+        white-space: nowrap;
+        border-top-width: 0px;
+      } 
+      .headcol {
+        position: absolute;
+        width: 9em;
+        left: size(24);
+        top: auto;
+        /*only relevant for first row*/
+        margin-top: 0px;
+        /*compensate for top border*/
+        @include flex-column;
+        @include breakpoint(mobile768) {
+            width: 14em;
+        }
+        gap: size(8);
+        .title {
+            color: $headingText;
+            @include font($primaryFont,14,medium,normal,14);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: size(4);
+        }
+        .total {
+            color: $textPrimary;
+            @include font($primaryFont,12,normal,normal,12);
+            b {
+                padding-left: size(10);
+            }
+        }
+      } 
+      .title-row {
+       
+        :nth-child(1) {
+            text-align: left;
+        }
+        * {
+            color: $textPrimary;
+            @include font($primaryFont,12,medium,normal,12);
+            padding: 10px 0;
+            text-align: center;
+        }
+      }
+
+} 

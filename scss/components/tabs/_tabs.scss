@@ -1,0 +1,28 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.mytask {
+    .nav{
+        &.nav-tabs {
+            @include radius(8);
+            background: $headerborder;
+            padding: size(4) size(4);
+        }
+        &-item {
+
+        }
+        &-link {
+            padding: size(8) size(20);
+            border: none;
+            @include font($primaryFont,12,semibold,normal,20);
+            color: $headingText;
+            @include radius(8);
+            @include breakpoint(mobile768) {
+                padding: size(6) size(40);
+            }
+            &.active {
+                color: $headingText;
+            }
+        }
+    }
+}
