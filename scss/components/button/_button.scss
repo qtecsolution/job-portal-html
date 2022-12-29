@@ -39,6 +39,7 @@ button,
   @include hover {
     @include setBgColor(darken($primary,20%),white);
   }
+
 }
 
 .pipeline-empty {
@@ -51,5 +52,20 @@ button,
   margin-block: size(4);
   @include flex-center;
   @include font($primaryFont,12,normal,normal,14);
+  &.one {
+    background: #eee3e7;
+  }
+  &.two {
+    background: #ead5dc;
+  }
+  &.three {
+    background:#eec9d2;
+  }
+  &.four {
+    background:#f4b6c2;
+  }
+  &.five {
+    background:#f6abb6;
+  }
 
 }

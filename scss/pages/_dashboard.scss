@@ -28,11 +28,13 @@
             background: $white;
             @include radius(10);
             box-shadow: $box-shadow-1;
+            @include h100;
             max-height: size(480);
             overflow-y: scroll;
 
             &::-webkit-scrollbar {
                 width: size(12);
+                display: none;
             }
             &::-webkit-scrollbar-track {
                 background: #D0D5DD; 
@@ -70,6 +72,12 @@
                         @include font($primaryFont,22,medium,normal,27);
 
                         }
+                    } 
+                    .nice-select {
+                        width: auto;
+                        min-width: size(120);
+                        @include font($primaryFont,12,medium,normal,40);
+                        
                     }
                 }
                 .right-content {
@@ -99,6 +107,7 @@
                     }
                     &::-webkit-scrollbar {
                         height: size(12);
+                        // display: none;
                     }
                     &::-webkit-scrollbar-track {
                         background: #D0D5DD; 
@@ -139,13 +148,20 @@
                     .title {
                         color: $headingText;
                         @include font($primaryFont,14,medium,normal,14);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                     .total {
                         color: $textPrimary;
                         @include font($primaryFont,12,normal,normal,12);
+                        b {
+                            padding-left: size(10);
+                        }
                     }
                   } 
                   .title-row {
+                   
                     :nth-child(1) {
                         text-align: left;
                     }
@@ -156,8 +172,26 @@
                         text-align: center;
                     }
                   }
+            } 
+        }
+
+        .summery {
+            .pipeline-body {
+                @include flex-center;
+                min-height: calc(100% - size(80));
+            }
+            .summery-wrapper {
+                figure {
+                    @include square(280);
+                    img {
+                        @include wh100;
+                        object-fit: contain;
+                    }
+                }
             }
         }
+
+        
     }
 } 
 .darkmode { 
