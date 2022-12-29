@@ -49,4 +49,7 @@ button,
   @include radius(8);
   margin-inline: size(4);
   margin-block: size(4);
+  @include flex-center;
+  @include font($primaryFont,12,normal,normal,14);
+
 }

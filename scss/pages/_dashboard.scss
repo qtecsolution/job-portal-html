@@ -93,7 +93,10 @@
                     // margin-left: 5em;
                     overflow-y: visible;
                     padding: 0;
-                    margin-left: 14em;
+                    margin-left: 9em;
+                    @include breakpoint(mobile768) {
+                        margin-left: 14em;
+                    }
                     &::-webkit-scrollbar {
                         height: size(12);
                     }
@@ -122,13 +125,16 @@
                   } 
                   .headcol {
                     position: absolute;
-                    width: 14em;
+                    width: 9em;
                     left: 24px;
                     top: auto;
                     /*only relevant for first row*/
                     margin-top: -1px;
                     /*compensate for top border*/
                     @include flex-column;
+                    @include breakpoint(mobile768) {
+                        width: 14em;
+                    }
                     gap: size(4);
                     .title {
                         color: $headingText;
