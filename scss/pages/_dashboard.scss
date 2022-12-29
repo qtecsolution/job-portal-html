@@ -4,12 +4,17 @@
 /**======= HOME-BANNER =======**/
 
 .dashboard {
+    padding: size(14) size(14) size(0) size(14);
+    @include breakpoint(mobile576) {
     padding: size(24) size(20) size(0) size(24);
+
+    }
     &-content {
 
     }
     &-header {
         @include flex-center-between;
+        padding-bottom: size(20);
         .dashboard-title {
             color: $headingText;
             @include font($primaryFont,24,medium,normal,30);
@@ -19,7 +24,42 @@
         }
     }
     &-body {
+        .pipeline {
+            background: $white;
+            @include radius(10);
+            box-shadow: $box-shadow-1;
 
+            &-header {
+                @include flex-center-between;
+                @include border-single(bottom,solid,1,$headerborder);
+                padding: size(14);
+                @include breakpoint(mobile576) {
+                    padding: size(18);
+                }
+
+                .left-content {
+                    @include flex;
+                    gap: size(10);
+                    flex-wrap: wrap;
+                    @include font($primaryFont,18,medium,normal,24);
+                    @include breakpoint(mobile576) {
+                        gap: size(20);
+                    } 
+
+                    .title {
+                        color: $headingText;
+                        @include font($primaryFont,18,medium,normal,24);
+                        @include breakpoint(mobile576) {
+                        @include font($primaryFont,22,medium,normal,27);
+
+                        }
+                    }
+                }
+            }
+            &-body {
+
+            }
+        }
     }
 } 
 .darkmode { 

@@ -25,13 +25,16 @@ button,
 }
 .createjob-btn {
   @include setBgColor($primary,$white);
-  padding: size(8) size(12);
+  padding: size(6) size(8);
   @include radius(24);
   @include font($primaryFont,12,normal,normal,12);
   @include transitionsbackground;
+  @include flex-center;
+  gap: size(4);
   @include breakpoint(mobile576) {
   @include font($primaryFont,14,normal,normal,14);
-
+  padding: size(8) size(12);
+  gap: size(6);
   }
   @include hover {
     @include setBgColor(darken($primary,20%),white);
