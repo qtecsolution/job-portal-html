@@ -201,4 +201,35 @@
     outline: 0 !important;
     font-size: 14px;
   }
+  .darkmode .nice-select {
+    background: #161819;
+    border-color: rgba(255, 255, 255,.2);
+  }
+
+  .darkmode .nice-select .nice-select-dropdown { 
+    background: green;
+    border-color: rgba(255, 255, 255,.2);
+
+  }
+  .darkmode .nice-select .nice-select-dropdown { 
+    background: #1e202a;
+  }
   
+
+
+.darkmode  .nice-select .list {
+  background: currentColor;
+ }
+.darkmode  .nice-select .option{
+  background:#1e202a ;
+ }
+
+ .darkmode .nice-select .option:hover,
+ .darkmode .nice-select .option.focus,
+ .darkmode .nice-select .option.selected.focus {
+   background-color: #292c2e;
+ }
+
+ .darkmode .nice-select .list:hover .option:not(:hover) {
+  background-color: #1e202a !important;
+}
