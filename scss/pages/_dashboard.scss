@@ -289,5 +289,42 @@
                 @include font($primaryFont,24,medium,normal,30);
             }
         }
+
+        &-body {
+
+            .pipeline {
+                background:#1e202a;
+                .left-content {
+                    .title { 
+                        color: $white;
+                    }
+                }
+                .pipeline-table {
+                   table {
+                    td {
+                        color: rgba(255, 255, 255,.6);
+                        .pipeline-empty {
+                            background: $darkPrimary;
+                            color: $white;
+                        }
+                       
+                    }
+                    .headcol  {
+                        color: rgba(255, 255, 255,.6);
+                        .title {
+                        color: rgba(255, 255, 255,.8);
+    
+                        }
+                        .total {
+                           color: rgba(255, 255, 255,.6);
+
+                        }
+                       }
+                   }
+                   
+                }
+            }
+
+        }
     }
 }
