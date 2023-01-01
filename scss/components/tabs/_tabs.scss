@@ -26,3 +26,24 @@
         }
     }
 }
+.darkmode {  
+    .mytask {
+        .nav{
+            &.nav-tabs {
+                background: $darkPrimary;
+                border: none;
+            }
+            &-item {
+    
+            }
+            &-link {
+                color: darken($white,40%);
+               
+                &.active {
+                    color: $white;
+                    background: $lightDark;
+                }
+            }
+        }
+    }
+}
