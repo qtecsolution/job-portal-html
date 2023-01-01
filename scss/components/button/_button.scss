@@ -85,3 +85,14 @@ button,
     background: lighten($btndarkborder, 5%);
   }
 }
+
+.darkmode {
+  .btn-addtask { 
+    @include border(solid,1,$headingText);
+    color: darken($white,20%);
+    @include hover {
+      background: $darkPrimary;
+
+    }
+  }
+}
