@@ -2,4 +2,51 @@
 @use '../../partials' as *;
 
 
+.inputbox {
+    @include flex-column;
+    gap: size(8);
 
+    .inputlabel {
+      color: $headingText;
+      @include font($primaryFont, 14, medium, normal, 17);
+    }
+
+    .inputfield ,.textareafield{
+      @include setBgColor($white, $bodybg);
+      @include border(solid, 1, $headerborder);
+      @include font($primaryFont, 14, medium, normal, 17);
+      padding: size(10) size(16);
+      @include transitionsall;
+      @include radius(8);
+        color: $textPrimary;
+      &::placeholder {
+        color: $textSecondary;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+    }
+    .textareafield {
+       
+    } 
+
+    .error {
+      display: none;
+
+      .error-message {
+        color: $danger;
+        @include font($primaryFont, 13, medium, normal, 17);
+      }
+    }
+
+    &.errorfield {
+      .inputfield {
+        border-color: $danger;
+      }
+      
+      .error {
+        display: block;
+      }
+    }
+  }

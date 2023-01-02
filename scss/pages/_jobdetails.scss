@@ -2,46 +2,147 @@
 @use "../partials" as *;
 
 .addnewjob {
-    
-    &-content {
 
-    }
+    &-content {}
+
     &-header {
-    @include border-single(bottom, solid, 1, $headerborder);
-    padding-bottom: size(20);
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(20);
 
-    .header-wrapper {
-        padding: size(14) size(14) size(0) size(14);
-        @include flex-between;
+        .header-wrapper {
+            padding: size(14) size(14) size(0) size(14);
+            @include flex-between;
 
 
-        @include breakpoint(mobile576) {
-            padding: size(24) size(20) size(0) size(24);
-         
+            @include breakpoint(mobile576) {
+                padding: size(24) size(20) size(0) size(24);
+
+            }
+        }
+
+
+        .addnewjob-title {
+            color: $headingText;
+            @include font($primaryFont, 18, medium, normal, 24);
+
+            @include breakpoint(mobile768) {
+                @include font($primaryFont, 22, medium, normal, 28);
+
+            }
+        }
+
+        .buttons {
+            @include flex;
+            justify-content: center;
+            gap: size(4);
+
+            @include breakpoint(mobile414) {
+                gap: size(10);
+            }
         }
     }
 
-
-    .addnewjob-title {
-        color: $headingText;
-        @include font($primaryFont, 18, medium, normal, 24);
-
-        @include breakpoint(mobile768) {
-            @include font($primaryFont, 22, medium, normal, 28);
+    &-body {
+       
+        padding: size(20);
+        .bg {
+            background: $white;
+            padding: size(20);
+            @include radius(7);
 
         }
-    }
+      .job-steps {
+       
+      @include border-single(bottom,solid,1,$headerborder);
+          
+          
+      }
 
-    .buttons {
-        @include flex;
-        justify-content: center;
-        gap: size(4);
+      .jobform {
+        max-width: size(1100);
+        padding-top: size(20);
+       @include breakpoint(tab992) {
+        padding-top: size(30);
+       }
+        
+        &-header {
 
-        @include breakpoint(mobile414) {
-            gap: size(10);
+            @include flex-column;
+            gap: size(14);
+            padding-bottom: size(20);
+            @include border-single(bottom,solid,1,$headerborder);
+            @include breakpoint(tab992) {
+                gap: size(20);
+            }
+            .title {
+                color: $headingText;
+                @include font($primaryFont, 18, medium, normal, 24);
+
+                @include breakpoint(mobile768) {
+                    @include font($primaryFont, 22, medium, normal, 28);
+
+                }
+
+            }
+            .upload-text{
+                color: $headingText; 
+                @include font($primaryFont,14,semibold,normal,14);
+                span {
+                @include font($primaryFont,12,normal,normal,14);
+
+                }
+            }
+
+            .upload-thumb {
+                
+                .headerimage {
+                 @include font($primaryFont,14,semibold,normal,14);
+                 color: $textSecondary;
+                 cursor: pointer;
+                }
+            }
+
+            .uploaded {
+                .headerimage-thumb {
+                    @include w100;
+                    max-height: size(360);
+                    overflow: hidden;
+                    @include radius(10);
+                    img {
+                        @include wh100;
+                        object-fit: contain;
+                    }
+                }
+                .buttons {
+                    @include flex-column;
+                    gap: size(8);
+                    label {
+                        @include w100;
+                        text-align: center;
+                    }
+                }
+            }
+          
+
+        } 
+
+        
+
+        &-body {
+            .nice-select { 
+                @include w100;
+            }
+
+            .tox-tinymce {
+                border-color: $headerborder !important;
+                border-width: size(1);
+            }
         }
-    }
-}
+
+
+      }
+
+  }
 }
 
 
