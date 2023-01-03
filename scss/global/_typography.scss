@@ -31,7 +31,7 @@ $primaryFont: "Inter", sans-serif;
     normal: 400,
     medium: 500,
     semibold: 600,
-    l bold: 700,
+     bold: 700,
   );
 
   @if not map-has-key($conversion-map, $keyword) {

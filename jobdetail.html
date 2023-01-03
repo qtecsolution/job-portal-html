@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
     <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -933,7 +935,26 @@
                     <div class="bg">
                         <div class="job-steps">
 
-                           
+                            <div class="wizard">
+                                <div class="item">
+                                    <span class="count">1</span>
+                                    <span class="title">Job Details</span>
+                                </div>
+                                <div class="item active">
+                                    <span class="count">2</span>
+                                    <span class="title">Application form</span>
+                                </div>
+                                <div class="item">
+                                    <span class="count">3</span>
+                                    <span class="title">Hiring Stages</span>
+                                </div>
+                                <div class="item">
+                                    <span class="count">4</span>
+                                    <span class="title">Task Assessment</span>
+                                </div>
+                                
+                                
+                            </div>
 
                         </div>
     
@@ -989,7 +1010,7 @@
                              </div>
                            </div>
 
-                           <div class="jobform-body">
+                           <div class="jobform-body pb-5">
 
                             <div class="row g-4">
                                 <div class="col-lg-7 pt-3">
@@ -1025,6 +1046,178 @@
                                         Welcome to Hireme
                                       </textarea>
                                 </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox ">
+                                        <label for="supportname" class="inputlabel"> Name </label>
+                                        <input type="text" id="supportname" class="inputfield" placeholder="write your name" autocomplete="off">
+                                        <div class="error">
+                                          <p class="error-message">Name is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox ">
+                                        <label for="supportname" class="inputlabel"> Name </label>
+                                        <input type="text" id="supportname" class="inputfield" placeholder="write your name" autocomplete="off">
+                                        <div class="error">
+                                          <p class="error-message">Name is required</p>
+                                        </div>
+                                      </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="supportname" class="inputlabel"> Experiences Level </label>
+                                        <select id="select-experience">
+                                            <option value="junior">Junior</option>
+                                            <option value="senior">Senior</option>
+                                            <option value="expert">Expert</option> 
+                                        </select>
+                                    </div> 
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="supportname" class="inputlabel"> Job type* </label>
+                                        <select id="select-jobtype">
+                                            <option value="remote">Remote</option>
+                                            <option value="inoffice">In-Office</option>
+                                        </select>
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox ">
+                                        <label for="vacancy" class="inputlabel"> Number of Vacancies </label>
+                                        <input type="text" id="vacancy" class="inputfield" placeholder="Enter number of vacancies" autocomplete="off">
+                                        <div class="error">
+                                          <p class="error-message"> Number of vacancies is required</p>
+                                        </div>
+                                      </div>
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-employmenttype" class="inputlabel"> Employment Type* </label>
+                                        <select id="select-employmenttype">
+                                            <option value="fulltime">Full-time</option>
+                                            <option value="partitime">Part-time</option>
+                                            <option value="temporary">Temporary</option>
+                                            <option value="seasonal">Seasonal</option>
+                                        </select>
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-currency" class="inputlabel"> Base Salary Currency* </label>
+
+                                        <select id="select-currency">
+                                            <option value="inr">	INR	₹ </option>
+                                            <option value="irr">	IRR	﷼</option>
+                                            <option value="jep">	JEP	£</option>
+                                        
+                                        </select>
+
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-salarytype" class="inputlabel"> Salary Type** </label>
+
+                                        <select id="select-salarytype">
+                                            <option value="daily">daily </option>
+                                            <option value="weekly">Weekly</option>
+                                            <option value="monthly">Monthly</option>
+                                        </select>
+
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox ">
+                                        <div class="d-flex justify-content-between">
+                                            <label for="salaryrange" class="inputlabel"> Salary*</label>
+                                            <span>Salary range</span>
+                                        </div>
+                                        <input type="text" id="salaryrange" class="inputfield" placeholder="Enter Salary Amount" autocomplete="off">
+                                        <div class="error">
+                                          <p class="error-message">Salary range is required</p>
+                                        </div>
+                                      </div>
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-country" class="inputlabel"> Country* </label>
+
+                                        <select id="select-country">
+                                            <option value="bangladesh">Bangladesh </option>
+                                            <option value="india">India</option>
+                                            <option value="pakistan">Pakistan </option>
+                                            <option value="afganistan">Afganistan</option>
+                                        </select>
+
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-state" class="inputlabel"> State* </label>
+                                        <select id="select-state">
+                                            <option value="alabama">Alabama</option>
+                                            <option value="alaska">Alaska</option>
+                                            <option value="california">California </option>
+                                        </select>
+
+                                    </div> 
+                                </div> 
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox">
+                                        <label for="select-city" class="inputlabel"> City** </label>
+                                        <select id="select-city">
+                                            <option value="dhaka">Dhaka</option>
+                                            <option value="sylhet">Sylhet</option>
+                                            <option value="khulna">Khulna </option>
+                                        </select>
+
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-8">
+                                    <div class="inputbox">
+                                        <label for="select-city" class="inputlabel"> Skill Sets* </label>
+                                        <select class="js-example-basic-single w-100" name="state" multiple="multiple">
+                                           
+                                            <option value="html">Html</option>
+                                            <option value="css">Css</option>
+                                            <option value="Javascript">Javascript</option>
+                                            <option value="bootstrap">Bootstrap</option>
+                                            <option value="react">React</option>
+                                            <option value="php">Php</option>
+                                            <option value="laravel">Laravel</option>
+                                            <option value="nodejs">Node JS</option>
+                                        </select>
+
+                                    </div> 
+                                </div> 
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="inputbox ">
+                                        <div class="d-flex justify-content-between">
+                                            <label for="salaryrange" class="inputlabel"> Office Time*</label>
+                                            <span>Salary range</span>
+                                        </div>
+                                        <input type="text" id="salaryrange" class="inputfield" placeholder="Enter Salary Amount" autocomplete="off">
+                                        <div class="error">
+                                          <p class="error-message">Salary range is required</p>
+                                        </div>
+                                      </div>
+                                </div> 
+
+
                             </div>
 
                            </div>
@@ -1037,9 +1230,9 @@
 
         </div>
         <!-- DASHBOARD CONTENT END -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- MAIN-SECTION END -->
-
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- BOOTSTRAP JS -->
         <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
         <!-- DARK-MODE -->
@@ -1054,6 +1247,8 @@
 
         <script src="https://cdn.tiny.cloud/1/k54ls3xs8rzv8rgm56khkpbjz9j22cjb9kbo2lmvn7cfnklm/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> 
         <script>
+
+
             tinymce.init({
               selector: 'textarea',
               plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
@@ -1076,7 +1271,12 @@
                 tinylogo.style.display = 'none';
             }
             });
-
+                // In your Javascript (external .js resource or <script> tag)
+                    $(document).ready(function () {
+                    $('.js-example-basic-single').select2({
+                        
+                    });
+                });
            
           </script>
 </body>

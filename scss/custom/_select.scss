@@ -51,3 +51,45 @@
     }
   }
 }
+
+
+.select2-container {
+  width: 100%  !important;
+   .select2-selection--multiple {
+    min-height: size(40) !important;
+    border: solid 0.0625rem #eaecf0 !important;
+    background: $bodybg !important;
+
+    .select2-selection__choice  {
+      background: $headingText !important;
+      color: $white;
+      @include font($primaryFont,14,normal,normal,20);
+    }
+  }
+}
+
+.select2-container--default .select2-selection--single{
+  background-color: #000 !important;
+}
+
+.select2-search input { background-color: #00f; }
+// .select2-results { background-color: #00f; }
+
+// .select2-container--default .select2-selection--multiple .select2-selection__choice {
+
+// }
+
+
+.darkmode {
+  .select2-container { 
+    .select2-selection--multiple {
+      background: $darkPrimary !important;
+    }
+
+    .select2-dropdown  {
+      background: $lightDark;
+    }
+  }
+}
+
+
