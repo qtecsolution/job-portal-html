@@ -27,9 +27,7 @@
         border-color: $primary;
       }
     }
-    .textareafield {
-       
-    } 
+ 
 
     .error {
       display: none;
@@ -49,11 +47,49 @@
         display: block;
       }
     }
+
+    &.hiring-manager {
+      position: relative;
+      
+      figure {
+        position: absolute;
+        @include square(30);
+        overflow: hidden;
+        @include circle;
+        left: size(14);
+        top: 48%;
+        
+        img {
+          @include wh100;
+          object-fit: cover;
+          
+          
+        }
+      }
+      .icon {
+        position: absolute;
+        right: size(14);
+        top: 50%;
+      }
+      .inputfield {
+        padding-left: size(50);
+        padding-right: size(40);
+      }
+    }
   }
 
 
   .darkmode {
     .inputbox { 
-
+      .inputlabel {
+        color: darken($white,10%);
+        @include font($primaryFont, 14, medium, normal, 17);
+      } 
+      .inputfield ,.textareafield{
+        @include setBgColor($darkPrimary, $bodybg);
+        border-color: #ffffff33;
+        
+      }
+  
     }
   }
