@@ -71,6 +71,7 @@
                 @include flex;
                 align-items: center;
                 gap: size(10);
+                
 
 
                 .count {
@@ -80,10 +81,14 @@
                     background: $checkborder;
                     color: $white;
                     @include font($primaryFont,12,bold,normal,15);
+                    flex-shrink: 0;
                 }
                 .title {
                     color: $checkborder;
                     @include font($primaryFont,12,bold,normal,15);
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                 }
                 &.active {
                     background: rgba(76, 111, 255, 0.05);
