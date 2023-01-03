@@ -152,4 +152,13 @@ button,
       color: lighten($textPrimary,20%)
     }
   }
+
+  .removeimage-btn {
+    @include setBgColor($lightDark,$white);
+    border-color: lighten($lightDark, 10%);
+    @include hover {
+      @include setBgColor($shade-1,$white);
+    }
+  }
+
 }
