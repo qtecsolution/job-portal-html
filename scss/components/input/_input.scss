@@ -5,6 +5,7 @@
 .inputbox {
     @include flex-column;
     gap: size(8);
+    position: relative;
 
     .inputlabel {
       color: $headingText;
@@ -14,7 +15,7 @@
     .inputfield ,.textareafield{
       @include setBgColor($bodybg, $bodybg);
       @include border(solid, 1, $headerborder);
-      @include font($primaryFont, 14, medium, normal, 17);
+      @include font($primaryFont, 14, normal, normal, 17);
       padding: size(10) size(16);
       @include transitionsall;
       @include radius(8);
@@ -86,10 +87,65 @@
         @include font($primaryFont, 14, medium, normal, 17);
       } 
       .inputfield ,.textareafield{
-        @include setBgColor($darkPrimary, $bodybg);
-        border-color: #ffffff33;
+        @include setBgColor(#292c2e, $bodybg);
+        border-color: $textPrimary;
         
       }
   
+    }
+  }
+
+
+  .desktop-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @include w100;
+    height: size(240);
+    background: $white;
+    gap: length(4);
+    @include double-radius(bottom, left, 10, bottom, right, 10);
+    padding: length(16) length(20) length(24);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @extend %animation;
+    @extend %slideUpIn;
+    display: none;
+    z-index: 100;
+    flex-direction: column;
+    @include border(solid,1,$headerborder);
+    padding: size(20) size(10);
+    border-top: none;
+
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(4);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $shade-1;
+      @include radius(8);
+      width: size(4)
+    }
+
+    &.active {
+      @include flex-column;
+    }
+
+    .card-suggestion {
+      @include flex;
+      align-items: center;
+      gap: size(10);
+      
+      padding: size(10) size(10);
+      color: $textPrimary;
+      @include transitionsall;
+      @include radius(8);
+      @include font($primaryFont, 12, medium, normal, 17);
+
+      @include hover {
+        @include setBgColor(#f6f6f9,$textPrimary);
+      }
     }
   }

@@ -12,16 +12,17 @@
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
     <!-- PLACEHOLDER LOADING -->
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
     <!-- NICE SELECT 2 CSS -->
     <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
-    <!-- SELECT 2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <!-- JQUERY UI  -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <!-- CHOSEN JQUERY FOR CUSTOM MULTIPLE SELECT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
 
 </head>
 
@@ -1144,7 +1145,140 @@
                                                 autocomplete="off">
                                             <div class="error">
                                                 <p class="error-message">Name is required</p>
+                                            </div> 
+
+                                             <!-- SEARCH-SUGGESTIONS START -->
+                                            <div class="desktop-suggestions">
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                                <a href="#" class="card-suggestion">
+                                                <span class="card-suggestion-cap">
+                                                    <img
+                                                    src="assets/images/person/user.png"
+                                                    alt="user image"
+                                                    />
+                                                </span>
+                                
+                                                <span class="card-suggestion-details">
+                                                    <span class="suggestion-title"
+                                                    >Sayed Uddin</span
+                                                    >
+                                                </span>
+                                                </a>
+                                
+                                               
                                             </div>
+                                            <!-- SEARCH-SUGGESTIONS END -->
                                         </div>
                                     </div>
 
@@ -1213,21 +1347,18 @@
                                         <div class="inputbox">
                                             <label for="select-currency" class="inputlabel"> Base Salary Currency*
                                             </label>
-
                                             <select id="select-currency">
                                                 <option value="inr">INR ₹ </option>
                                                 <option value="irr">IRR ﷼</option>
                                                 <option value="jep">JEP £</option>
-
                                             </select>
-
                                         </div>
                                     </div>
 
                                     <!-- SALARY TYPE -->
                                     <div class="col-sm-6 col-lg-4">
                                         <div class="inputbox">
-                                            <label for="select-salarytype" class="inputlabel"> Salary Type** </label>
+                                            <label for="select-salarytype" class="inputlabel"> Salary Type* </label>
 
                                             <select id="select-salarytype">
                                                 <option value="daily">daily </option>
@@ -1284,7 +1415,7 @@
                                     <!-- SELECT CITY  -->
                                     <div class="col-sm-6 col-lg-4">
                                         <div class="inputbox">
-                                            <label for="select-city" class="inputlabel"> City** </label>
+                                            <label for="select-city" class="inputlabel"> City* </label>
                                             <select id="select-city">
                                                 <option value="dhaka">Dhaka</option>
                                                 <option value="sylhet">Sylhet</option>
@@ -1298,17 +1429,12 @@
                                     <div class="col-sm-6 col-lg-8">
                                         <div class="inputbox">
                                             <label for="select-city" class="inputlabel"> Skill Sets* </label>
-                                            <select class="js-example-basic-single w-100" name="state"
-                                                multiple="multiple">
-
-                                                <option value="html">Html</option>
-                                                <option value="css">Css</option>
-                                                <option value="Javascript">Javascript</option>
-                                                <option value="bootstrap">Bootstrap</option>
-                                                <option value="react">React</option>
-                                                <option value="php">Php</option>
-                                                <option value="laravel">Laravel</option>
-                                                <option value="nodejs">Node JS</option>
+                                           <select id="people" multiple>
+                                            <option>Html</option>
+                                            <option>Css</option>
+                                            <option>Javascript</option>
+                                            <option>Php</option>
+                                            <option>laravel</option>
                                             </select>
 
                                         </div>
@@ -1329,6 +1455,7 @@
                                     <div class="col-12 mx-auto">
                                         <button class="uploadimage-btn w-50 ">Next</button>
                                     </div>
+                               
 
                                 </div>
 
@@ -1347,7 +1474,7 @@
             integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- MAIN-SECTION END -->
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
         <!-- BOOTSTRAP JS -->
         <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
         <!-- DARK-MODE -->
@@ -1362,18 +1489,27 @@
         <script src="assets/js/nice-select/nice-select2.js"></script>
         <!-- CUSTOM SELECT -->
         <script src="assets/js/nice-select/customselect.js"></script>
+       
         <!-- TINY MC  -->
         <script src="https://cdn.tiny.cloud/1/k54ls3xs8rzv8rgm56khkpbjz9j22cjb9kbo2lmvn7cfnklm/tinymce/6/tinymce.min.js"
             referrerpolicy="origin"></script>
         <!-- JQUERY UI -->
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script> 
+        <script src="assets/js/search-suggestion/search-suggestion.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
+        
+       
         <script>
-
-
             tinymce.init({
                 selector: 'textarea',
-                plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-                toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                menubar: false,
+                plugins: 'anchor autolink charmap codesample image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+                toolbar: 'undo redo | blocks   | bold italic underline link  | checklist numlist bullist indent outdent |  addcomment showcomments |  a11ycheck typography | align lineheight |   charmap |',
                 tinycomments_mode: 'embedded',
                 tinycomments_author: 'Author name',
 
@@ -1394,13 +1530,11 @@
             });
             // In your Javascript (external .js resource or <script> tag)
             $(document).ready(function () {
-                $('.js-example-basic-single').select2({
-
-                });
-
-                $(function () {
+                 $('#people').chosen();
+                 $(function () {
                     $("#datepicker").datepicker();
                 });
+                
             });
 
         </script>

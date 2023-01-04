@@ -53,43 +53,145 @@
 }
 
 
-.select2-container {
-  width: 100%  !important;
-   .select2-selection--multiple {
-    min-height: size(40) !important;
-    border: solid 0.0625rem #eaecf0 !important;
-    background: $bodybg !important;
 
-    .select2-selection__choice  {
+.chosen-container {
+ 
+  .chosen-choices {
+    border-color: $headerborder !important;
+    background-image: none !important;
+    @include radius(8);
+    background: $bodybg  !important;
+    padding: size(5) size(10) !important ;
+    .search-choice {
       background: $headingText !important;
-      color: $white;
-      @include font($primaryFont,14,normal,normal,20);
+      color: $white !important;
+      border: none !important;
+      span {
+        font-size: size(12) !important;
+        font-weight: 600 !important;
+      }
+      a {
+        
+      }
+
+    }
+    .search-field {
+
+    }
+  }
+
+  .chosen-drop {
+    border-color: $headerborder !important;
+    .chosen-results {
+      li {
+        padding: size(8) size(10) !important;
+      }
+      .active-result {
+        .highlighted {
+          background: $primary;
+        }
+      }
+      .result-selected {
+
+      }
+    }
+  }
+
+  &-active {
+    .chosen-choices {
+      box-shadow: none !important;
     }
   }
 }
 
-.select2-container--default .select2-selection--single{
-  background-color: #000 !important;
-}
-
-.select2-search input { background-color: #00f; }
-// .select2-results { background-color: #00f; }
-
-// .select2-container--default .select2-selection--multiple .select2-selection__choice {
-
-// }
 
 
 .darkmode {
-  .select2-container { 
-    .select2-selection--multiple {
-      background: $darkPrimary !important;
+ 
+  .nice-select { 
+    background: #292c2e;
+    border-color: $textPrimary !important; 
+    &.open {
+      border-color:$textPrimary;
+    } 
+    @include hover {
+      border-color: $textPrimary;
+    }
+    .nice-select-dropdown {
+      border-color:$textPrimary;
     }
 
-    .select2-dropdown  {
+    .list {
       background: $lightDark;
+    }
+    .option {
+      color:darken( $white,20%);
+      @include font($primaryFont,12,normal,normal,50);
+
+			&:hover {
+				background-color: $shade-1;
+			}
+		}
+		.option.focus {
+			background-color: $shade-1;
+		} 
+ 
+		.option.selected.focus {
+			background-color: $shade-1;
+		}
+  }
+
+  .chosen-container {
+ 
+    .chosen-choices {
+      border-color: $textPrimary !important;
+      @include radius(8);
+      background: #292c2e  !important;
+      padding: size(5) size(10) !important ;
+      .search-choice {
+        background: $headingText !important;
+        color: $white !important;
+        border: none !important;
+        span {
+          font-size: size(12) !important;
+          font-weight: 600 !important;
+        }
+        a {
+          
+        }
+  
+      }
+      .search-field {
+  
+      }
+    }
+  
+    .chosen-drop {
+      border: none !important;
+      .chosen-results {
+        background: $lightDark !important;
+        li {
+          padding: size(8) size(10) !important;
+        }
+        .active-result { 
+          color: $white !important;
+          .highlighted {
+            background: $primary;
+          }
+        }
+        .result-selected {
+  
+        }
+      }
+    }
+  
+    &-active {
+      .chosen-choices {
+        box-shadow: none !important;
+      }
     }
   }
 }
+
 
 

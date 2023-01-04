@@ -201,8 +201,8 @@
     outline: 0 !important;
     font-size: 14px;
   }
-  .darkmode .nice-select {
-    background: #161819;
+  /* .darkmode .nice-select {
+    background: #292c2e;
     border-color: #ffffff33;
   }
 
@@ -232,4 +232,4 @@
 
  .darkmode .nice-select .list:hover .option:not(:hover) {
   background-color: #1e202a !important;
-}
+} */
