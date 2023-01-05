@@ -111,6 +111,17 @@
                         }
                     }
 
+                    &.completed {
+                        background: $primary;
+                        
+                        &::after {
+                            border-left: 20px solid $primary;
+                        }
+                        .title {
+                            color: $white;
+                        }
+                    }
+
                     &::before {
                         width: 0;
                         height: 0;
@@ -128,7 +139,7 @@
                         height: 0;
                         border-top: 20px inset transparent;
                         border-bottom: 20px inset transparent;
-                        border-left: 21px solid $bodybg;
+                        border-left: 20px solid $bodybg;
                         position: absolute;
                         content: '';
                         top: 0;
@@ -137,6 +148,8 @@
                     }
 
                     &:first-child {
+                        border-top-right-radius: 1px;
+                        border-bottom-right-radius: 1px;
                         &:before {
                             border: none;
                         }

@@ -22,7 +22,13 @@
     <!-- JQUERY UI  -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
      <!-- CHOSEN CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" /> 
+
+    <style>
+        .drag-over {
+    border: dashed 3px red !important;
+}
+    </style>
 
 </head>
 
@@ -38,7 +44,7 @@
 
         <div class="sidebar-body loaded-content">
             <ul class="sidelist">
-                <li class="sidelist-item active" data-bs-toggle="tooltip" data-bs-placement="right"
+                <li class="sidelist-item " data-bs-toggle="tooltip" data-bs-placement="right"
                     data-bs-title="Dashboard">
                     <a href="index.html" class="sidelist-link">
                         <span class="icon">
@@ -146,7 +152,7 @@
 
                 <span class="title">Recruitment</span>
 
-                <li class="sidelist-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Jobs">
+                <li class="sidelist-item active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Jobs">
                     <a href="jobs.html" class="sidelist-link">
                         <span class="icon">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -937,11 +943,16 @@
                         <div class="job-steps loaded-content">
 
                             <div class="wizard">
-                                <div class="item active">
-                                    <span class="count">1</span>
+                                <div class="item completed">
+                                    <span class="icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 8L9.3333 14L6 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
                                     <span class="title">Job Details</span>
                                 </div>
-                                <div class="item ">
+                                <div class="item active">
                                     <span class="count">2</span>
                                     <span class="title">Application form</span>
                                 </div>
@@ -975,10 +986,102 @@
                             
                             </div>
 
-                           
-
                         </div>
                         <!-- loader for step-->
+
+                        <div class="form-builder">
+                            <div class="row">
+
+                                <div class="col-lg-9">
+                                    <div class="applicationform">
+
+                                        <div class="applicationform-header d-flex justify-content-between">
+                                            <h2>Application form</h2>
+                                            <button class="preview-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Preview</button>
+                                        </div>
+
+                                        <div class="applicationform-body">
+
+                                            <div class="box p-5 border">
+
+                                            </div>
+                                            <div class="box p-5 border">
+
+                                            </div>
+
+                                            <!-- basic info  start -->
+                                            <div class="collapsebtn-wrapper">
+                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#basicInfo" aria-expanded="false" aria-controls="basicInfo">
+                                                    <span>
+                                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span> Basic Info</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="collapse" id="basicInfo">
+                                                <div class="card card-body">
+                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                                </div>
+                                            </div>
+
+                                            <!-- basic info end -->
+
+                                            <!-- Professional Info  start -->
+                                            <div class="collapsebtn-wrapper">
+                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#personalInfo" aria-expanded="false" aria-controls="personalInfo">
+                                                    <span>
+                                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span> Professional Info</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="collapse" id="personalInfo">
+                                                <div class="card card-body">
+                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                                </div>
+                                            </div>
+
+                                            <!-- Professional Info end -->
+
+                                            <!-- Educational Info start -->
+                                            <div class="collapsebtn-wrapper">
+                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#educationalInfo" aria-expanded="false" aria-controls="educationalInfo">
+                                                    <span>
+                                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span> Educational Info</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="collapse" id="educationalInfo">
+                                                <div class="card card-body">
+                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                                </div>
+                                            </div>
+
+                                            <!-- Educational Info end -->
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <button class="btn" draggable="true">Add Group Field</button>
+                                    <br>
+                                    <button class="btn" draggable="true">Text Area</button>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </div>
@@ -990,6 +1093,20 @@
         <!-- DASHBOARD CONTENT END -->
     </main>     
        <!-- MAIN-SECTION END --> 
+
+
+       <!-- offcanvas  -->
+
+       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+       <!-- offcanvas  -->
 
         <!-- JQUERY -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
@@ -1006,9 +1123,9 @@
         <!-- CONTENT LOADER  -->
         <script src="assets/js/contentloader/contentloader.js"></script>
         <!-- nice select -->
-        <script src="assets/js/nice-select/nice-select2.js"></script>
+        <!-- <script src="assets/js/nice-select/nice-select2.js"></script> -->
         <!-- CUSTOM SELECT -->
-        <script src="assets/js/nice-select/customselect.js"></script>
+        <!-- <script src="assets/js/nice-select/customselect.js"></script> -->
         <!-- TINY MC  -->
         <script src="https://cdn.tiny.cloud/1/k54ls3xs8rzv8rgm56khkpbjz9j22cjb9kbo2lmvn7cfnklm/tinymce/6/tinymce.min.js"
             referrerpolicy="origin"></script>
@@ -1017,43 +1134,82 @@
         <!-- CHOSEN FOR MULTIPLE CUSTOM SELECT  -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script> 
         <!-- SEARCH SUGGESTION  -->
-        <script src="assets/js/search-suggestion/search-suggestion.js"></script>
+        <!-- <script src="assets/js/search-suggestion/search-suggestion.js"></script> -->
         
        
         
        
-        <script>
-            tinymce.init({
-                selector: 'textarea',
-                menubar: false,
-                plugins: 'anchor autolink charmap codesample image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-                toolbar: 'undo redo | blocks   | bold italic underline link  | checklist numlist bullist indent outdent |  addcomment showcomments |  a11ycheck typography | align lineheight |   charmap |',
-                tinycomments_mode: 'embedded',
-                tinycomments_author: 'Author name',
+        <script> 
 
-                skin: (document.body.classList.contains('darkmode') ? "oxide-dark" : "snow"),
-                content_css: (document.body.classList.contains('darkmode') ? "dark" : "snow"),
-                //   skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
-                //   content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""),
-                mergetags_list: [
-                    { value: 'First.Name', title: 'First Name' },
-                    { value: 'Email', title: 'Email' },
-                ],
-                init_instance_callback: function (editor) {
-                    var freeTiny = document.querySelector('.tox .tox-notification--in');
-                    var tinylogo = document.querySelector('.tox-statusbar__branding');
-                    freeTiny.style.display = 'none';
-                    tinylogo.style.display = 'none';
-                }
+            const boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(box => {
+                box.addEventListener('dragenter', dragEnter)
+                box.addEventListener('dragover', dragOver);
+                box.addEventListener('dragleave', dragLeave);
+                box.addEventListener('drop', drop);
             });
+
+            function dragEnter(e) {
+                e.preventDefault();
+                e.target.classList.add('drag-over');
+            }
+
+            function dragOver(e) {
+                e.preventDefault();
+                e.target.classList.add('drag-over');
+            }
+
+            function dragLeave(e) {
+                console.log('leave');
+                e.target.classList.remove('drag-over');
+            }
+
+            function drop(e) {
+                e.target.classList.remove('drag-over');
+
+                // get the draggable element
+                const id = e.dataTransfer.getData('text/plain');
+                const draggable = document.getElementById(id);
+
+                // add it to the drop target
+                e.target.appendChild(draggable);
+
+                // display the draggable element
+                draggable.classList.remove('hide');
+            }
+
+            // tinymce.init({
+            //     selector: 'textarea',
+            //     menubar: false,
+            //     plugins: 'anchor autolink charmap codesample image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            //     toolbar: 'undo redo | blocks   | bold italic underline link  | checklist numlist bullist indent outdent |  addcomment showcomments |  a11ycheck typography | align lineheight |   charmap |',
+            //     tinycomments_mode: 'embedded',
+            //     tinycomments_author: 'Author name',
+
+            //     skin: (document.body.classList.contains('darkmode') ? "oxide-dark" : "snow"),
+            //     content_css: (document.body.classList.contains('darkmode') ? "dark" : "snow"),
+            //     //   skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
+            //     //   content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""),
+            //     mergetags_list: [
+            //         { value: 'First.Name', title: 'First Name' },
+            //         { value: 'Email', title: 'Email' },
+            //     ],
+            //     init_instance_callback: function (editor) {
+            //         var freeTiny = document.querySelector('.tox .tox-notification--in');
+            //         var tinylogo = document.querySelector('.tox-statusbar__branding');
+            //         freeTiny.style.display = 'none';
+            //         tinylogo.style.display = 'none';
+            //     }
+            // });
             // In your Javascript (external .js resource or <script> tag)
-            $(document).ready(function () {
-                 $('#people').chosen();
-                 $(function () {
-                    $("#datepicker").datepicker();
-                });
+            // $(document).ready(function () {
+            //      $('#people').chosen();
+            //      $(function () {
+            //         $("#datepicker").datepicker();
+            //     });
                 
-            });
+            // });
 
         </script>
 </body>
