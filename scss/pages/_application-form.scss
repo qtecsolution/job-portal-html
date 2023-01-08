@@ -59,7 +59,9 @@
     min-height: 100vh;
     @include border-single(right,solid,1,$headerborder); 
 
-   
+   &.offcanvasform {
+    border-right: none;
+   }
         &-header {
             padding: size(12) size(12);
             @include flex-between;
@@ -69,7 +71,9 @@
             &.header-offcanvas {
                 @include flex-column;
                 align-items: flex-start;
-                
+                @include border-single(bottom,solid,1,$headerborder); 
+
+
 
             }
             }
