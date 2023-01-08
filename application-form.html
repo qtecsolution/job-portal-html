@@ -1021,7 +1021,7 @@
                                                 </button>
                                             </div>
 
-                                            <div class="collapse show" id="basicInfo">
+                                            <div class="collapse" id="basicInfo">
 
                                                 <div class="col-wrapper">
                                                    <div class="row g-4">
@@ -1157,7 +1157,7 @@
                                                 </button>
                                             </div>
 
-                                            <div class="collapse " id="personalInfo">
+                                            <div class="collapse" id="personalInfo">
                                                <div class="col-wrapper">
                                                     <div class="row g-4">
                                                         
@@ -1417,7 +1417,9 @@
             // });
             // In your Javascript (external .js resource or <script> tag)
             $(document).ready(function () {
-                 $('#skills').chosen();
+                 $('#skills').chosen(
+                    {width: "100%"}
+                 );
                  $(function () {
                     $("#datepicker").datepicker();
                     // $('#skills').chosen();
