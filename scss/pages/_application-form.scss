@@ -1,0 +1,54 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.form-builder {
+    
+
+   
+}
+
+.applicationform {
+    @include border-single(right,solid,1,$headerborder);
+   
+        &-header {
+            padding: size(12) size(12);
+            @include flex-between;
+            align-items: center;
+            @include breakpoint(tab992) {
+            padding: size(20) size(20);
+           
+            }
+            .title {
+                color: $headingText;
+                @include font($primaryFont, 18, medium, normal, 24);
+
+                @include breakpoint(mobile768) {
+                    @include font($primaryFont, 22, medium, normal, 28);
+
+                }
+               
+            }
+        }
+
+        &-body {
+            .col-wrapper {
+                @include border-single(bottom,solid,1,$headerborder);
+                padding: size(24) size(0);
+                margin-right: size(14)
+            }
+            .groupfield-btn {
+                @include flex;
+                gap: size(10);
+                padding: size(10) size(0);
+                cursor: pointer;
+                @include w100;
+                @include font($primaryFont, 14, medium, normal, 20);
+                color: $headingText;
+                @include breakpoint(tab992) {
+
+                }
+
+            }
+        }
+} 
+

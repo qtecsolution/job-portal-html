@@ -125,11 +125,21 @@ button,
   @include hover {
     background: darken($primary, 5%);
     color: $white
-
    
   }
+}
 
-
+.preview-btn {
+  @include border(solid,1,$checkborder);
+  @include font($primaryFont,12,semibold,normal,12); 
+  height: size(36);
+  width: size(106);
+  @include radius(7);
+  color: $textSecondary;
+  @include transitionsall;
+  @include hover {
+    background: darken($bodybg, 5%);
+  }
 }
 
 .removeimage-btn {

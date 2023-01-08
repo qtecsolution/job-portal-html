@@ -995,23 +995,23 @@
                                 <div class="col-lg-9">
                                     <div class="applicationform">
 
-                                        <div class="applicationform-header d-flex justify-content-between">
-                                            <h2>Application form</h2>
+                                        <div class="applicationform-header">
+                                            <h2 class="title">Application form</h2>
                                             <button class="preview-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Preview</button>
                                         </div>
 
                                         <div class="applicationform-body">
 
-                                            <div class="box p-5 border">
+                                            <div class="box p-5 border d-none">
 
                                             </div>
-                                            <div class="box p-5 border">
+                                            <div class="box p-5 border d-none">
 
                                             </div>
 
                                             <!-- basic info  start -->
                                             <div class="collapsebtn-wrapper">
-                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#basicInfo" aria-expanded="false" aria-controls="basicInfo">
+                                                <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#basicInfo" aria-expanded="false" aria-controls="basicInfo">
                                                     <span>
                                                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1021,9 +1021,125 @@
                                                 </button>
                                             </div>
 
-                                            <div class="collapse" id="basicInfo">
-                                                <div class="card card-body">
-                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                            <div class="collapse show" id="basicInfo">
+
+                                                <div class="col-wrapper">
+                                                   <div class="row g-4">
+                                                     <!--  Name -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox errorfield ">
+                                                            <label for="fullname" class="inputlabel"> Full Name* </label>
+                                                            <input type="text" id="fullname" class="inputfield"
+                                                                placeholder="Enter number of vacancies" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">  Full name is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Email -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="email" class="inputlabel"> Email* </label>
+                                                            <input type="email" id="email" class="inputfield"
+                                                                placeholder="Enter your email" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Email is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- Phone-->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="phone" class="inputlabel"> Phone* </label>
+                                                            <input type="text" id="phone" class="inputfield"
+                                                                placeholder="Phone" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Phone is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Portfolio -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="portfolio" class="inputlabel"> Portfolio link </label>
+                                                            <input type="text" id="portfolio" class="inputfield"
+                                                                placeholder="portfolio" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Portfolio is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- gender -->
+
+                                                    <div class="col-12">
+                                                        <div class="inputbox ">
+                                                            <label for="portfolio" class="inputlabel"> Gender</label>
+                                                             <div class="d-flex  gap-4 align-items-center">
+                                                                <div class="singleradio">
+                                                                    <input type="radio" name="gender" id="male" class="radiofield" hidden >
+                                                                    <label class="radiolabel" for="male">Male</label>
+                                                                  </div>
+                                                                  <div class="singleradio">
+                                                                    <input type="radio" name="gender" id="female" class="radiofield" hidden checked>
+                                                                    <label class="radiolabel" for="female">Female</label>
+                                                                  </div>
+                                                             </div>
+                                                            <div class="error">
+                                                                <p class="error-message"> Gender is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                 
+
+                                                    <!-- present address -->
+                                                    <div class="col-sm-6">
+                                                        <div class="textareabox">
+                                                            <label for="presentaddress" class="textarealabel">Present Address</label>
+                                                            <textarea  cols="30" rows="10" class="textareafield" id="presentaddress"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!-- present address -->
+                                                    <div class="col-sm-6">
+                                                        <div class="textareabox">
+                                                            <label for="parmanentaddress" class="textarealabel">Parmanent Address</label>
+                                                            <textarea  cols="30" rows="10" class="textareafield" id="parmanentaddress"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                  
+
+                                                    <!-- file upload -->
+                                                    <div class="col-12">
+                                                       <div class="upload-box">
+                                                        <input type="file" name="" id="uploadcv" class="uploadbox-input" hidden> 
+                                                        <label for="uploadcv" class="uploadbox-label">
+                                                            <div class="middle">
+                                                                <span>
+                                                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.33333 1H21.25V3.125H9.33333C8.13672 3.125 7.16667 4.07639 7.16667 5.25V30.75C7.16667 31.9236 8.13672 32.875 9.33333 32.875H26.6667C27.8633 32.875 28.8333 31.9236 28.8333 30.75V10.5625H31V30.75C31 33.0972 29.0599 35 26.6667 35H9.33333C6.9401 35 5 33.0972 5 30.75V5.25C5 2.90279 6.9401 1 9.33333 1Z" fill="#667085"/>
+                                                                        <path d="M21.25 7.375V1L31 10.5625H24.5C22.7051 10.5625 21.25 9.13541 21.25 7.375Z" fill="#667085"/>
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 23.1C13 22.6029 13.3731 22.2 13.8333 22.2H17.1667C17.6269 22.2 18 22.6029 18 23.1C18 23.5971 17.6269 24 17.1667 24H13.8333C13.3731 24 13 23.5971 13 23.1Z" fill="#667085"/>
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 19.5C13 19.0029 13.3731 18.6 13.8333 18.6H22.1667C22.6269 18.6 23 19.0029 23 19.5C23 19.9971 22.6269 20.4 22.1667 20.4H13.8333C13.3731 20.4 13 19.9971 13 19.5Z" fill="#667085"/>
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 15.9C13 15.4029 13.3731 15 13.8333 15H22.1667C22.6269 15 23 15.4029 23 15.9C23 16.3971 22.6269 16.8 22.1667 16.8H13.8333C13.3731 16.8 13 16.3971 13 15.9Z" fill="#667085"/>
+                                                                    </svg> 
+                                                                </span>
+
+                                                                <div class="right">
+                                                                    <span>Drag & drop file or browse file</span>
+                                                                    <span> Max size 5Mb</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                       </div>
+                                                    </div>
+
+                                                    
+                                                   </div>
                                                 </div>
                                             </div>
 
@@ -1031,7 +1147,7 @@
 
                                             <!-- Professional Info  start -->
                                             <div class="collapsebtn-wrapper">
-                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#personalInfo" aria-expanded="false" aria-controls="personalInfo">
+                                                <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#personalInfo" aria-expanded="false" aria-controls="personalInfo">
                                                     <span>
                                                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1041,10 +1157,107 @@
                                                 </button>
                                             </div>
 
-                                            <div class="collapse" id="personalInfo">
-                                                <div class="card card-body">
-                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                                                </div>
+                                            <div class="collapse " id="personalInfo">
+                                               <div class="col-wrapper">
+                                                    <div class="row g-4">
+                                                        
+                                                    <!--  Current Organization -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox errorfield ">
+                                                            <label for="organization" class="inputlabel"> Current Organization </label>
+                                                            <input type="text" id="organization" class="inputfield"
+                                                                placeholder="Enter your current organization name" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">  Organization is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Current Organization -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="organization" class="inputlabel"> Current Job Position </label>
+                                                            <input type="text" id="organization" class="inputfield"
+                                                                placeholder="Enter your current job position" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Job Position is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Experience in years -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="experienceyear" class="inputlabel"> Experience in years </label>
+                                                            <input type="text" id="experienceyear" class="inputfield"
+                                                                placeholder="Year of experiences" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">Experience in years is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Notice period -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="noticePeriod" class="inputlabel"> Notice period </label>
+                                                            <input type="text" id="noticePeriod" class="inputfield"
+                                                                placeholder="Notice period time" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Notice period is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Current Salary  -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="currentSallery" class="inputlabel">Current Salary </label>
+                                                            <input type="text" id="currentSallery" class="inputfield"
+                                                                placeholder="Current salary" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Current Salary is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Expected Salary  -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="expectedSallery" class="inputlabel"> Expected Salary </label>
+                                                            <input type="text" id="expectedSallery" class="inputfield"
+                                                                placeholder="Expected salary" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Expected Salary is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- SKILL SETS -->
+                                                    <div class="col-12">
+                                                        <div class="inputbox">
+                                                            <label for="select-city" class="inputlabel"> Skill Sets* </label>
+                                                        <select id="skills" multiple>
+                                                            <option>Html</option>
+                                                            <option>Css</option>
+                                                            <option>Javascript</option>
+                                                            <option>Php</option>
+                                                            <option>laravel</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div> 
+
+                                                     <!--additional info -->
+                                                     <div class="col-sm-6">
+                                                        <div class="textareabox">
+                                                            <label for="additional" class="textarealabel">Additional Info</label>
+                                                            <textarea  cols="30" rows="10" class="textareafield" id="additional"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    </div>
+                                               </div>
                                             </div>
 
                                             <!-- Professional Info end -->
@@ -1075,7 +1288,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 h-100">
                                     <button class="btn" draggable="true">Add Group Field</button>
                                     <br>
                                     <button class="btn" draggable="true">Text Area</button>
@@ -1203,13 +1416,14 @@
             //     }
             // });
             // In your Javascript (external .js resource or <script> tag)
-            // $(document).ready(function () {
-            //      $('#people').chosen();
-            //      $(function () {
-            //         $("#datepicker").datepicker();
-            //     });
+            $(document).ready(function () {
+                 $('#skills').chosen();
+                 $(function () {
+                    $("#datepicker").datepicker();
+                    // $('#skills').chosen();
+                });
                 
-            // });
+            });
 
         </script>
 </body>

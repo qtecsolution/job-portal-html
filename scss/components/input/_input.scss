@@ -156,4 +156,26 @@
         @include setBgColor(#f6f6f9,$textPrimary);
       }
     }
+  } 
+
+  .upload-box {
+
+    .uploadbox-label {
+      background: $bodybg;
+      width: 100%;
+      @include flex-center;
+      height: size(160);
+      @include border(solid,1,$headerborder);
+      @include radius(8);
+      .middle {
+        @include flex;
+        gap: size(10);
+        .right {
+          @include flex-column;
+         align-items: center;
+         color: $textPrimary;
+         @include font($primaryFont, 10, medium, normal, 12);
+        }
+      }
+    }
   }
