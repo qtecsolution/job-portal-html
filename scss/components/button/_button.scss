@@ -165,8 +165,17 @@ button,
   align-items: center;
   justify-content: center;
   gap: size(10);
+  @include breakpoint(tab992) {
+    gap: size(6);
+    @include font($primaryFont,10,semibold,normal,12); 
+  }
+  @include breakpoint(desktop1400) {
+    gap: size(10);
+    @include font($primaryFont,12,semibold,normal,12); 
+  }
   @include hover {
     background: darken($bodybg, 5%);
+
 
   }
 

@@ -1,8 +1,12 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+
+
 .offcanvas {
   height: 100vh;
+  width: size(800) !important;
+
 
   &.offcanvas-top {
     border-bottom: 0;
@@ -29,33 +33,49 @@
   }
 
   &-header {
+    background-color: $offcanvasbg;
+    
+    .offcanvas-title {
+      @include font($primaryFont,18,medium,normal,26);
+
+    }
     .btn-close {
-      @include radius(0);
-      @include transitionsall;
-      padding: 0;
-      margin: 0;
-      @include square(16);
-      @include flex-center;
-      overflow: hidden;
+      @include setBgColor($white,$textPrimary);
+      @include flex;
+      gap: size(10);
+      min-width: size(130);
+      @include border(solid,1,$headerborder);
+      align-items: center;
+      @include font($primaryFont,12,medium,normal,12);
+      // @include radius(0);
+      // @include transitionsall;
+      // padding: 0;
+      // margin: 0;
+      // @include square(16);
+      // @include flex-center;
+      // overflow: hidden;
 
       svg {
-        @include wh100;
+        // @include wh100;
       }
 
       @include hover {
-        opacity: 1;
-        @include rotate(180);
+        // opacity: 1;
+        // @include rotate(180);
 
-        svg {
-          path {
-            stroke: $danger;
-          }
-        }
+        // svg {
+        //   path {
+        //     stroke: $danger;
+        //   }
+        // }
       }
     }
   }
 
   &-body {
+    margin: size(20);
+    @include border(solid,1,$headerborder);
+    @include radius(10);
     &::-webkit-scrollbar {
       background: transparent;
       width: size(8);
