@@ -4,7 +4,12 @@
 .form-builder {
     
 
-   
+ .buttons-wrapper {
+    display: none;
+    display: grid;
+    gap: size(10);
+    grid-template-columns: 1fr 1fr;
+}
 }
 
 .applicationform {
@@ -49,6 +54,9 @@
                 }
 
             }
-        }
+
+           
+        } 
+      
 } 
 

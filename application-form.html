@@ -1264,7 +1264,7 @@
 
                                             <!-- Educational Info start -->
                                             <div class="collapsebtn-wrapper">
-                                                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#educationalInfo" aria-expanded="false" aria-controls="educationalInfo">
+                                                <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#educationalInfo" aria-expanded="false" aria-controls="educationalInfo">
                                                     <span>
                                                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1275,12 +1275,122 @@
                                             </div>
 
                                             <div class="collapse" id="educationalInfo">
-                                                <div class="card card-body">
-                                                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                                                </div>
+                                                <div class="col-wrapper">
+                                                    <div class="row g-4">
+                                                        
+                                                    <!--  University -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox">
+                                                            <label for="university" class="inputlabel"> University Name</label>
+                                                            <input type="text" id="university" class="inputfield"
+                                                                placeholder="Enter your university name" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> University name is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  Degree -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="degree" class="inputlabel"> Degree </label>
+                                                            <input type="text" id="degree" class="inputfield"
+                                                                placeholder="Enter your degree" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message"> Degree is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- passing year -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="passingyear" class="inputlabel">Passing Year </label>
+                                                            <input type="text" id="passingyear" class="inputfield"
+                                                                placeholder="Enter your passing year" autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">Passing year is in years is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                  
+                                                    </div>
+                                               </div>
                                             </div>
 
                                             <!-- Educational Info end -->
+
+                                            <!-- Social link start -->
+                                            <div class="collapsebtn-wrapper">
+                                                <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#socialLinkg" aria-expanded="false" aria-controls="educationalInfo">
+                                                    <span>
+                                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span> Socila Link</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="collapse" id="socialLinkg">
+                                                <div class="col-wrapper">
+                                                    <div class="row g-4">
+                                                        
+                                                    <!--  LinkedIn Profile -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox">
+                                                            <label for="linkdinprofile" class="inputlabel"> LinkedIn Profile</label>
+                                                            <input type="text" id="linkdinprofile" class="inputfield"
+                                                                placeholder="Enter your LinkedIn profile link  " autocomplete="off" required>
+                                                            <div class="error">
+                                                                <!-- <p class="error-message"> University name is required</p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--  GitHub Profile -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="githubprofile" class="inputlabel"> GitHub Profile</label>
+                                                            <input type="text" id="githubprofile" class="inputfield"
+                                                                placeholder="Enter your Github profile link " autocomplete="off" required>
+                                                            <div class="error">
+                                                                <!-- <p class="error-message"> Degree is required</p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Behance Profile -->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="behanceprofile" class="inputlabel">Behance Profile </label>
+                                                            <input type="text" id="behanceprofile" class="inputfield"
+                                                                placeholder="Enter your Behance profile link " autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">Passing year is in years is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Pinterest Profile-->
+                                                    <div class="col-sm-6 ">
+                                                        <div class="inputbox ">
+                                                            <label for="passingyear" class="inputlabel">Pinterest Profile </label>
+                                                            <input type="text" id="passingyear" class="inputfield"
+                                                                placeholder="Enter your Pinterest profile link " autocomplete="off" required>
+                                                            <div class="error">
+                                                                <p class="error-message">Passing year is in years is required</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                  
+                                                    </div>
+                                               </div>
+                                            </div>
+
+                                            <!--  Social link end -->
 
 
                                         </div>
@@ -1289,9 +1399,133 @@
                                 </div>
 
                                 <div class="col-lg-3 h-100">
-                                    <button class="btn" draggable="true">Add Group Field</button>
-                                    <br>
-                                    <button class="btn" draggable="true">Text Area</button>
+                                    <!-- configure -->
+                                    <div class="congigure">
+                                       <div class="configure-header">
+
+                                       </div>
+                                       <div class="configure-body">
+                                         <button class="drag-btn" draggable="true">
+                                            <span class="icon">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                </svg>   
+                                            </span>
+                                            <span class="text">Add Group Field</span>
+                                         </button>
+                                       </div> 
+
+                                    </div> 
+
+                                    <!-- select field -->
+                                    <div class="selectfield">
+
+                                        <div class="selectfield-header">
+                                            <h3>Select Field</h3>
+                                        </div> 
+                                        <div class="selectfield-body">
+                                            <div class="buttons-wrapper">
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                                <button class="drag-btn" draggable="true">
+                                                    <span class="icon">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3C2.55228 3 3 2.55228 3 2C3 1.44772 2.55228 1 2 1ZM0 2C0 0.89543 0.89543 0 2 0C2.93192 0 3.71497 0.637386 3.93699 1.5H12.063C12.285 0.637386 13.0681 0 14 0C15.1046 0 16 0.89543 16 2C16 2.93192 15.3626 3.71497 14.5 3.93699V12.063C15.3626 12.285 16 13.0681 16 14C16 15.1046 15.1046 16 14 16C13.0681 16 12.285 15.3626 12.063 14.5H3.93699C3.71497 15.3626 2.93192 16 2 16C0.89543 16 0 15.1046 0 14C0 13.0681 0.637386 12.285 1.5 12.063V3.93699C0.637386 3.71497 0 2.93192 0 2ZM2.5 3.93699V12.063C3.2028 12.2439 3.7561 12.7972 3.93699 13.5H12.063C12.2439 12.7972 12.7972 12.2439 13.5 12.063V3.93699C12.7972 3.7561 12.2439 3.2028 12.063 2.5H3.93699C3.7561 3.2028 3.2028 3.7561 2.5 3.93699ZM14 1C13.4477 1 13 1.44772 13 2C13 2.55228 13.4477 3 14 3C14.5523 3 15 2.55228 15 2C15 1.44772 14.5523 1 14 1ZM2 13C1.44772 13 1 13.4477 1 14C1 14.5523 1.44772 15 2 15C2.55228 15 3 14.5523 3 14C3 13.4477 2.55228 13 2 13ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15C14.5523 15 15 14.5523 15 14C15 13.4477 14.5523 13 14 13Z" fill="#667085"/>
+                                                        </svg>   
+                                                    </span>
+                                                    <span class="text">Add Group Field</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

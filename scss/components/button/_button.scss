@@ -153,6 +153,24 @@ button,
    
   }
 }
+.drag-btn {
+  @include setBgColor($bodybg,$textPrimary);
+  @include font($primaryFont,12,semibold,normal,12); 
+  @include border(solid,1,$headerborder);
+  padding-block: size(10);
+  @include w100;
+  @include radius(7);
+  @include transitionsbackground;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  gap: size(10);
+  @include hover {
+    background: darken($bodybg, 5%);
+
+  }
+
+}
 // ==============================-dark mode-====================================
 .darkmode {
   .btn-addtask { 
