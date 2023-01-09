@@ -27,10 +27,10 @@
         padding: size(10) size(20);
         &-header {
             h3 {
-                @include font($primaryFont,18,medium,normal,24);
+                @include font($primaryFont,14,medium,normal,20);
                 padding-bottom: size(20);
                 @include breakpoint(tab992) {
-                @include font($primaryFont,20,medium,normal,24);
+                @include font($primaryFont,16,medium,normal,20);
     
                 }
             }
@@ -107,6 +107,40 @@
 
                 }
 
+            } 
+
+            .groupfield {
+                @include border(solid,1,$primary);
+                @include radius(10);
+                margin-right: size(10);
+                padding: size(20);
+                &-header {
+                    @include flex-between;
+                    @include border-single(bottom,solid,1,$headerborder);
+                    padding-bottom: size(20);
+                    .left {
+                        @include flex;
+                        align-items: center;
+                        gap: size(10);
+                        .groupfield-input {
+                            background:#F7F7FA;
+                            padding: size(10) size(14);
+                            @include radius(8);
+                            @include border(solid,1,$headerborder);
+                        }
+                    }
+
+                    .right {
+                        @include flex;
+                        align-items: center;
+                        gap: size(10);
+                    }
+                }
+
+                &-body {
+                    @include flex-center;
+                    min-height: size(100);
+                }
             }
 
            
