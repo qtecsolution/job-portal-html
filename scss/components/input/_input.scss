@@ -178,4 +178,66 @@
         }
       }
     }
+  } 
+
+  .dropdownbox {
+    &-header {
+      @include flex-between; 
+      padding: size(10) size(0);
+      .title {
+        color: $headingText;
+        @include font($primaryFont, 14, semibold, normal, 17);
+
+      }
+      .checkbox-wrapper {
+        @include flex;
+        align-items: center;
+        gap: size(10);
+        .selectcountry {
+          color: $textPrimary;
+          @include font($primaryFont, 14, normal, normal, 17);
+        
+        }
+      }
+    }
+
+    &-body {
+
+    }
+  }
+
+
+  .check-box {
+    input[type="checkbox"] {
+      position: relative;
+      appearance: none;
+      width: 26px;
+      height: 13px;
+      background: #ccc;
+      border-radius: 50px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: 0.4s; 
+
+      &:checked[type="checkbox"] {
+        background: $success;
+        &::after {
+          left: 60%;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+        transition: 0.4s;
+      }
+    }
   }

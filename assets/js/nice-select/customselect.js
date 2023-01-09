@@ -1,10 +1,11 @@
+const select=document.querySelectorAll('select')
+const selectCountry = document.querySelector('#select-country');
 const selectDepartment = document.querySelector('#select-department');
 const selectExperience = document.querySelector('#select-experience');
 const selectJobtype = document.querySelector('#select-jobtype');
 const selectEmploymenttype = document.querySelector('#select-employmenttype');
 const selectCurrency = document.querySelector('#select-currency');
 const selectSalarytype = document.querySelector('#select-salarytype');
-const selectCountry = document.querySelector('#select-country');
 const selectState = document.querySelector('#select-state');
 const selectCity = document.querySelector('#select-city');
 
@@ -12,6 +13,13 @@ const instance = NiceSelect.bind(selectDepartment, {
   searchable: false,
   placeholder: 'Select Department'
 });
+
+
+NiceSelect.bind(selectCountry, {
+  searchable: true,
+  placeholder: 'Select Country'
+});
+
 
 
 
@@ -40,10 +48,6 @@ NiceSelect.bind(selectSalarytype, {
   placeholder: 'Select salary type'
 });
 
-NiceSelect.bind(selectCountry, {
-  searchable: false,
-  placeholder: 'Select Country'
-});
 
 NiceSelect.bind(selectState , {
   searchable: false,
