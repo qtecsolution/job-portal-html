@@ -1,0 +1,64 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.hiringstage {
+    
+    &-header {
+        @include flex-between;
+        align-items: center;
+        padding: size(20) size(0);
+        @include breakpoint(tab992) {
+        padding: size(30) size(0);
+
+        }
+        .title {
+            @include font($primaryFont,18,medium,normal,24); 
+            @include breakpoint(mobile576) {
+            @include font($primaryFont,20,medium,normal,24); 
+
+            }
+        }
+    }
+
+    &-body {
+        .stages {
+            @include flex-column;
+            gap: size(20);
+            @include breakpoint(tab992) {
+             gap: size(30);
+             padding-left: size(24);
+                
+            }
+            .stage {
+                @include border-single(top,solid,3,$primary);
+                box-shadow: 0px 3px 4px rgba(102, 112, 133, 0.05);
+                padding: size(18);
+                @include radius(8);
+                .stage-content {
+                    @include flex;
+                    gap: size(10);
+                    align-items: center;
+                    color: $headingText;
+                    @include font($primaryFont,16,medium,normal,20); 
+
+                }
+            }
+        }
+
+        .addstage {
+            &-header {
+
+            }
+            &-body {
+                .inputbox {
+                    input[type='color'] {
+                        @include w100;
+                        padding: 0;
+                        background:#f6f6f9;
+                       
+                    }
+                }
+            }
+        }
+    }
+}
