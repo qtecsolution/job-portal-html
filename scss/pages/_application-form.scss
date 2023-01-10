@@ -129,6 +129,7 @@
                             padding: size(10) size(14);
                             @include radius(8);
                             @include border(solid,1,$headerborder);
+                            width:100%;
                         }
                     }
 
@@ -136,6 +137,7 @@
                         @include flex;
                         align-items: center;
                         gap: size(10);
+                        flex-wrap: wrap;
                     }
                 }
 
