@@ -86,4 +86,11 @@
       @include radius(8);
     }
   }
+
+  .arrowbtn {
+    cursor: pointer;
+    position: absolute;
+    left: size(-24);
+    top: 50%;
+  }
 }

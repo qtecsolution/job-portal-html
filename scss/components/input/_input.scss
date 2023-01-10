@@ -87,6 +87,17 @@
     }
   }
 
+.groupfield-input {
+    background:#F7F7FA;
+    padding: size(10) size(14);
+    @include radius(8);
+    @include border(solid,1,$headerborder);
+
+    &::placeholder {
+      color: $textSecondary;
+      @include font($primaryFont, 14, normal, normal, 17);
+    }
+}
 
   .darkmode {
     .inputbox { 
@@ -195,7 +206,7 @@
         gap: size(10);
         .selectcountry {
           color: $textPrimary;
-          @include font($primaryFont, 14, normal, normal, 17);
+          @include font($primaryFont, 13, normal, normal, 17);
         
         }
       }
@@ -203,6 +214,17 @@
 
     &-body {
 
+    }
+  } 
+
+  .checkbox-wrapper {
+    @include flex;
+    align-items: center;
+    gap: size(10);
+    .selectcountry {
+      color: $textPrimary;
+      @include font($primaryFont, 13, normal, normal, 17);
+    
     }
   }
 

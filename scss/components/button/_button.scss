@@ -193,6 +193,30 @@ button,
     background: darken($bodybg, 5%);
   }
 }
+
+.addoption-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: size(6);
+  color: $primary;
+  @include font($primaryFont,14,semibold,normal,12); 
+  margin-left: size(10);
+ @include transitionsall;
+  @include hover {
+    color: darken($primary,5%);
+  }
+
+} 
+
+.singleoption-btn {
+  @include flex;
+  align-items: center;
+  gap: size(6);
+  @include setBgColor($headerborder,$textPrimary);
+  @include font($primaryFont,14,medium,normal,12); 
+  padding: size(12) size(20);
+  @include radius(50);
+}
 // ==============================-dark mode-====================================
 .darkmode {
   .btn-addtask { 
