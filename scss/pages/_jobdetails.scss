@@ -33,9 +33,13 @@
         }
 
         .buttons {
-            @include flex;
+            @include flex-column;
             justify-content: center;
             gap: size(4);
+            
+            @include breakpoint(mobile480) {
+                flex-direction: row;
+            }
 
             @include breakpoint(mobile414) {
                 gap: size(10);

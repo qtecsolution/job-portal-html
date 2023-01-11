@@ -6,7 +6,7 @@ let loadedContent=document.getElementsByClassName('loaded-content');
 
 
 // Hide content loader after 3 second
-setTimeout(skeletoHide, 1500); 
+setTimeout(skeletoHide, 1000); 
 //  hide content loader when window is loaded 
 // window.addEventListener('DOMContentLoaded', (event) => {
 //     skeletoHide()

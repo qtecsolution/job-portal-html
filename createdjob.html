@@ -7,15 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PAGE TITLE -->
-    <title>Hire Me - Job Portal |Hiring stage </title>
+    <title>Hire Me - Job Portal | Task Assessment</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <!-- PLACEHOLDER LOADING -->
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <!-- nice select -->
+    <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="assets/css/style.min.css" />
+    <!-- nice select -->
+    <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
 
  
 
@@ -919,8 +923,8 @@
 
                         <div class="buttons">
                             <button class="saveclose">Save & Close</button>
-                            <a href="application-form.html" class="btn-preview">Preview</a>
-                            <a href="taskassesment.html" class="btn-next">Next</a>
+                            <a href="taskassesment.html" class="btn-preview">Preview</a>
+                            <a href="createdjob.html" class="btn-next">Next</a>
                         </div>
                     </div>
 
@@ -928,6 +932,7 @@
 
                 <div class="addnewjob-body">
                     <div class="bg">
+
                         <!-- steps -->
                         <div class="job-steps loaded-content">
 
@@ -950,12 +955,22 @@
                                     </span>
                                     <span class="title">Application form</span>
                                 </div>
-                                <div class="item  active">
-                                    <span class="count">3</span>
+                                <div class="item  completed">
+                                    <span class="icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 8L9.3333 14L6 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
                                     <span class="title">Hiring Stages</span>
                                 </div>
-                                <div class="item">
-                                    <span class="count">4</span>
+                                <div class="item completed">
+                                    <span class="icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 8L9.3333 14L6 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
                                     <span class="title">Task Assessment</span>
                                 </div>
 
@@ -964,12 +979,14 @@
 
                         </div>
                         <!-- steps -->
+
                         <!-- loader for job  step -->
                         <!--  -->
                         <div class="ph-item h-100 content-loader">
 
                             <div class="ph-col-12">
                             <div class="ph-row rounded">
+
                                 <div class="ph-col-12 big rounded "></div>
                                 <div class="ph-col-12 big empty"></div>
                                 <div class="ph-col-12 big empty "></div>
@@ -983,212 +1000,18 @@
                         </div>
                         <!-- loader for step-->
 
-                        <!-- ===================hiring stage start ========================== -->
 
+                        <!-- task assesment  -->
                         <div class="row pb-5">
-                            <div class="col-xl-8">
-                                <div class="hiringstage">
-
-                                    <div class="hiringstage-header">
-                                        <h3 class="title">Customize your hiring pipeline</h3>
-                                        <button class="btn-addtask" onclick="addStage()">
-                                            <span>
-                                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5ZM5.3125 2.8125C5.3125 2.63991 5.17259 2.5 5 2.5C4.82741 2.5 4.6875 2.63991 4.6875 2.8125V4.6875H2.8125C2.63991 4.6875 2.5 4.82741 2.5 5C2.5 5.17259 2.63991 5.3125 2.8125 5.3125H4.6875V7.1875C4.6875 7.36009 4.82741 7.5 5 7.5C5.17259 7.5 5.3125 7.36009 5.3125 7.1875V5.3125H7.1875C7.36009 5.3125 7.5 5.17259 7.5 5C7.5 4.82741 7.36009 4.6875 7.1875 4.6875H5.3125V2.8125Z" fill="#667085"></path>
-                                              </svg>
-                                            </span>
-                                            <span>Add Stage</span>
-                                        </button>
-                                    </div>
-                                    <div class="hiringstage-body">
-                                        <!-- stages -->
-                                        <div class="stages">
-                                            
-                                            <!-- single stage  -->
-                                            <div class="stage border-success">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>New Applied </span>
-                                                </div>
-                                            </div>
-                                            <!-- single stage  -->
-                                            <div class="stage border-danger">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>Screeninng </span>
-                                                </div>
-                                            </div>
-                                            <!-- single stage  -->
-                                            <div class="stage  border-warning">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>Design Challenge </span>
-                                                </div>
-                                            </div>
-                                            <!-- single stage  -->
-                                            <div class="stage  border-info">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>Interview </span>
-                                                </div>
-                                            </div>
-                                            <!-- single stage  -->
-                                            <div class="stage  border-dark">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>Offer </span>
-                                                </div>
-                                            </div>
-
-                                            <!-- single stage  -->
-                                            <div class="stage  border-warning">
-                                                <div class="stage-content">
-                                                    <span>
-                                                        <svg width="5" height="14" viewBox="0 0 5 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="#98A2B3"/>
-                                                            <path d="M5 1C5 1.55228 4.55228 2 4 2C3.44772 2 3 1.55228 3 1C3 0.447715 3.44772 0 4 0C4.55228 0 5 0.447715 5 1Z" fill="#98A2B3"/>
-                                                            <path d="M2 4C2 4.55228 1.55228 5 1 5C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3C1.55228 3 2 3.44772 2 4Z" fill="#98A2B3"/>
-                                                            <path d="M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z" fill="#98A2B3"/>
-                                                            <path d="M2 7C2 7.55228 1.55228 8 1 8C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6C1.55228 6 2 6.44772 2 7Z" fill="#98A2B3"/>
-                                                            <path d="M5 7C5 7.55228 4.55228 8 4 8C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6C4.55228 6 5 6.44772 5 7Z" fill="#98A2B3"/>
-                                                            <path d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44771 0.447715 9 1 9C1.55228 9 2 9.44771 2 10Z" fill="#98A2B3"/>
-                                                            <path d="M5 10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9C4.55228 9 5 9.44771 5 10Z" fill="#98A2B3"/>
-                                                            <path d="M2 13C2 13.5523 1.55228 14 1 14C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12C1.55228 12 2 12.4477 2 13Z" fill="#98A2B3"/>
-                                                            <path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill="#98A2B3"/>
-                                                        </svg>  
-                                                    </span> 
-                                                    <span>Hired</span>
-                                                </div>
-                                            </div>
-        
-                                           
-        
-        
-        
-                                        </div>
-
-                                        <!-- add stage -->
-                                        <div class="addstage">
-                                            <div class="addstage-header">
-                                                <h3 class="title">Add a stage</h3>
-                                                <div class="buttons">
-                                                    <button class="btn-cancel">Cancel</button>
-                                                    <button class="btn-next">save</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="addstage-body">
-                                                <div class="row ">
-                                                    <div class="col-6 pe-1">
-                                                        <div class="inputbox">
-                                                            <label for="stagename" class="inputlabel">Stage Name</label>
-                                                            <input type="text" id="stagename" class="inputfield"
-                                                                placeholder="Enter stage name" autocomplete="off">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6 ps-1">
-                                                        <div class="inputbox colorpicker">
-                                                            <label for="stagecolor" class="inputlabel">Pick Stage Color</label>
-                                                            <!-- hidden color picker input -->
-                                                            <input onchange="show_color();" type="color" id="pick_color"  class="inputfield"
-                                                                placeholder="Enter your Zip Code" autocomplete="off"> 
-                                                            <!-- showed input for  picker -->
-                                                                <input type="text" id="stagecolor" class="inputfield"
-                                                                value="4F46E5" autocomplete="off" onclick="show_colorpicker();">
-
-                                                            <!-- drop icon  -->
-                                                            <span class="drop-icon ">
-                                                                <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M2.69667 5.5299L8 0.226562L13.3033 5.5299C14.3522 6.57879 15.0665 7.91517 15.3559 9.37002C15.6453 10.8249 15.4968 12.3329 14.9291 13.7033C14.3614 15.0738 13.4001 16.2451 12.1668 17.0692C10.9334 17.8933 9.48336 18.3332 8 18.3332C6.51665 18.3332 5.0666 17.8933 3.83324 17.0692C2.59987 16.2451 1.63858 15.0738 1.07092 13.7033C0.503256 12.3329 0.354725 10.8249 0.644107 9.37002C0.933489 7.91517 1.64779 6.57879 2.69667 5.5299Z" fill="#667085"/>
-                                                                </svg>
-                                                                    
-                                                            </span>
-                                                            <!-- paint icon  -->
-                                                            <span class="paint-icon ">
-                                                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M8.00074 0.5C8.00074 0.367392 7.94806 0.240215 7.8543 0.146447C7.76053 0.0526785 7.63335 0 7.50074 0C7.36813 0 7.24096 0.0526785 7.14719 0.146447C7.05342 0.240215 7.00074 0.367392 7.00074 0.5V2C6.79574 2.072 6.60374 2.19 6.44074 2.354L1.35374 7.439C1.21435 7.5783 1.10378 7.7437 1.02834 7.92575C0.952893 8.1078 0.914062 8.30294 0.914062 8.5C0.914062 8.69706 0.952893 8.8922 1.02834 9.07425C1.10378 9.2563 1.21435 9.4217 1.35374 9.561L5.68874 13.896C5.82804 14.0354 5.99344 14.146 6.1755 14.2214C6.35755 14.2968 6.55268 14.3357 6.74974 14.3357C6.94681 14.3357 7.14194 14.2968 7.32399 14.2214C7.50604 14.146 7.67144 14.0354 7.81074 13.896L12.8957 8.811C13.0351 8.6717 13.1457 8.5063 13.2211 8.32425C13.2966 8.1422 13.3354 7.94706 13.3354 7.75C13.3354 7.55294 13.2966 7.3578 13.2211 7.17575C13.1457 6.9937 13.0351 6.8283 12.8957 6.689L8.56174 2.354C8.40363 2.19545 8.21191 2.07447 8.00074 2V0.5ZM12.2697 8H2.20774L7.00074 3.207V4.5C7.00074 4.63261 7.05342 4.75979 7.14719 4.85355C7.24096 4.94732 7.36813 5 7.50074 5C7.63335 5 7.76053 4.94732 7.8543 4.85355C7.94806 4.75979 8.00074 4.63261 8.00074 4.5V3.207L12.1907 7.397C12.2684 7.47485 12.3182 7.5761 12.3325 7.68511C12.3467 7.79411 12.3247 7.90479 12.2697 8ZM15.0167 9.392C14.9642 9.30172 14.8889 9.2268 14.7984 9.17473C14.7078 9.12266 14.6052 9.09525 14.5007 9.09525C14.3963 9.09525 14.2937 9.12266 14.2031 9.17473C14.1126 9.2268 14.0373 9.30172 13.9847 9.392L12.3327 12.225C11.3557 13.898 12.5627 16 14.5007 16C16.4377 16 17.6457 13.898 16.6687 12.225L15.0167 9.392Z" fill="#667085"/>
-                                                                </svg>
-                                                                    
-                                                                    
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                            <div class="col-12">
+                                <div class="succesfully-created">
+                                    
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- ===================hiring stage end============================== -->
 
+                        <!-- task assesment  -->
+                                              
 
 
                     </div>
@@ -1205,35 +1028,23 @@
     
 
 
-        <!-- BOOTSTRAP JS -->
-        <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-        <!-- DARK-MODE -->
-        <script src="assets/js/darkmode/darkmode.js"></script>
-        <!-- SIDEBAR TOGGLE  -->
-        <script src="assets/js/sidetoggle/sidetoggle.js"></script>
-        <!-- TOOLTIP -->
-        <script src="assets/js/tooltip/tooltip.js"></script>
-        <!-- CONTENT LOADER  -->
-        <script src="assets/js/contentloader/contentloader.js"></script>
-        <script>
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- DARK-MODE -->
+    <script src="assets/js/darkmode/darkmode.js"></script>
+    <!-- SIDEBAR TOGGLE  -->
+    <script src="assets/js/sidetoggle/sidetoggle.js"></script>
+    <!-- TOOLTIP -->
+    <script src="assets/js/tooltip/tooltip.js"></script>
+    <!-- CONTENT LOADER  -->
+    <script src="assets/js/contentloader/contentloader.js"></script>
+    <!-- NICE SELECT -->
+    <script src="assets/js/nice-select/nice-select2.js"></script>
+    <!-- NICE SELECT ASSESMENT PAGE -->
+    <script src="assets/js/nice-select/taskassesment.js"></script>
 
-            function show_colorpicker(){
-                
-            document.getElementById('pick_color').click();
-            }
-
-            function show_color()
-            { 
-                document.getElementById('stagecolor').value=document.getElementById('pick_color').value
-                
-            }
-
-            // add stage button click 
-
-            function addStage() {
-                document.querySelector('.addstage').classList.toggle('d-none');
-            }
-        </script>
+ 
+        
         
 </body>
 
