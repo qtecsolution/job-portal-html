@@ -283,6 +283,29 @@
         }
       }
     } 
+    .groupfield-input { 
+
+     background: $lightDark !important;
+     color: $white;
+     border-color: $textSecondary !important;
+    } 
+
+    .dropdownbox {
+      &-header {
+        .title {
+          color:darken(white,20%);
+        }
+        .checkbox-wrapper {
+          .selectcountry {
+            color:darken(white,20%);          
+          }
+        }
+      }
+  
+      &-body {
+  
+      }
+    } 
 
 
   }

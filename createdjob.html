@@ -981,7 +981,6 @@
                         <!-- steps -->
 
                         <!-- loader for job  step -->
-                        <!--  -->
                         <div class="ph-item h-100 content-loader">
 
                             <div class="ph-col-12">
@@ -1085,105 +1084,100 @@
                                             <div class="jobcard-footer">
                                                 <button class="viewsite-btn">View on Career Site</button>
                                                 <button class="sharepromote-btn" data-bs-toggle="modal" data-bs-target="#shareModal">Share & Promote</button>
-                                            </div> 
-                                            <!-- modal -->
-                                        <!-- Button trigger modal -->
+                                            </div>  
+                                            <!-- Modal -->
+                                            <div class="modal fade " id="shareModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
 
-  
-                                        <!-- Modal -->
-                                        <div class="modal fade " id="shareModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-                                            <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
+                                                        <div class="customcheck">
+                                                            <input type="checkbox" id="selectall" class="customcheck-box" name="more-request" hidden>
+                                                            <label for="selectall" class="customcheck-label">Select All</label>
+                                                        </div>
 
-                                                    <div class="customcheck">
-                                                        <input type="checkbox" id="selectall" class="customcheck-box" name="more-request" hidden>
-                                                        <label for="selectall" class="customcheck-label">Select All</label>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                            <span>
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                    
+                                                            </span>
+                                                        </button>
                                                     </div>
+                                                    
+                                                    <div class="modal-body">
+                                                        <div class="social-selects">
 
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                                        <span>
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>
-                                                                
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                
-                                                <div class="modal-body">
-                                                    <div class="social-selects">
+                                                        <div class="single-select">
+                                                                <div>
+                                                                    <input type="checkbox" name="social" id="linkdin">
+                                                                    <label for="linkdin" class="checklabel">
+                                                                        <span class="checkmark"></span>
+                                                                        <figure>
+                                                                            <img src="assets/images/job-created/linkdin.svg" alt="linkdin">        
+                                                                        </figure>
+                                                                    </label>
 
-                                                       <div class="single-select">
-                                                            <div>
-                                                                <input type="checkbox" name="social" id="linkdin">
-                                                                <label for="linkdin" class="checklabel">
-                                                                    <span class="checkmark"></span>
-                                                                    <figure>
-                                                                        <img src="assets/images/job-created/linkdin.svg" alt="linkdin">        
-                                                                    </figure>
-                                                                </label>
+                                                                </div>
+                                                        </div>
+                                                        <div class="single-select">
+                                                                <div>
+                                                                    <input type="checkbox" name="social" id="adzuna">
+                                                                    <label for="adzuna" class="checklabel">
+                                                                        <span class="checkmark"></span>
+                                                                        <figure>
+                                                                            <img src="assets/images/job-created/adzuna.svg" alt="adzuna">        
+                                                                        </figure>
+                                                                    </label>
 
-                                                            </div>
-                                                       </div>
-                                                       <div class="single-select">
-                                                            <div>
-                                                                <input type="checkbox" name="social" id="adzuna">
-                                                                <label for="adzuna" class="checklabel">
-                                                                    <span class="checkmark"></span>
-                                                                    <figure>
-                                                                        <img src="assets/images/job-created/adzuna.svg" alt="adzuna">        
-                                                                    </figure>
-                                                                </label>
+                                                                </div>
+                                                        </div>
 
-                                                            </div>
-                                                       </div>
+                                                        <div class="single-select">
+                                                                <div>
+                                                                    <input type="checkbox" name="social" id="indedd">
+                                                                    <label for="indedd" class="checklabel">
+                                                                        <span class="checkmark"></span>
+                                                                        <figure>
+                                                                            <img src="assets/images/job-created/indeed.svg" alt="indeed">        
+                                                                        </figure>
+                                                                    </label>
 
-                                                       <div class="single-select">
-                                                            <div>
-                                                                <input type="checkbox" name="social" id="indedd">
-                                                                <label for="indedd" class="checklabel">
-                                                                    <span class="checkmark"></span>
-                                                                    <figure>
-                                                                        <img src="assets/images/job-created/indeed.svg" alt="indeed">        
-                                                                    </figure>
-                                                                </label>
+                                                                </div>
+                                                        </div>
 
-                                                            </div>
-                                                       </div>
+                                                        <div class="single-select">
+                                                                <div>
+                                                                    <input type="checkbox" name="social" id="glassdor">
+                                                                    <label for="glassdor" class="checklabel">
 
-                                                       <div class="single-select">
-                                                            <div>
-                                                                <input type="checkbox" name="social" id="glassdor">
-                                                                <label for="glassdor" class="checklabel">
+                                                                        <span class="checkmark"></span>
+                                                                        <figure>
+                                                                            <img src="assets/images/job-created/glassdor.svg" alt="glassdor">        
+                                                                        </figure>
 
-                                                                    <span class="checkmark"></span>
-                                                                    <figure>
-                                                                        <img src="assets/images/job-created/glassdor.svg" alt="glassdor">        
-                                                                    </figure>
+                                                                    </label>
 
-                                                                </label>
+                                                                </div>
+                                                        </div>
 
-                                                            </div>
-                                                       </div>
+                                                        </div>
 
                                                     </div>
-
+                                                    <div class="modal-footer">
+                                                        <button class="viewsite-btn">Share & Promote</button>
+                                                    
+                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button class="viewsite-btn">Share & Promote</button>
-                                                 
                                                 </div>
                                             </div>
-                                            </div>
-                                        </div>
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <!-- task assesment  -->
                                               
 

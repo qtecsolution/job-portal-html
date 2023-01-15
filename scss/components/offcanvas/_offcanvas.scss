@@ -94,3 +94,30 @@
     top: 50%;
   }
 }
+
+
+.darkmode {
+  .offcanvas {
+    background: $lightDark;
+
+    
+  &-header {
+    background-color: $shade-1;
+    
+    .offcanvas-title {
+      color: $white;
+    }
+    .btn-close {
+      @include setBgColor($lightDark,white);
+      border-color: $textPrimary;
+      align-items: center;
+      @include font($primaryFont,12,medium,normal,12);  
+    }
+  }
+
+  &-body {
+    border-color: $textPrimary;
+  }
+  
+  }
+}

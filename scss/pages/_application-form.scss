@@ -120,6 +120,7 @@
                     gap: size(14);
                     @include border-single(bottom,solid,1,$headerborder);
                     padding-bottom: size(20);
+                   
                     .left {
                         @include flex;
                         align-items: center;
@@ -160,4 +161,69 @@
         } 
       
 } 
+
+.darkmode {
+    .applicationform {
+        border-color: $textPrimary;
+            &-header {
+                @include breakpoint(tab992) {
+                &.header-offcanvas {
+                  
+                    border-color: $textPrimary;
+    
+                }
+                }
+                .title {
+                    color: $white;       
+                      
+                }
+            }
+    
+            &-body {
+                .col-wrapper {
+                    border-color: $textPrimary;
+                    
+                }
+                .groupfield-btn {
+                    color: white;
+                    svg {
+                        path {
+                            stroke: white;
+                        }
+                    }
+    
+                } 
+    
+                .groupfield {
+                    @include border(solid,1,$primary);
+                   
+                    &-header {
+                       border-color: $textSecondary;
+                        .left {
+                           
+                            .groupfield-input {
+                                background:#F7F7FA;
+                             
+                            }
+                        }
+    
+                       
+                    }
+    
+                    &-body {
+                     
+    
+                        .options {
+                          
+                        }
+                    }
+                }
+    
+               
+            } 
+          
+    } 
+          
+    } 
+
 

@@ -259,6 +259,24 @@ button,
     @include hover {
       @include setBgColor($shade-1,$white);
     }
+  } 
+
+  .singleoption-btn { 
+    @include setBgColor($darkPrimary,darken($white,20%));
+  } 
+  .drag-btn { 
+    @include setBgColor($lightDark,darken($white,20%));
+    border-color: $textPrimary;
+    @include hover {
+    @include setBgColor($darkPrimary,darken($white,20%));
+     
+    }
+    svg {
+      path {
+       fill: darken($white,20%);
+       stroke: darken($white,20%);
+      }
+    }
   }
 
 }

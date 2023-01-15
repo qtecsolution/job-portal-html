@@ -24,7 +24,15 @@
         &:focus {
           border-color: $primary;
         }
+        
     }
 }
 
+
+.darkmode {
+  .textareafield {
+    background: $lightDark;
+    border-color: rgb(102, 112, 133);
+  }
+}
 

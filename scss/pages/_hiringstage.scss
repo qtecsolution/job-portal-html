@@ -34,14 +34,20 @@
                 box-shadow: 0px 3px 4px rgba(102, 112, 133, 0.05);
                 padding: size(18);
                 @include radius(8);
+
                 .stage-content {
-                    @include flex;
-                    gap: size(10);
-                    align-items: center;
-                    color: $headingText;
-                    @include font($primaryFont,16,medium,normal,20); 
+                    @include flex-between; 
+                    .left {
+                        @include flex;
+                        gap: size(10);
+                        align-items: center;
+                        color: $headingText;
+                        @include font($primaryFont,16,medium,normal,20); 
+                    }
+                 
 
                 }
+
             }
         }
 
@@ -157,11 +163,30 @@
             .addstage { 
                 &-header {
                     border-color: darken(white,70%);
+                  
                 }
                 .title {
                     color: $white;
                 }
+            } 
+
+            .stages {
+                
+                .stage {
+                
+            
+                    .stage-content {
+                        .left {
+                            color: $white;
+                        }
+                     
+            
+                    }
+            
+                }
             }
         }
     }
-}
+} 
+
+
