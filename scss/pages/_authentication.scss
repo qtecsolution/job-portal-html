@@ -1,2 +1,64 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.authentications {
+  background: $checkborder;
+  @include flex;
+  width: 100%;
+  min-height: 100vh;
+
+  .left-content {
+    height: 100%;
+    @include flex-center;
+    overflow: hidden;
+
+    .sliderbox {
+      width: 70%;
+      height: size(340);
+      @include radius(10);
+      position: relative;
+      overflow: hidden;
+
+      .authSlider {
+        @include wh100;
+        height: size(305);
+        @include radius(10);
+        overflow: hidden;
+        
+        .swiper-slide {
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+
+      .swiper-pagination {
+        @include flex-center;
+        gap: size(8);
+
+        &-bullet {
+          @include square(10);
+          background: $textSecondary;
+          margin: 0;
+          opacity: 1;
+
+          &:hover:not(.active) {
+            background: $headingText;
+          }
+
+          &-active {
+            background: $headingText;
+          }
+        }
+      }
+    }
+  }
+
+  .right-content {
+    @include w100;
+    background: lightsalmon;
+    
+    @include breakpoint(tab992) {
+      width: 50%;
+    }
+  }
+}
