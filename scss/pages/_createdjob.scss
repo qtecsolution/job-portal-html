@@ -62,13 +62,14 @@
                 display: none;
                 @include flex-between;
                 margin-top: size(20);
+
                 .viewsite-btn {
                     @include setBgColor($primary,$white);
                     @include radius(10);
                     padding: size(10) size(10);
                     @include transitionsall;
                     @include border(solid,1,$primary);
-                    @include font($primaryFont,12,medium,normal,20);
+                    @include font($primaryFont,12,medium,normal,16);
                     @include breakpoint(mobile414) {
                         padding: size(12) size(20);
                     }
@@ -76,13 +77,14 @@
                         @include setBgColor(transparent,$textPrimary);
                     }
                 }
+
                 .sharepromote-btn {
                    
                     @include radius(10);
                     padding: size(10) size(10);
                     @include border(solid,1,$primary);
                     @include transitionsall;
-                    @include font($primaryFont,12,medium,normal,20);
+                    @include font($primaryFont,12,medium,normal,16);
                     @include breakpoint(mobile414) {
                         padding: size(12) size(20);
                     }

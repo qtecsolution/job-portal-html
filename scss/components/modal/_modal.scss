@@ -26,7 +26,7 @@
           @include rotate(90);
 
           path {
-            stroke: $danger;
+            // stroke: $danger;
           }
         }
       }
@@ -37,91 +37,141 @@
 
 .succesfully-created {
   .modal {
-    .social-selects {
-
+    .customcheck {
+      &-label {
+        padding-left: size(20); 
+        color: $textgray;
+        &::before {
+          @include circle;
+        }
+      }
     }
-    .single-select {
-
-      @include border(solid,1,$headerborder);
-      @include radius(8);
-      padding: size(16);
-      width: 106px;
-      height: 64px;
-      display: flex;
-      align-items: center;
+    .social-selects {
+      @include flex;
+      gap: size(10);
+      flex-wrap: wrap;
       justify-content: center;
-      user-select: none;
-      cursor: pointer;
+    }
+    .single-select  {
+      .checklabel {
+       padding-top: size(16);
+       padding-right: size(16); 
+       height: size(64);
+       width: size(106);
+       user-select: none;
+       @include border(solid,1,$headerborder);
+       @include radius(8);
+       @include flex-end;
+       position: relative;
+       .checkmark {
+        display: inline-block;
+        position: absolute;
+        left: size(10);
+        top: size(10);
+        background-color: $white;
+        @include border(solid,1,$headerborder);
+        @include square(20);
+        top: 50%;
+        transform: translateY(-50%);
+        @include circle; 
+        &::after {
+          content: '';
+          position: absolute;
+          left: size(6);
+          top: size(2);
+          height: size(12);
+          width: size(6);
+          transform: rotate(45deg);
+          border: solid white;
+          border-width: 0 size(2) size(2) 0;
+          display: none;
+        }
 
-      .social-thumb {
-        height: 35px;
-        width:  66px;
-         border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid gray;
-        padding: 5px;
+       }
+      
+      } 
+      input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        display: none;
+        &:checked {
+          ~ .checklabel {
+            border-color: $primary;
+            background: rgba(76, 111, 255, 0.05);
+            .checkmark {
+              background: $primary;
+              border-color: $primary;
+            &::after {
+              display: block;
+            }            }
+          }
+        }
+
+       }
+    }
+
+    &-footer {
+      border-top: none;
+      .viewsite-btn {
+        @include setBgColor($primary,$white);
+        @include radius(10);
+        padding: size(8) size(10);
+        @include transitionsall;
+        @include border(solid,1,$primary);
+        @include font($primaryFont,12,medium,normal,16);
+        @include breakpoint(mobile414) {
+            padding: size(12) size(20);
+        }
+        @include hover {
+            @include setBgColor(transparent,$textPrimary);
+        }
+    }
     }
     
-.customcheck {
-  @include flex-center;
-
-  &-box {
-    &:checked~.customcheck {
-      background-color: red;
-      &::before {
-        background: $primary;
-        border-color: $primary;
-      }
-
-      &::after {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
-  &-label {
-    position: relative;
-    color: $primary;
-    font: inherit;
-    padding-left: size(16);
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: '';
-      @include absolute(top 50% left 0);
-    }
-
-    &::before {
-      @include square(16);
-      @include radius(3);
-      @include border(solid, 1, $checkborder);
-      @include translateY(-50%);
-      @include transitionsall;
-    }
-
-    &::after {
-      width: size(5);
-      height: size(9);
-      @include border(solid, 2, $white);
-      border-top: 0;
-      border-left: 0;
-      left: size(6);
-      @include transform(translateY(-60%) rotate(45deg));
-      opacity: 0;
-      visibility: hidden;
-      @include transitionsall;
-    }
-
-    &::selection {
-      @include setBgColor(transparent, tan);
-    }
   }
 }
 
+.darkmode {
+  .succesfully-created {
+    .modal {
+      &-content {
+        background: $lightDark;
+      }
+      .customcheck {
+        &-label {
+          padding-left: size(20); 
+          color: $white;
+          &::before {
+            @include circle;
+          }
+        }
+      }
+
+      .single-select  {
+        .checklabel {
+        border-color: $textgray;
+         .checkmark {
+          background-color: $shade-1; 
+          &::after {
+          }
+  
+         }
+        
+        } 
+        input[type="checkbox"] {
+       
+          &:checked {
+            ~ .checklabel {
+              border-color: $primary;
+              background: rgba(76, 111, 255, 0.05);
+             
+                       
+            }
+          }
+  
+         }
+      }
     }
   }
 }
