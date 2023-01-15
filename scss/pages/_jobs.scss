@@ -1,0 +1,23 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.jobtab {
+    padding: size(16);
+    @include breakpoint(tab992) {
+        padding: size(16) size(30);
+    }
+    &-header {
+        @include flex-between;
+        align-items: center;
+        .tab-buttons {
+           width: size(160);
+            @include breakpoint(mobile414) {
+               width: auto;
+                
+            }
+        }
+    }
+    &-body {
+
+    }
+}

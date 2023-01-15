@@ -26,6 +26,52 @@
         }
     }
 }
+
+.jobtab {
+    .nav{
+        &.nav-tabs {
+
+            // padding: size(14) size(4);
+            border: none;
+            gap: size(20);
+        }
+        &-item {
+
+        }
+        &-link {
+          
+            border: none;
+            @include font($primaryFont,16,medium,normal,20);
+            color: $textSecondary;
+            @include flex;
+            gap: size(10);
+            padding: size(18) size(40);
+
+            .count {
+                padding: size(2) size(14);
+                background: $headerborder;
+                @include radius(25);
+               @include font($primaryFont,12,bold,normal,20);
+
+
+            }
+
+            @include breakpoint(mobile768) {
+                padding: size(18) size(40);
+            }
+            &.active {
+                color: $headingText;
+                @include border-single(bottom,solid,3,$primary);
+                background: transparent;
+                .count {
+                    background: $primaryLight;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
 .darkmode {  
     .mytask {
         .nav{

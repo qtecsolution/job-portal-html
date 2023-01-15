@@ -1,0 +1,28 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.jobcard {
+    background: $white;
+    display: inline-block;
+    @include radius(10);
+    padding: size(25);
+
+    &-header {
+        @include flex-between; 
+        .left {
+            .jobtypes {
+                @include flex;
+                align-items: center;
+                gap: size(6);
+            }
+        }
+    }
+    &-body {
+
+    }
+
+    &-footer {
+
+    }
+
+}
