@@ -158,6 +158,22 @@
         }
       }
 
+      .forgotinfo {
+        @include flex-center-column;
+        margin-bottom: size(24);
+        text-align: center;
+
+        @include breakpoint(tab992) {
+          margin-bottom: size(40);
+        }
+
+        .text {
+          color: $textPrimary;
+          @include font($primaryFont, 12, normal, normal, 24);
+          letter-spacing: size(0.01);
+        }
+      }
+
       .socialauth {
         margin-bottom: size(24);
 
