@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PAGE TITLE -->
-    <title>Hire Me - Job Portal | Forgot Passowrd</title>
+    <title>Hire Me - Job Portal | Verification</title>
     <!-- FAVICON -->
     <link
       rel="shortcut icon"
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/style.min.css" />
   </head>
   <body>
-    <!-- FORGOT-PASSWORD SECTION START -->
+    <!-- VERIFICATIONS SECTION START -->
     <main class="authentications">
       <div class="left-content">
         <div class="sliderbox">
@@ -62,42 +62,45 @@
         </header>
 
         <div class="authentic">
-          <h4 class="welcome-title">Forgot Password?</h4>
+          <h4 class="welcome-title">Check Your Email</h4>
 
           <div class="forgotinfo">
-            <span class="text">No worries!</span>
-            <span class="text">We will send you reset instruction</span>
+            <span class="text">We sent a 6 digit otp to</span>
+            <span class="text">sayeduddin.qtec@gmail.com</span>
           </div>
 
           <form class="authform">
             <div class="inputbox errorfield">
-              <label for="forgot-email" class="inputlabel">
-                Email Address
-              </label>
+              <label for="verify-code" class="inputlabel"> 6-digit code </label>
 
               <input
                 type="text"
-                id="forgot-email"
+                id="verify-code"
                 class="inputfield"
-                placeholder="Enter your work email address"
+                placeholder="Enter your verification code"
                 autocomplete="off"
               />
 
               <div class="error">
-                <p class="error-message">Email is required</p>
+                <p class="error-message">Verification is required</p>
               </div>
             </div>
 
             <div class="submitbox">
-              <a href="./verify.html" class="btn-submit">Reset Password</a>
+              <a href="./reset.html" class="btn-submit">Reset Password</a>
 
-              <!-- RESET-PASSWORD -->
+              <!-- VERIFY-PASSWORD -->
               <button type="button" class="btn-submit d-none">
-                Reset Password
+                Verify Password
               </button>
 
               <p class="authtext">
-                Already have an account?
+                Didn’t receive the email?
+                <button type="button" class="authlink">Click to resend</button>
+              </p>
+
+              <p class="authtext">
+                Remembered Password?
                 <a href="./login.html" class="authlink">Back to log in</a>
               </p>
             </div>
@@ -143,7 +146,7 @@
         </figure>
       </div>
     </main>
-    <!-- FORGOT-PASSWORD SECTION END -->
+    <!-- VERIFICATIONS SECTION END -->
 
     <!-- BOOTSTRAP JS -->
     <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
