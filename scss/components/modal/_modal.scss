@@ -37,7 +37,8 @@
 }
 
 
-.closejob-modal {
+.closejob-modal ,
+.deletejob-modal {
 
   .modal {
     
@@ -78,6 +79,10 @@
         padding: size(10) size(30);
         @include border(solid,1,$headerborder);
         @include radius(7);
+        @include transitionsall;
+        @include hover {
+          @include setBgColor(darken($white,5%),$textPrimary);
+        }
       }
       .modal-close-btn {
         padding: size(10) size(30);
@@ -87,10 +92,9 @@
         @include transitionsall;
 
         @include hover {
-
           @include setBgColor(darken($danger,10%),$white);
-
         }
+
       }
     }
   

@@ -28,6 +28,8 @@
 }
 
 .jobtab {
+    @include flex-column;
+    gap: size(16);
     .nav{
         &.nav-tabs {
 
@@ -45,7 +47,7 @@
             color: $textSecondary;
             @include flex;
             gap: size(10);
-            padding: size(18) size(40);
+            padding: size(18) size(20);
 
             .count {
                 padding: size(2) size(14);
@@ -57,7 +59,7 @@
             }
 
             @include breakpoint(mobile768) {
-                padding: size(18) size(40);
+                padding: size(18) size(20);
             }
             &.active {
                 color: $headingText;
