@@ -38,7 +38,7 @@
                 display: none;
             }
             &::-webkit-scrollbar-track {
-                background: #D0D5DD; 
+                background: $checkborder; 
                 @include radius(10);
             }
             &::-webkit-scrollbar-thumb {

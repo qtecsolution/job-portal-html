@@ -18,6 +18,15 @@
         }
     }
     &-body {
-
+        .cards {
+            @include flex;
+            gap: size(14);
+            flex-wrap: wrap;
+            justify-content: center;
+            @include breakpoint(tab992) {
+                justify-content: flex-start;
+            }
+            
+        }
     }
 }

@@ -31,9 +31,52 @@
         }
       }
     }
-  }
+  } 
+
+  
 }
 
+
+.closejob-modal {
+
+  .modal {
+    
+    &-content {
+     border: none;
+     box-shadow: $box-shadow-1;
+    }
+  
+    &-header {
+      @include border-single(bottom,solid,1,$headerborder);
+      margin:0 5%;
+      
+      .btn-close {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+        opacity: 1;
+  
+        svg {
+          @include wh100;
+          @include transitiontransform;
+        }
+  
+        @include hover {
+          svg {
+            @include rotate(90);
+  
+            path {
+              // stroke: $danger;
+            }
+          }
+        }
+      }
+    } 
+  
+    
+  }
+
+}
 
 .succesfully-created {
   .modal {

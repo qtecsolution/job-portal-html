@@ -7,7 +7,10 @@
     @include radius(10);
     padding: size(25);
     box-shadow: $box-shadow-1;
-
+    @include w100;
+    @include breakpoint(mobile768) {
+        width: auto;
+    }
     &-header {
         @include flex-between;
         gap: size(40);
@@ -25,15 +28,23 @@
                 color: $success;
                 @include font($primaryFont, 12, medium, normal, 24);
                 padding: size(2) size(12);
+
                 &.badge-purple{
                     @include setBgColor($purpleLight,$purple);
                 }
+
                 &.badge-success {
                     @include setBgColor($successlight,$success);
                     
                 }
-                &.badge-danger {
+
+                &.badge-cyan {
+                    @include setBgColor($electriccyanlight,$electriccyan);
                         
+                }
+                &.badge-orange {
+                    @include setBgColor($orangeLight,$orange);
+
                 }
 
             }
@@ -41,6 +52,10 @@
             .jobname {
                 color: $headingText;
                 @include font($primaryFont, 16, medium, normal, 20);
+                max-width: size(250);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
 
                 @include breakpoint(mobile414) {
                     @include font($primaryFont, 18, medium, normal, 20);
@@ -65,6 +80,7 @@
                     @include font($primaryFont, 9, medium, normal, 18);
                     text-transform: uppercase;
                     color: $textSecondary;
+
                     @include breakpoint(mobile414) {
                        @include font($primaryFont, 11, medium, normal, 18);
                         
@@ -75,6 +91,7 @@
 
         .right {
             .dropdown {
+
                 .icon {
                     padding: size(10);
                     cursor: pointer;
@@ -89,16 +106,15 @@
 
                     .dropdown-items {
                         @include flex-column;
-
+                        align-items: flex-start;
                         .item {
-                            text-align: center;
-                            padding: size(8) size(4);
+                            padding: size(8) size(10);
                             @include transitionsall;
                             @include font($primaryFont, 13, normal, normal, 18);
                             @include radius(6);
                             user-select: none;
                             color: $textPrimary;
-
+                            @include w100;
                             @include hover {
                                 background: $headerborder;
                             }
@@ -154,22 +170,38 @@
 
     &-footer {
         @include flex-between;
+        padding-top: size(10);
         .footerleft {
             @include flex;
-            align-items: center;
+            align-items: flex-start;
+            gap: size(8);
             span {
-                @include font($primaryFont, 12, medium, normal, 22);
-
+                &.text {
+                    @include font($primaryFont, 14, medium, normal, 22);
+                    
+                }
             }
         }
 
         .footerright {
             cursor: pointer;
+            color: $textPrimary;
+            @include font($primaryFont, 14, medium, normal, 22);
+            @include transitionsall;
+            @include hover {
+                color: darken($textPrimary,20%);
+            }
+
         }
     }
 
     &.activecard {
-        @include border-single(top, solid, 5, $success);
+        @include border-single(top, solid, 4, $success);
+
+    }
+
+    &.draftcard {
+        @include border-single(top, solid, 4, $checkborder);
 
     }
 
