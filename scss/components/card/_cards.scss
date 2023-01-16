@@ -6,22 +6,170 @@
     display: inline-block;
     @include radius(10);
     padding: size(25);
+    box-shadow: $box-shadow-1;
 
     &-header {
-        @include flex-between; 
+        @include flex-between;
+        gap: size(40);
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+
         .left {
+            @include flex-column;
+            gap: size(12);
+            align-items: baseline;
+
+            .badge {
+                background: lighten($success,50%);
+                @include radius(16);
+                color: $success;
+                @include font($primaryFont, 12, medium, normal, 24);
+                padding: size(2) size(12);
+                &.badge-purple{
+                    @include setBgColor($purpleLight,$purple);
+                }
+                &.badge-success {
+                    @include setBgColor($successlight,$success);
+                    
+                }
+                &.badge-danger {
+                        
+                }
+
+            }
+
+            .jobname {
+                color: $headingText;
+                @include font($primaryFont, 16, medium, normal, 20);
+
+                @include breakpoint(mobile414) {
+                    @include font($primaryFont, 18, medium, normal, 20);
+
+                }
+
+                @include breakpoint(tab992) {
+                    @include font($primaryFont, 20, medium, normal, 20);
+                }
+
+            }
+
             .jobtypes {
                 @include flex;
                 align-items: center;
-                gap: size(6);
+                gap: size(10);
+
+                .type {
+                    @include flex;
+                    gap: size(6);
+                    align-items: center;
+                    @include font($primaryFont, 9, medium, normal, 18);
+                    text-transform: uppercase;
+                    color: $textSecondary;
+                    @include breakpoint(mobile414) {
+                       @include font($primaryFont, 11, medium, normal, 18);
+                        
+                    }
+                }
+            }
+        }
+
+        .right {
+            .dropdown {
+                .icon {
+                    padding: size(10);
+                    cursor: pointer;
+                }
+
+                &-menu {
+
+                    padding: size(12);
+                    border: size(1) solid $headerborder;
+                    box-shadow: $box-shadow-1;
+                    @include radius(8);
+
+                    .dropdown-items {
+                        @include flex-column;
+
+                        .item {
+                            text-align: center;
+                            padding: size(8) size(4);
+                            @include transitionsall;
+                            @include font($primaryFont, 13, normal, normal, 18);
+                            @include radius(6);
+                            user-select: none;
+                            color: $textPrimary;
+
+                            @include hover {
+                                background: $headerborder;
+                            }
+                        }
+
+                    }
+                }
             }
         }
     }
-    &-body {
 
+    &-body {
+        @include border-single(bottom,solid,1,$headerborder);
+        padding-bottom: size(20);
+        .applicant-header {
+            @include flex;
+            align-items: center;
+            gap: size(7);
+            color: $textSecondary;
+            padding: size(14) size(0);
+
+            span {
+                @include font($primaryFont, 12, medium, normal, 17);
+
+            }
+
+        }
+
+        .applicants-wrapper {
+            background: $headerborder;
+            @include radius(10);
+            padding: size(24);
+            @include flex;
+            justify-content: space-around;
+
+            .applicatn {
+                @include flex-column;
+                align-items: center;
+                gap: size(8);
+
+                .count {
+                    @include font($primaryFont, 20, medium, normal, 26);
+                    color:$headingText;
+                }
+                .title {
+                    color: $textSecondary;
+                    @include font($primaryFont, 12, medium, normal, 15);
+
+                }
+            }
+        }
     }
 
     &-footer {
+        @include flex-between;
+        .footerleft {
+            @include flex;
+            align-items: center;
+            span {
+                @include font($primaryFont, 12, medium, normal, 22);
+
+            }
+        }
+
+        .footerright {
+            cursor: pointer;
+        }
+    }
+
+    &.activecard {
+        @include border-single(top, solid, 5, $success);
 
     }
 
