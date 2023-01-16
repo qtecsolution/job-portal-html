@@ -1,11 +1,80 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 /**=======================================================**
                   AUTHENTICATIONS START
 **=======================================================**/
 
+.authform {
+  @include flex-column;
+  gap: size(16);
 
+  .inputbox {
+    @include flex-column;
+    gap: size(8);
+
+    .inputlabel {
+      display: block;
+      margin-bottom: size(4);
+    }
+
+    .inputfield {
+      @include setBgColor($white, $headingText);
+      padding: size(14.5) size(12) size(14.5) size(20);
+
+      &::placeholder {
+        color: $checkborder;
+      }
+    }
+  }
+
+  .forgotlink {
+    color: $textSecondary;
+    @include font($primaryFont, 12, normal, normal, 24);
+    @include transitionsall;
+
+    @include hover {
+      color: $headingText;
+    }
+  }
+
+  .submitbox {
+    margin-top: size(8);
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
+
+    .btn-submit {
+      @include w100;
+      @include radius(10);
+      @include setBgColor($primary, $white);
+      height: size(48);
+      padding: size(12);
+      @include flex-center;
+      @include font($primaryFont, 14, medium, normal, 24);
+      letter-spacing: size(-0.09);
+      text-align: center;
+    }
+
+    .authtext {
+      color: $headingText;
+      @include font($primaryFont, 14, normal, normal, 24);
+      letter-spacing: size(-0.09);
+
+      .authlink {
+        color: $primary;
+        @include font($primaryFont, 14, medium, normal, 24);
+        letter-spacing: size(-0.09);
+        text-decoration: underline;
+        @include transitionsall;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
 
 /**=======================================================**
                   AUTHENTICATIONS END
