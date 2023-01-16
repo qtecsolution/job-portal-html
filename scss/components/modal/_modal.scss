@@ -49,29 +49,50 @@
     &-header {
       @include border-single(bottom,solid,1,$headerborder);
       margin:0 5%;
-      
-      .btn-close {
-        @include square(24);
-        @include flex-center;
-        overflow: hidden;
-        opacity: 1;
-  
-        svg {
-          @include wh100;
-          @include transitiontransform;
+      .modal-title {
+        color: $headingText;
+        @include font($primaryFont,16,medium,normal,25);
+      }
+    
+    } 
+    &-body {
+      padding: size(12) 5%;
+
+      .modal-text {
+        @include font($primaryFont,14,normal,normal,23);
+        color: $textPrimary;
+
+        .jobname {
+        @include font($primaryFont,14,semibold,normal,23);
+        color: $headingText;
+
         }
-  
+       
+      }
+    }
+
+    &-footer {
+      gap: size(10);
+      margin: 0 5%;
+      .modal-cancel-btn {
+        padding: size(10) size(30);
+        @include border(solid,1,$headerborder);
+        @include radius(7);
+      }
+      .modal-close-btn {
+        padding: size(10) size(30);
+        @include setBgColor($danger,$white);
+        @include radius(7);
+        @include border(solid,1,$danger);
+        @include transitionsall;
+
         @include hover {
-          svg {
-            @include rotate(90);
-  
-            path {
-              // stroke: $danger;
-            }
-          }
+
+          @include setBgColor(darken($danger,10%),$white);
+
         }
       }
-    } 
+    }
   
     
   }
