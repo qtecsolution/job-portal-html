@@ -158,6 +158,21 @@
         }
       }
 
+      .welcome-text {
+        color: $textSecondary;
+        font-size: size(13);
+        text-align: center;
+        margin-bottom: size(24);
+
+        @include breakpoint(mobile768) {
+          margin-bottom: size(32);
+        }
+
+        @include breakpoint(tab992) {
+          margin-bottom: size(40);
+        }
+      }
+
       .forgotinfo {
         @include flex-center-column;
         margin-bottom: size(24);

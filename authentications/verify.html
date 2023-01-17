@@ -74,7 +74,7 @@
               <label for="verify-code" class="inputlabel"> 6-digit code </label>
 
               <input
-                type="text"
+                type="number"
                 id="verify-code"
                 class="inputfield"
                 placeholder="Enter your verification code"
@@ -87,7 +87,7 @@
             </div>
 
             <div class="submitbox">
-              <a href="./reset.html" class="btn-submit">Reset Password</a>
+              <a href="./changepassword.html" class="btn-submit">Reset Password</a>
 
               <!-- VERIFY-PASSWORD -->
               <button type="button" class="btn-submit d-none">
@@ -95,14 +95,22 @@
               </button>
 
               <p class="authtext">
-                Didn’t receive the email?
-                <button type="button" class="authlink">Click to resend</button>
+                Didn’t receive any code?
+                <button type="button" class="btn-resend">Click to resend</button>
               </p>
 
-              <p class="authtext">
-                Remembered Password?
-                <a href="./login.html" class="authlink">Back to log in</a>
-              </p>
+              <div class="d-flex justify-content-center w-100">
+                <a href="./login.html" class="backlink">
+                  <span class="icon">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.8125 7H2.1875" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.125 3.0625L2.1875 7L6.125 10.9375" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  
+                  <span class="text">Back to log in</span>
+                </a>
+              </div>
             </div>
           </form>
         </div>
