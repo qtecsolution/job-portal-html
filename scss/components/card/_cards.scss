@@ -204,5 +204,9 @@
         @include border-single(top, solid, 4, $checkborder);
 
     }
+    &.inactivecard {
+        @include border-single(top, solid, 4, $danger);
+
+    }
 
 }
