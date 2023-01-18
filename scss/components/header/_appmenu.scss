@@ -94,6 +94,7 @@
                 fill: $headingText;
               }
             }
+
             .strokeicon {
               path {
                 stroke: $headingText;
@@ -110,8 +111,45 @@
             @include font($primaryFont, 10, medium, normal, 14);
           }
 
-          @include hover {
+          &:hover:not(.active) {
             background: lighten($textSecondary, 32%);
+            .icon {
+              .fillicon {
+                path {
+                  fill: $primary;
+                }
+              }
+              .strokeicon {
+                path {
+                  stroke: $primary;
+                }
+              }
+            }
+
+            .text {
+              color: $primary;
+            }
+          }
+
+          &.active {
+            background: lighten($textSecondary, 32%);
+
+            .icon {
+              .fillicon {
+                path {
+                  fill: $primary;
+                }
+              }
+              .strokeicon {
+                path {
+                  stroke: $primary;
+                }
+              }
+            }
+
+            .text {
+              color: $primary;
+            }
           }
         }
 

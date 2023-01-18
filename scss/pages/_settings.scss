@@ -1,0 +1,81 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.settings {
+  @include flex-column;
+  gap: size(20);
+
+  &-header {
+    @include border-single(bottom, solid, 1, $headerborder);
+    padding: size(12) size(12) 0;
+
+    @include breakpoint(tab992) {
+      padding: size(12) size(30) 0;
+    }
+
+    .titlebox {
+      width: size(107);
+      height: size(60);
+      padding: size(10);
+      @include border-single(bottom, solid, 3, $primary);
+      @include flex-center;
+
+      .settings-title {
+        color: $headingText;
+        font-size: size(16);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-body {
+    padding: size(12);
+
+    @include breakpoint(tab992) {
+      padding: size(20) size(30);
+    }
+
+    .settings-leftcontent,
+    .settings-rightcontent {
+      background: $white;
+      @include radius(10);
+      box-shadow: $box-shadow-1;
+      @include flex-column;
+      gap: size(20);
+      padding: size(16);
+
+      @include breakpoint(mobile768) {
+        padding: size(20);
+        gap: size(32);
+      }
+
+      @include breakpoint(tab992) {
+        padding: size(20) size(24);
+      }
+
+      .infotitle {
+        color: $headingText;
+        font-size: size(16);
+        font-weight: 500;
+      }
+    }
+
+    .settings-leftcontent {
+      .leftheader {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+      }
+
+      .leftbody {}
+    }
+
+    .settings-rightcontent {
+      .rightheader {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+      }
+
+      .rightbody {}
+    }
+  }
+}
