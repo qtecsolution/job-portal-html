@@ -326,30 +326,310 @@
     }
   }
 
-  .ph-item  {
-    background: $darkPrimary; 
+  .ph-item {
+    background: $darkPrimary;
     border: none;
     &:before {
-      background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 43%, 0.212) 50%, hsla(0, 0%, 100%, 0) 54%) 50% 50%;
+      background: linear-gradient(
+          90deg,
+          hsla(0, 0%, 100%, 0) 46%,
+          hsla(0, 0%, 43%, 0.212) 50%,
+          hsla(0, 0%, 100%, 0) 54%
+        )
+        50% 50%;
     }
     .ph-row {
       div {
-        background: lighten(#15202B, 7%)
+        background: lighten(#15202b, 7%);
       }
       .empty {
         background: transparent;
       }
     }
     .ph-avatar {
-      background: lighten(#15202B, 7%)
-
+      background: lighten(#15202b, 7%);
     }
     .ph-picture {
-      background: lighten(#15202B, 7%)
-
+      background: lighten(#15202b, 7%);
     }
   }
 
+  // AUTHENTICATION DARKMODE
+  .authentications {
+    background: $lightDark;
 
+    .left-content {
+      .sliderbox {
+        .swiper-pagination {
+          &-bullet {
+            &:hover:not(.active) {
+              background: $primary;
+            }
 
+            &-active {
+              background: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .right-content {
+      background: $darkPrimary;
+
+      .authentic {
+        background: lighten($black, 10%);
+        border-color: $lightDark;
+
+        .welcome-title {
+          color: $white;
+        }
+
+        .welcome-text {
+          color: $white;
+        }
+
+        .forgotinfo {
+          .text {
+            color: $white;
+          }
+        }
+
+        .socialauth {
+          .btn-socialauth {
+            background: $lightDark;
+            border-color: lighten($lightDark, 10%);
+
+            .text {
+              color: $white;
+            }
+          }
+        }
+
+        .divide {
+          .or {
+            background: lighten($black, 10%);
+
+            .ortitle {
+              color: $white;
+            }
+          }
+
+          .bar {
+            background: lighten($lightDark, 10%);
+          }
+        }
+      }
+    }
+
+    .authform {
+      .inputbox {
+        .inputfield {
+          @include setBgColor($lightDark, $white);
+
+          &::placeholder {
+            color: $checkborder;
+          }
+        }
+
+        .employeelist {
+          .inputradio {
+            .radio {
+              &:checked ~ .radiolabel {
+                @include setBgColor($primary, $white);
+                border-color: $primary;
+              }
+            }
+
+            .radiolabel {
+              @include setBgColor($darkPrimary, $textSecondary);
+              @include border(solid, 1, $lightDark);
+            }
+          }
+        }
+      }
+
+      .agreebox {
+        .agreecheck {
+          &:checked ~ .agreelabel {
+            &::before {
+              background: $primary;
+              border-color: $primary;
+            }
+
+            &::after {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+
+        .agreelabel {
+          color: $textSecondary;
+
+          &::selection {
+            @include setBgColor(transparent, $primary);
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+          }
+
+          &::before {
+            left: 0;
+            @include transform(translateY(-50%));
+            @include square(16);
+            background: $darkPrimary;
+            @include border(solid, 2, $lightDark);
+            @include radius(3);
+          }
+
+          &::after {
+            width: size(5);
+            height: size(9);
+            @include border(solid, 2, $white);
+            @include transform(translateY(-60%) rotate(45deg));
+            border-top: 0;
+            border-left: 0;
+            left: size(5.75);
+            opacity: 0;
+            visibility: hidden;
+            @include transitionsall;
+          }
+        }
+      }
+
+      .submitbox {
+        .btn-submit {
+          @include setBgColor($primary, $white);
+        }
+
+        .authtext {
+          color: $textSecondary;
+
+          .authlink {
+            color: $primary;
+          }
+
+          .btn-resend {
+            color: $primary;
+          }
+        }
+
+        .backlink {
+          span {
+            color: $textSecondary;
+          }
+
+          @include hover {
+            span {
+              color: $primary;
+
+              svg {
+                path {
+                  stroke: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // SETTINGS DARKMODE
+  .settings {
+    &-header {
+      border-color: $lightDark;
+
+      .titlebox {
+        .settings-title {
+          color: $white;
+        }
+      }
+    }
+
+    &-body {
+      .settings-leftcontent,
+      .settings-rightcontent {
+        background: $darkPrimary;
+        // box-shadow: none;
+
+        .infotitle {
+          color: $white;
+        }
+      }
+
+      .settings-leftcontent {
+        .leftheader {
+          border-color: $lightDark;
+        }
+
+        .leftbody {
+          .imagebox {
+            .imagelabel {
+              .labeltext {
+                color: $white;
+              }
+            }
+
+            .uploadbox {
+              border-color: $lightDark;
+
+              .uploadlabel {
+                .addtext {
+                  color: $textSecondary;
+                }
+              }
+            }
+          }
+
+          .inputbox {
+            .inputlabel {
+              color: $white;
+            }
+
+            .inputfield {
+              @include setBgColor(lighten($black, 10%), $white);
+              border-color: $lightDark;
+
+              &:focus {
+                border-color: $primary;
+                background: transparent;
+              }
+            }
+          }
+
+          .submitbox {
+            border-color: $lightDark;
+          }
+        }
+      }
+
+      .settings-rightcontent {
+        .rightheader {
+          border-color: $lightDark;
+        }
+
+        .rightbody {
+          .headerinfo {
+            .headtitle {
+              color: $white;
+            }
+          }
+
+          .bodyinfo {
+            .details {
+              .infotext {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

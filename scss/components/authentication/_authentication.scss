@@ -22,9 +22,14 @@
     .inputfield {
       @include setBgColor($white, $headingText);
       padding: size(14.5) size(12) size(14.5) size(20);
+      @include transitionsall;
 
       &::placeholder {
         color: $checkborder;
+      }
+
+      &:focus {
+        border-color: $primary;
       }
     }
 
@@ -33,6 +38,12 @@
       position: absolute;
       top: size(28);
       right: 0;
+    }
+
+    &.errorfield {
+      .inputfield {
+        border-color: $danger;
+      }
     }
 
     &.passwordbox {
@@ -79,7 +90,7 @@
           background: $primary;
           border-color: $primary;
         }
-        
+
         &::after {
           opacity: 1;
           visibility: visible;
@@ -103,14 +114,14 @@
           text-decoration: underline;
         }
       }
-      
+
       &::selection {
         @include setBgColor(transparent, $primary);
       }
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
       }

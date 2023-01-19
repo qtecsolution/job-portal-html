@@ -4,6 +4,7 @@
 .settings {
   @include flex-column;
   gap: size(20);
+  padding-bottom: size(84);
 
   &-header {
     @include border-single(bottom, solid, 1, $headerborder);
@@ -43,6 +44,7 @@
       @include flex-column;
       gap: size(20);
       padding: size(16);
+      @include h100;
 
       @include breakpoint(mobile768) {
         padding: size(20);
@@ -58,6 +60,21 @@
         font-size: size(16);
         font-weight: 500;
       }
+
+      .btn-submit {
+        @include setBgColor($primary, $white);
+        @include radius(8);
+        @include flex-center;
+        font-size: size(12);
+        font-weight: 600;
+        padding: size(12) size(30);
+        text-align: center;
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor(darken($primary, 10%), $white);
+        }
+      }
     }
 
     .settings-leftcontent {
@@ -66,7 +83,98 @@
         padding-bottom: size(16);
       }
 
-      .leftbody {}
+      .leftbody {
+        .profileform {
+          @include flex-column;
+          gap: size(24);
+        }
+
+        .imagebox {
+          @include flex-column;
+          gap: size(20);
+
+          .imagelabel {
+            @include flex-center-vert;
+            gap: size(5);
+
+            .labeltext {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 600;
+            }
+
+            .labelicon {
+              @include square(13);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+
+          .uploadbox {
+            @include border-single(bottom, solid, 1, $headerborder);
+            padding-bottom: size(16);
+
+            .uploadlabel {
+              @include flex-center-vert;
+              gap: size(8);
+              cursor: pointer;
+
+              .addicon {
+                @include square(22);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .addtext {
+                color: $textSecondary;
+                font-size: size(14);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .inputbox {
+          @include flex-column;
+          gap: size(20);
+
+          .inputlabel {
+            color: $headingText;
+            font-size: size(14);
+            font-weight: 600;
+          }
+
+          .inputfield {
+            @include setBgColor($bodybg, $headingText);
+            @include border(solid, 1, $headerborder);
+            @include radius(8);
+            font-size: size(14);
+            font-weight: 400;
+            padding: size(12.5) size(16);
+            @include transitionsall;
+
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+        }
+
+        .submitbox {
+          @include border-single(top, solid, 1, $headerborder);
+          margin: size(24) 0 0;
+          padding: size(24) 0 0;
+          @include flex-end;
+        }
+      }
     }
 
     .settings-rightcontent {
@@ -75,7 +183,39 @@
         padding-bottom: size(16);
       }
 
-      .rightbody {}
+      .rightbody {
+        @include flex-center-column;
+        gap: size(24);
+
+        .headerinfo {
+          @include flex-center-column;
+          gap: size(24);
+          text-align: center;
+
+          .headtitle {
+            color: $headingText;
+            font-size: size(16);
+            font-weight: 600;
+          }
+        }
+
+        .bodyinfo {
+          @include flex-center-column;
+          gap: size(32);
+          text-align: center;
+
+          .details {
+            max-width: size(550);
+            margin-inline: auto;
+
+            .infotext {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 400;
+            }
+          }
+        }
+      }
     }
   }
 }
