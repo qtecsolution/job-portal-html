@@ -207,6 +207,11 @@
     &.inactivecard {
         @include border-single(top, solid, 4, $danger);
 
+        .jobcard-header {
+            align-items: flex-start;
+        }
+
+
     }
 
 }
