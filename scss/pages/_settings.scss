@@ -142,6 +142,66 @@
           }
         }
 
+        .uploadbox {
+          @include flex-center-column;
+          gap: size(10);
+
+          .avatar {
+            @include square(100);
+            @include radius(10);
+            @include flex-center;
+            overflow: hidden;
+        
+            img {
+              @include wh100;
+              object-fit: cover;
+            }
+          }
+        
+          .uploadinfo {
+            @include flex-center-column;
+            gap: size(10);
+
+            .remove-button {
+              @include setBgColor($white, $textPrimary);
+              @include border(solid, 1, $headerborder);
+              @include radius(8);
+              @include flex-center;
+              font-size: size(12);
+              font-weight: 600;
+              padding: size(8.61) size(16);
+              text-align: center;
+              @include transitionsall;
+
+              @include hover {
+                @include setBgColor($textPrimary, $white);
+                border-color: $textPrimary;
+              }
+            }
+
+            .upload-detail {
+              .uploadlabel {
+                @include setBgColor($primary, $white);
+                @include border(solid, 1, $primary);
+                @include radius(8);
+                cursor: pointer;
+                @include flex-center;
+                font-size: size(12);
+                font-weight: 600;
+                padding: size(8.61) size(16);
+                text-align: center;
+                @include transitionsall;
+  
+                @include hover {
+                  @include setBgColor($textPrimary, $white);
+                  border-color: $textPrimary;
+                }
+              }
+            }
+          }
+        }
+        
+
         .inputbox {
           @include flex-column;
           gap: size(20);
