@@ -587,19 +587,30 @@
             }
           }
 
-          .inputbox {
-            .inputlabel {
-              color: $white;
-            }
+          .uploaderbox {
+            .uploadinfo {
+              .remove-button {
+                @include setBgColor(transparent, $textPrimary);
+                @include border(solid, 1, $textPrimary);
 
-            .inputfield {
-              @include setBgColor(lighten($black, 10%), $white);
-              border-color: $lightDark;
-
-              &:focus {
-                border-color: $primary;
-                background: transparent;
+                @include hover {
+                  @include setBgColor($textPrimary, $white);
+                }
               }
+            }
+          }
+         
+          .inputlabel {
+            color: $white;
+          }
+
+          .inputfield {
+            @include setBgColor(lighten($black, 10%), $white);
+            border-color: $lightDark;
+
+            &:focus {
+              border-color: $primary;
+              background: transparent;
             }
           }
 
@@ -628,8 +639,37 @@
               }
             }
           }
+         
+          .inputlabel {
+            color: $white;
+          }
+
+          .inputfield {
+            @include setBgColor(lighten($black, 10%), $white);
+            border-color: $lightDark;
+
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+
+          .submitbox {
+            border-color: $lightDark;
+          }
+
+          .otpcode {      
+            &-header {      
+              .btn-resend {      
+                @include hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
         }
       }
+
     }
   }
 }

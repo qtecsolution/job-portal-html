@@ -10,6 +10,10 @@
   }
 
   &.maincollapsed {
-    width: calc(100% - size(80));
+    display: none;
+
+    @include breakpoint(tab992) {
+      width: calc(100% - size(80));
+    }
   }
 }
