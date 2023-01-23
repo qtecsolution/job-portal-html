@@ -1,6 +1,41 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+@mixin custom-scroll-bar($bg,$height) {
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: $height;
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $bg;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
+  @mixin no-scroll-bar() {
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      height: 0;
+      width: 0;
+    }
+  
+    &::-webkit-scrollbar-track {
+      height: 0;
+      width: 0;
+    }
+  }
+
+
 .job__overview {
     padding-bottom: size(100);
     &-header {
@@ -44,6 +79,33 @@
         .overview-tab {
             overflow-x: auto;
             white-space: nowrap;
+           
+            @include no-scroll-bar();
+            @include breakpoint(mobile576) {
+                @include custom-scroll-bar($textSecondary,size(6));
+            }
+            padding-bottom: size(20);
+
+            .review__row {
+                padding-top: size(24);
+                @include flex;
+                .review__col {
+                    width: size(290);
+                    @include flex-column;
+                    gap: size(14);
+                    @include border-single(right,solid,1,$checkborder);
+                    padding: size(0) size(10);
+                    &-header {
+
+                    }
+
+                    &-body {
+                        @include flex-column;
+                        gap: size(10);
+                       
+                    }
+                }
+            }
         }
     }
 }

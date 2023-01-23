@@ -220,3 +220,54 @@
     }
 
 }
+
+.review__header-card {
+    padding: size(16);
+    background-color: $white;
+    @include radius(8);
+    @include flex-between;
+    @include border-single(top,solid,4,$primary);
+    color: $headingText;
+    @include font($primaryFont, 16, medium, normal, 20);
+
+    .count {
+        height: size(20);
+        width: size(30);
+        @include flex-center;
+        @include radius(100);
+        @include setBgColor($primaryLight,$headingText);
+        @include font($primaryFont, 14, medium, normal, 20);
+
+    }
+} 
+.review__card {
+    background: $white;
+    @include radius(8);
+    @include border(solid,1,$headerborder);
+    padding: size(10) size(10) size(14) size(10);
+    .name {
+        color: $headingText;
+        @include font($primaryFont, 12, medium, normal, 20);
+
+    }
+    .email {
+        color: $textPrimary;
+        @include font($primaryFont, 12, medium, normal, 20);
+
+    }
+
+    .review-footer {
+        @include flex-between;
+        @include border-single(top,solid,1,$headerborder);
+        margin-top: size(10);
+        .stars {
+            @include flex;
+            gap: size(4);
+        }
+        .time {
+          @include font($primaryFont, 10, medium, normal, 16);
+
+        }
+    }
+}
+
