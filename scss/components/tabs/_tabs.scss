@@ -74,6 +74,49 @@
     }
 }
 
+.overview-tab {
+    .nav {
+        flex-wrap: nowrap;
+        padding: size(10) size(0);
+        align-items: center;
+        &-tabs {
+
+        }
+        &-item {
+            .nav-link {
+            padding: size(16);
+
+            }
+        }
+        &-link {
+            padding: size(8) size(20);
+            border: none;
+            @include font($primaryFont,12,semibold,normal,20);
+            color: $headingText;
+            @include radius(0);
+            @include border-single(bottom,solid,3,transparent);
+            @include breakpoint(mobile768) {
+                padding: size(6) size(40);
+            }
+            
+            @include hover {
+                border-color: transparent;
+            }
+            &.active {
+                color: $headingText;
+                @include border-single(bottom,solid,3,$primary);
+                background-color: transparent;
+            }
+        }
+        .gap {
+            width: size(2);
+            height: size(32);
+            background: $checkborder;
+            margin: 0 size(20);
+        }
+    }
+}
+
 .darkmode {  
     .mytask {
         .nav{

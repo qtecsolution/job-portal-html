@@ -1,0 +1,49 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.job__overview {
+    padding-bottom: size(100);
+    &-header {
+        @include flex-between;
+        flex-wrap: wrap;
+        @include border-single(bottom,solid,1,$headerborder);
+        .header-left {
+            @include flex-center-vert;
+            flex-wrap: wrap;
+            gap: size(10);
+            padding:size(24) size(24);
+            .jobname {
+                color: $headingText;
+                @include font($primaryFont,16,medium,normal,14);
+            }
+            .category {
+                padding: size(3) size(8);
+                @include radius(16);
+                @include setBgColor($purpleLight,$purple);
+                @include font($primaryFont,12,medium,normal,18);
+
+            }
+
+            .circle {
+                @include square(5);
+                @include circle;
+                background: $textSecondary;
+            }
+            .info {
+                @include flex-center-vert;
+                gap: size(6);
+            }
+        }
+
+        .header-right {
+            padding:size(24) size(24);
+        }
+    }
+    &-body {
+        padding:size(0) size(24);
+        .overview-tab {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+}

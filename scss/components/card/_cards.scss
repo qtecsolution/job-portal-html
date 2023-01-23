@@ -8,6 +8,7 @@
     padding: size(25);
     box-shadow: $box-shadow-1;
     @include w100;
+    @include transitionsall;
     @include breakpoint(mobile768) {
         width: auto;
     }
@@ -212,6 +213,10 @@
         }
 
 
+    }
+
+    @include hover {
+        transform: translateY(size(-8));
     }
 
 }
