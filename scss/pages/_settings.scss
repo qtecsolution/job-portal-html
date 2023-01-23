@@ -88,152 +88,6 @@
           @include flex-column;
           gap: size(24);
         }
-
-        .imagebox {
-          @include flex-column;
-          gap: size(20);
-
-          .imagelabel {
-            @include flex-center-vert;
-            gap: size(5);
-
-            .labeltext {
-              color: $headingText;
-              font-size: size(14);
-              font-weight: 600;
-            }
-
-            .labelicon {
-              @include square(13);
-              @include flex-center;
-              overflow: hidden;
-
-              svg {
-                @include wh100;
-              }
-            }
-          }
-
-          .uploadbox {
-            @include border-single(bottom, solid, 1, $headerborder);
-            padding-bottom: size(16);
-
-            .uploadlabel {
-              @include flex-center-vert;
-              gap: size(8);
-              cursor: pointer;
-
-              .addicon {
-                @include square(22);
-                @include flex-center;
-                overflow: hidden;
-
-                svg {
-                  @include wh100;
-                }
-              }
-
-              .addtext {
-                color: $textSecondary;
-                font-size: size(14);
-                font-weight: 400;
-              }
-            }
-          }
-        }
-
-        .uploadbox {
-          @include flex-center-column;
-          gap: size(10);
-
-          .avatar {
-            @include square(100);
-            @include radius(10);
-            @include flex-center;
-            overflow: hidden;
-        
-            img {
-              @include wh100;
-              object-fit: cover;
-            }
-          }
-        
-          .uploadinfo {
-            @include flex-center-column;
-            gap: size(10);
-
-            .remove-button {
-              @include setBgColor($white, $textPrimary);
-              @include border(solid, 1, $headerborder);
-              @include radius(8);
-              @include flex-center;
-              font-size: size(12);
-              font-weight: 600;
-              padding: size(8.61) size(16);
-              text-align: center;
-              @include transitionsall;
-
-              @include hover {
-                @include setBgColor($textPrimary, $white);
-                border-color: $textPrimary;
-              }
-            }
-
-            .upload-detail {
-              .uploadlabel {
-                @include setBgColor($primary, $white);
-                @include border(solid, 1, $primary);
-                @include radius(8);
-                cursor: pointer;
-                @include flex-center;
-                font-size: size(12);
-                font-weight: 600;
-                padding: size(8.61) size(16);
-                text-align: center;
-                @include transitionsall;
-  
-                @include hover {
-                  @include setBgColor($textPrimary, $white);
-                  border-color: $textPrimary;
-                }
-              }
-            }
-          }
-        }
-        
-
-        .inputbox {
-          @include flex-column;
-          gap: size(20);
-
-          .inputlabel {
-            color: $headingText;
-            font-size: size(14);
-            font-weight: 600;
-          }
-
-          .inputfield {
-            @include setBgColor($bodybg, $headingText);
-            @include border(solid, 1, $headerborder);
-            @include radius(8);
-            font-size: size(14);
-            font-weight: 400;
-            padding: size(12.5) size(16);
-            @include transitionsall;
-
-            &:focus {
-              border-color: $primary;
-              background: transparent;
-            }
-          }
-        }
-
-        .submitbox {
-          @include border-single(top, solid, 1, $headerborder);
-          margin: size(24) 0 0;
-          padding: size(24) 0 0;
-          @include flex-end;
-        }
       }
     }
 
@@ -276,6 +130,185 @@
           }
         }
       }
+    }
+
+    .imagebox {
+      @include flex-column;
+      gap: size(20);
+
+      .imagelabel {
+        @include flex-center-vert;
+        gap: size(5);
+
+        .labeltext {
+          color: $headingText;
+          font-size: size(14);
+          font-weight: 600;
+        }
+
+        .labelicon {
+          @include square(13);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+
+      .uploadbox {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+
+        .uploadlabel {
+          @include flex-center-vert;
+          gap: size(8);
+          cursor: pointer;
+
+          .addicon {
+            @include square(22);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .addtext {
+            color: $textSecondary;
+            font-size: size(14);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .uploaderbox {
+      @include flex-center-column;
+      gap: size(10);
+
+      @include breakpoint(mobile576) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between
+      }
+
+      .avatar {
+        @include square(100);
+        @include radius(10);
+        @include flex-center;
+        overflow: hidden;
+    
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+    
+      .uploadinfo {
+        @include flex-center-column;
+        gap: size(10);
+
+        @include breakpoint(mobile576) {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+
+        .remove-button {
+          @include setBgColor($white, $textPrimary);
+          @include border(solid, 1, $headerborder);
+          @include radius(8);
+          @include flex-center;
+          font-size: size(12);
+          font-weight: 600;
+          padding: size(8.61) size(16);
+          text-align: center;
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor($textPrimary, $white);
+            border-color: $textPrimary;
+          }
+        }
+
+        .upload-detail {
+          .uploadlabel {
+            @include setBgColor($primary, $white);
+            @include border(solid, 1, $primary);
+            @include radius(8);
+            cursor: pointer;
+            @include flex-center;
+            font-size: size(12);
+            font-weight: 600;
+            padding: size(8.61) size(16);
+            text-align: center;
+            @include transitionsall;
+
+            @include hover {
+              @include setBgColor(darken($primary, 5%), $white);
+              border-color: darken($primary, 5%);
+            }
+          }
+        }
+      }
+    }
+
+    .inputlabel {
+      color: $headingText;
+      font-size: size(14);
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .otpcode {
+      @include flex-column;
+      gap: size(12);
+
+      &-header {
+        @include flex-center-between;
+
+        .btn-resend {
+          color: $textPrimary;
+          font-weight: 500;
+          font-size: size(13);
+          line-height: 1.0625;
+          @include transitionsall;
+
+          @include hover {
+            color: $darkText;
+          }
+        }
+      }
+    }
+    
+    .inputbox {
+      @include flex-column;
+      gap: size(12);
+
+      .inputfield {
+        @include setBgColor($bodybg, $headingText);
+        @include border(solid, 1, $headerborder);
+        @include radius(8);
+        font-size: size(14);
+        font-weight: 400;
+        padding: size(12.5) size(16);
+        @include transitionsall;
+
+        &:focus {
+          border-color: $primary;
+          background: transparent;
+        }
+      }
+    }
+
+    .submitbox {
+      @include border-single(top, solid, 1, $headerborder);
+      margin: size(24) 0 0;
+      padding: size(24) 0 0;
+      @include flex-end;
     }
   }
 }
