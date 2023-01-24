@@ -109,3 +109,32 @@
         }
     }
 }
+
+
+.darkmode {
+  .job__overview {
+    padding-bottom: size(100);
+
+    &-header {
+      border-color:$headingText;
+
+      .header-left {
+        .jobname {
+          color: $white;
+        
+      }
+      }
+    }
+
+    &-body {
+      padding:size(0) size(24);
+      .overview-tab {
+          .review__row {
+              .review__col {
+                border-color: $headingText;
+              }
+          }
+      }
+  }
+  }
+}

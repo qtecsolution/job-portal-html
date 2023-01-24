@@ -245,14 +245,20 @@
     @include radius(8);
     @include border(solid,1,$headerborder);
     padding: size(10) size(10) size(14) size(10);
+    @include flex-column;
+    gap: size(6);
     .name {
         color: $headingText;
         @include font($primaryFont, 12, medium, normal, 20);
+        text-overflow: ellipsis;
+        overflow: hidden;
 
     }
-    .email {
+    .gmail {
         color: $textPrimary;
         @include font($primaryFont, 12, medium, normal, 20);
+        text-overflow: ellipsis;
+        overflow: hidden;
 
     }
 
@@ -263,11 +269,185 @@
         .stars {
             @include flex;
             gap: size(4);
+            
+           
         }
         .time {
           @include font($primaryFont, 10, medium, normal, 16);
+          color: $textPrimary;
 
         }
     }
 }
 
+
+
+.darkmode {
+
+    .jobcard {
+        background: $lightDark;
+
+        &-header {
+            border-color: $headingText;
+            .left {
+    
+                .badge {
+                    background: lighten($success,50%);
+                    color: $success;
+                 
+    
+                    &.badge-purple{
+                        @include setBgColor($purpleLight,$purple);
+                    }
+    
+                    &.badge-success {
+                        @include setBgColor($successlight,$success);
+                        
+                    }
+    
+                    &.badge-cyan {
+                        @include setBgColor($electriccyanlight,$electriccyan);
+                            
+                    }
+                    &.badge-orange {
+                        @include setBgColor($orangeLight,$orange);
+    
+                    }
+    
+                }
+    
+                .jobname {
+                    color: $white;
+                }
+    
+                .jobtypes {
+                    
+    
+                    .type {
+                        color: darken($white,20%);
+                    }
+                }
+            }
+    
+            .right {
+                .dropdown {
+                    &-menu {
+                        border-color: $headingText;
+                        background: $lightDark;
+                        box-shadow: $box-shadow-1;
+                        .dropdown-items {
+                            .item {
+                                color: darken($white,20%);
+                                @include hover {
+                                    background: $shade-1;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+
+        &-body {
+           border-color: $headingText;
+            padding-bottom: size(20);
+            .applicant-header {
+                @include flex;
+                align-items: center;
+                gap: size(7);
+                color: darken($white,20%);
+                padding: size(14) size(0);
+    
+                span {
+                    @include font($primaryFont, 12, medium, normal, 17);
+    
+                }
+    
+            }
+    
+            .applicants-wrapper {
+                background: $headingText;
+    
+                .applicatn {
+                    .count {
+                        color:$white;
+                    }
+                    .title {
+                        color: $white;
+                    }
+                }
+            }
+        } 
+
+        &-footer {
+            .footerleft {
+                svg {
+                    path {
+                        stroke: darken($white,20%);
+                        
+                    }
+                }
+                span {
+                    &.text {
+                        @include font($primaryFont, 14, medium, normal, 22);
+                        color: darken($white,20%);
+                        
+                    }
+                }
+            }
+    
+            .footerright {
+                color: darken($white,20%);
+                svg {
+                  path {
+                    stroke: darken($white,20%);
+                  }
+                }
+                @include hover {
+                    color: $white;
+                }
+    
+            }
+        }
+    }
+    .review__header-card {
+        background: $lightDark;
+        color: $white;
+    }
+
+    .review__card {
+        background: $lightDark;
+        border-color: $headingText;
+
+        .name {
+            color: darken($white,20%);
+            
+        }
+        .gmail {
+            color: darken($white,20%);
+
+        }
+        .review-footer {
+            border-color: $headingText;
+
+            .stars {
+                @include flex;
+                gap: size(4);
+                
+               .empty {
+                svg {
+                    path {
+                        fill: darken($white,20%);
+                    }
+                }
+               }
+               
+            }
+            .time {
+              color: darken($white,30%);
+    
+            }
+        }
+    }
+}

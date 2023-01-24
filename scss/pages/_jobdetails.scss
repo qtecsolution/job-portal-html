@@ -226,12 +226,13 @@
                 .uploaded {
                     .headerimage-thumb {
                         @include w100;
-                        max-height: size(360);
+                        // max-height: size(360);
+                        height: auto;
                         overflow: hidden;
                         @include radius(10);
 
                         img {
-                            @include wh100;
+                            // @include wh100;
                             object-fit: contain;
                         }
                     }
