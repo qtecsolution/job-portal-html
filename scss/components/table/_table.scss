@@ -82,3 +82,24 @@
 
 } 
 
+#example_filter {
+    display: none !important;
+   
+}
+
+#example {
+    width: 100% !important;
+}
+
+.table-wrapper {
+    background: $white;
+    
+    table {
+        tr {
+            td {
+            @include border-single(bottom,solid,1,$headerborder);
+            padding: size(15) size(0);
+        }
+        }
+    }
+}
