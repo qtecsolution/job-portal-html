@@ -1,0 +1,204 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.rightinfo {
+  @include flex-column;
+  gap: size(20);
+}
+
+.settingsform {
+  background: $white;
+  @include radius(10);
+  box-shadow: $box-shadow-1;
+  @include flex-column;
+  gap: size(20);
+  padding: size(16);
+  @include h100;
+
+  &-header {
+    @include border-single(bottom, solid, 1, $headerborder);
+    padding-bottom: size(16);
+  
+    .settingsform-title {
+      color: $headingText;
+      font-size: size(16);
+      font-weight: 600;
+    }
+
+    .titleinfo {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .icon {
+        cursor: pointer;
+        @include flex-center;
+        @include square(13);
+  
+        svg {
+          @include wh100;
+          margin-top: size(2);
+        }
+      }
+    }
+
+    .rightcontent {
+      .btn-add {
+        color: $primary;
+        font-size: size(12);
+        font-weight: 500;
+        @include transitionsall;
+
+        @include hover {
+          color: darken($primary, 5%);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(mobile768) {
+    padding: size(20);
+    gap: size(32);
+  }
+
+  &-body {
+    .inputbox {
+      @include flex-column;
+      gap: size(12);
+
+      .inputfield {
+        @include setBgColor($bodybg, $headingText);
+        @include border(solid, 1, $headerborder);
+        @include radius(8);
+        font-size: size(14);
+        font-weight: 400;
+        padding: size(12.5) size(16);
+        @include transitionsall;
+
+        &:focus {
+          border-color: $primary;
+          background: transparent;
+        }
+      }
+    }
+
+    .selectbox {
+      @include flex-column;
+      gap: size(12);
+
+      .selectlabel {
+        color: $headingText;
+        font-size: size(14);
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .nice-select {
+        @include setBgColor($bodybg, $headingText);
+        @include border(solid, 1, $headerborder);
+        @include radius(8);
+        padding: size(12.5) size(16);
+        height: size(44);
+        @include transitionsall;
+
+        .current {
+          font-size: size(14);
+          font-weight: 400;
+        }
+
+        .nice-select-dropdown {
+          .list {
+            .option {
+              font-size: size(14);
+              font-weight: 400;
+            }
+          }
+        }
+
+        &:focus {
+          border-color: $primary;
+          background: transparent;
+        }
+
+        &::after {
+          transform: rotate(0) translateY(40%) !important;
+        }
+
+        &.open {
+          &::after {
+            transform: rotateX(180deg) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.socialinfo {
+  background: $white;
+  @include radius(10);
+  box-shadow: $box-shadow-1;
+  @include flex-column;
+  gap: size(20);
+  padding: size(16);
+  @include h100;
+
+  @include breakpoint(mobile768) {
+    padding: size(20);
+    gap: size(32);
+  }
+
+  &-header {
+    @include border-single(bottom, solid, 1, $headerborder);
+    padding-bottom: size(16);
+  
+    .title {
+      color: $headingText;
+      font-size: size(16);
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    .inputbox {
+      @include flex-column;
+      gap: size(12);
+
+      .inputfield {
+        @include setBgColor($bodybg, $headingText);
+        @include border(solid, 1, $headerborder);
+        @include radius(8);
+        font-size: size(14);
+        font-weight: 400;
+        padding: size(12.5) size(16);
+        @include transitionsall;
+
+        &:focus {
+          border-color: $primary;
+          background: transparent;
+        }
+      }
+    }
+
+    .submitbox {
+      @include border-single(top, solid, 1, $headerborder);
+      margin: size(24) 0 0;
+      padding: size(24) 0 0;
+      @include flex-end;
+
+      .btn-submit {
+        @include setBgColor($primary, $white);
+        @include radius(8);
+        @include flex-center;
+        font-size: size(12);
+        font-weight: 600;
+        padding: size(12) size(30);
+        text-align: center;
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor(darken($primary, 10%), $white);
+        }
+      }
+    }
+  }
+}

@@ -315,24 +315,48 @@
   .settingstab {
     padding-top: size(12);
     @include flex-column;
+    gap: size(20);
 
     .nav-tabs {
-      .nav-item {
-        .nav-link {
-
-        }
+      border-color: $headerborder;
+      gap: size(2);
+      padding: size(0) size(12);
+  
+      @include breakpoint(tab992) {
+        padding: size(0) size(30);
       }
 
       .nav-link {
+        border: 0;
+        @include radius(0);
+        @include border-single(bottom, solid, 3, transparent);
+        padding: size(20) size(15);
+        @include setBgColor(transparent, $textSecondary);
+        font-size: size(14);
+        font-weight: 500;
+
+        @include breakpoint(mobile768) {
+          font-size: size(16);
+        }
+
+        &:hover:not(.active) {
+          border-color: $primary;
+          color: $headingText;
+        }
 
         &.active {
-
+          border-color: $primary;
+          color: $headingText;
         }
       }
     }
 
     .tab-content {
-
+      padding: size(0) size(12);
+  
+      @include breakpoint(tab992) {
+        padding: size(0) size(30);
+      }
     }
   }
 }
