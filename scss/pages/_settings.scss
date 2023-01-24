@@ -311,4 +311,28 @@
       @include flex-end;
     }
   }
+
+  .settingstab {
+    padding-top: size(12);
+    @include flex-column;
+
+    .nav-tabs {
+      .nav-item {
+        .nav-link {
+
+        }
+      }
+
+      .nav-link {
+
+        &.active {
+
+        }
+      }
+    }
+
+    .tab-content {
+
+    }
+  }
 }
