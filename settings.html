@@ -15,13 +15,13 @@
     />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css"
     />
     <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
 
   <body>
@@ -1908,7 +1908,7 @@
                                 type="password"
                                 id="c-changepass"
                                 class="inputfield"
-                                placeholder="Confirm your entered password"
+                                placeholder="Confirm your password"
                                 autocomplete="off"
                               />
                             </div>
@@ -1958,7 +1958,265 @@
           <div class="tab-content" id="settingsTabContent">
             <!-- COMPANY-INFO START -->
             <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
-              Company Info
+              
+              <div class="row g-4 w-100">
+                <div class="col-lg-6">
+                  <form class="settingsform">
+                    <div class="settingsform-header">
+                      <h4 class="settingsform-title">Company details</h4>
+                    </div>
+    
+                    <div class="settingsform-body">
+                      <div class="row w-100 g-3">
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="company-name" class="inputlabel">
+                              Company name*
+                            </label>
+                            <input
+                              type="text"
+                              id="company-name"
+                              placeholder="QTEC Solution Limited"
+                              class="inputfield"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="weburl" class="inputlabel">
+                              Website URL*
+                            </label>
+                            <input
+                              type="text"
+                              id="weburl"
+                              placeholder="https://www.qtecsolution.com/"
+                              class="inputfield"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="mobnumber" class="inputlabel">
+                              Mobile number*
+                            </label>
+                            <input
+                              type="tel"
+                              id="mobnumber"
+                              placeholder="+880 1689131186"
+                              class="inputfield"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="selectbox">
+                            <label for="select-industry" class="selectlabel">
+                              Industry*
+                            </label>
+
+                            <select id="select-industry">
+                              <option value="">Software and IT</option>
+                              <option value="">Creative arts and design</option>
+                              <option value="">Energy and utilities</option>
+                              <option value="">Healthcare</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="selectbox">
+                            <label for="settings-country" class="selectlabel">
+                              Country*
+                            </label>
+
+                            <select id="settings-country">
+                              <option value="">Banglasesh</option>
+                              <option value="">China</option>
+                              <option value="">India</option>
+                              <option value="">Japan</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="selectbox">
+                            <label for="settings-city" class="selectlabel">
+                              City*
+                            </label>
+
+                            <select id="settings-city">
+                              <option value="">Dhaka</option>
+                              <option value="">Mymensingh</option>
+                              <option value="">Chittagong</option>
+                              <option value="">Barishal</option>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="compaddress" class="inputlabel">
+                              Company address*
+                            </label>
+                            <input
+                              type="text"
+                              id="compaddress"
+                              placeholder="Enter company address"
+                              class="inputfield"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="selectbox">
+                            <label for="settings-timezone" class="selectlabel">
+                              Time Zone
+                            </label>
+
+                            <select id="settings-timezone">
+                              <option value="">Development</option>
+                              <option value="">China</option>
+                              <option value="">India</option>
+                              <option value="">Japan</option>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="compaddress" class="inputlabel">
+                              Number of Employees
+                            </label>
+                            <input
+                              type="text"
+                              id="compaddress"
+                              placeholder="Enter number of employees, ex : 1-30"
+                              class="inputfield"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+                        
+                        <div class="col-12">
+                          <div class="inputbox">
+                            <label for="compaddress" class="inputlabel">
+                              About the company
+                            </label>
+                            
+                            <textarea class="inputfield" id="compaddress" rows="5" placeholder="Write description here"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="rightinfo">
+                    <form class="settingsform">
+                      <div class="settingsform-header">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="titleinfo">
+                            <h4 class="settingsform-title">Manage team</h4>
+                            <figure class="icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Owner have access to every feature and every employee, and can assign any role to a user. Team members can review candidates and more, depending on the permissions.">
+                              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.5C0 10.0874 2.912 13 6.5 13C10.0945 13 13 10.0874 13 6.5C13 2.91135 10.0945 0 6.5 0C2.912 0 0 2.91135 0 6.5ZM5.92773 8.96316C5.92773 9.27451 6.18773 9.53516 6.49973 9.53516C6.81173 9.53516 7.06523 9.27451 7.06523 8.96316V6.09016C7.06523 5.77751 6.81173 5.52466 6.49973 5.52466C6.18773 5.52466 5.92773 5.77751 5.92773 6.09016V8.96316ZM6.50755 3.45625C6.18905 3.45625 5.93555 3.71625 5.93555 4.02825C5.93555 4.34025 6.18905 4.59375 6.50105 4.59375C6.81955 4.59375 7.07305 4.34025 7.07305 4.02825C7.07305 3.71625 6.81955 3.45625 6.50755 3.45625Z" fill="#98A2B3"/>
+                              </svg>
+                            </figure>
+                          </div>
+  
+                          <div class="rightcontent">
+                            <button type="button" class="btn-add">Add user</button>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="settingsform-body">
+                      </div>
+                    </form>
+
+                    <div class="socialinfo">
+                      <div class="socialinfo-header">
+                        <h4 class="title">Company Social Accounts</h4>
+                      </div>
+
+                      <div class="socialinfo-body">
+                        <div class="row w-100 g-3">
+                          <div class="col-lg-6">
+                            <div class="inputbox">
+                              <label for="linkedinprofile" class="inputlabel">
+                                LinkedIn
+                              </label>
+                              <input
+                                type="text"
+                                id="linkedinprofile"
+                                placeholder="Company linkedin link"
+                                class="inputfield"
+                                autocomplete="off"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="inputbox">
+                              <label for="twitterprofile" class="inputlabel">
+                                Twitter
+                              </label>
+                              <input
+                                type="text"
+                                id="twitterprofile"
+                                placeholder="Company twitter link"
+                                class="inputfield"
+                                autocomplete="off"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="inputbox">
+                              <label for="facebookprofile" class="inputlabel">
+                                Facebook
+                              </label>
+                              <input
+                                type="text"
+                                id="facebookprofile"
+                                placeholder="Company facebook link"
+                                class="inputfield"
+                                autocomplete="off"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="inputbox">
+                              <label for="instagramprofile" class="inputlabel">
+                                Instagram
+                              </label>
+                              <input
+                                type="text"
+                                id="instagramprofile"
+                                placeholder="Company instagram link"
+                                class="inputfield"
+                                autocomplete="off"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="submitbox">
+                          <button type="submit" class="btn-submit">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- JOB-INFO START -->
@@ -1988,9 +2246,10 @@
     <script src="assets/js/darkmode/darkmode.js"></script>
     <script src="assets/js/sidetoggle/sidetoggle.js"></script>
     <script src="assets/js/tooltip/tooltip.js"></script>
-    <!-- content loader  -->
-    <script src="assets/js/contentloader/contentloader.js"></script>
     <!-- nice select -->
     <script src="assets/js/nice-select/nice-select2.js"></script>
+    <script src="assets/js/nice-select/settings-select.js"></script>
+    <!-- content loader  -->
+    <script src="assets/js/contentloader/contentloader.js"></script>
   </body>
 </html>
