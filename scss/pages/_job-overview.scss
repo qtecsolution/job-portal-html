@@ -72,6 +72,22 @@
 
         .header-right {
             padding:size(24) size(24);
+            @include flex-center-vert;
+            gap: size(10);
+
+            .btn-share {
+
+              @include border(solid,1,$primary);
+              @include radius(7);
+              padding: size(12) size(20);
+              @include font($primaryFont,12,semibold,normal,12);
+              color: $textPrimary;
+              @include transitionsall;
+              @include hover {
+                @include setBgColor($primary,$white);
+
+              }
+            }
         }
     }
     &-body {

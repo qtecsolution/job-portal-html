@@ -278,6 +278,22 @@
 
         }
     }
+} 
+
+.review__drag-card {
+    @include border(dashed,2,$checkborder);
+    background: $headerborder;
+    padding: size(30);
+    @include flex-center;
+    @include radius(8);
+    .content {
+        @include flex-column;
+        align-items: center;
+        color:  hsl(218, 15%, 65%);
+        gap: size(4);
+
+    }
+
 }
 
 

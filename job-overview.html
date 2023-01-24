@@ -12,10 +12,18 @@
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="assets/css/style.min.css" />
   <!-- PLACEHOLDER LOADING -->
   <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+  <!-- DATA TABLE  -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/css/style.min.css" />
+
+  <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
+
+  <style>
+    
+  </style>
   
 </head>
 
@@ -975,20 +983,26 @@
            
             <div class="header-right">
                 <button class="btn-share">Share</button>
-                <button class="btn-share">Published</button>
+                <div>
+                  <select id="jobstatus">
+                    <option value="1">Published</option>
+                    <option value="2" selected>On Hold</option>
+                    <option value="1">Close</option>
+                  </select>
+                </div>
             </div>
         </div>
         <div class="job__overview-body">
 
             <div class="overview-tab">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab" aria-controls="overview-tab-pane" aria-selected="true">
+                      <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab" aria-controls="overview-tab-pane" aria-selected="true">
                         <span class="title">Overview</span>
                       </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="applicants-tab" data-bs-toggle="tab" data-bs-target="#applicants-tab-pane" type="button" role="tab" aria-controls="applicants-tab-pane" aria-selected="false">
+                      <button class="nav-link active" id="applicants-tab" data-bs-toggle="tab" data-bs-target="#applicants-tab-pane" type="button" role="tab" aria-controls="applicants-tab-pane" aria-selected="false">
                         <span class="title">Applicants</span>
                         <span class="count">22</span>
                       </button>
@@ -1042,8 +1056,8 @@
                    
                   </ul>
                   <div class="tab-content" id="myTabContent">
-                    <!-- overview -->
-                    <div class="tab-pane fade show active" id="overview-tab-pane" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
+                    <!-- overview  tab content -->
+                    <div class="tab-pane fade " id="overview-tab-pane" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
                         
                         <div class="review__row">
 
@@ -1949,6 +1963,18 @@
                                         </div>
                                     </div>
 
+                                    <div class="review__drag-card">
+                                      <div class="content">
+                                        <span class="icon">
+                                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 9V7C17 6.46957 16.7893 5.96086 16.4142 5.58579C16.0391 5.21071 15.5304 5 15 5H7C6.46957 5 5.96086 5.21071 5.58579 5.58579C5.21071 5.96086 5 6.46957 5 7V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H9" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 1V1.01M5 1V1.01M9 1V1.01M13 1V1.01M1 5V5.01M1 9V9.01M1 13V13.01M11 11L20 14L16 16L14 20L11 11Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                        </span>
+                                        <span class="title">Drop here</span>
+                                      </div>
+                                    </div>
+
 
 
                                 </div>
@@ -1957,10 +1983,57 @@
 
                         </div>
 
-
-
                     </div>
-                    <div class="tab-pane fade" id="applicants-tab-pane" role="tabpanel" aria-labelledby="applicants-tab" tabindex="0"><h3> application tab</h3></div>
+
+                    <!-- applicant tab content -->
+
+                    <div class="tab-pane fade show active" id="applicants-tab-pane" role="tabpanel" aria-labelledby="applicants-tab" tabindex="0">
+
+                      <div class="table-wrapper">
+                        <div class="table-search">
+                          <input type="text" id="myInputTextField">
+                        </div>
+                        <table id="example" >
+                          <thead>
+                            <tr>
+                              <td>
+                                <input type="checkbox" name="" id="">
+                              </td>
+                              <td>
+                                name
+                              </td>
+                              <td>
+                                school
+                              </td>
+                              <td>
+                               home
+                              </td>
+                              <td>
+                                bd
+                              </td>
+                            </tr>
+                          </thead>
+                          
+                          <tbody>
+                            
+                            <tr>
+                              <td>kawsar</td>
+                            <td>kawsar</td>
+                            <td>kawsar</td>
+                            <td>kawsar</td>
+                            <td>kawsar</td>
+                            </tr>
+                            <tr>
+                              <td>rakib</td>
+                            <td>rakib</td>
+                            <td>rakib</td>
+                            <td>rakib</td>
+                            <td>rakib</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                     <div class="tab-pane fade" id="newapplied-tab-pane" role="tabpanel" aria-labelledby="newapplied-tab" tabindex="0"><h3>NEw applied</h3></div>
                     <div class="tab-pane fade" id="screeninng-tab-pane" role="tabpanel" aria-labelledby="screeninng-tab" tabindex="0"><h3>screeninng</h3></div>
                     <div class="tab-pane fade" id="designChange-tab-pane" role="tabpanel" aria-labelledby="designChange-tab" tabindex="0"><h3>designChange</h3></div>
@@ -1990,7 +2063,20 @@
   <script src="assets/js/contentloader/contentloader.js"></script>
   <!-- nice select -->
   <script src="assets/js/nice-select/nice-select2.js"></script>
-  <script src="assets/js/nice-select/hirpeline.js"></script>
+  <script src="assets/js/nice-select/jobstatus.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready( function () {
+      var table = $('#example').DataTable({
+         paging: false, info: false
+      });
+
+      $('#myInputTextField').keyup(function(){
+        table.search($(this).val()).draw() ;
+})
+} );
+  </script>
 </body>
 
 </html>
