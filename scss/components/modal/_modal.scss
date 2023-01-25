@@ -70,6 +70,19 @@
 
         }
        
+       
+      }
+      .disqualifyinput {
+        background: $bodybg;
+        padding: size(10) size(14);
+        @include border(solid,1,$headerborder);
+        @include radius(8);
+        @include w100;
+
+        &:focus {
+          
+        }
+         
       }
     }
 

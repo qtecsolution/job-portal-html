@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PAGE TITLE -->
+    <title>Hire Me - Job Portal | Application form  </title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+    <!-- PLACEHOLDER LOADING -->
+    <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <!-- NICE SELECT 2 CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
+
+    <!-- JQUERY UI  -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <!-- CHOSEN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+
+</head>
+
+<body>
+
+     <div class="container py-5">
+
+        <div class="candidate__form bg-white p-4 rounded">
+            <div class="applicationform-header header-offcanvas">
+                <h2 class="title">Submit Your Application</h2>
+                <p>Senior Product Designer</p>
+                
+            </div>
+
+            <div class="applicationform-body">
+
+
+                <!-- basic info  start -->
+                <div class="collapsebtn-wrapper">
+                    <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#basicInfopreview" aria-expanded="false" aria-controls="basicInfo">
+                        <span>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span> Basic Info</span>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="basicInfopreview">
+
+                    <div class="col-wrapper">
+                       <div class="row g-4">
+                         <!--  Name -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox errorfield ">
+                                <label for="fullname" class="inputlabel"> Full Name* </label>
+                                <input type="text" id="fullname" class="inputfield"
+                                    placeholder="Enter number of vacancies" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">  Full name is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="email" class="inputlabel"> Email* </label>
+                                <input type="email" id="email" class="inputfield"
+                                    placeholder="Enter your email" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Email is required</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone-->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="phone" class="inputlabel"> Phone* </label>
+                                <input type="text" id="phone" class="inputfield telinput w-100"
+                                    placeholder="Phone" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Phone is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="portfolio" class="inputlabel"> Portfolio link </label>
+                                <input type="text" id="portfolio" class="inputfield"
+                                    placeholder="portfolio" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Portfolio is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gender -->
+
+                        <div class="col-12">
+                            <div class="inputbox ">
+                                <label for="portfolio" class="inputlabel"> Gender</label>
+                                 <div class="d-flex  gap-4 align-items-center">
+                                    <div class="singleradio">
+                                        <input type="radio" name="gender" id="male" class="radiofield" hidden >
+                                        <label class="radiolabel" for="male">Male</label>
+                                      </div>
+                                      <div class="singleradio">
+                                        <input type="radio" name="gender" id="female" class="radiofield" hidden checked>
+                                        <label class="radiolabel" for="female">Female</label>
+                                      </div>
+                                 </div>
+                                <div class="error">
+                                    <p class="error-message"> Gender is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+                        <!-- present address -->
+                        <div class="col-sm-6">
+                            <div class="textareabox">
+                                <label for="presentaddress" class="textarealabel">Present Address</label>
+                                <textarea  cols="30" rows="10" class="textareafield" id="presentaddress"></textarea>
+                            </div>
+                        </div>
+                        <!-- present address -->
+                        <div class="col-sm-6">
+                            <div class="textareabox">
+                                <label for="parmanentaddress" class="textarealabel">Parmanent Address</label>
+                                <textarea  cols="30" rows="10" class="textareafield" id="parmanentaddress"></textarea>
+                            </div>
+                        </div>
+
+                      
+
+                        <!-- file upload -->
+                        <div class="col-12">
+                           <div class="upload-box">
+                            <input type="file" name="" id="uploadcv" class="uploadbox-input" hidden> 
+                            <label for="uploadcv" class="uploadbox-label">
+                                <div class="middle">
+                                    <span>
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.33333 1H21.25V3.125H9.33333C8.13672 3.125 7.16667 4.07639 7.16667 5.25V30.75C7.16667 31.9236 8.13672 32.875 9.33333 32.875H26.6667C27.8633 32.875 28.8333 31.9236 28.8333 30.75V10.5625H31V30.75C31 33.0972 29.0599 35 26.6667 35H9.33333C6.9401 35 5 33.0972 5 30.75V5.25C5 2.90279 6.9401 1 9.33333 1Z" fill="#667085"/>
+                                            <path d="M21.25 7.375V1L31 10.5625H24.5C22.7051 10.5625 21.25 9.13541 21.25 7.375Z" fill="#667085"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 23.1C13 22.6029 13.3731 22.2 13.8333 22.2H17.1667C17.6269 22.2 18 22.6029 18 23.1C18 23.5971 17.6269 24 17.1667 24H13.8333C13.3731 24 13 23.5971 13 23.1Z" fill="#667085"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 19.5C13 19.0029 13.3731 18.6 13.8333 18.6H22.1667C22.6269 18.6 23 19.0029 23 19.5C23 19.9971 22.6269 20.4 22.1667 20.4H13.8333C13.3731 20.4 13 19.9971 13 19.5Z" fill="#667085"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 15.9C13 15.4029 13.3731 15 13.8333 15H22.1667C22.6269 15 23 15.4029 23 15.9C23 16.3971 22.6269 16.8 22.1667 16.8H13.8333C13.3731 16.8 13 16.3971 13 15.9Z" fill="#667085"/>
+                                        </svg> 
+                                    </span>
+
+                                    <div class="right">
+                                        <span>Drag & drop file or <span class="browse">browse file</span></span>
+                                        <span> Max size 5Mb</span>
+                                    </div>
+                                </div>
+                            </label>
+                           </div>
+                        </div>
+
+                        
+                       </div>
+                    </div>
+                </div>
+
+                <!-- basic info end -->
+
+                <!-- Professional Info  start -->
+                <div class="collapsebtn-wrapper">
+                    <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#personalInfopreview" aria-expanded="false" aria-controls="personalInfo">
+                        <span>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span> Professional Info</span>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="personalInfopreview">
+                   <div class="col-wrapper">
+                        <div class="row g-4">
+                            
+                        <!--  Current Organization -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox errorfield ">
+                                <label for="organization" class="inputlabel"> Current Organization </label>
+                                <input type="text" id="organization" class="inputfield"
+                                    placeholder="Enter your current organization name" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">  Organization is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Current Organization -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="organization" class="inputlabel"> Current Job Position </label>
+                                <input type="text" id="organization" class="inputfield"
+                                    placeholder="Enter your current job position" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Job Position is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Experience in years -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="experienceyear" class="inputlabel"> Experience in years </label>
+                                <input type="text" id="experienceyear" class="inputfield"
+                                    placeholder="Year of experiences" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">Experience in years is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Notice period -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="noticePeriod" class="inputlabel"> Notice period </label>
+                                <input type="text" id="noticePeriod" class="inputfield"
+                                    placeholder="Notice period time" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Notice period is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Current Salary  -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="currentSallery" class="inputlabel">Current Salary </label>
+                                <input type="text" id="currentSallery" class="inputfield"
+                                    placeholder="Current salary" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Current Salary is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Expected Salary  -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="expectedSallery" class="inputlabel"> Expected Salary </label>
+                                <input type="text" id="expectedSallery" class="inputfield"
+                                    placeholder="Expected salary" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Expected Salary is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SKILL SETS -->
+                        <div class="col-12">
+                            <div class="inputbox">
+                                <label for="select-city" class="inputlabel"> Skill Sets* </label>
+                            <select class="skills" multiple>
+                                <option>Html</option>
+                                <option>Css</option>
+                                <option>Javascript</option>
+                                <option>Php</option>
+                                <option>laravel</option>
+                                </select>
+
+                            </div>
+                        </div> 
+
+                         <!--additional info -->
+                         <div class="col-12">
+                            <div class="textareabox">
+                                <label for="additional" class="textarealabel">Additional Info</label>
+                                <textarea  cols="30" rows="10" class="textareafield" id="additional"></textarea>
+                            </div>
+                        </div>
+
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Professional Info end -->
+
+                <!-- Educational Info start -->
+                <div class="collapsebtn-wrapper">
+                    <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#educationalInfopreview" aria-expanded="false" aria-controls="educationalInfo">
+                        <span>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span> Educational Info</span>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="educationalInfopreview">
+                    <div class="col-wrapper">
+                        <div class="row g-4">
+                            
+                        <!--  University -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox">
+                                <label for="university" class="inputlabel"> University Name</label>
+                                <input type="text" id="university" class="inputfield"
+                                    placeholder="Enter your university name" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> University name is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Degree -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="degree" class="inputlabel"> Degree </label>
+                                <input type="text" id="degree" class="inputfield"
+                                    placeholder="Enter your degree" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message"> Degree is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- passing year -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="passingyear" class="inputlabel">Passing Year </label>
+                                <input type="text" id="passingyear" class="inputfield"
+                                    placeholder="Enter your passing year" autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">Passing year is in years is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Educational Info end -->
+
+                <!-- Social link start -->
+                <div class="collapsebtn-wrapper">
+                    <button class="groupfield-btn" type="button" data-bs-toggle="collapse" data-bs-target="#socialLinkgpreview" aria-expanded="false" aria-controls="educationalInfo">
+                        <span>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span> Socila Link</span>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="socialLinkgpreview">
+                    <div class="col-wrapper">
+                        <div class="row g-4">
+                            
+                        <!--  LinkedIn Profile -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox">
+                                <label for="linkdinprofile" class="inputlabel"> LinkedIn Profile</label>
+                                <input type="text" id="linkdinprofile" class="inputfield"
+                                    placeholder="Enter your LinkedIn profile link  " autocomplete="off" required>
+                                <div class="error">
+                                    <!-- <p class="error-message"> University name is required</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  GitHub Profile -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="githubprofile" class="inputlabel"> GitHub Profile</label>
+                                <input type="text" id="githubprofile" class="inputfield"
+                                    placeholder="Enter your Github profile link " autocomplete="off" required>
+                                <div class="error">
+                                    <!-- <p class="error-message"> Degree is required</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Behance Profile -->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="behanceprofile" class="inputlabel">Behance Profile </label>
+                                <input type="text" id="behanceprofile" class="inputfield"
+                                    placeholder="Enter your Behance profile link " autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">Passing year is in years is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pinterest Profile-->
+                        <div class="col-sm-6 ">
+                            <div class="inputbox ">
+                                <label for="passingyear" class="inputlabel">Pinterest Profile </label>
+                                <input type="text" id="passingyear" class="inputfield"
+                                    placeholder="Enter your Pinterest profile link " autocomplete="off" required>
+                                <div class="error">
+                                    <p class="error-message">Passing year is in years is required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                        </div>
+                   </div>
+                </div>
+
+                <!--  Social link end -->
+                <div class="py-4">
+                    <button class="btn btn-primary d-block w-25">Submit</button>
+                </div>
+
+
+            </div>
+        </div>
+
+     </div>
+
+        <!-- JQUERY -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+        <!-- DARK-MODE -->
+        <script src="assets/js/darkmode/darkmode.js"></script>
+        <!-- SIDEBAR TOGGLE  -->
+        <script src="assets/js/sidetoggle/sidetoggle.js"></script>
+        <!-- TOOLTIP -->
+        <script src="assets/js/tooltip/tooltip.js"></script>
+        <!-- CONTENT LOADER  -->
+        <script src="assets/js/contentloader/contentloader.js"></script>
+        <!-- nice select -->
+        <script src="assets/js/nice-select/nice-select2.js"></script>
+        <!-- CUSTOM SELECT -->
+        <script src="assets/js/nice-select/customselect.js"></script>
+        <!-- TINY MC  -->
+        <script src="https://cdn.tiny.cloud/1/k54ls3xs8rzv8rgm56khkpbjz9j22cjb9kbo2lmvn7cfnklm/tinymce/6/tinymce.min.js"
+            referrerpolicy="origin"></script>
+        <!-- JQUERY UI -->
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <!-- CHOSEN FOR MULTIPLE CUSTOM SELECT  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+        <!-- SEARCH SUGGESTION  -->
+        <!-- <script src="assets/js/search-suggestion/search-suggestion.js"></script> -->
+        
+       
+        
+       
+        <script> 
+
+            const groupfield = document.querySelectorAll('.groupfield');
+
+            groupfield.forEach(box => {
+                box.addEventListener('dragenter', dragEnter)
+                box.addEventListener('dragover', dragOver);
+                box.addEventListener('dragleave', dragLeave);
+                box.addEventListener('drop', drop);
+            });
+
+            function dragEnter(e) {
+                e.preventDefault();
+                // e.target.classList.add('drag-over');
+                this.classList.add('drag-over')
+            }
+
+            function dragOver(e) {
+                e.preventDefault();
+                // e.target.classList.add('drag-over');
+                this.classList.add('drag-over')
+            }
+
+            function dragLeave(e) {
+                console.log('leave');
+                // e.target.classList.remove('drag-over'); 
+                this.classList.remove('drag-over'); 
+
+            }
+
+            function drop(e) {
+                // e.target.classList.remove('drag-over'); 
+                this.classList.remove('drag-over'); 
+
+
+                // get the draggable element
+                const id = e.dataTransfer.getData('text/plain');
+                const draggable = document.getElementById(id);
+
+                // add it to the drop target
+                e.target.appendChild(draggable);
+
+                // display the draggable element
+                draggable.classList.remove('hide');
+            }
+
+            // tinymce.init({
+            //     selector: 'textarea',
+            //     menubar: false,
+            //     plugins: 'anchor autolink charmap codesample image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            //     toolbar: 'undo redo | blocks   | bold italic underline link  | checklist numlist bullist indent outdent |  addcomment showcomments |  a11ycheck typography | align lineheight |   charmap |',
+            //     tinycomments_mode: 'embedded',
+            //     tinycomments_author: 'Author name',
+
+            //     skin: (document.body.classList.contains('darkmode') ? "oxide-dark" : "snow"),
+            //     content_css: (document.body.classList.contains('darkmode') ? "dark" : "snow"),
+            //     //   skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
+            //     //   content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""),
+            //     mergetags_list: [
+            //         { value: 'First.Name', title: 'First Name' },
+            //         { value: 'Email', title: 'Email' },
+            //     ],
+            //     init_instance_callback: function (editor) {
+            //         var freeTiny = document.querySelector('.tox .tox-notification--in');
+            //         var tinylogo = document.querySelector('.tox-statusbar__branding');
+            //         freeTiny.style.display = 'none';
+            //         tinylogo.style.display = 'none';
+            //     }
+            // });
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function () {
+                 $('.skills').chosen(
+                    {width: "100%"}
+                 );
+
+                 // -----Country Code Selection
+                $(".telinput").intlTelInput({
+                    initialCountry: "bd",
+                    separateDialCode: true,
+                    // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+                });
+                 $(function () {
+                    $("#datepicker").datepicker();
+                    // $('#skills').chosen();
+                });
+                
+            });
+
+        </script>
+</body>
+
+</html>
