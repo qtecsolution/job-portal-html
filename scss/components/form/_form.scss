@@ -130,6 +130,38 @@
         }
       }
     }
+
+    .table {
+      thead {
+        tr {
+          th {
+
+          }
+        }
+      }
+
+      tbody {
+        .searchinputbox {
+          .buttonbox {
+            .btn-search {
+
+            }
+          }
+
+          .searchboxinput {
+            .searchfield {
+
+            }
+          }
+        }
+
+        .action {
+          .btn-action {
+            
+          }
+        }
+      }
+    }
   }
 }
 
