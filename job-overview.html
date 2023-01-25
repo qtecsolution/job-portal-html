@@ -1991,16 +1991,33 @@
 
                       <div class="table-wrapper">
                         <div class="table-search">
-                          <input type="text" id="myInputTextField">
+                          <span class="search__icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_886_3372" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 0.666504H16.8977V16.8973H0.666992V0.666504Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_886_3372)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.78283 1.9165C4.99699 1.9165 1.91699 4.99567 1.91699 8.7815C1.91699 12.5673 4.99699 15.6473 8.78283 15.6473C12.5678 15.6473 15.6478 12.5673 15.6478 8.7815C15.6478 4.99567 12.5678 1.9165 8.78283 1.9165ZM8.78283 16.8973C4.30783 16.8973 0.666992 13.2565 0.666992 8.7815C0.666992 4.3065 4.30783 0.666504 8.78283 0.666504C13.2578 0.666504 16.8978 4.3065 16.8978 8.7815C16.8978 13.2565 13.2578 16.8973 8.78283 16.8973Z" fill="#98A2B3"/>
+                              </g>
+                              <mask id="mask1_886_3372" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="13" y="13" width="5" height="5">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3672 13.7559H17.5539V17.9348H13.3672V13.7559Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask1_886_3372)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9291 17.9348C16.7699 17.9348 16.6099 17.874 16.4874 17.7523L13.5507 14.824C13.3066 14.5798 13.3057 14.184 13.5499 13.9398C13.7932 13.694 14.1891 13.6957 14.4341 13.9382L17.3707 16.8673C17.6149 17.1115 17.6157 17.5065 17.3716 17.7507C17.2499 17.874 17.0891 17.9348 16.9291 17.9348Z" fill="#98A2B3"/>
+                              </g>
+                              </svg>                              
+                          </span>
+                          <input type="text" id="myInputTextField" placeholder="Search here..." >
                         </div>
                         <table id="example" >
                           <thead>
                             <tr>
                               
-                             
-                              
                               <td data-orderable="false">
-                               <input type="checkbox" name="applicant-check" id="">
+                                <div class="customcheck ps-2">
+                                  <input type="checkbox" id="allselect" class="customcheck-box" name="pipeline" hidden>
+                                  <label for="allselect" class="customcheck-label"></label>
+                              </div>
                               </td>
                               <td>
                                 Applicant name
@@ -2020,7 +2037,7 @@
                               <td>
                                 Assignee
                               </td>
-                              <td>
+                              <td data-orderable="false">
                                 
                               </td>
                             </tr>
@@ -2028,73 +2045,387 @@
                           
                           <tbody>
                             
-                            <tr>
-                              <td>                     
-                                <input type="checkbox" name="applicant-check" id="">
-                              </td>
-                            <td>kawsar</td>
-                            <td>oluwarotimiadesina@gmail.com ; 01xxxxxxxxx</td>
-                            <td>
-                              <div class="stars">
-
-                                <span class="filled">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z" fill="#FFD831"></path>
-                                    </svg>
-                                </span>
-
-                                <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                        3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                        8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                        0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
-                                    </svg>
-                                </span>
-                                <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                        3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                        8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                        0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
-                                    </svg>
-                                </span>
-                                <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                        3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                        8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                        0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
-                                    </svg>
-                                </span>
-                                <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                        3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                        8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                        0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
-                                    </svg>
-                                </span>
-
-                            </div>
-                            </td>
-                            <td><span>Screening</span></td>
-                            <td>22 November, 2022</td>
-                            <td>22 November, 2022</td>
-                            <td>22 November, 2022</td>
-                            </tr>
-                            <tr>
+                            <tr class="userTr">
                               <td>
-                                <input type="checkbox" name="applicant-check" id="">
+                                <div class="customcheck">
+                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <label for="firstApplicant" class="customcheck-label" onclick=" func(this)"></label>
+                              </div>
                               </td>
-                            <td>rakib</td>
-                            <td>rakib</td>
-                            <td>rakib</td>
-                            <td>rakib</td>
-                            <td>rakib</td>
-                            <td>rakib</td>
-                            <td>rakib</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Md rakib</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">oluwarotimiadesina@gmail.com ; 01xxxxxxxxx</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="stars">
+                            
+                                  <span class="filled">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
+                                        fill="#FFD831"></path>
+                                    </svg>
+                                  </span>
+                            
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 
+                                                                    5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 
+                                                                    4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 
+                                                                    1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 
+                                                                    9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                            
+                                </div>
+                              </td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="screening">Screening</span></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">22 November, 2022</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="userimage__wrapper">
+                                  <figure class="userimage__thumb">
+                                    <img src="assets/images/person/user.png" alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                </div>
+                              </td>
+                              
+                              <td>
+                                <div class="dropdown">
+                                  <span class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M6.33398 2.00016C6.33398 2.36835 6.63246 2.66683 7.00065 2.66683C7.36884 2.66683 7.66732 2.36835 7.66732 2.00016C7.66732 1.63197 7.36884 1.3335 7.00065 1.3335C6.63246 1.3335 6.33398 1.63197 6.33398 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M11.0007 2.00016C11.0007 2.36835 11.2991 2.66683 11.6673 2.66683C12.0355 2.66683 12.334 2.36835 12.334 2.00016C12.334 1.63197 12.0355 1.3335 11.6673 1.3335C11.2991 1.3335 11.0007 1.63197 11.0007 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M1.66732 2.00016C1.66732 2.36835 1.9658 2.66683 2.33398 2.66683C2.70217 2.66683 3.00065 2.36835 3.00065 2.00016C3.00065 1.63197 2.70217 1.3335 2.33398 1.3335C1.9658 1.3335 1.66732 1.63197 1.66732 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                            
+                                  </span>
+                                  <ul class="dropdown-menu">
+                                    <div class="dropdown-items">
+                                      <div class="item">copy link</div>
+                                      <div class="item">Duplicate</div>
+                                      <div class="item">Close</div>
+                                    </div>
+                                  </ul>
+                                </div>
+                              </td>
                             </tr>
+
+                            <tr class="userTr">
+                              <td>
+                                <div class="customcheck">
+                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <label for="secondApplicant" class="customcheck-label" onclick=" func(this)"></label>
+                              </div>
+                              </td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Abdur Rahman</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">abdurrahman@gmail.com ; 01xxxxxxxxx</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="stars">
+                            
+                                  <span class="filled">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
+                                        fill="#FFD831"></path>
+                                    </svg>
+                                  </span>
+                            
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 
+                                                                    5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 
+                                                                    4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 
+                                                                    1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 
+                                                                    9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                            
+                                </div>
+                              </td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="interview">interview</span></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">11 November, 2022</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="userimage__wrapper">
+                                  <figure class="userimage__thumb">
+                                    <img src="assets/images/person/user.png" alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                </div>
+                              </td>
+                              
+                              <td>
+                                <div class="dropdown">
+                                  <span class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M6.33398 2.00016C6.33398 2.36835 6.63246 2.66683 7.00065 2.66683C7.36884 2.66683 7.66732 2.36835 7.66732 2.00016C7.66732 1.63197 7.36884 1.3335 7.00065 1.3335C6.63246 1.3335 6.33398 1.63197 6.33398 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M11.0007 2.00016C11.0007 2.36835 11.2991 2.66683 11.6673 2.66683C12.0355 2.66683 12.334 2.36835 12.334 2.00016C12.334 1.63197 12.0355 1.3335 11.6673 1.3335C11.2991 1.3335 11.0007 1.63197 11.0007 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M1.66732 2.00016C1.66732 2.36835 1.9658 2.66683 2.33398 2.66683C2.70217 2.66683 3.00065 2.36835 3.00065 2.00016C3.00065 1.63197 2.70217 1.3335 2.33398 1.3335C1.9658 1.3335 1.66732 1.63197 1.66732 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                            
+                                  </span>
+                                  <ul class="dropdown-menu">
+                                    <div class="dropdown-items">
+                                      <div class="item">Email Applicant</div>
+                                      <div class="item">Create an Event</div>
+                                      <div class="item">Move to next satge</div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#disqualifyModal">Disqualify</div>
+                                      <div class="item">Delete</div>
+                                    </div>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="userTr">
+                              <td>
+                                <div class="customcheck">
+                                  <input type="checkbox" id="third" class="customcheck-box" name="pipeline" hidden>
+                                  <label for="third" class="customcheck-label" onclick=" func(this)"></label>
+                              </div>
+                              </td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Rofiqul Islam</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">oluwarotimiadesina@gmail.com ; 01xxxxxxxxx</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="stars">
+                            
+                                  <span class="filled">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
+                                        fill="#FFD831"></path>
+                                    </svg>
+                                  </span>
+                            
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 
+                                                                    5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 
+                                                                    4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 
+                                                                    1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 
+                                                                    9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                                  <span class="empty">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
+                                        fill="#667085"></path>
+                                    </svg>
+                                  </span>
+                            
+                                </div>
+                              </td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="design__challenge">Design challenge</span></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">22 November, 2022</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
+                                <div class="userimage__wrapper">
+                                  <figure class="userimage__thumb">
+                                    <img src="assets/images/person/user.png" alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                  <figure class="userimage__thumb">
+                                    <img
+                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                      alt="avater">
+                                  </figure>
+                                </div>
+                              </td>
+                              
+                              <td>
+                                <div class="dropdown">
+                                  <span class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M6.33398 2.00016C6.33398 2.36835 6.63246 2.66683 7.00065 2.66683C7.36884 2.66683 7.66732 2.36835 7.66732 2.00016C7.66732 1.63197 7.36884 1.3335 7.00065 1.3335C6.63246 1.3335 6.33398 1.63197 6.33398 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M11.0007 2.00016C11.0007 2.36835 11.2991 2.66683 11.6673 2.66683C12.0355 2.66683 12.334 2.36835 12.334 2.00016C12.334 1.63197 12.0355 1.3335 11.6673 1.3335C11.2991 1.3335 11.0007 1.63197 11.0007 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      <path
+                                        d="M1.66732 2.00016C1.66732 2.36835 1.9658 2.66683 2.33398 2.66683C2.70217 2.66683 3.00065 2.36835 3.00065 2.00016C3.00065 1.63197 2.70217 1.3335 2.33398 1.3335C1.9658 1.3335 1.66732 1.63197 1.66732 2.00016Z"
+                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                            
+                                  </span>
+                                  <ul class="dropdown-menu">
+                                    <div class="dropdown-items">
+                                      <div class="item">copy link</div>
+                                      <div class="item">Duplicate</div>
+                                      <div class="item">Close</div>
+                                    </div>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+
+                          
+                           
                           </tbody>
                         </table>
                       </div>
@@ -2116,7 +2447,62 @@
 
   </main>
   <!-- MAIN-SECTION END -->
+  <!-- offcanvas  -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="userOffcanvas" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      </div>
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+
+ 
+    <!-- Disqualify  modal  --> 
+    <div class="disqualify-modal">
+      <div class="modal fade" id="disqualifyModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="closeModalLabel">Disqualify Job  </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    
+                </span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-text">
+                Are you sure you want to disqualify <span class="jobname"> Oluwarotimi Adesina  </span> ? Please save a reason for it.
+              </p>
+              <input type="text" name="" placeholder="Enter your disqualify reason here">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="modal-cancel-btn" data-bs-dismiss="modal">cancel</button>
+              <button type="button" class="modal-close-btn">Disqualify</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Disqualify modal  -->
 
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -2141,6 +2527,31 @@
         table.search($(this).val()).draw() ;
 })
 } );
+
+
+
+var y
+
+function func(e) {
+  if (!e.previousElementSibling.checked) {
+    console.log(e.parentElement.parentElement.parentElement);
+    e.parentElement.parentElement.parentElement.style.backgroundColor = '#F8FBFF'
+  } else {
+    e.parentElement.parentElement.parentElement.style.backgroundColor = '#fff'
+
+  }
+ 
+
+}
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 

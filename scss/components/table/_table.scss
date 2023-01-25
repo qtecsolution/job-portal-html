@@ -92,13 +92,121 @@
 }
 
 .table-wrapper {
-    background: $white;
-    
+        @include flex-column;
+        margin-top: size(16);
+        @include breakpoint(tab992) {
+            margin-top: size(24);
+        }
+        .table-search {
+            position: relative;
+            .search__icon {
+                position: absolute;
+                top: 50%;
+                left: size(20);
+                transform: translateY(-50%);
+            }
+            input {
+                @include w100;
+                @include border(solid,1,$tableBorder);
+                padding: size(10) size(20);
+                border-top-left-radius: size(10);
+                border-top-right-radius: size(10);
+                @include breakpoint(mobile576) {
+                    padding: size(16);
+                    padding-left: size(50);
+                }
+
+                padding-left: size(50);
+            }
+        }
     table {
+        background: $white;
+        border-radius: size(0) size(0) size(10) size(10);
+        border-bottom: none !important;
         tr {
             td {
-            @include border-single(bottom,solid,1,$headerborder);
-            padding: size(15) size(0);
+            @include border-single(bottom,solid,1,$tableBorder);
+            padding: size(15) size(8);
+           
+            &:first-child{
+              padding: size(15) size(15);
+              @include border-single(left,solid,1,$tableBorder);
+
+              &::before {
+                display: none !important;
+              }
+              &::after {
+                display: none !important;
+              }
+
+            }
+            &:last-child{
+              @include border-single(right,solid,1,$tableBorder);
+
+            }
+
+            .screening {
+                color: hsl(178, 16%, 47%);
+            } 
+            .design__challenge {
+                color: hsl(31, 98%, 62%) ;
+            }
+            .interview {
+                color: hsl(295, 45%, 61%);
+            }
+
+            .dropdown {
+
+                .icon {
+                    padding: size(10);
+                    cursor: pointer;
+                }
+
+                &-menu {
+
+                    padding: size(12);
+                    border: size(1) solid $headerborder;
+                    box-shadow: $box-shadow-1;
+                    @include radius(8);
+
+                    .dropdown-items {
+                        @include flex-column;
+                        align-items: flex-start;
+                        .item {
+                            padding: size(8) size(0);
+                            @include transitionsall;
+                            @include font($primaryFont, 13, normal, normal, 18);
+                            @include radius(6);
+                            user-select: none;
+                            color: $textPrimary;
+                            text-align: center;
+                            @include w100;
+                            @include hover {
+                                background: $headerborder;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        .userimage__wrapper {
+            @include flex;
+            gap: size(5);
+          .userimage__thumb {
+            @include square(30);
+            @include circle;
+            overflow: hidden;
+            @include transitiontransform;
+            @include hover {
+                transform: scale(1.1);
+            }
+            img {
+                @include wh100;
+                object-fit: cover;
+
+            }
+          }
         }
         }
     }
