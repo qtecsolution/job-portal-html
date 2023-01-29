@@ -99,6 +99,7 @@
         }
         .table-search {
             position: relative;
+            min-width: size(1150);
             .search__icon {
                 position: absolute;
                 top: 50%;
@@ -117,6 +118,54 @@
                 }
 
                 padding-left: size(50);
+            }
+
+            .selected-dropdown {
+                position: absolute;
+                right: size(10);
+                top: 40%;
+                @include flex;
+                gap: size(6);
+                align-items: center;
+
+                span {
+                    @include font($primaryFont, 13, normal, normal, 18);
+                    .bold {
+                        color: $black;
+                    }
+
+                }
+                button {
+                    @include square(20);
+                    background: $headerborder;
+                    @include circle;
+                    @include flex-center;
+
+                }
+
+                .dropdown {
+                    
+                    &-menu {
+                        padding: size(12);
+                        border: size(1) solid $headerborder;
+                        box-shadow: $box-shadow-1;
+                        @include radius(8);                       
+                    }
+
+                    &-item {
+                        padding: size(8) size(10);
+                        @include transitionsall;
+                        @include font($primaryFont, 13, normal, normal, 18);
+                        @include radius(6);
+                        user-select: none;
+                        color: $textPrimary;
+                        @include w100;
+                        @include hover {
+                            background: $headerborder;
+                        }
+
+                    }
+                }
             }
         }
     table {
@@ -207,7 +256,197 @@
 
             }
           }
+        } 
+
+        &.checked {
+            background-color: #F8FBFF;
         }
+
+        }
+
+       
+    }
+
+    // datattabel pagination 
+    .dataTables_paginate {
+        .paginate_button {
+            border: none;
+            &.next {
+                position: relative;
+                &:hover {
+                    background: $bodybg;
+                    color: $textPrimary !important;
+                    border: transparent;
+         
+                }
+
+             &::after {
+                content: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.25 9.375L5.625 5L1.25 0.625' stroke='%232F3643' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                position: absolute;
+                right: 0;
+             }
+             
+                
+            }
+            &.previous {
+                display: inline-flex;
+                position: relative;
+                &:hover {
+                    background: $bodybg;
+                    color: $textPrimary !important;
+                    border: transparent;
+                }
+
+                &::before {
+                    content: 'hei';
+                    margin-right: size(10);
+                    content: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75 9.375L1.375 5L5.75 0.625' stroke='%232F3643' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+                    position: absolute;
+                    left: 0;
+                }
+            }
+
+            &.disabled {
+                border: none;
+            }
+        }
+        span {
+            .paginate_button {
+                color: white;
+                @include circle;
+                border: none;
+                &.current {
+                  background-color: $primary;
+                  color: $white !important;
+                  @include hover {
+                    background: $primary;
+                    color: $white !important;
+                  }
+                }
+                &:hover:not(.current)  {
+                    background: transparent;
+                    border: none;
+                    color: $textPrimary !important;
+                }
+              
+              }
+        }
+       
+    }
+
+    // datatable length 
+    .dataTables_length {
+        padding-top: size(10);
+        color: $headingText;
+        @include font($primaryFont,12,normal,normal,12);
+        select {
+            padding: size(6) size(10);
+            @include radius(8);
+            @include font($primaryFont,12,normal,normal,12);
+            @include border(solid,1,$checkborder);
+
+        }
+    }
+}
+
+
+  
+
+.darkmode {
+    .table-wrapper {
+
+        .table-search {
+            position: relative;
+            min-width: size(1150);
+
+            .search__icon {
+                position: absolute;
+                top: 50%;
+                left: size(20);
+                transform: translateY(-50%);
+            }
+
+            input {
+                background: $shade-1;
+                border-color: rgba(248, 250, 252, 0.08);
+                color: $white;
+
+            }
+
+            .selected-dropdown {
+
+
+                span {
+                    color: $btndarkborder;
+
+                    .bold {
+                        color: $white
+                    }
+
+                }
+
+                button {
+                    background: $lightDark;
+
+
+                }
+
+                .dropdown {
+                    &-menu {
+                        border-color: $headingText;
+                        background: $lightDark;
+                    }
+
+                    &-item {
+                        color: $white;
+                        @include w100;
+
+                        @include hover {
+                            background: #0b1120;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        table {
+            background: rgba(30, 41, 59, .6);
+
+            td {
+                border-color: rgba(248, 250, 252, .08);
+                color: rgb(248, 250, 252)
+            }
+
+            tr {
+                td {
+                    border-color: rgba(248, 250, 252, .08);
+                    padding: size(15) size(8);
+
+                    &:first-child {
+                        padding: size(15) size(15);
+                        border-color: rgba(248, 250, 252, .08);
+
+                        &::before {
+                            display: none !important;
+                        }
+
+                        &::after {
+                            display: none !important;
+                        }
+
+                    }
+
+                    &:last-child {
+                        border-color: rgba(248, 250, 252, .08);
+
+                    }
+                }
+
+                &.checked {
+                    background-color: red;
+                }
+            }
         }
     }
 }
