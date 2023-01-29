@@ -358,5 +358,187 @@
         padding: size(0) size(30);
       }
     }
+
+    .integragiondetails {
+      .integrationleft,
+      .integrationright {
+        background: $white;
+        @include radius(10);
+        box-shadow: $box-shadow-1;
+        @include flex-column;
+        gap: size(20);
+        padding: size(16);
+        @include h100;
+  
+        @include breakpoint(mobile768) {
+          padding: size(20);
+          gap: size(32);
+        }
+  
+        @include breakpoint(tab992) {
+          padding: size(20) size(24);
+        }
+  
+        .title {
+          color: $headingText;
+          font-size: size(16);
+          font-weight: 500;
+        }
+      }
+
+      .integrationleft {
+        &-header {
+          @include border-single(bottom, solid, 1, $headerborder);
+          padding-bottom: size(16);
+        }
+
+        &-body {}
+      }
+
+      .integrationright {
+        &-header {
+          @include border-single(bottom, solid, 1, $headerborder);
+          padding-bottom: size(16);
+        }
+
+        &-body {}
+      }
+    }
+
+    .integrationtabinfo {
+      background: $white;
+      box-shadow: $box-shadow-1;
+      padding: size(12);
+      @include radius(10);
+      @include flex-column;
+      gap: size(20);
+  
+      @include breakpoint(tab992) {
+        padding: size(20) size(30);
+      }
+
+      .integrationheader {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+
+        .btn-back {
+          @include flex-center-vert;
+
+          .icon {
+            svg {
+              @include wh100;
+            }
+          }
+
+          .text {
+            color: $headingText;
+            font-size: size(16);
+            font-weight: 500;
+            display: inline-block;
+            margin-top: size(1);
+          }
+
+          @include hover {
+            .icon {
+              svg {
+                path {
+                  stroke: $primary;
+                }
+              }
+            }
+
+            .text {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      .integrationbody {
+        .integrations {
+          background: $white;
+          @include border(solid, 1, $headerborder);
+          box-shadow: $box-shadow-1;
+          @include flex-column;
+          gap: size(20);
+          padding: size(12);
+  
+          @include breakpoint(tab992) {
+            gap: size(40);
+            padding: size(30);
+          }
+
+          &-header {
+            @include flex-column;
+            gap: size(20);
+
+            .companylogo {
+              max-width: size(160);
+              @include flex-center;
+              overflow: hidden;
+
+              img {
+                @include wh100;
+                object-fit: contain;
+              }
+            }
+
+            .info {
+              &-text {
+                color: $textPrimary;
+                font-size: size(14);
+                font-weight: 400;
+              }
+            }
+          }
+          
+          &-body {
+            .inputbox {
+              @include flex-column;
+              gap: size(12);
+        
+              .inputfield {
+                @include setBgColor($bodybg, $headingText);
+                @include border(solid, 1, $headerborder);
+                @include radius(8);
+                font-size: size(14);
+                font-weight: 400;
+                padding: size(12.5) size(16);
+                @include transitionsall;
+        
+                &:focus {
+                  border-color: $primary;
+                  background: transparent;
+                }
+              }
+            }
+        
+            .submitbox {
+              @include border-single(top, solid, 1, $headerborder);
+              margin: size(24) 0 0;
+              padding: size(24) 0 0;
+              @include flex-end;
+        
+              .btn-submit {
+                @include setBgColor($primary, $white);
+                @include radius(8);
+                @include flex-center;
+                font-size: size(12);
+                font-weight: 600;
+                padding: size(12) size(30);
+                text-align: center;
+                @include transitionsall;
+        
+                @include hover {
+                  @include setBgColor(darken($primary, 10%), $white);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
   }
 }

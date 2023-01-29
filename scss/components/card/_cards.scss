@@ -239,7 +239,8 @@
         @include font($primaryFont, 14, medium, normal, 20);
 
     }
-} 
+}
+
 .review__card {
     background: $white;
     @include radius(8);
@@ -296,10 +297,7 @@
 
 }
 
-
-
 .darkmode {
-
     .jobcard {
         background: $lightDark;
 
@@ -466,4 +464,202 @@
             }
         }
     }
+}
+
+.cardintegration {
+	background: $white;
+	box-shadow: $box-shadow-1;
+	@include border(solid, 1, $headerborder);
+	@include radius(10);
+	@include flex-column;
+	gap: size(24);
+	padding: size(20);
+
+	@include breakpoint(tab992) {
+		padding: size(16);
+	}
+
+	@include breakpoint(desktop1400) {
+		padding: size(24);
+	}
+
+	.companylogo {
+		max-width: size(140);
+		height: size(32);
+		@include flex-center;
+		overflow: hidden;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	.info {
+		&-text {
+			color: $textPrimary;
+			font-size: size(12);
+			font-weight: 400;
+		}
+	}
+
+	.linkinfo {
+		.btn-link,
+		.btn-coming {
+			@include radius(8);
+			@include flex-center;
+			font-size: size(12);
+			font-weight: 600;
+			padding: size(12) size(20);
+			text-align: center;
+			text-decoration: none;
+			@include transitionsall;
+		}
+
+		.btn-link {
+			max-width: size(110);
+			@include setBgColor($primary, $white);
+
+			@include hover {
+				@include setBgColor(darken($primary, 10%), $white);
+			}
+		}
+
+		.btn-coming {
+			max-width: size(120);
+			@include setBgColor($checkborder, $white);
+
+			@include hover {
+				@include setBgColor(darken($checkborder, 10%), $white);
+				cursor: default;
+			}
+		}
+	}
+}
+
+.cardtemplate {
+	background: $white;
+	box-shadow: $box-shadow-1;
+	@include border(solid, 1, $headerborder);
+	@include radius(10);
+	padding: size(24);
+
+	.template-thumbnail {
+		@include radius(10);
+		position: relative;
+		@include w100;
+		height: size(200);
+		@include flex-center;
+		overflow: hidden;		
+
+		&::before {
+			content: '';
+			@include wh100;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba($black, .25);
+			z-index: 10;
+		}
+
+		img {
+			@include wh100;
+			object-fit: cover;
+		}
+
+		.viewinfo {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+			z-index: 100;
+			opacity: 0;
+			visibility: hidden;
+			@include transitionsall;
+
+			.btn-view {
+				background: rgba($white, .7);
+				@include square(48);
+				@include circle;
+				@include flex-center;
+				overflow: hidden;
+
+				@include hover {
+					background: $white;
+
+					svg {
+						path {
+							fill: $primary;
+						}
+					}
+				}
+			}
+		}
+
+		.customcheckbox {
+			position: absolute;
+			top: size(12);
+			left: size(12);
+			z-index: 100;
+	
+			.checkinput {
+				&:checked ~ .checklabel {
+					&::before {
+						background: $primary;
+						border-color: $primary;
+					}
+	
+					&::after {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+	
+			.checklabel {
+				cursor: pointer;
+				position: relative;
+			
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+				}
+				
+				&::before {
+					@include square(20);
+					@include border(solid, 1, $checkborder);
+					background: $white;
+					@include circle;
+					@include translateY(-45%);
+					@include transitiontransform;
+				}
+				
+				&::after {
+					width: size(5);
+					height: size(10);
+					@include border(solid, 2, $white);
+					@include transform(translateY(-50%) rotate(45deg));
+					border-top: 0;
+					border-left: 0;
+					left: size(7.5);
+					opacity: 0;
+					visibility: hidden;
+					@include transitiontransform;
+				}
+			}
+		}
+	}
+
+	@include hover {
+		.template-thumbnail {	
+			.viewinfo {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
 }

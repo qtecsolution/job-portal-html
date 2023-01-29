@@ -1958,7 +1958,6 @@
           <div class="tab-content" id="settingsTabContent">
             <!-- COMPANY-INFO START -->
             <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
-              
               <div class="row g-4 w-100">
                 <div class="col-lg-6">
                   <form class="settingsform">
@@ -2138,191 +2137,193 @@
                       </div>
       
                       <div class="settingsform-body">
-                        <table class="table table-responsive-sm">
-                          <thead>
-                            <tr>
-                              <th scope="col">Name</th>
-                              <th scope="col">Email address</th>
-                              <th scope="col">Role</th>
-                              <th scope="col"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td colspan="4">
-                                <div class="searchinputbox">
-                                  <div class="buttonbox">
-                                    <button type="button" class="btn-search">
+                        <div class="settingtable">
+                          <table class="table table-responsive-sm">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email address</th>
+                                <th scope="col">Role</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td colspan="4">
+                                  <div class="searchinputbox">
+                                    <div class="buttonbox">
+                                      <button type="button" class="btn-search">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <mask id="searchicon-2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3335 1.33398H14.318V14.3187H1.3335V1.33398Z" fill="white"/>
+                                          </mask>
+                                          <g mask="url(#searchicon-2)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.82616 2.33398C4.7975 2.33398 2.3335 4.79732 2.3335 7.82598C2.3335 10.8547 4.7975 13.3187 7.82616 13.3187C10.8542 13.3187 13.3182 10.8547 13.3182 7.82598C13.3182 4.79732 10.8542 2.33398 7.82616 2.33398ZM7.82616 14.3187C4.24616 14.3187 1.3335 11.406 1.3335 7.82598C1.3335 4.24598 4.24616 1.33398 7.82616 1.33398C11.4062 1.33398 14.3182 4.24598 14.3182 7.82598C14.3182 11.406 11.4062 14.3187 7.82616 14.3187Z" fill="#98A2B3"/>
+                                          </g>
+                                          <mask id="searchicon-1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="11" width="4" height="5">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4937 11.8047H14.843V15.1479H11.4937V11.8047Z" fill="white"/>
+                                          </mask>
+                                          <g mask="url(#searchicon-1)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3432 15.1479C14.2158 15.1479 14.0878 15.0992 13.9898 15.0019L11.6405 12.6592C11.4452 12.4639 11.4445 12.1472 11.6398 11.9519C11.8345 11.7552 12.1512 11.7565 12.3472 11.9505L14.6965 14.2939C14.8918 14.4892 14.8925 14.8052 14.6972 15.0005C14.5998 15.0992 14.4712 15.1479 14.3432 15.1479Z" fill="#98A2B3"/>
+                                          </g>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    
+                                    <div class="searchboxinput">
+                                      <input type="search" class="searchfield" placeholder="Search members...">
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+  
+                              <!-- TABLE-DATA -->
+                              <tr>
+                                <th scope="row">
+                                  <div class="userinfo">
+                                    <figure class="thumbnail">
+                                      <img src="assets/images/table-avatar.png" alt="user-thumbnail">
+                                    </figure>
+                                    <p class="username">Sayed Uddin</p>
+                                  </div>
+                                </th>
+                                <td>
+                                  <div class="emailinfo">
+                                    <p class="emailaddress">sayed.qtec@gmail.com</p>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="roleinfo">
+                                    <span class="badgerole owner">owner</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="action">
+                                    <button class="btn-action" type="button">
                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="searchicon-2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3335 1.33398H14.318V14.3187H1.3335V1.33398Z" fill="white"/>
-                                        </mask>
-                                        <g mask="url(#searchicon-2)">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.82616 2.33398C4.7975 2.33398 2.3335 4.79732 2.3335 7.82598C2.3335 10.8547 4.7975 13.3187 7.82616 13.3187C10.8542 13.3187 13.3182 10.8547 13.3182 7.82598C13.3182 4.79732 10.8542 2.33398 7.82616 2.33398ZM7.82616 14.3187C4.24616 14.3187 1.3335 11.406 1.3335 7.82598C1.3335 4.24598 4.24616 1.33398 7.82616 1.33398C11.4062 1.33398 14.3182 4.24598 14.3182 7.82598C14.3182 11.406 11.4062 14.3187 7.82616 14.3187Z" fill="#98A2B3"/>
-                                        </g>
-                                        <mask id="searchicon-1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="11" width="4" height="5">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4937 11.8047H14.843V15.1479H11.4937V11.8047Z" fill="white"/>
-                                        </mask>
-                                        <g mask="url(#searchicon-1)">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3432 15.1479C14.2158 15.1479 14.0878 15.0992 13.9898 15.0019L11.6405 12.6592C11.4452 12.4639 11.4445 12.1472 11.6398 11.9519C11.8345 11.7552 12.1512 11.7565 12.3472 11.9505L14.6965 14.2939C14.8918 14.4892 14.8925 14.8052 14.6972 15.0005C14.5998 15.0992 14.4712 15.1479 14.3432 15.1479Z" fill="#98A2B3"/>
-                                        </g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
                                       </svg>
                                     </button>
                                   </div>
-                                  
-                                  <div class="searchboxinput">
-                                    <input type="search" class="searchfield" placeholder="Search members...">
+  
+                                  <div class="actions d-none">
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#F04438"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.64645C11.5488 4.84171 11.5488 5.15829 11.3536 5.35355L5.35355 11.3536C5.15829 11.5488 4.84171 11.5488 4.64645 11.3536C4.45118 11.1583 4.45118 10.8417 4.64645 10.6464L10.6464 4.64645C10.8417 4.45118 11.1583 4.45118 11.3536 4.64645Z" fill="#F04438"/>
+                                      </svg>
+                                    </button>
+  
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
+                                      </svg>
+                                    </button>
                                   </div>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <!-- TABLE-DATA -->
-                            <tr>
-                              <th scope="row">
-                                <div class="userinfo">
-                                  <figure class="thumbnail">
-                                    <img src="assets/images/table-avatar.png" alt="user-thumbnail">
-                                  </figure>
-                                  <p class="username">Sayed Uddin</p>
-                                </div>
-                              </th>
-                              <td>
-                                <div class="emailinfo">
-                                  <p class="emailaddress">sayed.qtec@gmail.com</p>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="roleinfo">
-                                  <span class="badgerole owner">owner</span>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="action">
-                                  <button class="btn-action" type="button">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
-                                    </svg>
-                                  </button>
-                                </div>
-
-                                <div class="actions">
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#F04438"/>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.64645C11.5488 4.84171 11.5488 5.15829 11.3536 5.35355L5.35355 11.3536C5.15829 11.5488 4.84171 11.5488 4.64645 11.3536C4.45118 11.1583 4.45118 10.8417 4.64645 10.6464L10.6464 4.64645C10.8417 4.45118 11.1583 4.45118 11.3536 4.64645Z" fill="#F04438"/>
-                                    </svg>
-                                  </button>
-
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <th scope="row">
-                                <div class="userinfo">
-                                  <figure class="thumbnail">
-                                    <img src="assets/images/table-avatar.png" alt="user-thumbnail">
-                                  </figure>
-                                  <p class="username">Kawser Ahmed</p>
-                                </div>
-                              </th>
-                              <td>
-                                <div class="emailinfo">
-                                  <p class="emailaddress">kawser.qtec@gmail.com</p>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="roleinfo">
-                                  <span class="badgerole user">user</span>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="action">
-                                  <button class="btn-action" type="button">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
-                                    </svg>
-                                  </button>
-                                </div>
-
-                                <div class="actions">
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#F04438"/>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.64645C11.5488 4.84171 11.5488 5.15829 11.3536 5.35355L5.35355 11.3536C5.15829 11.5488 4.84171 11.5488 4.64645 11.3536C4.45118 11.1583 4.45118 10.8417 4.64645 10.6464L10.6464 4.64645C10.8417 4.45118 11.1583 4.45118 11.3536 4.64645Z" fill="#F04438"/>
-                                    </svg>
-                                  </button>
-
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <th scope="row">
-                                <div class="userinfo">
-                                  <figure class="thumbnail">
-                                    <img src="assets/images/table-avatar.png" alt="user-thumbnail">
-                                  </figure>
-                                  <p class="username">Sayed Uddin</p>
-                                </div>
-                              </th>
-                              <td>
-                                <div class="emailinfo">
-                                  <p class="emailaddress">sayed.qtec@gmail.com</p>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="roleinfo">
-                                  <span class="badgerole owner">owner</span>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="action">
-                                  <button class="btn-action" type="button">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
-                                    </svg>
-                                  </button>
-                                </div>
-
-                                <div class="actions">
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6581 14.627H9.82275C9.54675 14.627 9.32275 14.403 9.32275 14.127C9.32275 13.851 9.54675 13.627 9.82275 13.627H14.6581C14.9341 13.627 15.1581 13.851 15.1581 14.127C15.1581 14.403 14.9341 14.627 14.6581 14.627Z" fill="#98A2B3"/>
-                                      <mask id="editicon" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="12" height="13">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.15771 2L13.6114 2L13.6114 14.6264L2.15771 14.6264L2.15771 2Z" fill="white"/>
-                                      </mask>
-                                      <g mask="url(#editicon)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.56456 3.34443L3.2879 11.1944C3.1739 11.3371 3.1319 11.5211 3.1739 11.6978L3.6279 13.6211L5.6539 13.5958C5.84656 13.5938 6.02456 13.5078 6.14256 13.3611C8.28723 10.6778 12.3759 5.56176 12.4919 5.41176C12.6012 5.23443 12.6439 4.98376 12.5866 4.74243C12.5279 4.4951 12.3739 4.2851 12.1519 4.1511C12.1046 4.11843 10.9812 3.24643 10.9466 3.2191C10.5239 2.88043 9.90723 2.9391 9.56456 3.34443ZM3.23323 14.6264C3.0019 14.6264 2.80056 14.4678 2.74656 14.2418L2.20056 11.9278C2.0879 11.4484 2.1999 10.9538 2.50723 10.5698L8.78723 2.7151C8.7899 2.71243 8.7919 2.7091 8.79456 2.70643C9.48323 1.8831 10.7286 1.76176 11.5686 2.43576C11.6019 2.46176 12.7172 3.32843 12.7172 3.32843C13.1226 3.56976 13.4392 4.0011 13.5592 4.51176C13.6786 5.0171 13.5919 5.53843 13.3139 5.97909C13.2932 6.01176 13.2752 6.03976 6.92323 13.9864C6.61723 14.3678 6.15856 14.5898 5.6659 14.5958L3.2399 14.6264H3.23323Z" fill="#98A2B3"/>
-                                      </g>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.64 7.78959C11.5333 7.78959 11.4267 7.75559 11.3353 7.68625L7.70066 4.89425C7.48199 4.72625 7.44066 4.41292 7.60866 4.19292C7.77733 3.97425 8.09066 3.93359 8.30999 4.10159L11.9453 6.89292C12.164 7.06092 12.2053 7.37492 12.0367 7.59425C11.9387 7.72225 11.79 7.78959 11.64 7.78959Z" fill="#98A2B3"/>
-                                    </svg>
-                                  </button>
-
-                                  <button class="btn-tableaction" type="button">
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                                </td>
+                              </tr>
+  
+                              <tr>
+                                <th scope="row">
+                                  <div class="userinfo">
+                                    <figure class="thumbnail">
+                                      <img src="assets/images/table-avatar.png" alt="user-thumbnail">
+                                    </figure>
+                                    <p class="username">Kawser Ahmed</p>
+                                  </div>
+                                </th>
+                                <td>
+                                  <div class="emailinfo">
+                                    <p class="emailaddress">kawser.qtec@gmail.com</p>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="roleinfo">
+                                    <span class="badgerole owner">owner</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="action">
+                                    <button class="btn-action" type="button">
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+  
+                                  <div class="actions d-none">
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#F04438"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.64645C11.5488 4.84171 11.5488 5.15829 11.3536 5.35355L5.35355 11.3536C5.15829 11.5488 4.84171 11.5488 4.64645 11.3536C4.45118 11.1583 4.45118 10.8417 4.64645 10.6464L10.6464 4.64645C10.8417 4.45118 11.1583 4.45118 11.3536 4.64645Z" fill="#F04438"/>
+                                      </svg>
+                                    </button>
+  
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+  
+                              <tr>
+                                <th scope="row">
+                                  <div class="userinfo">
+                                    <figure class="thumbnail">
+                                      <img src="assets/images/table-avatar.png" alt="user-thumbnail">
+                                    </figure>
+                                    <p class="username">Sayed Uddin</p>
+                                  </div>
+                                </th>
+                                <td>
+                                  <div class="emailinfo">
+                                    <p class="emailaddress">sayed.qtec@gmail.com</p>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="roleinfo">
+                                    <span class="badgerole user">user</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="action">
+                                    <button class="btn-action" type="button">
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.5C2.17157 9.5 1.5 8.82843 1.5 8C1.5 7.17157 2.17157 6.5 3 6.5C3.82843 6.5 4.5 7.17157 4.5 8C4.5 8.82843 3.82843 9.5 3 9.5ZM8 9.5C7.17157 9.5 6.5 8.82843 6.5 8C6.5 7.17157 7.17157 6.5 8 6.5C8.82843 6.5 9.5 7.17157 9.5 8C9.5 8.82843 8.82843 9.5 8 9.5ZM13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5Z" fill="#98A2B3"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+  
+                                  <div class="actions d-none">
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6581 14.627H9.82275C9.54675 14.627 9.32275 14.403 9.32275 14.127C9.32275 13.851 9.54675 13.627 9.82275 13.627H14.6581C14.9341 13.627 15.1581 13.851 15.1581 14.127C15.1581 14.403 14.9341 14.627 14.6581 14.627Z" fill="#98A2B3"/>
+                                        <mask id="editicon" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="12" height="13">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.15771 2L13.6114 2L13.6114 14.6264L2.15771 14.6264L2.15771 2Z" fill="white"/>
+                                        </mask>
+                                        <g mask="url(#editicon)">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.56456 3.34443L3.2879 11.1944C3.1739 11.3371 3.1319 11.5211 3.1739 11.6978L3.6279 13.6211L5.6539 13.5958C5.84656 13.5938 6.02456 13.5078 6.14256 13.3611C8.28723 10.6778 12.3759 5.56176 12.4919 5.41176C12.6012 5.23443 12.6439 4.98376 12.5866 4.74243C12.5279 4.4951 12.3739 4.2851 12.1519 4.1511C12.1046 4.11843 10.9812 3.24643 10.9466 3.2191C10.5239 2.88043 9.90723 2.9391 9.56456 3.34443ZM3.23323 14.6264C3.0019 14.6264 2.80056 14.4678 2.74656 14.2418L2.20056 11.9278C2.0879 11.4484 2.1999 10.9538 2.50723 10.5698L8.78723 2.7151C8.7899 2.71243 8.7919 2.7091 8.79456 2.70643C9.48323 1.8831 10.7286 1.76176 11.5686 2.43576C11.6019 2.46176 12.7172 3.32843 12.7172 3.32843C13.1226 3.56976 13.4392 4.0011 13.5592 4.51176C13.6786 5.0171 13.5919 5.53843 13.3139 5.97909C13.2932 6.01176 13.2752 6.03976 6.92323 13.9864C6.61723 14.3678 6.15856 14.5898 5.6659 14.5958L3.2399 14.6264H3.23323Z" fill="#98A2B3"/>
+                                        </g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.64 7.78959C11.5333 7.78959 11.4267 7.75559 11.3353 7.68625L7.70066 4.89425C7.48199 4.72625 7.44066 4.41292 7.60866 4.19292C7.77733 3.97425 8.09066 3.93359 8.30999 4.10159L11.9453 6.89292C12.164 7.06092 12.2053 7.37492 12.0367 7.59425C11.9387 7.72225 11.79 7.78959 11.64 7.78959Z" fill="#98A2B3"/>
+                                      </svg>
+                                    </button>
+  
+                                    <button class="btn-tableaction" type="button">
+                                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07422 15C11.9402 15 15.0742 11.866 15.0742 8C15.0742 4.13401 11.9402 1 8.07422 1C4.20823 1 1.07422 4.13401 1.07422 8C1.07422 11.866 4.20823 15 8.07422 15ZM8.07422 16C12.4925 16 16.0742 12.4183 16.0742 8C16.0742 3.58172 12.4925 0 8.07422 0C3.65594 0 0.0742188 3.58172 0.0742188 8C0.0742188 12.4183 3.65594 16 8.07422 16Z" fill="#EAECF0"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72067 4.64645C4.91593 4.45118 5.23251 4.45118 5.42777 4.64645L8.07422 7.29289L10.7207 4.64645C10.9159 4.45118 11.2325 4.45118 11.4278 4.64645C11.623 4.84171 11.623 5.15829 11.4278 5.35355L8.78133 8L11.4278 10.6464C11.623 10.8417 11.623 11.1583 11.4278 11.3536C11.2325 11.5488 10.9159 11.5488 10.7207 11.3536L8.07422 8.70711L5.42777 11.3536C5.23251 11.5488 4.91593 11.5488 4.72067 11.3536C4.5254 11.1583 4.5254 10.8417 4.72067 10.6464L7.36711 8L4.72067 5.35355C4.5254 5.15829 4.5254 4.84171 4.72067 4.64645Z" fill="#EAECF0"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </form>
 
@@ -2407,16 +2408,352 @@
             <!-- JOB-INFO START -->
             <div class="tab-pane fade" id="job" role="tabpanel" aria-labelledby="job-tab">
               Job Info
+              <div class="row w-100"></div>
             </div>
             
             <!-- TEMPLATE-INFO START -->
             <div class="tab-pane fade" id="template" role="tabpanel" aria-labelledby="template-tab">
-              Template Info
+              <div class="row g-3 w-100">
+                <div class="col-md-4 col-sm-6 col-12">
+                  <div class="cardtemplate">
+                    <figure class="template-thumbnail">
+                      <img src="assets/images/templates/template-1.png" alt="template-thumbnail">
+
+                      <div class="viewinfo">
+                        <button class="btn-view">
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9991 8.83789C9.77998 8.83789 8.78906 9.82972 8.78906 11.0489C8.78906 12.2671 9.77998 13.2581 10.9991 13.2581C12.2183 13.2581 13.2101 12.2671 13.2101 11.0489C13.2101 9.82972 12.2183 8.83789 10.9991 8.83789M10.9991 14.6331C9.0219 14.6331 7.41406 13.0252 7.41406 11.0489C7.41406 9.07164 9.0219 7.46289 10.9991 7.46289C12.9764 7.46289 14.5851 9.07164 14.5851 11.0489C14.5851 13.0252 12.9764 14.6331 10.9991 14.6331" fill="#667085"/>
+                            <mask id="viewicon-1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="3" width="20" height="16">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83301 3.66602L20.1662 3.66602L20.1662 18.4289L1.83301 18.4289L1.83301 3.66602Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#viewicon-1)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.27195 11.0477C4.97695 14.8143 7.84886 17.0537 10.9994 17.0546C14.15 17.0537 17.0219 14.8143 18.7269 11.0477C17.0219 7.28204 14.15 5.04262 10.9994 5.0417C7.84978 5.04262 4.97695 7.28204 3.27195 11.0477V11.0477ZM11.0013 18.4296H10.9976H10.9967C7.20536 18.4269 3.80086 15.7695 1.8887 11.319C1.81445 11.1458 1.81445 10.9496 1.8887 10.7764C3.80086 6.32687 7.20628 3.66945 10.9967 3.6667C10.9985 3.66579 10.9985 3.66579 10.9994 3.6667C11.0013 3.66579 11.0013 3.66579 11.0022 3.6667C14.7935 3.66945 18.198 6.32687 20.1102 10.7764C20.1854 10.9496 20.1854 11.1458 20.1102 11.319C18.1989 15.7695 14.7935 18.4269 11.0022 18.4296H11.0013Z" fill="#667085"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="customcheckbox">
+                        <input type="checkbox" id="template-1" class="checkinput" checked hidden>
+                        <label for="template-1" class="checklabel"></label>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 col-12">
+                  <div class="cardtemplate">
+                    <figure class="template-thumbnail">
+                      <img src="assets/images/templates/template-2.png" alt="template-thumbnail">
+
+                      <div class="viewinfo">
+                        <button class="btn-view">
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9991 8.83789C9.77998 8.83789 8.78906 9.82972 8.78906 11.0489C8.78906 12.2671 9.77998 13.2581 10.9991 13.2581C12.2183 13.2581 13.2101 12.2671 13.2101 11.0489C13.2101 9.82972 12.2183 8.83789 10.9991 8.83789M10.9991 14.6331C9.0219 14.6331 7.41406 13.0252 7.41406 11.0489C7.41406 9.07164 9.0219 7.46289 10.9991 7.46289C12.9764 7.46289 14.5851 9.07164 14.5851 11.0489C14.5851 13.0252 12.9764 14.6331 10.9991 14.6331" fill="#667085"/>
+                            <mask id="viewicon-2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="3" width="20" height="16">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83301 3.66602L20.1662 3.66602L20.1662 18.4289L1.83301 18.4289L1.83301 3.66602Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#viewicon-2)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.27195 11.0477C4.97695 14.8143 7.84886 17.0537 10.9994 17.0546C14.15 17.0537 17.0219 14.8143 18.7269 11.0477C17.0219 7.28204 14.15 5.04262 10.9994 5.0417C7.84978 5.04262 4.97695 7.28204 3.27195 11.0477V11.0477ZM11.0013 18.4296H10.9976H10.9967C7.20536 18.4269 3.80086 15.7695 1.8887 11.319C1.81445 11.1458 1.81445 10.9496 1.8887 10.7764C3.80086 6.32687 7.20628 3.66945 10.9967 3.6667C10.9985 3.66579 10.9985 3.66579 10.9994 3.6667C11.0013 3.66579 11.0013 3.66579 11.0022 3.6667C14.7935 3.66945 18.198 6.32687 20.1102 10.7764C20.1854 10.9496 20.1854 11.1458 20.1102 11.319C18.1989 15.7695 14.7935 18.4269 11.0022 18.4296H11.0013Z" fill="#667085"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="customcheckbox">
+                        <input type="checkbox" id="template-2" class="checkinput" hidden>
+                        <label for="template-2" class="checklabel"></label>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-12">
+                  <div class="cardtemplate">
+                    <figure class="template-thumbnail">
+                      <img src="assets/images/templates/template-3.png" alt="template-thumbnail">
+
+                      <div class="viewinfo">
+                        <button class="btn-view">
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9991 8.83789C9.77998 8.83789 8.78906 9.82972 8.78906 11.0489C8.78906 12.2671 9.77998 13.2581 10.9991 13.2581C12.2183 13.2581 13.2101 12.2671 13.2101 11.0489C13.2101 9.82972 12.2183 8.83789 10.9991 8.83789M10.9991 14.6331C9.0219 14.6331 7.41406 13.0252 7.41406 11.0489C7.41406 9.07164 9.0219 7.46289 10.9991 7.46289C12.9764 7.46289 14.5851 9.07164 14.5851 11.0489C14.5851 13.0252 12.9764 14.6331 10.9991 14.6331" fill="#667085"/>
+                            <mask id="viewicon-3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="3" width="20" height="16">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83301 3.66602L20.1662 3.66602L20.1662 18.4289L1.83301 18.4289L1.83301 3.66602Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#viewicon-3)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.27195 11.0477C4.97695 14.8143 7.84886 17.0537 10.9994 17.0546C14.15 17.0537 17.0219 14.8143 18.7269 11.0477C17.0219 7.28204 14.15 5.04262 10.9994 5.0417C7.84978 5.04262 4.97695 7.28204 3.27195 11.0477V11.0477ZM11.0013 18.4296H10.9976H10.9967C7.20536 18.4269 3.80086 15.7695 1.8887 11.319C1.81445 11.1458 1.81445 10.9496 1.8887 10.7764C3.80086 6.32687 7.20628 3.66945 10.9967 3.6667C10.9985 3.66579 10.9985 3.66579 10.9994 3.6667C11.0013 3.66579 11.0013 3.66579 11.0022 3.6667C14.7935 3.66945 18.198 6.32687 20.1102 10.7764C20.1854 10.9496 20.1854 11.1458 20.1102 11.319C18.1989 15.7695 14.7935 18.4269 11.0022 18.4296H11.0013Z" fill="#667085"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="customcheckbox">
+                        <input type="checkbox" id="template-3" class="checkinput" hidden>
+                        <label for="template-3" class="checklabel"></label>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-12">
+                  <div class="cardtemplate">
+                    <figure class="template-thumbnail">
+                      <img src="assets/images/templates/template-4.png" alt="template-thumbnail">
+
+                      <div class="viewinfo">
+                        <button class="btn-view">
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9991 8.83789C9.77998 8.83789 8.78906 9.82972 8.78906 11.0489C8.78906 12.2671 9.77998 13.2581 10.9991 13.2581C12.2183 13.2581 13.2101 12.2671 13.2101 11.0489C13.2101 9.82972 12.2183 8.83789 10.9991 8.83789M10.9991 14.6331C9.0219 14.6331 7.41406 13.0252 7.41406 11.0489C7.41406 9.07164 9.0219 7.46289 10.9991 7.46289C12.9764 7.46289 14.5851 9.07164 14.5851 11.0489C14.5851 13.0252 12.9764 14.6331 10.9991 14.6331" fill="#667085"/>
+                            <mask id="viewicon-4" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="3" width="20" height="16">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83301 3.66602L20.1662 3.66602L20.1662 18.4289L1.83301 18.4289L1.83301 3.66602Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#viewicon-4)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.27195 11.0477C4.97695 14.8143 7.84886 17.0537 10.9994 17.0546C14.15 17.0537 17.0219 14.8143 18.7269 11.0477C17.0219 7.28204 14.15 5.04262 10.9994 5.0417C7.84978 5.04262 4.97695 7.28204 3.27195 11.0477V11.0477ZM11.0013 18.4296H10.9976H10.9967C7.20536 18.4269 3.80086 15.7695 1.8887 11.319C1.81445 11.1458 1.81445 10.9496 1.8887 10.7764C3.80086 6.32687 7.20628 3.66945 10.9967 3.6667C10.9985 3.66579 10.9985 3.66579 10.9994 3.6667C11.0013 3.66579 11.0013 3.66579 11.0022 3.6667C14.7935 3.66945 18.198 6.32687 20.1102 10.7764C20.1854 10.9496 20.1854 11.1458 20.1102 11.319C18.1989 15.7695 14.7935 18.4269 11.0022 18.4296H11.0013Z" fill="#667085"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="customcheckbox">
+                        <input type="checkbox" id="template-4" class="checkinput" hidden>
+                        <label for="template-4" class="checklabel"></label>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <!-- INTEGRATIONS-INFO START -->
             <div class="tab-pane fade" id="integrations" role="tabpanel" aria-labelledby="integrations-tab">
-              Integrations Info
+              <!-- INTEGRATIONS-DETAILS -->
+              <div class="integragiondetails mb-5">
+                <div class="row g-3 w-100">
+                  <div class="col-lg-6">
+                    <div class="integrationleft">
+                      <div class="integrationleft-header">
+                        <h3 class="title">Social Platforms</h3>
+                      </div>
+
+                      <div class="integrationleft-body">
+                        <div class="row g-3">
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/social/linkedin.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-link">Configure</a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/social/adzuna.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-coming">Coming soon</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/social/indeed.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-coming">Coming soon</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/social/glassdoor.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-link">Configure</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="integrationright">
+                      <div class="integrationright-header">
+                        <h3 class="title">Mail Servers</h3>
+                      </div>
+
+                      <div class="integrationright-body">
+                        <div class="row g-3">
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/mail/aws.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-link">Configure</a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/mail/sendgrid.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-coming">Coming soon</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <div class="cardintegration">
+                              <figure class="companylogo">
+                                <img src="assets/images/company/mail/mailchimp.svg" alt="company-logo">
+                              </figure>
+
+                              <div class="info">
+                                <p class="info-text">
+                                  Share your jobs with LinkedIn. This increases the chances that your jobs appear in search results on LinkedIn.
+                                </p>
+                              </div>
+
+                              <div class="linkinfo">
+                                <a href="#" class="btn-link">Configure</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- INTEGRATIONS-INFO -->
+              <div class="integrationtabinfo">
+                <div class="integrationheader">
+                  <button type="button" class="btn-back">
+                    <span class="icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="#2F3643" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <span class="text">Back</span>
+                  </button>
+                </div>
+
+                <div class="integrationbody">
+                  <div class="row w-100">
+                    <div class="col-lg-7 col-md-8 col-12">
+                      <div class="integrations">
+                        <div class="integrations-header">
+                          <figure class="companylogo">
+                            <img src="assets/images/company/social/linkedin.svg" alt="linkedin-logo">
+                          </figure>
+  
+                          <div class="info">
+                            <p class="info-text">
+                              LinkedIn for free allows only to automatically post jobs on a private profile. 
+                              Posting on a company profile is not possible.
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div class="integrations-body">
+                          <div class="row w-100 gy-3">
+                            <div class="col-12">
+                              <div class="inputbox">
+                                <label for="clientid" class="inputlabel">
+                                  Client ID
+                                </label>
+                                <input
+                                  type="text"
+                                  id="clientid"
+                                  placeholder="Enter Client ID"
+                                  class="inputfield"
+                                  autocomplete="off"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-12">
+                              <div class="inputbox">
+                                <label for="secretkey" class="inputlabel">
+                                  Secret Key
+                                </label>
+                                <input
+                                  type="text"
+                                  id="secretkey"
+                                  placeholder="Enter Secret Key"
+                                  class="inputfield"
+                                  autocomplete="off"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="submitbox">
+                            <button type="submit" class="btn-submit">Update</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2431,6 +2768,11 @@
     <script src="assets/js/darkmode/darkmode.js"></script>
     <script src="assets/js/sidetoggle/sidetoggle.js"></script>
     <script src="assets/js/tooltip/tooltip.js"></script>
+    <!-- ACTION-TOGGLE -->
+    <script src="assets/js/toggler.js"></script>
+    <!-- SORTABLE-JS -->
+    <script src="assets/js/sortable/Sortable.js"></script>
+    <script src="assets/js/sortable/draggable.js"></script>
     <!-- nice select -->
     <script src="assets/js/nice-select/nice-select2.js"></script>
     <script src="assets/js/nice-select/settings-select.js"></script>

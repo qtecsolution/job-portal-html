@@ -13,6 +13,7 @@
     display: none;
 
     @include breakpoint(tab992) {
+      display: block;
       width: calc(100% - size(80));
     }
   }
