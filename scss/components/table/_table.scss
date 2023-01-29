@@ -421,12 +421,8 @@
             tr {
                 td {
                     border-color: rgba(248, 250, 252, .08);
-                    padding: size(15) size(8);
-
                     &:first-child {
-                        padding: size(15) size(15);
                         border-color: rgba(248, 250, 252, .08);
-
                         &::before {
                             display: none !important;
                         }
@@ -441,12 +437,53 @@
                         border-color: rgba(248, 250, 252, .08);
 
                     }
+
+                    .dropdown {
+
+                        .icon {
+                            padding: size(10);
+                            cursor: pointer;
+                        }
+        
+                        &-menu {
+                            border-color: $headingText;
+                                background: $lightDark;
+                          
+        
+                            .dropdown-items {
+                                .item {
+                                    color: $white;
+                                    @include hover {
+                                        background: #0b1120;
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
                 }
 
                 &.checked {
-                    background-color: red;
+                    background-color:$lightDark;
                 }
             }
         }
+
+  
+
+    // datatable length 
+    .dataTables_length {
+        padding-top: size(10);
+        color: $white;
+        @include font($primaryFont,12,normal,normal,12);
+        select {
+            padding: size(6) size(10);
+            @include radius(8);
+            @include font($primaryFont,12,normal,normal,12);
+            border-color: $headingText;
+            color: darken($white,29%);
+
+        }
+    }
     }
 }

@@ -31,88 +31,92 @@
         }
       }
     }
-  } 
+  }
 
-  
+
 }
 
 
-.closejob-modal ,
+.closejob-modal,
 .deletejob-modal,
 .disqualify-modal {
 
   .modal {
-    
+
     &-content {
-     border: none;
-     box-shadow: $box-shadow-1;
+      border: none;
+      box-shadow: $box-shadow-1;
     }
-  
+
     &-header {
-      @include border-single(bottom,solid,1,$headerborder);
-      margin:0 5%;
+      @include border-single(bottom, solid, 1, $headerborder);
+      margin: 0 5%;
+
       .modal-title {
         color: $headingText;
-        @include font($primaryFont,16,medium,normal,25);
+        @include font($primaryFont, 16, medium, normal, 25);
       }
-    
-    } 
+
+    }
+
     &-body {
       padding: size(12) 5%;
 
       .modal-text {
-        @include font($primaryFont,14,normal,normal,23);
+        @include font($primaryFont, 14, normal, normal, 23);
         color: $textPrimary;
 
         .jobname {
-        @include font($primaryFont,14,semibold,normal,23);
-        color: $headingText;
+          @include font($primaryFont, 14, semibold, normal, 23);
+          color: $headingText;
 
         }
-       
-       
+
+
       }
+
       .disqualifyinput {
         background: $bodybg;
         padding: size(10) size(14);
-        @include border(solid,1,$headerborder);
+        @include border(solid, 1, $headerborder);
         @include radius(8);
         @include w100;
 
-        &:focus {
-          
-        }
-         
+        &:focus {}
+
       }
     }
 
     &-footer {
       gap: size(10);
       margin: 0 5%;
+
       .modal-cancel-btn {
         padding: size(10) size(30);
-        @include border(solid,1,$headerborder);
+        @include border(solid, 1, $headerborder);
         @include radius(7);
-        @include transitionsall;
-        @include hover {
-          @include setBgColor(darken($white,5%),$textPrimary);
-        }
-      }
-      .modal-close-btn {
-        padding: size(10) size(30);
-        @include setBgColor($danger,$white);
-        @include radius(7);
-        @include border(solid,1,$danger);
         @include transitionsall;
 
         @include hover {
-          @include setBgColor(darken($danger,10%),$white);
+          @include setBgColor(darken($white, 5%), $textPrimary);
+        }
+      }
+
+      .modal-close-btn {
+        padding: size(10) size(30);
+        @include setBgColor($danger, $white);
+        @include radius(7);
+        @include border(solid, 1, $danger);
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor(darken($danger, 10%), $white);
         }
 
       }
     }
-  
-    
+
+
   }
 
 }
@@ -121,139 +125,238 @@
   .modal {
     .customcheck {
       &-label {
-        padding-left: size(20); 
+        padding-left: size(20);
         color: $textgray;
+
         &::before {
           @include circle;
         }
       }
     }
+
     .social-selects {
       @include flex;
       gap: size(10);
       flex-wrap: wrap;
       justify-content: center;
     }
-    .single-select  {
+
+    .single-select {
       .checklabel {
-       padding-top: size(16);
-       padding-right: size(16); 
-       height: size(64);
-       width: size(106);
-       user-select: none;
-       @include border(solid,1,$headerborder);
-       @include radius(8);
-       @include flex-end;
-       position: relative;
-       .checkmark {
-        display: inline-block;
-        position: absolute;
-        left: size(10);
-        top: size(10);
-        background-color: $white;
-        @include border(solid,1,$headerborder);
-        @include square(20);
-        top: 50%;
-        transform: translateY(-50%);
-        @include circle; 
-        &::after {
-          content: '';
+        padding-top: size(16);
+        padding-right: size(16);
+        height: size(64);
+        width: size(106);
+        user-select: none;
+        @include border(solid, 1, $headerborder);
+        @include radius(8);
+        @include flex-end;
+        position: relative;
+
+        .checkmark {
+          display: inline-block;
           position: absolute;
-          left: size(6);
-          top: size(2);
-          height: size(12);
-          width: size(6);
-          transform: rotate(45deg);
-          border: solid white;
-          border-width: 0 size(2) size(2) 0;
-          display: none;
+          left: size(10);
+          top: size(10);
+          background-color: $white;
+          @include border(solid, 1, $headerborder);
+          @include square(20);
+          top: 50%;
+          transform: translateY(-50%);
+          @include circle;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: size(6);
+            top: size(2);
+            height: size(12);
+            width: size(6);
+            transform: rotate(45deg);
+            border: solid white;
+            border-width: 0 size(2) size(2) 0;
+            display: none;
+          }
+
         }
 
-       }
-      
-      } 
+      }
+
       input[type="checkbox"] {
         width: 0;
         height: 0;
         opacity: 0;
         display: none;
+
         &:checked {
-          ~ .checklabel {
+          ~.checklabel {
             border-color: $primary;
             background: rgba(76, 111, 255, 0.05);
+
             .checkmark {
               background: $primary;
               border-color: $primary;
-            &::after {
-              display: block;
-            }            }
+
+              &::after {
+                display: block;
+              }
+            }
           }
         }
 
-       }
+      }
     }
 
     &-footer {
       border-top: none;
+
       .viewsite-btn {
-        @include setBgColor($primary,$white);
+        @include setBgColor($primary, $white);
         @include radius(10);
         padding: size(8) size(10);
         @include transitionsall;
-        @include border(solid,1,$primary);
-        @include font($primaryFont,12,medium,normal,16);
+        @include border(solid, 1, $primary);
+        @include font($primaryFont, 12, medium, normal, 16);
+
         @include breakpoint(mobile414) {
-            padding: size(12) size(20);
+          padding: size(12) size(20);
         }
+
         @include hover {
-            @include setBgColor(transparent,$textPrimary);
+          @include setBgColor(transparent, $textPrimary);
         }
+      }
     }
-    }
-    
+
   }
 }
-
+// modal darkmode 
 .darkmode {
   .succesfully-created {
     .modal {
       &-content {
         background: $lightDark;
       }
+
       .customcheck {
         &-label {
-          padding-left: size(20); 
+          padding-left: size(20);
           color: $white;
+
           &::before {
             @include circle;
           }
         }
       }
 
-      .single-select  {
+      .single-select {
         .checklabel {
-        border-color: $textgray;
-         .checkmark {
-          background-color: $shade-1; 
-          &::after {
+          border-color: $textgray;
+
+          .checkmark {
+            background-color: $shade-1;
+
+            &::after {}
+
           }
-  
-         }
-        
-        } 
+
+        }
+
         input[type="checkbox"] {
-       
+
           &:checked {
-            ~ .checklabel {
+            ~.checklabel {
               border-color: $primary;
               background: rgba(76, 111, 255, 0.05);
-             
-                       
+
+
             }
           }
-  
-         }
+
+        }
       }
     }
   }
+
+
+  .closejob-modal,
+  .deletejob-modal,
+  .disqualify-modal {
+
+    .modal {
+      &-content {
+        background: $lightDark;
+      }
+
+      &-header {
+        border-color: $headingText;
+
+        .modal-title {
+          color: $white;
+          @include font($primaryFont, 16, medium, normal, 25);
+        }
+
+      }
+
+      &-body {
+        padding: size(12) 5%;
+
+        .modal-text {
+          @include font($primaryFont, 14, normal, normal, 23);
+          color: $white;
+
+          .jobname {
+            @include font($primaryFont, 14, semibold, normal, 23);
+            color: $white;
+
+          }
+
+
+        }
+
+        .disqualifyinput {
+          background-color: #292c2e;
+          border-color: $headingText;
+          color: $white;
+
+          &::placeholder {
+            color: darken($white, 20%);
+          }
+
+          &:focus {}
+
+        }
+      }
+
+      &-footer {
+        border-color: $headingText;
+
+        .modal-cancel-btn {
+          border-color: $headingText;
+          color: $white;
+
+          @include hover {
+            @include setBgColor(darken($shade-1, 5%), $white);
+          }
+        }
+
+        .modal-close-btn {
+          padding: size(10) size(30);
+          @include setBgColor($danger, $white);
+          @include radius(7);
+          @include border(solid, 1, $danger);
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor(darken($danger, 10%), $white);
+          }
+
+        }
+      }
+
+
+    }
+
+  }
+
 }

@@ -92,7 +92,7 @@
   &::before {
     @include square(16);
     @include radius(3);
-    @include border(solid, 1, darken($white,25%));
+    border-color: $headingText;
     @include translateY(-50%);
     @include transitionsall;
   }
@@ -118,3 +118,5 @@
 
 
 }
+
+
