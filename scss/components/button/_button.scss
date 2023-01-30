@@ -263,6 +263,21 @@ button,
 
 }
 
+.btn-addemployee {
+  @include border(solid, 1, $btndarkborder);
+  width: size(120);
+  height: size(32);
+  @include flex-center;
+  gap: size(10);
+  @include radius(7);
+  color: $textPrimary;
+  @include font($primaryFont, 12, medium, normal, 12);
+  @include transitionsbackground;
+  @include hover {
+    background: lighten($btndarkborder, 5%);
+  }
+}
+
 // ==============================-dark mode-====================================
 .darkmode {
   .btn-addtask {
