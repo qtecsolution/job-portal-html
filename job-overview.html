@@ -995,6 +995,7 @@
         <div class="job__overview-body">
 
             <div class="overview-tab">
+
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab" aria-controls="overview-tab-pane" aria-selected="true">
@@ -1055,6 +1056,7 @@
 
                    
                   </ul>
+
                   <div class="tab-content" id="myTabContent">
                     <!-- overview  tab content -->
                     <div class="tab-pane fade " id="overview-tab-pane" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
@@ -2037,13 +2039,13 @@
                           </div>
 
                         </div>
-                        <table id="example" >
+                        <table id="example" class="dataTable" >
                           <thead>
                             <tr>
                               
                               <td data-orderable="false">
                                 <div class="customcheck ps-2">
-                                  <input type="checkbox" id="allselect" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="allselect" class="customcheck-box" name="selectUser" hidden>
                                   <label for="allselect" class="customcheck-label"></label>
                               </div>
                               </td>
@@ -2076,7 +2078,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="selectUser" hidden>
                                   <label for="firstApplicant" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2205,7 +2207,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="selectUser" hidden>
                                   <label for="secondApplicant" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2325,7 +2327,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="third" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="third" class="customcheck-box" name="selectUser" hidden>
                                   <label for="third" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2516,13 +2518,13 @@
                           </div>
 
                         </div>
-                        <table id="example" >
+                        <table id="example"  class="dataTable">
                           <thead>
                             <tr>
                               
                               <td data-orderable="false">
                                 <div class="customcheck ps-2">
-                                  <input type="checkbox" id="allselect" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="allselect" class="customcheck-box" name="selectUser" hidden>
                                   <label for="allselect" class="customcheck-label"></label>
                               </div>
                               </td>
@@ -2558,7 +2560,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="selectUser" hidden>
                                   <label for="firstApplicant" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2688,7 +2690,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="selectUser" hidden>
                                   <label for="secondApplicant" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2809,7 +2811,7 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="third" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="third" class="customcheck-box" name="selectUser" hidden>
                                   <label for="third" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
@@ -2995,13 +2997,13 @@
                           </div>
 
                         </div>
-                        <table id="example" >
+                        <table id="example" class="dataTable">
                           <thead>
                             <tr>
                               
                               <td data-orderable="false">
                                 <div class="customcheck ps-2">
-                                  <input type="checkbox" id="allselect" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="allselect" class="customcheck-box" name="selectUser" hidden>
                                   <label for="allselect" class="customcheck-label"></label>
                               </div>
                               </td>
@@ -3015,14 +3017,12 @@
                                 Team review
                               </td>
                               <td>
-                                Stage
+                                Disqualify reason
                               </td>
                               <td>
                                 Applied date
                               </td>
-                              <td>
-                                submitted task
-                              </td>
+                            
                               <td>
                                 Assignee
                               </td>
@@ -3037,11 +3037,11 @@
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="pipeline" hidden>
+                                  <input type="checkbox" id="firstApplicant" class="customcheck-box" name="selectUser" hidden>
                                   <label for="firstApplicant" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Md rakib</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Md abdullah </td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">oluwarotimiadesina@gmail.com ; 01xxxxxxxxx</td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
                                 <div class="stars">
@@ -3103,9 +3103,8 @@
                             
                                 </div>
                               </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="screening">Screening</span></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span>Too Senior</span></td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">22 November, 2022</td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><a href="#" class="submited__link">Link</a></td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
                                 <div class="userimage__wrapper">
                                   <figure class="userimage__thumb">
@@ -3154,8 +3153,6 @@
                                     <div class="dropdown-items">
                                       <div class="item">Email Applicant</div>
                                       <div class="item">Create an Event</div>
-                                      <div class="item">Move to next satge</div>
-                                      <div class="item" data-bs-toggle="modal" data-bs-target="#disqualifyModal">Disqualify</div>
                                       <div class="item">Delete</div>
                                     </div>
                                   </ul>
@@ -3163,136 +3160,14 @@
                               </td>
 
                             </tr>
-
                             <tr class="userTr">
                               <td>
                                 <div class="customcheck">
-                                  <input type="checkbox" id="secondApplicant" class="customcheck-box" name="pipeline" hidden>
-                                  <label for="secondApplicant" class="customcheck-label" onclick=" func(this)"></label>
+                                  <input type="checkbox" id="disqialifiedTwo" class="customcheck-box" name="selectUser" hidden>
+                                  <label for="disqialifiedTwo" class="customcheck-label" onclick=" func(this)"></label>
                               </div>
                               </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Abdur Rahman</td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">abdurrahman@gmail.com ; 01xxxxxxxxx</td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
-                                <div class="stars">
-                            
-                                  <span class="filled">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
-                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
-                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
-                                        fill="#FFD831"></path>
-                                    </svg>
-                                  </span>
-                            
-                                  <span class="filled">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
-                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
-                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
-                                        fill="#FFD831"></path>
-                                    </svg>
-                                  </span>
-                            
-                                  <span class="filled">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                        d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
-                                        0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
-                                        5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z"
-                                        fill="#FFD831"></path>
-                                    </svg>
-                                  </span>
-                            
-                                  <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 
-                                                                    5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 
-                                                                    4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 
-                                                                    1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 
-                                                                    9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
-                                        fill="#667085"></path>
-                                    </svg>
-                                  </span>
-                                  <span class="empty">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
-                                                                    3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
-                                                                    8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
-                                                                    0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z"
-                                        fill="#667085"></path>
-                                    </svg>
-                                  </span>
-                                 
-                            
-                                </div>
-                              </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="interview">interview</span></td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">11 November, 2022</td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><a href="#">Link</a></td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
-                                <div class="userimage__wrapper">
-                                  <figure class="userimage__thumb">
-                                    <img src="assets/images/person/user.png" alt="avater">
-                                  </figure>
-                                  <figure class="userimage__thumb">
-                                    <img
-                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                      alt="avater">
-                                  </figure>
-                                  <figure class="userimage__thumb">
-                                    <img
-                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                      alt="avater">
-                                  </figure>
-                                 
-                                </div>
-                              </td>
-                              
-                              <td>
-                                <div class="dropdown">
-                                  <span class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                        d="M6.33398 2.00016C6.33398 2.36835 6.63246 2.66683 7.00065 2.66683C7.36884 2.66683 7.66732 2.36835 7.66732 2.00016C7.66732 1.63197 7.36884 1.3335 7.00065 1.3335C6.63246 1.3335 6.33398 1.63197 6.33398 2.00016Z"
-                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                      <path
-                                        d="M11.0007 2.00016C11.0007 2.36835 11.2991 2.66683 11.6673 2.66683C12.0355 2.66683 12.334 2.36835 12.334 2.00016C12.334 1.63197 12.0355 1.3335 11.6673 1.3335C11.2991 1.3335 11.0007 1.63197 11.0007 2.00016Z"
-                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                      <path
-                                        d="M1.66732 2.00016C1.66732 2.36835 1.9658 2.66683 2.33398 2.66683C2.70217 2.66683 3.00065 2.36835 3.00065 2.00016C3.00065 1.63197 2.70217 1.3335 2.33398 1.3335C1.9658 1.3335 1.66732 1.63197 1.66732 2.00016Z"
-                                        stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                            
-                                  </span>
-                                  <ul class="dropdown-menu">
-                                    <div class="dropdown-items">
-                                      <div class="item">Email Applicant</div>
-                                      <div class="item">Create an Event</div>
-                                      <div class="item">Move to next satge</div>
-                                      <div class="item" data-bs-toggle="modal" data-bs-target="#disqualifyModal">Disqualify</div>
-                                      <div class="item">Delete</div>
-                                    </div>
-                                  </ul>
-                                </div>
-                              </td>
-                            </tr>
-                            
-                            <tr class="userTr">
-                              <td>
-                                <div class="customcheck">
-                                  <input type="checkbox" id="third" class="customcheck-box" name="pipeline" hidden>
-                                  <label for="third" class="customcheck-label" onclick=" func(this)"></label>
-                              </div>
-                              </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Rofiqul Islam</td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">Mahmud azam </td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">oluwarotimiadesina@gmail.com ; 01xxxxxxxxx</td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
                                 <div class="stars">
@@ -3354,9 +3229,8 @@
                             
                                 </div>
                               </td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span class="design__challenge">Design challenge</span></td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">22 November, 2022</td>
-                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><a href="#">Link</a></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas"><span>Salary expectation too high</span></td>
+                              <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">26 November, 2022</td>
                               <td data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas">
                                 <div class="userimage__wrapper">
                                   <figure class="userimage__thumb">
@@ -3377,11 +3251,7 @@
                                       src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                                       alt="avater">
                                   </figure>
-                                  <figure class="userimage__thumb">
-                                    <img
-                                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                      alt="avater">
-                                  </figure>
+                                 
                                 </div>
                               </td>
                               
@@ -3405,14 +3275,14 @@
                                     <div class="dropdown-items">
                                       <div class="item">Email Applicant</div>
                                       <div class="item">Create an Event</div>
-                                      <div class="item">Move to next satge</div>
-                                      <div class="item" data-bs-toggle="modal" data-bs-target="#disqualifyModal">Disqualify</div>
                                       <div class="item">Delete</div>
                                     </div>
                                   </ul>
                                 </div>
                               </td>
-                            </tr>                      
+
+                            </tr>
+                      
                            
                           </tbody>
                         </table>
@@ -3430,25 +3300,280 @@
   </main>
   <!-- MAIN-SECTION END -->
   <!-- offcanvas  -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="userOffcanvas" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+  
+  <div class="applicant-offcanvas">
+    <div class="offcanvas offcanvas-end  show" tabindex="-1" id="userOffcanvas" aria-labelledby="offcanvasExampleLabel">
+
+      <div class="offcanvas-header">
+        <div class="header-left">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Istiak Hossain Tushar</h5>
+          <div class="title-icon">
+            <span class="title">job title : Senior product designer </span>
+            <div class="stars">
+                            
+              <span class="filled">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                    0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                    5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z" fill="#FFD831"></path>
+                </svg>
+              </span>
+        
+              <span class="filled">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                    0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                    5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z" fill="#FFD831"></path>
+                </svg>
+              </span>
+        
+              <span class="filled">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.4104 13.5124C3.07227 13.6862 2.6894 13.3824 2.75747 12.9944L3.48348 8.8561L0.401444 5.91904C0.113411 5.64456 0.262511 5.14269 
+                    0.648377 5.08788L4.93454 4.47899L6.84565 0.693267C7.0178 0.352244 7.48415 0.352244 7.6563 0.693267L9.56741 4.47899L13.8536 5.08788C14.2394 
+                    5.14269 14.3885 5.64456 14.1005 5.91904L11.0185 8.8561L11.7445 12.9944C11.8126 13.3824 11.4297 13.6862 11.0915 13.5124L7.25098 11.5384L3.4104 13.5124Z" fill="#FFD831"></path>
+                </svg>
+              </span>
+        
+              <span class="empty">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 
+                                                5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 
+                                                4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 
+                                                1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 
+                                                9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
+                </svg>
+              </span>
+
+              <span class="empty">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50747 12.9944C2.4394 13.3824 2.82227 13.6862 
+                                                3.1604 13.5124L7.00098 11.5384L10.8415 13.5124C11.1797 13.6862 11.5626 13.3824 11.4945 12.9944L10.7685 
+                                                8.8561L13.8505 5.91904C14.1385 5.64456 13.9894 5.14269 13.6036 5.08788L9.31741 4.47899L7.4063 
+                                                0.693267C7.23415 0.352244 6.7678 0.352244 6.59565 0.693267L4.68454 4.47899L0.398377 5.08788C0.0125114 5.14269 -0.136589 5.64456 0.151444 5.91904L3.23348 8.8561L2.50747 12.9944ZM6.799 10.5723L3.57397 12.2299L4.18144 8.76724C4.21008 8.60402 4.15623 8.43687 4.03904 8.32519L1.49555 5.90135L5.04132 5.39764C5.1879 5.37682 5.31588 5.2832 5.38503 5.14623L7.00098 1.94519L8.61692 5.14623C8.68607 5.2832 8.81405 5.37682 8.96063 5.39764L12.5064 5.90135L9.96292 8.32519C9.84572 8.43687 9.79188 8.60402 9.82051 8.76724L10.428 12.2299L7.20295 10.5723C7.07556 10.5068 6.9264 10.5068 6.799 10.5723Z" fill="#667085"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="right-buttons">
+            <button class="btn-event">
+              <span class="icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.375 2.1875H2.625C2.38338 2.1875 2.1875 2.38338 2.1875 2.625V11.375C2.1875 11.6166 2.38338 11.8125 2.625 11.8125H11.375C11.6166 11.8125 11.8125 11.6166 11.8125 11.375V2.625C11.8125 2.38338 11.6166 2.1875 11.375 2.1875Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.625 1.3125V3.0625" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.375 1.3125V3.0625" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2.1875 4.8125H11.8125" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
+              </span>
+              <span class="text">Create event</span>
+            </button>
+            <button class="btn-sendemail">
+              <span class="icon">
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.4375 2.9375V2.6875C1.4375 1.85907 2.10907 1.1875 2.9375 1.1875H13.0625C13.8909 1.1875 14.5625 1.85907 14.5625 2.6875V2.9375M1.4375 2.9375L6.88614 6.20669M1.4375 2.9375V9.5M14.5625 2.9375L9.11386 6.20669M14.5625 2.9375V9.5M9.11386 6.20669L8 6.875L6.88614 6.20669M9.11386 6.20669L14.5625 9.5M14.5625 9.5V9.5C14.5625 10.2249 13.9749 10.8125 13.25 10.8125H2.75C2.02513 10.8125 1.4375 10.2249 1.4375 9.5V9.5M6.88614 6.20669L1.4375 9.5" stroke="#667085"/>
+                </svg>
+              </span>
+              <span class="text">Send Email</span>
+            </button>
+          </div>
+        </div>
+       
+        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
       </div>
-      <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
+
+      <div class="offcanvas-body">
+        <div class="applicant-tab">
+          <ul class="nav nav-tabs sticky-top bg-white" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail-tab-pane" type="button" role="tab" aria-controls="detail-tab-pane" aria-selected="true">Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-tab-pane" type="button" role="tab" aria-controls="resume-tab-pane" aria-selected="false">Resume</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event-tab-pane" type="button" role="tab" aria-controls="event-tab-pane" aria-selected="false">Events</button>
+            </li>
+           
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="detail-tab-pane" role="tabpanel" aria-labelledby="detail-tab" tabindex="0">
+
+              <div class="offcanvas__info-cards">
+
+                <div class="offcanvas__info-card">
+                  <div class="offcanvas__info-card-header">
+                    <h3 class="title">Basic Information</h3>
+                  </div>
+                  <div class="offcanvas__info-card-body">
+                    <div class="row g-4">
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Name</p>
+                          <p class="text">Istiak Hossain Tushar</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">phone</p>
+                          <p class="text">01684526987</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">portfolio link</p>
+                          <p class="text">www.dummyweblink/username</p>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Email</p>
+                          <p class="text">istiaktushar.qtec@gmail.com</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">Address</p>
+                          <p class="text">house #127/1, lake circus, kalabagan, 1205</p>
+                        </div>
+                       
+
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+               
+                <div class="offcanvas__info-card">
+                  <div class="offcanvas__info-card-header">
+                    <h3 class="title">Professional Information</h3>
+                  </div>
+                  <div class="offcanvas__info-card-body">
+                    <div class="row g-4">
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Current Organization</p>
+                          <p class="text">Qtec Solution Limited</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">Experience in years</p>
+                          <p class="text">2 Years</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">Notice period</p>
+                          <p class="text">1 month</p>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Current job title</p>
+                          <p class="text">Jr Front End Developer</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">current salary</p>
+                          <p class="text">-</p>
+                        </div>
+                        <div class="info-box">
+                          <p class="label">Expected salary</p>
+                          <p class="text">45000 bdt</p>
+                        </div>
+
+                      </div>
+
+                      <div class="col-12">
+                        <div class="info-box">
+                          <p class="label">Additional info</p>
+                          <p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8">
+                        <div class="info-box">
+                          <p class="label">skill set</p>
+                          <div class="skills">
+                            <span class="skill">HTML</span>
+                            <span class="skill">css</span>
+                            <span class="skill">jQuery</span>
+                            <span class="skill">java</span>
+                            <span class="skill">python</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                <div class="offcanvas__info-card">
+                  <div class="offcanvas__info-card-header">
+                    <h3 class="title"> Educational Information</h3>
+                  </div>
+                  <div class="offcanvas__info-card-body">
+                    <div class="row g-4">
+                      <div class="col-md-9">
+                        <div class="info-box">
+                          <p class="label">University name</p>
+                          <p class="text">International University of Business Agriculture and Technology</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Name of degree</p>
+                          <p class="text">BCSE</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Passing year</p>
+                          <p class="text">2019</p>
+                        </div>
+                      
+                       
+
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="resume-tab-pane" role="tabpanel" aria-labelledby="resume-tab" tabindex="0">Resume</div>
+            <div class="tab-pane fade" id="pipeline-tab-pane" role="tabpanel" aria-labelledby="pipeline-tab" tabindex="0">pipeline</div>
+            <div class="tab-pane fade" id="event-tab-pane" role="tabpanel" aria-labelledby="event-tab" tabindex="0">event</div>
+            
+          </div>
+        </div>
+      
+        
       </div>
+
+      <!-- arrow  -->
+
+      <span class="arrowbtn" data-bs-dismiss="offcanvas" aria-label="Close">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="24.5" fill="white" stroke="#EAECF0"></circle>
+            <path d="M22 31L28 25L22 19" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg> 
+     </span>
+
     </div>
   </div>
 
@@ -3501,7 +3626,7 @@
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
   <script>
     $(document).ready( function () {
-      var table = $('#example').DataTable({
+      var table = $('.dataTable').DataTable({
           info: false,
           "sDom": 'Rfrtlip',
           language: {

@@ -663,3 +663,50 @@
 		}
 	}
 }
+
+.offcanvas__info-card {
+ @include radius(10);
+ @include border(solid,1,$headerborder); 
+
+ &-header {
+    @include border-single(bottom,solid,1,$headerborder);
+    padding: size(14);
+    .title {
+        @include font($primaryFont,16,medium,normal,19);
+
+    }
+ }
+
+ &-body {
+    padding: size(14);
+
+    .info-box {
+        padding: size(10) size(0);
+        @include flex-column;
+        gap: size(8);
+        .label {
+            color: $textSecondary;
+            @include font($primaryFont,10,medium,normal,16);
+            text-transform: uppercase;
+        }
+        .text {
+            color: $headingText;
+            @include font($primaryFont,14,normal,normal,17);
+
+        }
+        .skills {
+            @include flex;
+            flex-wrap: wrap;
+            gap:size(8);
+            .skill {
+                padding: size(4) size(10);
+                @include radius(100);
+                background: #E4F7FF;
+                @include font($primaryFont,12,medium,normal,16);
+
+            }
+        }
+    }
+ }
+
+}

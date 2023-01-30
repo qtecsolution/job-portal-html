@@ -245,6 +245,24 @@ button,
   @include radius(50);
 }
 
+.btn-event {
+  @include border(solid, 1, $checkborder);
+  @include radius(10);
+  padding: size(8) size(12);
+  @include flex;
+  align-items: center;
+  gap: size(6);
+  color: $textPrimary;
+  @include font($primaryFont, 14, medium, normal, 12);
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($bodybg, $textPrimary);
+  }
+
+
+
+}
+
 // ==============================-dark mode-====================================
 .darkmode {
   .btn-addtask {

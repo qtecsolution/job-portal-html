@@ -93,7 +93,36 @@
     left: size(-24);
     top: 50%;
   }
+
+ 
 }
+
+
+.applicant-offcanvas {
+  .offcanvas {
+
+    &-header {
+     background: $offcanvasbg;
+     
+    }
+    &-body {
+      border: none;
+      padding: 0;
+      margin: 0;
+
+      .offcanvas__info-cards {
+        padding: size(14) size(18); 
+        @include breakpoint(mobile576) {
+         padding: size(25) size(30); 
+
+        }
+        @include flex-column;
+        gap: size(20);
+      }
+    }
+  }
+}
+
 
 
 .darkmode {
