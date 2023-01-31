@@ -266,39 +266,39 @@
               }
             }
           }
-  
-          .action {
-            @include flex-center;
-            min-width: size(60);
-  
-            .btn-action {
-              @include square(16);
-              @include flex-center;
-              overflow: hidden;
-              
-              svg {
-                @include wh100;
-              }
-            }
-          }
-  
-          .actions {
-            @include flex-center;
-            gap: size(8);
-            min-width: size(60);
-  
-            .btn-tableaction {
-              @include square(16);
-              @include flex-center;
-              overflow: hidden;
-              
-              svg {
-                @include wh100;
-              }
-            }
-          }
         }
       }
+    }
+  }
+}
+ 
+.action {
+  @include flex-center;
+  min-width: size(60);
+
+  .btn-action {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+    
+    svg {
+      @include wh100;
+    }
+  }
+}
+
+.actions {
+  @include flex-center;
+  gap: size(8);
+  min-width: size(60);
+
+  .btn-tableaction {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+    
+    svg {
+      @include wh100;
     }
   }
 }

@@ -391,8 +391,6 @@
           @include border-single(bottom, solid, 1, $headerborder);
           padding-bottom: size(16);
         }
-
-        &-body {}
       }
 
       .integrationright {
@@ -400,8 +398,6 @@
           @include border-single(bottom, solid, 1, $headerborder);
           padding-bottom: size(16);
         }
-
-        &-body {}
       }
     }
 
@@ -539,6 +535,53 @@
       }
     }
 
+    .jobinfo {
 
+      &-header {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+      
+        .jobinfo-title {
+          color: $headingText;
+          font-size: size(16);
+          font-weight: 600;
+        }
+    
+        .titleinfo {
+          @include flex-center-vert;
+          gap: size(8);
+    
+          .icon {
+            cursor: pointer;
+            @include flex-center;
+            @include square(13);
+      
+            svg {
+              @include wh100;
+              margin-top: size(2);
+            }
+          }
+        }
+    
+        .rightcontent {
+          .btn-add {
+            color: $primary;
+            font-size: size(12);
+            font-weight: 500;
+            @include transitionsall;
+    
+            @include hover {
+              color: darken($primary, 5%);
+            }
+          }
+        }
+      }
+    
+      @include breakpoint(mobile768) {
+        padding: size(20);
+        gap: size(32);
+      }
+    
+    }
   }
 }

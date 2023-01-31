@@ -17,3 +17,8 @@ NiceSelect.bind(document.getElementById("settings-timezone"), {
   searchable: false,
   placeholder: 'Development'
 });
+
+NiceSelect.bind(document.getElementById("job-stage"), {
+  searchable: false,
+  placeholder: 'Design'
+});
