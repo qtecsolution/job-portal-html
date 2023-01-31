@@ -13,17 +13,14 @@
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
   <!-- PLACEHOLDER LOADING -->
-  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+  <link rel="stylesheet" href="assets/css/content-loader/placeholder-loading.min.css">
   <!-- DATA TABLE  -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/datatable/datatable.css">
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
 
-  <style>
-    
-  </style>
   
 </head>
 
@@ -932,6 +929,37 @@
             </div>
 
             <div class="addnewjob-body">
+              <table id="example" class="dataTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                  </tr>
+                  <!-- Add more rows here -->
+                </tbody>
+              </table>
               
             </div>
         </div>
@@ -1225,7 +1253,7 @@
  
     <!-- Disqualify  modal  --> 
     <div class="addemployee-modal">
-      <div class="modal fade show" id="addemployeeModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" style="display: block;">
+      <div class="modal fade" id="addemployeeModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
 
@@ -1276,8 +1304,8 @@
   <!-- nice select -->
   <script src="assets/js/nice-select/nice-select2.js"></script>
   <script src="assets/js/nice-select/jobstatus.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+  <script src="assets/js/jquery/jquery.min.js" ></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/datatable/datatable.js"></script>
   <script>
     $(document).ready( function () {
       var table = $('.dataTable').DataTable({
