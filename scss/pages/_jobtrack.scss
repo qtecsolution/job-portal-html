@@ -1,0 +1,102 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.jobtrack {
+  &-info {
+    @include flex-center-column;
+    gap: size(20);
+  }
+
+  &-header {
+    .logo {
+      @include square(80);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(tab992) {
+        @include square(100);
+      }
+
+      @include breakpoint(desktop1400) {
+        @include square(138);
+      }
+
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(20);
+
+    .title {
+      color: $headingText;
+      font-size: size(24);
+      font-weight: 600;
+      letter-spacing: size(-0.69);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        font-size: size(32);
+      }
+    }
+
+    .trackform {
+      @include w100;
+      @include flex-column;
+      gap: size(20);
+    
+      .inputbox {
+        @include flex-column;
+        gap: size(12);
+        @include w100;
+
+        .inputlabel {
+          color: $headingText;
+          font-size: size(14);
+          font-weight: 600;
+          text-align: left;
+        }
+  
+        .inputfield {
+          @include w100;
+          @include setBgColor($bodybg, $headingText);
+          @include border(solid, 1, $headerborder);
+          @include radius(8);
+          font-size: size(14);
+          font-weight: 400;
+          padding: size(12.5) size(16);
+          @include transitionsall;
+  
+          &:focus {
+            border-color: $primary;
+            background: transparent;
+          }
+        }
+      }
+  
+      .submitbox {
+        @include w100;
+
+        .btn-submit {
+          @include w100;
+          @include setBgColor($primary, $white);
+          @include radius(8);
+          @include flex-center;
+          font-size: size(12);
+          font-weight: 600;
+          padding: size(12) size(30);
+          text-align: center;
+          @include transitionsall;
+  
+          @include hover {
+            @include setBgColor(darken($primary, 10%), $white);
+          }
+        }
+      }
+    }
+  }
+}

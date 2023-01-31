@@ -1211,4 +1211,30 @@
       }
     }
   }
+
+  .jobtrack {
+    &-body {
+      .title {
+        color: $white;
+      }
+
+      .trackform {    
+        .inputbox {
+          .inputlabel {
+            color: $white;
+          }
+
+          .inputfield {
+            @include setBgColor($lightDark, $white);
+            border-color: lighten($lightDark, 10%);
+
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
 }
