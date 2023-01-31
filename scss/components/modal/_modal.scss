@@ -32,17 +32,13 @@
       }
     }
   }
-
-
 }
 
 
 .closejob-modal,
 .deletejob-modal,
 .disqualify-modal {
-
   .modal {
-
     &-content {
       border: none;
       box-shadow: $box-shadow-1;
@@ -230,6 +226,7 @@
 
   }
 }
+
 // modal darkmode 
 .darkmode {
   .succesfully-created {
@@ -359,4 +356,123 @@
 
   }
 
+}
+
+.settingsmodal {
+  .modal-header {
+    @include border-single(bottom, solid, 1, $headerborder);
+
+    .modal-title {
+      color: $headingText;
+      font-size: size(16);
+      font-weight: 500;
+    }
+  }
+
+  .modal-body {
+    @include flex-column;
+    gap: size(24);
+
+    .addform {
+      @include flex-column;
+      gap: size(16);
+      
+      .inputbox {
+        @include flex-column;
+        gap: size(12);
+
+        .inputlabel {
+          color: $headingText;
+          font-size: size(14);
+          font-weight: 600;
+          text-align: left;
+        }
+
+        .inputfield {
+          @include setBgColor($bodybg, $headingText);
+          @include border(solid, 1, $headerborder);
+          @include radius(8);
+          font-size: size(14);
+          font-weight: 400;
+          padding: size(12.5) size(16);
+          @include transitionsall;
+
+          &:focus {
+            border-color: $primary;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .modalplaceholder-info {
+      @include flex-column;
+      gap: size(16);
+
+      .modalplaceholder {
+        @include flex-column;
+        gap: size(16);
+
+        &-header {
+          .title {
+            color: $headingText;
+            font-size: size(14);
+            font-weight: 600;
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: size(4);
+          flex-wrap: wrap;
+
+          .badge-placeholder {
+            @include setBgColor($headerborder, $headingText);
+            @include radius(100);
+            font-size: size(12);
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-block;
+            padding: size(8) size(16);
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .info {
+        &-text {
+          color: $textPrimary;
+          font-size: size(12);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    gap: size(10);
+    padding-bottom: size(24);
+
+    .btn-cancel {
+      width: size(101);
+      height: size(36);
+      font-size: size(12);
+      font-weight: 600;
+    }
+
+    .btn-save {
+      width: size(123);
+      height: size(36);
+      @include setBgColor($success, $white);
+      @include radius(8);
+      font-size: size(12);
+      font-weight: 600;
+      @include transitionsall;
+
+      @include hover {
+        @include setBgColor(darken($success, 10%), $white);
+      }
+    }
+  }
 }
