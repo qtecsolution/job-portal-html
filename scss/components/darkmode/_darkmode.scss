@@ -786,14 +786,13 @@
       }
   
       .jobinfo {
-        background: $white;
-        box-shadow: $box-shadow-1;
+        background: $darkPrimary;
   
         &-header {
-          @include border-single(bottom, solid, 1, $headerborder);
+          border-color: $lightDark;
         
           .jobinfo-title {
-            color: $headingText;
+            color: $white;
           }
   
           .btn-text {
@@ -803,27 +802,25 @@
               color: darken($primary, 5%);
             }
           }
-      
-          .titleinfo {
-            .icon {
-              svg {
-                
-              }
-            }
-          }
           
-          .selectbox {
-            .selectlabel {
-              color: $headingText;
-            }
-  
+          .selectbox {  
             .nice-select {
-              @include setBgColor($bodybg, $headingText);
-              @include border(solid, 1, $headerborder);
+              @include setBgColor($lightDark, $white);
+              border-color: lighten($lightDark, 10%);
   
-              &:focus {
-                border-color: $primary;
-                background: transparent;
+              &::after {
+                content: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.3' d='M1 1L8.5 8L16 1' stroke='%23ffffff' stroke-width='1.58' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+              }
+      
+              .nice-select-dropdown {
+                background: $lightDark;
+  
+                .list {
+                  .option {
+                    font-size: size(12);
+                    font-weight: 400;
+                  }
+                }
               }
             }
           }
@@ -833,17 +830,11 @@
           .department-list,
           .stage-list {
             &-item {
-              @include border(solid, 1, $headerborder);
+              border-color: $lightDark;
   
-              .titlebox {
-                .icon {
-                  svg {
-                    
-                  }
-                }
-  
+              .titlebox {  
                 .title {
-                  color: $textPrimary;
+                  color: $white;
                 }
               }
             }
@@ -851,22 +842,16 @@
   
           .email-list {
             &-item {
-              @include border(solid, 1, $headerborder);
-              .titlebox {
-                .icon {
-                  svg {
-                    
-                  }
-                }
-  
+              border-color: $lightDark;
+              .titlebox {  
                 .title {
-                  color: $textPrimary;
+                  color: $white;
                 }
               }
   
               .datebox {
                 .maildate {
-                  color: $textSecondary;
+                  color: $white;
                 }
               }
             }
@@ -874,126 +859,7 @@
   
           .btn-add {
             color: $blue;
-            @include border(solid, 1, $headerborder);
-          }
-        }
-      }
-    }
-
-    .settingsmodal {
-      .modal-header {
-        @include border-single(bottom, solid, 1, $headerborder);
-    
-        .modal-title {
-          color: $headingText;
-          font-size: size(16);
-          font-weight: 500;
-        }
-      }
-    
-      .modal-body {
-        @include flex-column;
-        gap: size(24);
-    
-        .addform {
-          @include flex-column;
-          gap: size(16);
-          
-          .inputbox {
-            @include flex-column;
-            gap: size(12);
-    
-            .inputlabel {
-              color: $headingText;
-              font-size: size(14);
-              font-weight: 600;
-              text-align: left;
-            }
-    
-            .inputfield {
-              @include setBgColor($bodybg, $headingText);
-              @include border(solid, 1, $headerborder);
-              @include radius(8);
-              font-size: size(14);
-              font-weight: 400;
-              padding: size(12.5) size(16);
-              @include transitionsall;
-    
-              &:focus {
-                border-color: $primary;
-                background: transparent;
-              }
-            }
-          }
-        }
-    
-        .modalplaceholder-info {
-          @include flex-column;
-          gap: size(16);
-    
-          .modalplaceholder {
-            @include flex-column;
-            gap: size(16);
-    
-            &-header {
-              .title {
-                color: $headingText;
-                font-size: size(14);
-                font-weight: 600;
-              }
-            }
-    
-            &-body {
-              @include flex-center-vert;
-              gap: size(4);
-              flex-wrap: wrap;
-    
-              .badge-placeholder {
-                @include setBgColor($headerborder, $headingText);
-                @include radius(100);
-                font-size: size(12);
-                font-weight: 500;
-                cursor: pointer;
-                display: inline-block;
-                padding: size(8) size(16);
-                text-align: center;
-                vertical-align: middle;
-              }
-            }
-          }
-    
-          .info {
-            &-text {
-              color: $textPrimary;
-              font-size: size(12);
-              font-weight: 500;
-            }
-          }
-        }
-      }
-    
-      .modal-footer {
-        gap: size(10);
-        padding-bottom: size(24);
-    
-        .btn-cancel {
-          width: size(101);
-          height: size(36);
-          font-size: size(12);
-          font-weight: 600;
-        }
-    
-        .btn-save {
-          width: size(123);
-          height: size(36);
-          @include setBgColor($success, $white);
-          @include radius(8);
-          font-size: size(12);
-          font-weight: 600;
-          @include transitionsall;
-    
-          @include hover {
-            @include setBgColor(darken($success, 10%), $white);
+            border-color: $lightDark;
           }
         }
       }
@@ -1024,7 +890,7 @@
           }
         }
     
-        .selectbox {    
+        .selectbox {
           .selectlabel {
             color: $white;
           }
@@ -1032,8 +898,14 @@
           .nice-select {
             @include setBgColor($lightDark, $white);
             border-color: lighten($lightDark, 10%);
+
+            &::after {
+              content: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.3' d='M1 1L8.5 8L16 1' stroke='%23ffffff' stroke-width='1.58' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            }
     
             .nice-select-dropdown {
+              background: $lightDark;
+
               .list {
                 .option {
                   font-size: size(12);
@@ -1045,25 +917,21 @@
         }
     
         .settingtable {
-          background: $white;
-          @include border(solid, 1, $headerborder);
-          @include radius(8);
-          overflow: hidden;
+          background: $lightDark;
+          border-color: lighten($lightDark,  10%);
     
           .table {
             margin: size(0);
             
             thead {
               background: $bodybg;
+              background: $lightDark;
       
               tr {
-                @include border-single(bottom, solid, 1, $headerborder);
+                border-color: lighten($lightDark,  10%);
     
                 th {
-                  border: 0;
-                  font-size: size(13);
-                  font-weight: 400;
-                  color: $textPrimary;
+                  color: $white
                 }
               }
             }
@@ -1078,7 +946,7 @@
               }
     
               tr {
-                @include border-single(bottom, solid, 1, $headerborder);
+                border-color: lighten($lightDark,  10%);
     
                 &:last-of-type {
                   border-bottom: 0;
@@ -1086,42 +954,17 @@
               }
       
               .searchinputbox {
-                @include flex-center-vert;
-                
-                .buttonbox {
-                  width: size(24);
-                  @include flex-center;
-                  overflow: hidden;
-                  
-                  .btn-search {
-                    @include square(16);
-                    @include flex-center;
-                    overflow: hidden;
-      
-                    svg {
-                      @include wh100;
-                    }
-                  }
-                }
-      
                 .searchboxinput {
-                  width: calc(100% - size(24));
-      
                   .searchfield {
-                    @include w100;
-                    @include setBgColor($white, $headingText);
-                    font-size: size(13);
-                    font-weight: 400;
-                    padding: size(4) size(0) size(4) size(8);
-                    @include transitionsall;
+                    @include setBgColor(transparent, $white);
       
                     &::placeholder {
-                      color: $textSecondary;
+                      color: $textPrimary;
                     }
       
                     &:focus {
                       &::placeholder {
-                        color: $headingText;
+                        color: $textSecondary;
                       }
                     }                    
                   }
@@ -1129,52 +972,14 @@
               }
       
               .userinfo {
-                @include flex-center-vert;
-                gap: size(12);
-      
-                .thumbnail {
-                  @include square(24);
-                  @include circle;
-                  @include flex-center;
-                  overflow: hidden;
-      
-                  img {
-                    @include wh100;
-                  }
-                }
-      
                 .username {
-                  font-size: size(13);
-                  font-weight: 400;
-                  color: $textPrimary;
+                  color: $white;
                 }
               }
       
               .emailinfo {
                 .emailaddress {
-                  font-size: size(13);
-                  font-weight: 400;
-                  color: $textPrimary;
-                }
-              }
-      
-              .roleinfo {
-                @include flex-center;
-      
-                .badgerole {
-                  @include radius(100);
-                  padding: size(5) size(10);
-                  font-size: size(12);
-                  font-weight: 500;
-                  text-align: center;
-      
-                  &.owner {
-                    @include setBgColor($ownerbg, $headingText);
-                  }
-      
-                  &.user {
-                    @include setBgColor($userbg, $headingText);
-                  }
+                  color: $white;
                 }
               }
             }
@@ -1215,27 +1020,13 @@
     }
     
     .socialinfo {
-      background: $white;
-      @include radius(10);
-      box-shadow: $box-shadow-1;
-      @include flex-column;
-      gap: size(20);
-      padding: size(16);
-      @include h100;
-    
-      @include breakpoint(mobile768) {
-        padding: size(20);
-        gap: size(32);
-      }
+      background: $darkPrimary;
     
       &-header {
-        @include border-single(bottom, solid, 1, $headerborder);
-        padding-bottom: size(16);
+        border-color: $lightDark;
       
         .title {
-          color: $headingText;
-          font-size: size(16);
-          font-weight: 600;
+          color: $white;
         }
       }
     
@@ -1243,18 +1034,10 @@
         @include flex-column;
         gap: size(20);
         
-        .inputbox {
-          @include flex-column;
-          gap: size(12);
-    
+        .inputbox {    
           .inputfield {
-            @include setBgColor($bodybg, $headingText);
-            @include border(solid, 1, $headerborder);
-            @include radius(8);
-            font-size: size(14);
-            font-weight: 400;
-            padding: size(12.5) size(16);
-            @include transitionsall;
+            @include setBgColor($lightDark, $white);
+            border-color: lighten($lightDark, 10%);
     
             &:focus {
               border-color: $primary;
@@ -1264,25 +1047,7 @@
         }
     
         .submitbox {
-          @include border-single(top, solid, 1, $headerborder);
-          margin: size(24) 0 0;
-          padding: size(24) 0 0;
-          @include flex-end;
-    
-          .btn-submit {
-            @include setBgColor($primary, $white);
-            @include radius(8);
-            @include flex-center;
-            font-size: size(12);
-            font-weight: 600;
-            padding: size(12) size(30);
-            text-align: center;
-            @include transitionsall;
-    
-            @include hover {
-              @include setBgColor(darken($primary, 10%), $white);
-            }
-          }
+          border-color: $lightDark;
         }
       }
     }
@@ -1353,6 +1118,95 @@
             visibility: hidden;
             @include transitiontransform;
           }
+        }
+      }
+    }
+  }
+
+  .modal {
+    &-content {
+      background: $darkPrimary;
+    }
+
+    &-header {
+      border-color: $lightDark;
+    }
+  }
+
+  .settingsmodal {
+    .modal-header {
+      border-color: $lightDark;
+  
+      .modal-title {
+        color: $white;
+      }
+    }
+  
+    .modal-body {
+      .addform {
+        .inputbox {
+          .inputlabel {
+            color: $white;
+          }
+  
+          .inputfield {
+            @include setBgColor($lightDark, $white);
+            border-color: lighten($lightDark, 10%);
+  
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+        }
+      }
+  
+      .modalplaceholder-info {  
+        .modalplaceholder {  
+          &-header {
+            .title {
+              color: $white;
+            }
+          }
+  
+          &-body {
+            .badge-placeholder {
+              @include setBgColor(lighten($lightDark, 10%), $textSecondary);
+            }
+          }
+        }
+  
+        .info {
+          &-text {
+            color: $textSecondary;
+          }
+        }
+      }
+    }
+  
+    .modal-footer {
+      border-color: $lightDark;
+  
+      .btn-cancel {
+        border-color: $lightDark;
+
+        @include hover {
+          color: $danger;
+          @include setBgColor(lighten($lightDark, 10%), $white);
+        }
+      }
+  
+      .btn-save {
+        width: size(123);
+        height: size(36);
+        @include setBgColor($success, $white);
+        @include radius(8);
+        font-size: size(12);
+        font-weight: 600;
+        @include transitionsall;
+  
+        @include hover {
+          @include setBgColor(darken($success, 10%), $white);
         }
       }
     }

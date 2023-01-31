@@ -552,6 +552,7 @@
       &-header {
         @include border-single(bottom, solid, 1, $headerborder);
         padding-bottom: size(16);
+        min-height: size(54);
       
         .jobinfo-title {
           color: $headingText;
