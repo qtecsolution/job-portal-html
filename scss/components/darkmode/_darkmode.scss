@@ -670,5 +670,691 @@
         }
       }
     }
+
+    .settingstab {  
+      .nav-tabs {
+        border-color: $lightDark;
+        
+        .nav-link {
+          @include setBgColor(transparent, $textSecondary);
+  
+          &:hover:not(.active) {
+            border-color: $primary;
+            color: $white;
+          }
+  
+          &.active {
+            border-color: $primary;
+            color: $white;
+          }
+        }
+      }
+  
+      .integragiondetails {
+        .integrationleft,
+        .integrationright {
+          background: $darkPrimary;
+          box-shadow: $box-shadow-1;
+    
+          .title {
+            color: $white;
+          }
+        }
+  
+        .integrationleft {
+          &-header {
+            border-color: $lightDark;
+          }
+        }
+  
+        .integrationright {
+          &-header {
+            border-color: $lightDark;
+          }
+        }
+      }
+  
+      .integrationtabinfo {
+        background: $darkPrimary;
+        box-shadow: $box-shadow-1;
+  
+        .integrationheader {
+          border-color: $lightDark;
+  
+          .btn-back {
+            .icon {
+              svg {
+                path {
+                  stroke: $textSecondary;
+                }
+              }
+            }
+  
+            .text {
+              color: $textSecondary;
+            }
+  
+            @include hover {
+              .icon {
+                svg {
+                  path {
+                    stroke: $primary;
+                  }
+                }
+              }
+  
+              .text {
+                color: $primary;
+              }
+            }
+          }
+        }
+  
+        .integrationbody {
+          .integrations {
+            background: lighten($black, 10%);
+            border-color: $lightDark;
+            box-shadow: none;
+  
+            &-header {
+              .info {
+                &-text {
+                  color: $white;
+                }
+              }
+            }
+            
+            &-body {
+              .inputbox {
+                .inputfield {
+                  @include setBgColor($lightDark, $white);
+                  border-color: lighten($lightDark, 10%);
+          
+                  &:focus {
+                    border-color: $primary;
+                    background: transparent;
+                  }
+                }
+              }
+          
+              .submitbox {
+                border-color: $lightDark;
+              }
+            }
+          }
+        }
+      }
+  
+      .jobinfo {
+        background: $white;
+        box-shadow: $box-shadow-1;
+  
+        &-header {
+          @include border-single(bottom, solid, 1, $headerborder);
+        
+          .jobinfo-title {
+            color: $headingText;
+          }
+  
+          .btn-text {
+            color: $primary;
+    
+            @include hover {
+              color: darken($primary, 5%);
+            }
+          }
+      
+          .titleinfo {
+            .icon {
+              svg {
+                
+              }
+            }
+          }
+          
+          .selectbox {
+            .selectlabel {
+              color: $headingText;
+            }
+  
+            .nice-select {
+              @include setBgColor($bodybg, $headingText);
+              @include border(solid, 1, $headerborder);
+  
+              &:focus {
+                border-color: $primary;
+                background: transparent;
+              }
+            }
+          }
+        }
+      
+        &-body {
+          .department-list,
+          .stage-list {
+            &-item {
+              @include border(solid, 1, $headerborder);
+  
+              .titlebox {
+                .icon {
+                  svg {
+                    
+                  }
+                }
+  
+                .title {
+                  color: $textPrimary;
+                }
+              }
+            }
+          }
+  
+          .email-list {
+            &-item {
+              @include border(solid, 1, $headerborder);
+              .titlebox {
+                .icon {
+                  svg {
+                    
+                  }
+                }
+  
+                .title {
+                  color: $textPrimary;
+                }
+              }
+  
+              .datebox {
+                .maildate {
+                  color: $textSecondary;
+                }
+              }
+            }
+          }
+  
+          .btn-add {
+            color: $blue;
+            @include border(solid, 1, $headerborder);
+          }
+        }
+      }
+    }
+
+    .settingsmodal {
+      .modal-header {
+        @include border-single(bottom, solid, 1, $headerborder);
+    
+        .modal-title {
+          color: $headingText;
+          font-size: size(16);
+          font-weight: 500;
+        }
+      }
+    
+      .modal-body {
+        @include flex-column;
+        gap: size(24);
+    
+        .addform {
+          @include flex-column;
+          gap: size(16);
+          
+          .inputbox {
+            @include flex-column;
+            gap: size(12);
+    
+            .inputlabel {
+              color: $headingText;
+              font-size: size(14);
+              font-weight: 600;
+              text-align: left;
+            }
+    
+            .inputfield {
+              @include setBgColor($bodybg, $headingText);
+              @include border(solid, 1, $headerborder);
+              @include radius(8);
+              font-size: size(14);
+              font-weight: 400;
+              padding: size(12.5) size(16);
+              @include transitionsall;
+    
+              &:focus {
+                border-color: $primary;
+                background: transparent;
+              }
+            }
+          }
+        }
+    
+        .modalplaceholder-info {
+          @include flex-column;
+          gap: size(16);
+    
+          .modalplaceholder {
+            @include flex-column;
+            gap: size(16);
+    
+            &-header {
+              .title {
+                color: $headingText;
+                font-size: size(14);
+                font-weight: 600;
+              }
+            }
+    
+            &-body {
+              @include flex-center-vert;
+              gap: size(4);
+              flex-wrap: wrap;
+    
+              .badge-placeholder {
+                @include setBgColor($headerborder, $headingText);
+                @include radius(100);
+                font-size: size(12);
+                font-weight: 500;
+                cursor: pointer;
+                display: inline-block;
+                padding: size(8) size(16);
+                text-align: center;
+                vertical-align: middle;
+              }
+            }
+          }
+    
+          .info {
+            &-text {
+              color: $textPrimary;
+              font-size: size(12);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    
+      .modal-footer {
+        gap: size(10);
+        padding-bottom: size(24);
+    
+        .btn-cancel {
+          width: size(101);
+          height: size(36);
+          font-size: size(12);
+          font-weight: 600;
+        }
+    
+        .btn-save {
+          width: size(123);
+          height: size(36);
+          @include setBgColor($success, $white);
+          @include radius(8);
+          font-size: size(12);
+          font-weight: 600;
+          @include transitionsall;
+    
+          @include hover {
+            @include setBgColor(darken($success, 10%), $white);
+          }
+        }
+      }
+    }
+
+    .settingsform {
+      background: $darkPrimary;
+      box-shadow: $box-shadow-1;
+    
+      &-header {
+        border-color: $lightDark;
+      
+        .settingsform-title {
+          color: $white;
+        }
+      }
+    
+      &-body {
+        .inputbox {
+          .inputfield {
+            @include setBgColor($lightDark, $white);
+            border-color: lighten($lightDark, 10%);
+    
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+        }
+    
+        .selectbox {    
+          .selectlabel {
+            color: $white;
+          }
+    
+          .nice-select {
+            @include setBgColor($lightDark, $white);
+            border-color: lighten($lightDark, 10%);
+    
+            .nice-select-dropdown {
+              .list {
+                .option {
+                  font-size: size(12);
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+    
+        .settingtable {
+          background: $white;
+          @include border(solid, 1, $headerborder);
+          @include radius(8);
+          overflow: hidden;
+    
+          .table {
+            margin: size(0);
+            
+            thead {
+              background: $bodybg;
+      
+              tr {
+                @include border-single(bottom, solid, 1, $headerborder);
+    
+                th {
+                  border: 0;
+                  font-size: size(13);
+                  font-weight: 400;
+                  color: $textPrimary;
+                }
+              }
+            }
+      
+            tbody {
+              td {
+                vertical-align: middle;
+              }
+    
+              td, th {
+                border: 0;
+              }
+    
+              tr {
+                @include border-single(bottom, solid, 1, $headerborder);
+    
+                &:last-of-type {
+                  border-bottom: 0;
+                }
+              }
+      
+              .searchinputbox {
+                @include flex-center-vert;
+                
+                .buttonbox {
+                  width: size(24);
+                  @include flex-center;
+                  overflow: hidden;
+                  
+                  .btn-search {
+                    @include square(16);
+                    @include flex-center;
+                    overflow: hidden;
+      
+                    svg {
+                      @include wh100;
+                    }
+                  }
+                }
+      
+                .searchboxinput {
+                  width: calc(100% - size(24));
+      
+                  .searchfield {
+                    @include w100;
+                    @include setBgColor($white, $headingText);
+                    font-size: size(13);
+                    font-weight: 400;
+                    padding: size(4) size(0) size(4) size(8);
+                    @include transitionsall;
+      
+                    &::placeholder {
+                      color: $textSecondary;
+                    }
+      
+                    &:focus {
+                      &::placeholder {
+                        color: $headingText;
+                      }
+                    }                    
+                  }
+                }
+              }
+      
+              .userinfo {
+                @include flex-center-vert;
+                gap: size(12);
+      
+                .thumbnail {
+                  @include square(24);
+                  @include circle;
+                  @include flex-center;
+                  overflow: hidden;
+      
+                  img {
+                    @include wh100;
+                  }
+                }
+      
+                .username {
+                  font-size: size(13);
+                  font-weight: 400;
+                  color: $textPrimary;
+                }
+              }
+      
+              .emailinfo {
+                .emailaddress {
+                  font-size: size(13);
+                  font-weight: 400;
+                  color: $textPrimary;
+                }
+              }
+      
+              .roleinfo {
+                @include flex-center;
+      
+                .badgerole {
+                  @include radius(100);
+                  padding: size(5) size(10);
+                  font-size: size(12);
+                  font-weight: 500;
+                  text-align: center;
+      
+                  &.owner {
+                    @include setBgColor($ownerbg, $headingText);
+                  }
+      
+                  &.user {
+                    @include setBgColor($userbg, $headingText);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+     
+    .action {
+      @include flex-center;
+      min-width: size(60);
+    
+      .btn-action {
+        @include square(16);
+        @include flex-center;
+        overflow: hidden;
+        
+        svg {
+          @include wh100;
+        }
+      }
+    }
+    
+    .actions {
+      @include flex-center;
+      gap: size(8);
+      min-width: size(60);
+    
+      .btn-tableaction {
+        @include square(16);
+        @include flex-center;
+        overflow: hidden;
+        
+        svg {
+          @include wh100;
+        }
+      }
+    }
+    
+    .socialinfo {
+      background: $white;
+      @include radius(10);
+      box-shadow: $box-shadow-1;
+      @include flex-column;
+      gap: size(20);
+      padding: size(16);
+      @include h100;
+    
+      @include breakpoint(mobile768) {
+        padding: size(20);
+        gap: size(32);
+      }
+    
+      &-header {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(16);
+      
+        .title {
+          color: $headingText;
+          font-size: size(16);
+          font-weight: 600;
+        }
+      }
+    
+      &-body {
+        @include flex-column;
+        gap: size(20);
+        
+        .inputbox {
+          @include flex-column;
+          gap: size(12);
+    
+          .inputfield {
+            @include setBgColor($bodybg, $headingText);
+            @include border(solid, 1, $headerborder);
+            @include radius(8);
+            font-size: size(14);
+            font-weight: 400;
+            padding: size(12.5) size(16);
+            @include transitionsall;
+    
+            &:focus {
+              border-color: $primary;
+              background: transparent;
+            }
+          }
+        }
+    
+        .submitbox {
+          @include border-single(top, solid, 1, $headerborder);
+          margin: size(24) 0 0;
+          padding: size(24) 0 0;
+          @include flex-end;
+    
+          .btn-submit {
+            @include setBgColor($primary, $white);
+            @include radius(8);
+            @include flex-center;
+            font-size: size(12);
+            font-weight: 600;
+            padding: size(12) size(30);
+            text-align: center;
+            @include transitionsall;
+    
+            @include hover {
+              @include setBgColor(darken($primary, 10%), $white);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cardintegration {
+    background: lighten($black, 10%);
+    background: $lightDark;
+    box-shadow: none;
+    border-color: $lightDark;
+    border-color: lighten($lightDark, 10%);
+  
+    .info {
+      &-text {
+        color: $white;
+      }
+    }
+  }
+
+  .cardtemplate {
+    background: $darkPrimary;
+    box-shadow: none;
+    border-color: $lightDark;
+
+    .template-thumbnail {
+      .viewinfo {
+        .btn-view {
+          background: rgba($black, .7);
+  
+          svg {
+            path {
+              fill: $textSecondary;
+            }
+          }
+  
+          @include hover {
+            background: $lightDark;
+  
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+  
+      .customcheckbox {    
+        .checklabel {          
+          &::before {
+            @include square(20);
+            border-color: lighten($lightDark, 60%);
+            background: lighten($lightDark, 40%);
+            @include circle;
+            @include translateY(-45%);
+            @include transitiontransform;
+          }
+          
+          &::after {
+            width: size(5);
+            height: size(10);
+            @include border(solid, 2, $white);
+            @include transform(translateY(-50%) rotate(45deg));
+            border-top: 0;
+            border-left: 0;
+            left: size(7.5);
+            opacity: 0;
+            visibility: hidden;
+            @include transitiontransform;
+          }
+        }
+      }
+    }
   }
 }
