@@ -929,39 +929,10 @@
             </div>
 
             <div class="addnewjob-body">
-              <table id="example" class="dataTable">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                  </tr>
-                  <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                    <td>2011/07/25</td>
-                    <td>$170,750</td>
-                  </tr>
-                  <!-- Add more rows here -->
-                </tbody>
-              </table>
+             
               
             </div>
+
         </div>
 
 
@@ -1253,7 +1224,7 @@
  
     <!-- Disqualify  modal  --> 
     <div class="addemployee-modal">
-      <div class="modal fade" id="addemployeeModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" >
+      <div class="modal fade " id="addemployeeModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true"  >
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
 
@@ -1270,27 +1241,269 @@
             </div>
 
             <div class="modal-body">
-             <div class="row g-4">
+              <!-- employee image  -->
+              <div class="employee-image">
+               <h3 class="title">Employee Image</h3>
+               <div class="image-box">
+                <input type="file" name="" id="employee-image" hidden>
+                <label for="employee-image">
+
+                  <span class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_994_10316" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833496 0.833984L19.1298 0.833984L19.1298 19.1213L0.833496 19.1213L0.833496 0.833984Z" fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0_994_10316)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.01266 2.20898C3.70175 2.20898 2.2085 3.79207 2.2085 6.2414L2.2085 13.7141C2.2085 16.1643 3.70175 17.7465 6.01266 17.7465L13.9418 17.7465C16.2582 17.7465 17.7552 16.1643 17.7552 13.7141L17.7552 6.2414C17.7552 3.79207 16.2582 2.20898 13.9418 2.20898L6.01266 2.20898ZM13.9418 19.1215L6.01266 19.1215C2.91433 19.1215 0.833496 16.9481 0.833496 13.7141L0.833496 6.2414C0.833496 3.0074 2.91433 0.833984 6.01266 0.833984L13.9418 0.833984C17.0447 0.833984 19.1302 3.0074 19.1302 6.2414L19.1302 13.7141C19.1302 16.9481 17.0447 19.1215 13.9418 19.1215Z" fill="#98A2B3"/>
+                      </g>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.84131 14.7493C3.67081 14.7493 3.50123 14.687 3.36831 14.5605C3.0924 14.3001 3.0814 13.8638 3.34265 13.5897L4.74331 12.1111C5.4849 11.3237 6.73615 11.2852 7.52723 12.0277L8.4054 12.9187C8.65015 13.1662 9.04798 13.1708 9.29365 12.9288C9.38623 12.8197 11.3827 10.3951 11.3827 10.3951C11.7622 9.93495 12.2976 9.65079 12.8925 9.59212C13.4883 9.53987 14.0667 9.71312 14.5278 10.0917C14.5672 10.1238 14.603 10.155 16.616 12.222C16.8809 12.4934 16.8763 12.9288 16.6041 13.1937C16.3327 13.4605 15.8964 13.4522 15.6315 13.1809C15.6315 13.1809 13.7532 11.2531 13.6194 11.123C13.4773 11.0065 13.2491 10.9387 13.0245 10.9607C12.7962 10.9836 12.5909 11.0927 12.4451 11.2696C10.3148 13.8537 10.2891 13.8785 10.2543 13.9124C9.46781 14.6842 8.19823 14.6714 7.42548 13.883C7.42548 13.883 6.57298 13.0177 6.55831 13.0003C6.34656 12.8041 5.9689 12.817 5.74248 13.0562L4.33998 14.5348C4.20431 14.6778 4.02281 14.7493 3.84131 14.7493Z" fill="#98A2B3"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.84422 6.45215C6.3373 6.45215 5.9248 6.86465 5.9248 7.37248C5.9248 7.88032 6.3373 8.29373 6.84514 8.29373C7.35297 8.29373 7.76639 7.88032 7.76639 7.37248C7.76639 6.86556 7.35297 6.45306 6.84422 6.45215ZM6.84514 9.66873C5.57922 9.66873 4.5498 8.6384 4.5498 7.37248C4.5498 6.10657 5.57922 5.07715 6.84514 5.07715C8.11197 5.07807 9.14139 6.1084 9.14139 7.37248C9.14139 8.6384 8.11105 9.66873 6.84514 9.66873Z" fill="#98A2B3"/>
+                    </svg>
+                  </span>
+                  <span class="text">Add Employee Image</span>
+                </label>
+               </div>
+
+              </div>
+             <div class="row g-4 py-4">
+
                 <div class="col-lg-6">
                     <div class="inputbox">
-                        <label for="jobtitle" class="inputlabel"> Job Title</label>
-                        <input type="text" id="jobtitle" class="inputfield" placeholder="Enter Job Title" autocomplete="off">
+                        <label for="fullname" class="inputlabel">Full Name</label>
+                        <input type="text" id="fullname" class="inputfield" placeholder="Enter employee full name" autocomplete="off">
                         <div class="error">
-                            <p class="error-message">Jobtitle is required</p>
+                            <p class="error-message">Fullname is required</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-6">
+                    <div class="inputbox">
+                        <label for="email" class="inputlabel">Email</label>
+                        <input type="email" id="email" class="inputfield" placeholder="Enter employee email" autocomplete="off">
+                        <div class="error">
+                            <p class="error-message">Email is required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="inputbox">
+                        <label for="employeeid" class="inputlabel">Employee ID</label>
+                        <input type="email" id="employeeid" class="inputfield" placeholder="FELKJ52EF" autocomplete="off">
+                        <div class="error">
+                            <p class="error-message">Employee ID is required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="inputbox">
+                    <label for="select-department" class="inputlabel"> Department </label>
+                
+                    <select id="select-department" class="w-100">
+                      <option value="development">Development </option>
+                      <option value="design">Design</option>
+                      <option value="frontend">Frontend</option>
+                      <option value="backend">Backend</option>
+                    </select>
+                
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="inputbox">
+                        <label for="jobDesignation" class="inputlabel">Job Designation</label>
+                        <input type="email" id="jobDesignation" class="inputfield" placeholder="Enter employee designation" autocomplete="off">
+                        <div class="error">
+                            <p class="error-message">Job Designation is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="inputbox">
+                        <label for="contact" class="inputlabel">Contact</label>
+                        <input type="email" id="contact" class="inputfield" placeholder="Enter employee phone number" autocomplete="off">
+                        <div class="error">
+                            <p class="error-message">Contact is required</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-6">
+                  <div class="inputbox">
+                    <label for="select-role" class="inputlabel"> Employee Role </label>
+                
+                    <select id="select-role" class="w-100">
+                      <option value="admin"> Admin </option>
+                
+                    </select>
+                
+                  </div>
+                </div>
+
              </div>
+
+             <div class="permissions">
+              <h3 class="title">Permissions</h3>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.72341 4.99967C3.72341 6.24412 4.74211 7.25664 5.99984 7.25664C7.25187 7.25664 8.27057 6.24412 8.27057 4.99967C8.27057 3.74957 7.25187 2.73705 5.99984 2.73705C4.74211 2.73705 3.72341 3.74957 3.72341 4.99967ZM9.34618 1.52654C10.3421 2.29584 11.1901 3.42149 11.799 4.82998C11.8446 4.93745 11.8446 5.0619 11.799 5.16371C10.5811 7.98069 8.41284 9.66634 5.99984 9.66634H5.99415C3.58683 9.66634 1.41854 7.98069 0.20065 5.16371C0.155122 5.0619 0.155122 4.93745 0.20065 4.82998C1.41854 2.01301 3.58683 0.333008 5.99415 0.333008H5.99984C7.20634 0.333008 8.35024 0.751594 9.34618 1.52654ZM6.00052 6.40692C6.7802 6.40692 7.41759 5.77338 7.41759 4.99843C7.41759 4.21782 6.7802 3.58429 6.00052 3.58429C5.93223 3.58429 5.86393 3.58995 5.80133 3.60126C5.77857 4.22348 5.26637 4.72126 4.63467 4.72126H4.60621C4.58914 4.81176 4.57776 4.90227 4.57776 4.99843C4.57776 5.77338 5.21515 6.40692 6.00052 6.40692Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">View Jobs</p>
+                    <p class="permission-des">The user can view all kind of jobs.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="viewjobs">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9015 6.92199C11.1102 7.03283 11.2711 7.20783 11.3844 7.38283C11.605 7.74449 11.5871 8.18783 11.3725 8.57866L10.9552 9.27866C10.7346 9.65199 10.3233 9.88533 9.90001 9.88533C9.69136 9.88533 9.45887 9.82699 9.2681 9.71033C9.11311 9.61116 8.93426 9.57616 8.7435 9.57616C8.15332 9.57616 7.65852 10.0603 7.64064 10.6378C7.64064 11.3087 7.09219 11.8337 6.40662 11.8337L5.59587 11.8337C4.90434 11.8337 4.35589 11.3087 4.35589 10.6378C4.34397 10.0603 3.84917 9.57616 3.25899 9.57616C3.06227 9.57616 2.88342 9.61116 2.73439 9.71033C2.54362 9.82699 2.30517 9.88533 2.10248 9.88533C1.67326 9.88533 1.26192 9.65199 1.04135 9.27866L0.630008 8.57866C0.409435 8.19949 0.397512 7.74449 0.618085 7.38283C0.713468 7.20783 0.89231 7.03283 1.095 6.92199C1.26192 6.84033 1.36922 6.70616 1.47057 6.54866C1.76864 6.04699 1.5898 5.38783 1.08308 5.09032C0.492895 4.75782 0.30213 4.01699 0.64193 3.43949L1.04135 2.75116C1.38711 2.17366 2.12632 1.96949 2.72247 2.30783C3.24111 2.58783 3.91475 2.40116 4.21878 1.90533C4.31416 1.74199 4.36782 1.56699 4.35589 1.39199C4.34397 1.16449 4.40955 0.948659 4.52281 0.773659C4.74339 0.411992 5.1428 0.178659 5.57798 0.166992L6.41855 0.166992C6.85969 0.166992 7.25911 0.411992 7.47968 0.773659C7.58698 0.948659 7.65852 1.16449 7.64064 1.39199C7.62871 1.56699 7.68237 1.74199 7.77775 1.90533C8.08178 2.40116 8.75542 2.58783 9.28003 2.30783C9.87021 1.96949 10.6154 2.17366 10.9552 2.75116L11.3546 3.43949C11.7004 4.01699 11.5096 4.75782 10.9135 5.09032C10.4067 5.38783 10.2279 6.04699 10.5319 6.54866C10.6273 6.70616 10.7346 6.84033 10.9015 6.92199ZM4.31416 6.00616C4.31416 6.92199 5.07126 7.65116 6.00721 7.65116C6.94315 7.65116 7.68236 6.92199 7.68236 6.00616C7.68236 5.09033 6.94315 4.35533 6.00721 4.35533C5.07126 4.35533 4.31416 5.09033 4.31416 6.00616Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">Manage Jobs</p>
+                    <p class="permission-des">The user can create, edit, delete, edit pipeline & archive jobs.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="managejob">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9015 6.92199C11.1102 7.03283 11.2711 7.20783 11.3844 7.38283C11.605 7.74449 11.5871 8.18783 11.3725 8.57866L10.9552 9.27866C10.7346 9.65199 10.3233 9.88533 9.90001 9.88533C9.69136 9.88533 9.45887 9.82699 9.2681 9.71033C9.11311 9.61116 8.93426 9.57616 8.7435 9.57616C8.15332 9.57616 7.65852 10.0603 7.64064 10.6378C7.64064 11.3087 7.09219 11.8337 6.40662 11.8337L5.59587 11.8337C4.90434 11.8337 4.35589 11.3087 4.35589 10.6378C4.34397 10.0603 3.84917 9.57616 3.25899 9.57616C3.06227 9.57616 2.88342 9.61116 2.73439 9.71033C2.54362 9.82699 2.30517 9.88533 2.10248 9.88533C1.67326 9.88533 1.26192 9.65199 1.04135 9.27866L0.630008 8.57866C0.409435 8.19949 0.397512 7.74449 0.618085 7.38283C0.713468 7.20783 0.89231 7.03283 1.095 6.92199C1.26192 6.84033 1.36922 6.70616 1.47057 6.54866C1.76864 6.04699 1.5898 5.38783 1.08308 5.09032C0.492895 4.75782 0.30213 4.01699 0.64193 3.43949L1.04135 2.75116C1.38711 2.17366 2.12632 1.96949 2.72247 2.30783C3.24111 2.58783 3.91475 2.40116 4.21878 1.90533C4.31416 1.74199 4.36782 1.56699 4.35589 1.39199C4.34397 1.16449 4.40955 0.948659 4.52281 0.773659C4.74339 0.411992 5.1428 0.178659 5.57798 0.166992L6.41855 0.166992C6.85969 0.166992 7.25911 0.411992 7.47968 0.773659C7.58698 0.948659 7.65852 1.16449 7.64064 1.39199C7.62871 1.56699 7.68237 1.74199 7.77775 1.90533C8.08178 2.40116 8.75542 2.58783 9.28003 2.30783C9.87021 1.96949 10.6154 2.17366 10.9552 2.75116L11.3546 3.43949C11.7004 4.01699 11.5096 4.75782 10.9135 5.09032C10.4067 5.38783 10.2279 6.04699 10.5319 6.54866C10.6273 6.70616 10.7346 6.84033 10.9015 6.92199ZM4.31416 6.00616C4.31416 6.92199 5.07126 7.65116 6.00721 7.65116C6.94315 7.65116 7.68236 6.92199 7.68236 6.00616C7.68236 5.09033 6.94315 4.35533 6.00721 4.35533C5.07126 4.35533 4.31416 5.09033 4.31416 6.00616Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">Publish Jobs</p>
+                    <p class="permission-des">The user can publish, re-publish any job.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="publishjob">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.42585 2.80217C9.42585 4.17282 8.33316 5.27186 6.97043 5.27186C5.6077 5.27186 4.51501 4.17282 4.51501 2.80217C4.51501 1.431 5.6077 0.333008 6.97043 0.333008C8.33316 0.333008 9.42585 1.431 9.42585 2.80217ZM6.97043 9.66634C4.96891 9.66634 3.25988 9.34903 3.25988 8.07977C3.25988 6.80999 4.95794 6.48112 6.97043 6.48112C8.97195 6.48112 10.681 6.79843 10.681 8.06821C10.681 9.33747 8.98292 9.66634 6.97043 9.66634ZM10.4751 2.84672C10.4751 3.54544 10.2667 4.19636 9.90111 4.73747C9.8635 4.79316 9.89693 4.86828 9.96326 4.87984C10.0547 4.8956 10.1492 4.90453 10.2453 4.90716C11.2038 4.93238 12.064 4.31193 12.3017 3.37785C12.6537 1.99039 11.6201 0.74478 10.3038 0.74478C10.1607 0.74478 10.0239 0.760016 9.89066 0.787334C9.87238 0.791537 9.85305 0.799942 9.84261 0.816228C9.83007 0.836192 9.83947 0.862985 9.85201 0.880322C10.2474 1.43772 10.4751 2.11753 10.4751 2.84672ZM12.0625 5.88201C12.7065 6.00862 13.1301 6.26709 13.3056 6.64272C13.4539 6.9511 13.4539 7.30887 13.3056 7.61673C13.0371 8.19934 12.1716 8.38637 11.8353 8.4347C11.7658 8.44521 11.7099 8.38479 11.7172 8.31492C11.889 6.70051 10.5221 5.93507 10.1685 5.75907C10.1534 5.75119 10.1503 5.73911 10.1518 5.73176C10.1529 5.7265 10.1591 5.7181 10.1706 5.71652C10.9358 5.70234 11.7585 5.80741 12.0625 5.88201ZM3.75514 4.90711C3.85125 4.90448 3.94527 4.89607 4.03719 4.87979C4.10353 4.86823 4.13696 4.79311 4.09935 4.73742C3.73373 4.1963 3.52532 3.54539 3.52532 2.84667C3.52532 2.11748 3.75305 1.43767 4.14845 0.880269C4.16098 0.862933 4.16986 0.836139 4.15785 0.816176C4.1474 0.800415 4.12756 0.791484 4.1098 0.787282C3.97608 0.759963 3.83924 0.744728 3.69612 0.744728C2.37988 0.744728 1.34621 1.99034 1.69878 3.3778C1.93643 4.31188 2.79669 4.93232 3.75514 4.90711ZM3.84838 5.73144C3.84994 5.73932 3.84681 5.75088 3.83219 5.75928C3.47805 5.93528 2.11115 6.70072 2.28299 8.31461C2.2903 8.385 2.23494 8.44489 2.16547 8.43491C1.82909 8.38658 0.963613 8.19955 0.695142 7.61694C0.546281 7.30855 0.546281 6.95131 0.695142 6.64293C0.870641 6.2673 1.29372 6.00883 1.93774 5.88169C2.24225 5.80762 3.06438 5.70255 3.8301 5.71673C3.84159 5.71831 3.84733 5.72671 3.84838 5.73144Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                      
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">View Candidates</p>
+                    <p class="permission-des">The user can search, view & export details of candidates.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="viewcandidate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8342 2.05872C11.0611 2.05872 11.25 2.24714 11.25 2.48689V2.70855C11.25 2.94246 11.0611 3.13671 10.8342 3.13671L1.16641 3.13671C0.938918 3.13671 0.75 2.94246 0.75 2.70855L0.75 2.48689C0.75 2.24714 0.938918 2.05872 1.16641 2.05872L2.86725 2.05872C3.21275 2.05872 3.51343 1.81314 3.59115 1.46665L3.68022 1.06882C3.81865 0.526905 4.27421 0.166992 4.79557 0.166992L7.20442 0.166992C7.72012 0.166992 8.18079 0.526905 8.31411 1.04023L8.40942 1.46606C8.48657 1.81314 8.78725 2.05872 9.13332 2.05872L10.8342 2.05872ZM9.97006 10.1618C10.1476 8.50694 10.4585 4.57531 10.4585 4.53565C10.4699 4.41548 10.4307 4.30173 10.353 4.21015C10.2696 4.1244 10.1641 4.07365 10.0478 4.07365L1.95664 4.07365C1.83977 4.07365 1.72857 4.1244 1.65142 4.21015C1.57313 4.30173 1.53455 4.41548 1.54022 4.53565C1.54127 4.54294 1.55242 4.68143 1.57107 4.91296C1.65392 5.94152 1.88468 8.80626 2.03379 10.1618C2.13932 11.1605 2.79457 11.7882 3.7437 11.8109C4.47612 11.8278 5.23065 11.8337 6.00221 11.8337C6.72895 11.8337 7.46704 11.8278 8.22214 11.8109C9.20418 11.794 9.85887 11.1774 9.97006 10.1618Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">Delete/Remove Candidates</p>
+                    <p class="permission-des">The user can remove any applied & pending candidates from jobs.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="deletecandidate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permission">
+
+                <div class="left-content">
+                  <div class="icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8342 2.05872C11.0611 2.05872 11.25 2.24714 11.25 2.48689V2.70855C11.25 2.94246 11.0611 3.13671 10.8342 3.13671L1.16641 3.13671C0.938918 3.13671 0.75 2.94246 0.75 2.70855L0.75 2.48689C0.75 2.24714 0.938918 2.05872 1.16641 2.05872L2.86725 2.05872C3.21275 2.05872 3.51343 1.81314 3.59115 1.46665L3.68022 1.06882C3.81865 0.526905 4.27421 0.166992 4.79557 0.166992L7.20442 0.166992C7.72012 0.166992 8.18079 0.526905 8.31411 1.04023L8.40942 1.46606C8.48657 1.81314 8.78725 2.05872 9.13332 2.05872L10.8342 2.05872ZM9.97006 10.1618C10.1476 8.50694 10.4585 4.57531 10.4585 4.53565C10.4699 4.41548 10.4307 4.30173 10.353 4.21015C10.2696 4.1244 10.1641 4.07365 10.0478 4.07365L1.95664 4.07365C1.83977 4.07365 1.72857 4.1244 1.65142 4.21015C1.57313 4.30173 1.53455 4.41548 1.54022 4.53565C1.54127 4.54294 1.55242 4.68143 1.57107 4.91296C1.65392 5.94152 1.88468 8.80626 2.03379 10.1618C2.13932 11.1605 2.79457 11.7882 3.7437 11.8109C4.47612 11.8278 5.23065 11.8337 6.00221 11.8337C6.72895 11.8337 7.46704 11.8278 8.22214 11.8109C9.20418 11.794 9.85887 11.1774 9.97006 10.1618Z" fill="#98A2B3"/>
+                    </svg>
+                      
+                  </div>
+                  <div class="texts">
+                    <p class="permission-title">Organize Candidates</p>
+                    <p class="permission-des">The user can update pipeline/stage of candidates, <br> invite candidate, manage candidates' attachments,
+                      rate candidates & can do conversation with candidates.</p>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <div class="checkbox-wrapper">
+                    <div class="check-box">
+                        <input type="checkbox" checked id="deletecandidate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+             </div>
+
+            
               
             </div>
             <div class="modal-footer">
-              <button type="button" class="modal-cancel-btn" data-bs-dismiss="modal">Discard</button>
-              <button type="button" class="modal-close-btn">Save</button>
+              <button type="button" class="modal-discard-btn" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="modal-save-btn">Save</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
     <!-- Disqualify modal  -->
 
   <!-- BOOTSTRAP JS -->
@@ -1303,7 +1516,7 @@
   <script src="assets/js/contentloader/contentloader.js"></script>
   <!-- nice select -->
   <script src="assets/js/nice-select/nice-select2.js"></script>
-  <script src="assets/js/nice-select/jobstatus.js"></script>
+  <script src="assets/js/nice-select/employeepage.js"></script>
   <script src="assets/js/jquery/jquery.min.js" ></script>
   <script type="text/javascript" charset="utf8" src="assets/js/datatable/datatable.js"></script>
   <script>

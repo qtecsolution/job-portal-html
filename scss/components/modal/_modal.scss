@@ -227,6 +227,164 @@
   }
 }
 
+.addemployee-modal {
+  @include breakpoint(mobile576) {
+
+  }
+  .modal {
+    &-content {
+      border: none;
+      box-shadow: $box-shadow-1;
+    }
+
+    &-header {
+      @include border-single(bottom, solid, 1, $headerborder);
+      margin: 0 5%;
+
+      .modal-title {
+        color: $headingText;
+        @include font($primaryFont, 16, medium, normal, 25);
+      }
+
+    }
+
+    &-body {
+      padding: size(12) 5%;
+
+      .employee-image {
+        padding: size(16) size(0);
+        @include flex-column;
+        gap: size(10);
+        @include border-single(bottom,solid,1,$headerborder);
+        @include breakpoint(mobile576) {
+          padding: size(24) size(0);
+          gap: size(20);
+        }
+        .title {
+          @include font($primaryFont, 14, medium, normal, 25);
+          color: $headingText;
+          @include breakpoint(mobile576) {
+            @include font($primaryFont, 16, medium, normal, 25);
+
+          }
+        }
+        .image-box {
+          label {
+            @include flex;
+            align-items: center;
+            gap: size(6)
+          }
+        }
+      }
+       .permissions {
+        @include border-single(top,solid,1,$headerborder);
+        padding: size(16) size(0);
+        @include flex-column;
+        gap: size(10);
+        @include breakpoint(mobile576) {
+          padding: size(24) size(0);
+          gap: size(20);
+        }
+        .title {
+          @include font($primaryFont, 14, medium, normal, 25);
+          color: $headingText;
+          @include breakpoint(mobile576) {
+            @include font($primaryFont, 16, medium, normal, 25);
+
+          }
+
+        }
+
+        .permission {
+          @include flex-between;
+
+          .left-content {
+            @include flex;
+            gap: size(8);
+
+            .icon {
+
+            }
+            .texts {
+              @include flex-column;
+              gap: size(6);
+            }
+
+           
+          } 
+
+          .right-content {
+
+          }
+
+          &-title {
+            color:$headingText;
+            @include font($primaryFont, 12, normal, normal, 17);
+            @include breakpoint(mobile576) {
+             @include font($primaryFont, 14, normal, normal, 17);
+
+            }
+
+          }
+          &-des {
+            color: $textSecondary;
+            @include font($primaryFont, 12, normal, normal, 17);
+            @include breakpoint(mobile576) {
+             @include font($primaryFont, 14, normal, normal, 17);
+
+            }
+
+
+          }
+        }
+       
+
+       
+       }
+    }
+
+    &-footer {
+      gap: size(10);
+      margin: 0 5%;
+
+      .modal-discard-btn {
+        padding: size(10) size(30);
+        @include border(solid, 1, $headerborder);
+        @include radius(7);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        @include hover {
+          @include setBgColor(darken($white, 5%), $textPrimary);
+        }
+      }
+
+      .modal-save-btn {
+        padding: size(10) size(30);
+        @include setBgColor($success, $white);
+        @include radius(7);
+        @include border(solid, 1, $success);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        
+        @include hover {
+          @include setBgColor(darken($success, 10%), $white);
+        }
+
+      }
+    }
+
+
+  }
+}
+
 // modal darkmode 
 .darkmode {
   .succesfully-created {
