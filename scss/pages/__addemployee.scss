@@ -49,3 +49,41 @@
         overflow-y: scroll;
     }
 }
+
+.darkmode {
+    .addemployee {
+        &-header {
+            border-color: $headingText;
+
+            .addemployee-title {
+                color: darken($white,30%);
+                @include font($primaryFont, 18, medium, normal, 24);
+    
+                @include breakpoint(mobile768) {
+                    @include font($primaryFont, 22, medium, normal, 28);
+    
+                }
+            }
+    
+            .buttons {
+                @include flex-column;
+                justify-content: center;
+                gap: size(4);
+                
+                @include breakpoint(mobile480) {
+                    flex-direction: row;
+                }
+    
+                @include breakpoint(mobile414) {
+                    gap: size(10);
+                }
+            }
+        }
+        &-body {
+           
+            padding: size(20);
+            padding-bottom: size(100);
+            overflow-y: scroll;
+        }
+    }
+}

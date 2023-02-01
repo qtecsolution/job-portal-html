@@ -123,6 +123,92 @@
   }
 }
 
+.employee-offcanvas {
+  .offcanvas {
+
+    &-header {
+     background: $offcanvasbg;
+     @include flex-between;
+
+     .header-left {
+      @include flex;
+      gap: size(16);
+
+      .employee-thumb {
+        @include square(68);
+        overflow: hidden;
+        @include radius(10);
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+      .employee-info {
+
+        .designation {
+          @include font($primaryFont,12,medium,normal,18);
+          color: $textPrimary;
+          span {
+            color: $headingText;
+          
+          }
+        }
+
+        .department {
+          @include font($primaryFont,12,medium,normal,18);
+          color: $textPrimary;
+          span {
+            color: $headingText;
+          
+          }
+
+        }
+      }
+
+     }
+
+     .header-right {
+
+      .right-buttons {
+        @include flex;
+        gap: size(10);
+
+        .right-btn {
+          @include square(38);
+          @include border(solid,1,$headerborder);
+          @include flex-center;
+          @include radius(10);
+          @include transitionsall;
+          @include hover {
+            background: darken($white,10%);
+          }
+        }
+      }
+     }
+     
+    }
+    &-body {
+      border: none;
+      padding: 0;
+      margin: 0;
+
+      .offcanvas__info-cards {
+        padding: size(14) size(18); 
+        @include breakpoint(mobile576) {
+         padding: size(25) size(30); 
+
+        }
+        @include flex-column;
+        gap: size(20);
+      }
+
+      .offcanvas__info-card {
+        border: none;
+      }
+    }
+  }
+}
+
 
 
 .darkmode {
@@ -149,4 +235,54 @@
   }
   
   }
+
+  .employee-offcanvas {
+    .header-left {
+
+      .employee-info {
+
+        .designation {
+          color: darken($white,20%);
+          span {
+            color: darken($white,10%);
+          
+          }
+        }
+
+        .department {
+          @include font($primaryFont,12,medium,normal,18);
+          color: $textPrimary;
+          span {
+            color: $headingText;
+          
+          }
+
+        }
+      }
+
+     }
+
+     .header-right {
+
+      .right-buttons {
+        .right-btn {
+          border-color: $headingText;
+          svg {
+            path {
+              fill:darken($white,30%);
+            }
+          }
+          @include hover {
+            background: darken($shade-1,10%);
+          }
+        }
+
+       
+      }
+     }
+  }
+
+
+
+  
 }
