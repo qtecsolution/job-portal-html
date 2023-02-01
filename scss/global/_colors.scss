@@ -41,6 +41,7 @@ $shade-1: rgba(102, 112, 133, 0.05);
 
 // BOX-SHADOWS
 $box-shadow-1: 0.25rem 0.25rem 0.25rem $shade-1;
+$dropshadow-1: drop-shadow(0.25rem 0.25rem 0.25rem $shade-1);
 
 // DARK-MODE
 $darkPrimary: hsl(200, 6%, 9%); //#161819
