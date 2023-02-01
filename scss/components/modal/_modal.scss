@@ -276,6 +276,64 @@
           }
         }
       }
+
+      .uploaded {
+        @include flex-between;
+        align-items: flex-end;
+        .left-content {
+
+          .employee-thumb {
+            @include square(100);
+            overflow: hidden;
+            @include radius(10);
+
+            img {
+              @include wh100;
+              object-fit: cover;
+            }
+          }
+
+        }
+
+        .right-content {
+
+          .buttons {
+            @include flex;
+            gap: size(10);
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            .upload-btn {
+              padding: size(12) size(18);
+              @include setBgColor($primary,$white);
+              @include radius(8);
+              @include font($primaryFont,12,semibold,normal,12);
+              @include border(solid,1,$primary);
+              @include transitionsall;
+
+              @include hover {
+              @include setBgColor(darken($primary,10%),$white);
+              }
+
+            }
+
+            .remove-btn {
+              padding: size(12) size(18);
+              @include setBgColor($white,$textPrimary);
+              @include radius(8);
+              @include font($primaryFont,12,semibold,normal,12);
+              @include border(solid,1,$headerborder);
+              @include transitionsall;
+              
+              @include hover {
+              @include setBgColor(darken($white,10%),$textPrimary);
+              }
+            }
+
+          }
+        }
+      }
+
        .permissions {
         @include border-single(top,solid,1,$headerborder);
         padding: size(16) size(0);

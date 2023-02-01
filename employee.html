@@ -906,13 +906,13 @@
     </header>
     <!-- HEADER SECTION END -->
 
-    <div class="addnewjob">
+    <div class="addemployee">
 
-        <div class="addnewjob-content">
+        <div class="addemployee-content">
 
-            <div class="addnewjob-header">
+            <div class="addemployee-header">
                 <div class="header-wrapper">
-                    <h2 class="addnewjob-title">27 Employees</h2>
+                    <h2 class="addemployee-title">27 Employees</h2>
 
                     <div class="buttons">
                         <button class="btn-addemployee" data-bs-toggle="modal" data-bs-target="#addemployeeModal">
@@ -928,7 +928,7 @@
 
             </div>
 
-            <div class="addnewjob-body">
+            <div class="addemployee-body">
              
               <div class="table-wrapper">
                 <div class="table-search">
@@ -1048,11 +1048,10 @@
                           </span>
                           <ul class="dropdown-menu">
                             <div class="dropdown-items">
-                              <div class="item">Email Applicant</div>
-                              <div class="item">Create an Event</div>
-                              <div class="item">Move to next satge</div>
-                              <div class="item" data-bs-toggle="modal" data-bs-target="#disqualifyModal">Disqualify</div>
+                              <div class="item">Edit</div>
+                              <div class="item">Invitation Email</div>
                               <div class="item">Delete</div>
+                            
                             </div>
                           </ul>
                         </div>
@@ -1060,15 +1059,6 @@
 
                     </tr>
 
-                   
-                  
-
-                 
-
-                   
-              
-
-                  
                    
                   </tbody>
                 </table>
@@ -1088,7 +1078,7 @@
   <!-- offcanvas  -->
   
     <div class="applicant-offcanvas">
-        <div class="offcanvas offcanvas-end " tabindex="-1" id="userOffcanvas" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-end show" tabindex="-1" id="userOffcanvas" aria-labelledby="offcanvasExampleLabel">
 
         <div class="offcanvas-header">
             <div class="header-left">
@@ -1174,179 +1164,7 @@
         </div>
 
         <div class="offcanvas-body">
-            <div class="applicant-tab">
-            <ul class="nav nav-tabs sticky-top bg-white" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail-tab-pane" type="button" role="tab" aria-controls="detail-tab-pane" aria-selected="true">Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                <button class="nav-link" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-tab-pane" type="button" role="tab" aria-controls="resume-tab-pane" aria-selected="false">Resume</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                <button class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event-tab-pane" type="button" role="tab" aria-controls="event-tab-pane" aria-selected="false">Events</button>
-                </li>
-            
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="detail-tab-pane" role="tabpanel" aria-labelledby="detail-tab" tabindex="0">
-
-                <div class="offcanvas__info-cards">
-
-                    <div class="offcanvas__info-card">
-                    <div class="offcanvas__info-card-header">
-                        <h3 class="title">Basic Information</h3>
-                    </div>
-                    <div class="offcanvas__info-card-body">
-                        <div class="row g-4">
-
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Name</p>
-                            <p class="text">Istiak Hossain Tushar</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">phone</p>
-                            <p class="text">01684526987</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">portfolio link</p>
-                            <p class="text">www.dummyweblink/username</p>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Email</p>
-                            <p class="text">istiaktushar.qtec@gmail.com</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">Address</p>
-                            <p class="text">house #127/1, lake circus, kalabagan, 1205</p>
-                            </div>
-                        
-
-                        </div>
-                        
-                        </div>
-                    </div>
-                    </div>
-
-                
-                    <div class="offcanvas__info-card">
-                    <div class="offcanvas__info-card-header">
-                        <h3 class="title">Professional Information</h3>
-                    </div>
-                    <div class="offcanvas__info-card-body">
-                        <div class="row g-4">
-
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Current Organization</p>
-                            <p class="text">Qtec Solution Limited</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">Experience in years</p>
-                            <p class="text">2 Years</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">Notice period</p>
-                            <p class="text">1 month</p>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Current job title</p>
-                            <p class="text">Jr Front End Developer</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">current salary</p>
-                            <p class="text">-</p>
-                            </div>
-                            <div class="info-box">
-                            <p class="label">Expected salary</p>
-                            <p class="text">45000 bdt</p>
-                            </div>
-
-                        </div>
-
-                        <div class="col-12">
-                            <div class="info-box">
-                            <p class="label">Additional info</p>
-                            <p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="info-box">
-                            <p class="label">skill set</p>
-                            <div class="skills">
-                                <span class="skill">HTML</span>
-                                <span class="skill">css</span>
-                                <span class="skill">jQuery</span>
-                                <span class="skill">java</span>
-                                <span class="skill">python</span>
-                            </div>
-                            </div>
-                        </div>
-                        
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="offcanvas__info-card">
-                    <div class="offcanvas__info-card-header">
-                        <h3 class="title"> Educational Information</h3>
-                    </div>
-                    <div class="offcanvas__info-card-body">
-                        <div class="row g-4">
-                        <div class="col-md-9">
-                            <div class="info-box">
-                            <p class="label">University name</p>
-                            <p class="text">International University of Business Agriculture and Technology</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Name of degree</p>
-                            <p class="text">BCSE</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-
-                            <div class="info-box">
-                            <p class="label">Passing year</p>
-                            <p class="text">2019</p>
-                            </div>
-                        
-                        
-
-                        </div>
-                        
-                        </div>
-                    </div>
-                    </div>
-
-                </div>
-
-                </div>
-                <div class="tab-pane fade" id="resume-tab-pane" role="tabpanel" aria-labelledby="resume-tab" tabindex="0">Resume</div>
-                <div class="tab-pane fade" id="pipeline-tab-pane" role="tabpanel" aria-labelledby="pipeline-tab" tabindex="0">pipeline</div>
-                <div class="tab-pane fade" id="event-tab-pane" role="tabpanel" aria-labelledby="event-tab" tabindex="0">event</div>
-                
-            </div>
-            </div>
+           
         
             
         </div>
@@ -1387,6 +1205,8 @@
               <!-- employee image  -->
               <div class="employee-image">
                <h3 class="title">Employee Image</h3>
+
+               <!-- after upload hide this -->
                <div class="image-box">
                 <input type="file" name="" id="employee-image" hidden>
                 <label for="employee-image">
@@ -1406,6 +1226,25 @@
                   <span class="text">Add Employee Image</span>
                 </label>
                </div>
+
+               <!-- after upload show this  -->
+              <div class="uploaded">
+              
+                <div class="left-content">
+                  <figure class="employee-thumb">
+                    <img src="assets/images/avatar.png" alt="employee image">
+                  </figure>
+                </div>
+                <div class="right-content">
+
+                  <div class="buttons">
+                    <button class="upload-btn">Upload new Image</button>
+                    <button class="remove-btn">Remove Image</button>
+                  </div>
+
+                </div>
+              </div>
+
 
               </div>
              <div class="row g-4 py-4">
