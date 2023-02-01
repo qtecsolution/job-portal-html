@@ -463,7 +463,40 @@
     
             }
         }
-    }
+    } 
+
+    .offcanvas__info-card {
+        @include border(solid,1,$headerborder); 
+       
+        &-body {
+       
+           .info-box {
+               .label {
+                   color: darken($white,30%);
+                   @include font($primaryFont,10,medium,normal,16);
+                   text-transform: uppercase;
+               }
+               .text {
+                   color: darken($white,10%);
+                   @include font($primaryFont,14,normal,normal,17);
+       
+               }
+               .skills {
+                   @include flex;
+                   flex-wrap: wrap;
+                   gap:size(8);
+                   .skill {
+                       padding: size(4) size(10);
+                       @include radius(100);
+                       background: #E4F7FF;
+                       @include font($primaryFont,12,medium,normal,16);
+       
+                   }
+               }
+           }
+        }
+       
+       }
 }
 
 .cardintegration {
