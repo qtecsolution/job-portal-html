@@ -1295,7 +1295,7 @@
                 }
               }
             }
-            
+
             &.active {
               .mytrackinfo {
                 &-header {
@@ -1333,6 +1333,42 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  .taskform {
+    .info {
+      &-text {
+        color: $textSecondary;
+      }
+    }
+  
+    .inputbox {
+      .inputlabel {
+        color: $white;
+      }
+  
+      .inputfield {
+        @include setBgColor($lightDark, $white);
+        border-color: lighten($lightDark, 10%);
+  
+        &:focus {
+          border-color: $primary;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .submissionbox {  
+    .info {    
+      &-text {
+        color: $textSecondary;
+  
+        strong {
+          color: $white;
         }
       }
     }
