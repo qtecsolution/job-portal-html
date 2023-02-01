@@ -88,10 +88,16 @@
   }
 
   .arrowbtn {
+    @include square(40);
+    background: $white;
+    @include flex-center;
+    @include circle;
     cursor: pointer;
     position: absolute;
     left: size(-24);
     top: 50%;
+    @include border(solid,1,$headerborder);
+    
   }
 
  
@@ -235,10 +241,8 @@
   }
   
    .arrowbtn {
-    cursor: pointer;
-    position: absolute;
-    left: size(-24);
-    top: 50%;
+    background: $lightDark;
+    border-color: $headingText;
   }
   }
 

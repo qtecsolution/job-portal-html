@@ -572,6 +572,108 @@
 
   }
 
+  .addemployee-modal { 
+    .modal {
+     
+  
+      &-header {
+      border-color: $headingText;
+        .modal-title {
+          color: darken($white,20%);
+        }
+  
+      }
+  
+      &-body {
+        .employee-image {
+          border-color: $headingText;
+          .title {
+            color: darken($white,30%);
+          }
+          .image-box {
+            label {
+              color: darken($white,30%);
+            
+            }
+          }
+        }
+  
+        .uploaded {
+       
+          .right-content {
+  
+            .buttons {
+              .upload-btn {
+                @include setBgColor($primary,$white);
+                @include border(solid,1,$primary);
+                @include hover {
+                @include setBgColor(darken($primary,10%),$white);
+                }
+  
+              }
+  
+              .remove-btn {
+                @include setBgColor($darkPrimary,$white);
+                border-color: $textPrimary;
+                color: darken($white,20%);
+                @include hover {
+                  @include setBgColor(darken($lightDark, 5%), $textPrimary);
+                }
+              }
+  
+            }
+          }
+        }
+  
+         .permissions {
+         border-color: $headingText;
+          .title {
+            color: darken($white,10%);
+            
+          }
+  
+          .permission {
+            @include flex-between;
+  
+           
+            &-title {
+              color:darken($white,10%);    
+  
+            }
+            &-des {
+              color: $textSecondary;
+              @include font($primaryFont, 12, normal, normal, 17);
+              @include breakpoint(mobile576) {
+               @include font($primaryFont, 14, normal, normal, 17);
+  
+              }
+  
+  
+            }
+          }
+         
+  
+         
+         }
+      }
+  
+      &-footer {
+        border-color:$headingText;
+        .modal-discard-btn {
+          border-color: $headingText; 
+          color: darken($white,20%);
+          @include hover {
+            @include setBgColor(darken($lightDark, 5%), $textPrimary);
+          }
+        }
+  
+      
+      }
+  
+  
+    }
+  }
+
 }
 
 .settingsmodal {
