@@ -1373,4 +1373,42 @@
       }
     }
   }
+
+  .emailtemplate {
+    background: $darkPrimary;
+  
+    &-header {
+      border-color: $lightDark;
+  
+      .templatetitle {
+        color: $white;
+      }
+    }
+    
+    &-body {
+      .template-details {
+        background: $lightDark;
+        border-color: lighten($lightDark, 10%);
+  
+        .info {
+          &-text {
+            color: $white;
+          }
+        }
+        .maildetail {
+          .mailbody {
+            color: $white;
+          }
+        }
+      }
+    }
+  
+    .mailfooter {
+      &-body {
+        .title {
+          color: $white;
+        }
+      }
+    }
+  }
 }
