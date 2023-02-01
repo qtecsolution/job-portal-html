@@ -1236,5 +1236,105 @@
         }
       }
     }
+
+    .trackinfo {
+      &-header {
+        .title {
+          color: $white;
+        }
+      }
+
+      &-body {
+        .desktop-track {
+          &::before {
+            border-color: $lightDark;
+          }
+
+          .mytrack {  
+            .mytrackinfo {  
+              &-header {  
+                .title {
+                  color: $white;
+                }
+              }
+              
+              &-body {
+                background: $checkborder;
+
+                .circlebox {
+                  background: $lightDark;
+                }
+              }
+            }
+          }
+        }
+
+        .mobile-track {
+          &::before {
+            border-color: $lightDark;
+          }
+
+          .mytrack {
+            .mytrackinfo {
+              @include flex-center-vert;
+              gap: size(16);
+              position: relative;
+              z-index: 10;
+
+              &-header {
+                .title {
+                  color: $white;
+                }
+              }
+              
+              &-body {
+                background: $checkborder;
+
+                .circlebox {
+                  background: $lightDark;
+                }
+              }
+            }
+            
+            &.active {
+              .mytrackinfo {
+                &-header {
+                  opacity: 1;
+                  visibility: visible;
+                }
+
+                &-body {
+                  background: $primary;
+                }
+              }
+            }
+          }
+        }
+
+        .info {
+          @include flex-center;
+          text-align: center;
+
+          &-text {
+            color: $textPrimary;
+            font-size: size(14);
+            font-weight: 400;
+
+            .link {
+              color: $primary;
+              font-size: size(14);
+              font-weight: 500;
+              text-decoration: underline;
+              @include transitionsall;
+
+              @include hover {
+                color: $blue;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
