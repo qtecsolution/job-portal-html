@@ -160,6 +160,37 @@
          padding: size(25) size(30); 
 
         }
+
+        .stages {
+          padding-bottom: size(10);
+          .stageMenu {
+            @include list-horizontal;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            white-space: nowrap;
+            gap: size(8);
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &-item {
+              padding: size(8) size(12);
+              @include radius(6);
+              background: #E8F2FF;
+              &.active {
+              background: $primary;
+              color: $white;
+              }
+            }
+            .arrow-icon {
+
+            }
+           
+          }
+        }
       }
 
     }

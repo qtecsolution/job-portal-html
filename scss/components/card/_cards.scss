@@ -296,6 +296,7 @@
     }
 
 }
+
 .offcanvas__info-card {
     @include radius(10);
     @include border(solid, 1, $headerborder);
@@ -413,6 +414,7 @@
     }
 
 }
+
 
 .darkmode {
     .jobcard {
