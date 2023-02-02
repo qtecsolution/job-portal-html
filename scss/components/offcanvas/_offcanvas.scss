@@ -109,7 +109,35 @@
 
     &-header {
      background: $offcanvasbg;
-     
+     @include flex-between;
+     align-items: center;
+     .header-left {
+
+        .title-icon {
+          @include flex;
+          gap: size(20);
+          flex-wrap: wrap;
+          .title {
+
+          }
+
+          .stars {
+            @include flex;
+            align-items: center;
+            gap: size(4);
+          }
+        }
+     }
+
+     .header-right {
+
+      .right-buttons {
+        @include flex;
+        gap: size(10);
+        align-items: center;
+        flex-wrap: wrap;
+      }
+     }
     }
     &-body {
       border: none;
@@ -125,6 +153,15 @@
         @include flex-column;
         gap: size(20);
       }
+
+      .hiring-pipeline {
+        padding: size(14) size(18); 
+        @include breakpoint(mobile576) {
+         padding: size(25) size(30); 
+
+        }
+      }
+
     }
   }
 }
@@ -216,7 +253,7 @@
 }
 
 
-
+// ======================darkmode =======================================
 .darkmode {
   .offcanvas {
     background: $lightDark;

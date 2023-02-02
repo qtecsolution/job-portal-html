@@ -245,7 +245,8 @@ button,
   @include radius(50);
 }
 
-.btn-event {
+.btn-event ,
+.btn-sendemail {
   @include border(solid, 1, $checkborder);
   @include radius(10);
   padding: size(8) size(12);

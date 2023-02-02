@@ -296,6 +296,123 @@
     }
 
 }
+.offcanvas__info-card {
+    @include radius(10);
+    @include border(solid, 1, $headerborder);
+
+    &-header {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding: size(14);
+
+        .title {
+            @include font($primaryFont, 16, medium, normal, 19);
+
+        }
+    }
+
+    &-body {
+        padding: size(14);
+
+        .info-box {
+            padding: size(10) size(0);
+            @include flex-column;
+            gap: size(8);
+
+            .label {
+                color: $textSecondary;
+                @include font($primaryFont, 10, medium, normal, 16);
+                text-transform: uppercase;
+            }
+
+            .text {
+                color: $headingText;
+                @include font($primaryFont, 14, normal, normal, 17);
+
+            }
+
+            .skills {
+                @include flex;
+                flex-wrap: wrap;
+                gap: size(8);
+
+                .skill {
+                    padding: size(4) size(10);
+                    @include radius(100);
+                    background: #E4F7FF;
+                    @include font($primaryFont, 12, medium, normal, 16);
+
+                }
+            }
+        }
+
+        .assignee-boxes {
+            @include flex;
+            gap: size(12);
+            align-items: center;
+            flex-wrap: wrap;
+            .assignee-box {
+                @include flex;
+                gap: size(9);
+                align-items: center;
+                .assignee-thumb {
+                    @include square(22);
+                    @include circle;
+                    overflow: hidden;
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                span {
+                @include font($primaryFont, 12, normal, normal, 16);
+
+                }
+            }
+        } 
+
+        .notes {
+            @include flex-column;
+            .note {
+              @include border-single(bottom,solid,1,$headerborder);
+              @include flex;
+              gap: size(8);
+              padding: size(20);
+              .note-thumb {
+                @include square(36);
+                @include circle;
+                overflow: hidden;
+                img {
+                    @include wh100;
+                    object-fit: cover;
+
+                }
+              }
+              &-info {
+                @include flex-column;
+                gap: size(8);
+                h3 {
+                @include font($primaryFont, 14, normal, normal, 16);
+                color: $headingText;
+                    span {
+                        color: $textPrimary;
+                        font-size: size(10);
+                        font-weight: 400;
+                    }
+                }
+
+                .des {
+                    columns: $textPrimary;
+                    font-size: size(10);
+                }
+              }
+
+            }
+        }
+
+    }
+
+}
 
 .darkmode {
     .jobcard {
@@ -303,60 +420,64 @@
 
         &-header {
             border-color: $headingText;
+
             .left {
-    
+
                 .badge {
-                    background: lighten($success,50%);
+                    background: lighten($success, 50%);
                     color: $success;
-                 
-    
-                    &.badge-purple{
-                        @include setBgColor($purpleLight,$purple);
+
+
+                    &.badge-purple {
+                        @include setBgColor($purpleLight, $purple);
                     }
-    
+
                     &.badge-success {
-                        @include setBgColor($successlight,$success);
-                        
+                        @include setBgColor($successlight, $success);
+
                     }
-    
+
                     &.badge-cyan {
-                        @include setBgColor($electriccyanlight,$electriccyan);
-                            
+                        @include setBgColor($electriccyanlight, $electriccyan);
+
                     }
+
                     &.badge-orange {
-                        @include setBgColor($orangeLight,$orange);
-    
+                        @include setBgColor($orangeLight, $orange);
+
                     }
-    
+
                 }
-    
+
                 .jobname {
                     color: $white;
                 }
-    
+
                 .jobtypes {
-                    
-    
+
+
                     .type {
-                        color: darken($white,20%);
+                        color: darken($white, 20%);
                     }
                 }
             }
-    
+
             .right {
                 .dropdown {
                     &-menu {
                         border-color: $headingText;
                         background: $lightDark;
                         box-shadow: $box-shadow-1;
+
                         .dropdown-items {
                             .item {
-                                color: darken($white,20%);
+                                color: darken($white, 20%);
+
                                 @include hover {
                                     background: $shade-1;
                                 }
                             }
-    
+
                         }
                     }
                 }
@@ -364,67 +485,73 @@
         }
 
         &-body {
-           border-color: $headingText;
+            border-color: $headingText;
             padding-bottom: size(20);
+
             .applicant-header {
                 @include flex;
                 align-items: center;
                 gap: size(7);
-                color: darken($white,20%);
+                color: darken($white, 20%);
                 padding: size(14) size(0);
-    
+
                 span {
                     @include font($primaryFont, 12, medium, normal, 17);
-    
+
                 }
-    
+
             }
-    
+
             .applicants-wrapper {
                 background: $headingText;
-    
+
                 .applicatn {
                     .count {
-                        color:$white;
+                        color: $white;
                     }
+
                     .title {
                         color: $white;
                     }
                 }
             }
-        } 
+        }
 
         &-footer {
             .footerleft {
                 svg {
                     path {
-                        stroke: darken($white,20%);
-                        
+                        stroke: darken($white, 20%);
+
                     }
                 }
+
                 span {
                     &.text {
                         @include font($primaryFont, 14, medium, normal, 22);
-                        color: darken($white,20%);
-                        
+                        color: darken($white, 20%);
+
                     }
                 }
             }
-    
+
             .footerright {
-                color: darken($white,20%);
+                color: darken($white, 20%);
+
                 svg {
-                  path {
-                    stroke: darken($white,20%);
-                  }
+                    path {
+                        stroke: darken($white, 20%);
+                    }
                 }
+
                 @include hover {
                     color: $white;
                 }
-    
+
             }
         }
     }
+
     .review__header-card {
         background: $lightDark;
         color: $white;
@@ -435,68 +562,74 @@
         border-color: $headingText;
 
         .name {
-            color: darken($white,20%);
-            
-        }
-        .gmail {
-            color: darken($white,20%);
+            color: darken($white, 20%);
 
         }
+
+        .gmail {
+            color: darken($white, 20%);
+
+        }
+
         .review-footer {
             border-color: $headingText;
 
             .stars {
                 @include flex;
                 gap: size(4);
-                
-               .empty {
-                svg {
-                    path {
-                        fill: darken($white,20%);
+
+                .empty {
+                    svg {
+                        path {
+                            fill: darken($white, 20%);
+                        }
                     }
                 }
-               }
-               
+
             }
+
             .time {
-              color: darken($white,30%);
-    
+                color: darken($white, 30%);
+
             }
         }
-    } 
+    }
 
     .offcanvas__info-card {
-        @include border(solid,1,$headerborder); 
-       
+        @include border(solid, 1, $headerborder);
+
         &-body {
-       
-           .info-box {
-               .label {
-                   color: darken($white,30%);
-                   @include font($primaryFont,10,medium,normal,16);
-                   text-transform: uppercase;
-               }
-               .text {
-                   color: darken($white,10%);
-                   @include font($primaryFont,14,normal,normal,17);
-       
-               }
-               .skills {
-                   @include flex;
-                   flex-wrap: wrap;
-                   gap:size(8);
-                   .skill {
-                       padding: size(4) size(10);
-                       @include radius(100);
-                       background: #E4F7FF;
-                       @include font($primaryFont,12,medium,normal,16);
-       
-                   }
-               }
-           }
+
+            .info-box {
+                .label {
+                    color: darken($white, 30%);
+                    @include font($primaryFont, 10, medium, normal, 16);
+                    text-transform: uppercase;
+                }
+
+                .text {
+                    color: darken($white, 10%);
+                    @include font($primaryFont, 14, normal, normal, 17);
+
+                }
+
+                .skills {
+                    @include flex;
+                    flex-wrap: wrap;
+                    gap: size(8);
+
+                    .skill {
+                        padding: size(4) size(10);
+                        @include radius(100);
+                        background: #E4F7FF;
+                        @include font($primaryFont, 12, medium, normal, 16);
+
+                    }
+                }
+            }
         }
-       
-       }
+
+    }
 }
 
 .cardintegration {
@@ -697,49 +830,3 @@
 	}
 }
 
-.offcanvas__info-card {
- @include radius(10);
- @include border(solid,1,$headerborder); 
-
- &-header {
-    @include border-single(bottom,solid,1,$headerborder);
-    padding: size(14);
-    .title {
-        @include font($primaryFont,16,medium,normal,19);
-
-    }
- }
-
- &-body {
-    padding: size(14);
-
-    .info-box {
-        padding: size(10) size(0);
-        @include flex-column;
-        gap: size(8);
-        .label {
-            color: $textSecondary;
-            @include font($primaryFont,10,medium,normal,16);
-            text-transform: uppercase;
-        }
-        .text {
-            color: $headingText;
-            @include font($primaryFont,14,normal,normal,17);
-
-        }
-        .skills {
-            @include flex;
-            flex-wrap: wrap;
-            gap:size(8);
-            .skill {
-                padding: size(4) size(10);
-                @include radius(100);
-                background: #E4F7FF;
-                @include font($primaryFont,12,medium,normal,16);
-
-            }
-        }
-    }
- }
-
-}

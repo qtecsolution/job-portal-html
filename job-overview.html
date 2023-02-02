@@ -3391,13 +3391,13 @@
         <div class="applicant-tab">
           <ul class="nav nav-tabs sticky-top bg-white" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail-tab-pane" type="button" role="tab" aria-controls="detail-tab-pane" aria-selected="true">Details</button>
+              <button class="nav-link" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail-tab-pane" type="button" role="tab" aria-controls="detail-tab-pane" aria-selected="true">Details</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-tab-pane" type="button" role="tab" aria-controls="resume-tab-pane" aria-selected="false">Resume</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
+              <button class="nav-link active" id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event-tab-pane" type="button" role="tab" aria-controls="event-tab-pane" aria-selected="false">Events</button>
@@ -3405,7 +3405,8 @@
            
           </ul>
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="detail-tab-pane" role="tabpanel" aria-labelledby="detail-tab" tabindex="0">
+            <!-- detail tab options -->
+            <div class="tab-pane fade show" id="detail-tab-pane" role="tabpanel" aria-labelledby="detail-tab" tabindex="0">
 
               <div class="offcanvas__info-cards">
 
@@ -3555,8 +3556,121 @@
               </div>
 
             </div>
+            <!-- resume tab options -->
             <div class="tab-pane fade" id="resume-tab-pane" role="tabpanel" aria-labelledby="resume-tab" tabindex="0">Resume</div>
-            <div class="tab-pane fade" id="pipeline-tab-pane" role="tabpanel" aria-labelledby="pipeline-tab" tabindex="0">pipeline</div>
+
+            <!-- hirinig pipeline -->
+            <div class="tab-pane fade active show" id="pipeline-tab-pane" role="tabpanel" aria-labelledby="pipeline-tab" tabindex="0">
+
+              <div class="hiring-pipeline">
+
+                <!-- detail -->
+                <div class="offcanvas__info-card">
+                  <div class="offcanvas__info-card-header">
+                    <h3 class="title">Details</h3>
+                  </div>
+                  <div class="offcanvas__info-card-body">
+                    <div class="row g-4">
+
+                      <div class="col-md-4">
+
+                        <div class="info-box">
+                          <p class="label">Current stage</p>
+                          <p class="text">Interview</p>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="info-box">
+                          <p class="label">Apply date</p>
+                          <p class="text">22 November, 2022</p>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="info-box">
+                          <p class="label">Assignee</p>
+                          <div class="assignee-boxes">
+
+                            <div class="assignee-box">
+                              <figure class="assignee-thumb">
+                                <img src="assets/images/avatar.png" alt="">
+                              </figure>
+                              <span>Assignee name</span>
+                            </div>
+
+                            <div class="assignee-box">
+                              <figure class="assignee-thumb">
+                                <img src="assets/images/avatar.png" alt="">
+                              </figure>
+                              <span>Assignee name</span>
+                            </div>
+
+                            <div class="assignee-box">
+                              <figure class="assignee-thumb">
+                                <img src="assets/images/avatar.png" alt="">
+                              </figure>
+                              <span>Assignee name</span>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                <!-- notes -->
+                <div class="offcanvas__info-card mt-4">
+                  <div class="offcanvas__info-card-header">
+                    <h3 class="title">Notes</h3>
+                  </div>
+                  <div class="offcanvas__info-card-body">
+                   
+                    <div class="notes">
+
+                      
+                      <div class="note">
+                        <figure class="note-thumb">
+                          <img src="assets/images/avatar.png" alt="note image ">
+                        </figure>
+                       <div class="note-info">
+                        <h3>Assignee name one <span class="date">13th November, 2022 | 4:23 pm</span></h3>
+                        <p class="des">Candidate successfully interview for this stage</p>
+                       </div>
+                      </div>
+
+                      <div class="note">
+                        <figure class="note-thumb">
+                          <img src="assets/images/avatar.png" alt="note image ">
+                        </figure>
+                       <div class="note-info">
+                        <h3>Assignee name one <span class="date">13th November, 2022 | 4:23 pm</span></h3>
+                        <p class="des">Candidate successfully interview for this stage</p>
+                       </div>
+                      </div>
+
+                      <div class="note">
+                        <figure class="note-thumb">
+                          <img src="assets/images/avatar.png" alt="note image ">
+                        </figure>
+                       <div class="note-info">
+                        <h3>Assignee name one <span class="date">13th November, 2022 | 4:23 pm</span></h3>
+                        <p class="des"> <a href="#" class="link">@assigneenameone</a> Please check the experience on this cv and give me an feedback.</p>
+                       </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
             <div class="tab-pane fade" id="event-tab-pane" role="tabpanel" aria-labelledby="event-tab" tabindex="0">event</div>
             
           </div>
