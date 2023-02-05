@@ -99,7 +99,19 @@
     left: size(-24);
     top: 50%;
     @include border(solid, 1, $headerborder);
+    display: none;
+    @include breakpoint(tab992) {
+      display: flex;
+    }
+  }
 
+  .closebtn-mobile {
+    position: absolute;
+    top: size(6);
+    right: size(6);
+    @include breakpoint(tab992) {
+      display: none;
+    }
   }
 
 
@@ -236,12 +248,24 @@
                 border-left: size(10) solid $blue;
                 padding-block: size(18);
                 @include radius(10);
+                @include transitionsall;
 
                 .innerbox {
                   @include flex-column;
                   gap: size(14);
                   padding-left: size(16);
 
+                  .delete-icon {
+                    svg {
+                     
+                      @include hover {
+                        path {
+                          @include transitionsall;
+                          stroke :$danger;
+                        }
+                      }
+                    }
+                  }
                   &-header {
 
                     color: $headingText;
@@ -294,6 +318,10 @@
                 }
                 &.border-l-danger {
                   border-left-color: $danger;
+                } 
+
+                @include hover {
+                  transform: translateY(size(-8));
                 }
               }
 
