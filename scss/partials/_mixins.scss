@@ -217,3 +217,13 @@
 @mixin transitiontransform {
   @include transition(transform $time ease-in-out);
 }
+
+@mixin hideScrollbar {
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

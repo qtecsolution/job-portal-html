@@ -142,6 +142,9 @@
         padding: size(0);
         padding-left: size(30);
         align-items: center;
+        white-space: nowrap;
+        overflow-x: scroll;
+        @include hideScrollbar;
         &-tabs {
 
         }
@@ -154,7 +157,7 @@
         &-link {
             padding: size(8) size(20);
             border: none;
-            @include font($primaryFont,16,medium,normal,20);
+            @include font($primaryFont,14,medium,normal,20);
             color: $textSecondary;
             @include radius(0);
             @include border-single(bottom,solid,3,transparent);
@@ -162,6 +165,8 @@
             gap: size(10);
             @include breakpoint(mobile768) {
                 padding: size(6) size(40);
+                @include font($primaryFont,16,medium,normal,20);
+
             }
 
             @include hover {
@@ -198,6 +203,8 @@
         }
     }
 }
+
+
 .darkmode {  
 
     .mytask {

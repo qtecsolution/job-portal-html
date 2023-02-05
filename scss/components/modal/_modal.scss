@@ -442,7 +442,41 @@
 
   }
 }
+.sendemail-modal {
 
+  .custom-email {
+    @include border(solid,1,$headerborder);
+    @include radius(10);
+
+    &-fromto {
+      @include border-single(bottom,solid,1,$headerborder);
+      padding: size(20) size(14);
+    }
+    &-subject {
+      @include border-single(bottom,solid,1,$headerborder);
+      padding: size(12) size(14);
+      @include flex-between;
+
+    }
+    &-writting {
+
+      .attachment-list {
+        @include flex-between;
+        @include border(solid,1,$headerborder);
+        margin: size(3) size(14);
+        padding: size(10);
+        @include radius(8);
+
+
+        .right {
+          @include flex;
+          align-items: center;
+          gap: size(8);
+        }
+      }
+    }
+  }
+}
 // modal darkmode 
 .darkmode {
   .succesfully-created {

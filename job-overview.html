@@ -3373,13 +3373,13 @@
               </span>
               <span class="text">Create event</span>
             </button>
-            <button class="btn-sendemail">
+            <button class="btn-sendemail" data-bs-toggle="modal" data-bs-target="#sendEmailModal">
               <span class="icon">
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4375 2.9375V2.6875C1.4375 1.85907 2.10907 1.1875 2.9375 1.1875H13.0625C13.8909 1.1875 14.5625 1.85907 14.5625 2.6875V2.9375M1.4375 2.9375L6.88614 6.20669M1.4375 2.9375V9.5M14.5625 2.9375L9.11386 6.20669M14.5625 2.9375V9.5M9.11386 6.20669L8 6.875L6.88614 6.20669M9.11386 6.20669L14.5625 9.5M14.5625 9.5V9.5C14.5625 10.2249 13.9749 10.8125 13.25 10.8125H2.75C2.02513 10.8125 1.4375 10.2249 1.4375 9.5V9.5M6.88614 6.20669L1.4375 9.5" stroke="#667085"/>
                 </svg>
               </span>
-              <span class="text">Send Email</span>
+              <span class="text" >Send Email</span>
             </button>
           </div>
         </div>
@@ -3388,23 +3388,23 @@
       </div>
 
       <div class="offcanvas-body">
-        <div class="applicant-tab">
+        <div class="applicant-tab applicant-offcanvas-tab">
           <ul class="nav nav-tabs sticky-top bg-white" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail-tab-pane" type="button" role="tab" aria-controls="detail-tab-pane" aria-selected="true">Details</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-tab-pane" type="button" role="tab" aria-controls="resume-tab-pane" aria-selected="false">Resume</button>
+              <button class="nav-link active" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume-tab-pane" type="button" role="tab" aria-controls="resume-tab-pane" aria-selected="false">Resume</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
+              <button class="nav-link " id="pipeline-tab" data-bs-toggle="tab" data-bs-target="#pipeline-tab-pane" type="button" role="tab" aria-controls="pipeline-tab-pane" aria-selected="false">Hiring Pipeline</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link " id="event-tab" data-bs-toggle="tab" data-bs-target="#event-tab-pane" type="button" role="tab" aria-controls="event-tab-pane" aria-selected="false">Events</button>
             </li>
            
           </ul>
-          <div class="tab-content" id="myTabContent">
+          <div class="tab-content pb-5" id="myTabContent">
             <!-- detail tab options -->
             <div class="tab-pane fade show" id="detail-tab-pane" role="tabpanel" aria-labelledby="detail-tab" tabindex="0">
 
@@ -4155,6 +4155,148 @@
       </div>
     </div>
     <!-- Disqualify modal  -->
+
+
+    <!-- send emaill modal  -->
+    <div class="sendemail-modal">
+      <div class="modal fade show" id="sendEmailModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="closeModalLabel">Custom Email  </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    
+                </span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="custom-email">
+
+                <div class="custom-email-fromto">
+                  <p>From :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Qtec Career . Qtec Solution Limited</p>
+                  <p>To :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Istiak Hossaiin Tushar (istiaktushar@gmail.com)</p>
+                </div>
+                <div class="custom-email-subject">
+                  <div class="left">
+                    <span>Subject :</span>
+                    <input type="text" placeholder="Your subject" class="border">
+                  </div>
+                  <div class="right">
+                    <span>Insert Template </span>
+                  </div>
+                </div>
+                <div class="custom-email-writting">
+                  <input type="text" name="" id="" placeholder="Write a message ">
+                  <!-- uploading time  -->
+                  <div class="attachment-list uploading">
+                    <div class="left">
+
+                      <span class="icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.507 6.44587L7.14617 11.8067C6.48942 12.4634 5.59869 12.8324 4.66992 12.8324C3.74114 12.8324 2.85041 12.4634 2.19367 11.8067C1.53692 11.15 1.16797 10.2592 1.16797 9.33045C1.16797 8.40168 1.53692 7.51094 2.19367 6.8542L7.5545 1.49337C7.99233 1.05554 8.58615 0.80957 9.20533 0.80957C9.82451 0.80957 10.4183 1.05554 10.8562 1.49337C11.294 1.9312 11.54 2.52502 11.54 3.1442C11.54 3.76338 11.294 4.35721 10.8562 4.79503L5.4895 10.1559C5.27058 10.3748 4.97367 10.4978 4.66408 10.4978C4.35449 10.4978 4.05758 10.3748 3.83867 10.1559C3.61975 9.93695 3.49677 9.64004 3.49677 9.33045C3.49677 9.02086 3.61975 8.72395 3.83867 8.50503L8.79116 3.55837" stroke="#D0D5DD" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="name">istiak_tushar.pdf</span>
+                    </div>
+                    <div class="right">
+
+                      <div class="progressbar">
+                        <progress value="70" max="100">75%</progress>
+                      </div>
+
+                      <div class="cancel-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
+                          <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M11.25 11.25L6.75 6.75" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                          
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- uploading failed -->
+                  <div class="attachment-list failed">
+                    <div  class="left">
+                      <span class="icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.507 6.44587L7.14617 11.8067C6.48942 12.4634 5.59869 12.8324 4.66992 12.8324C3.74114 12.8324 2.85041 12.4634 2.19367 11.8067C1.53692 11.15 1.16797 10.2592 1.16797 9.33045C1.16797 8.40168 1.53692 7.51094 2.19367 6.8542L7.5545 1.49337C7.99233 1.05554 8.58615 0.80957 9.20533 0.80957C9.82451 0.80957 10.4183 1.05554 10.8562 1.49337C11.294 1.9312 11.54 2.52502 11.54 3.1442C11.54 3.76338 11.294 4.35721 10.8562 4.79503L5.4895 10.1559C5.27058 10.3748 4.97367 10.4978 4.66408 10.4978C4.35449 10.4978 4.05758 10.3748 3.83867 10.1559C3.61975 9.93695 3.49677 9.64004 3.49677 9.33045C3.49677 9.02086 3.61975 8.72395 3.83867 8.50503L8.79116 3.55837" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                          
+                      </span>
+                      <span class="name">istiak_tushar.pdf</span>
+                    </div>
+                    <div class="right">
+                      <span class="failed-text">Upload failed</span>
+                      <span class="refresh-icon">
+                        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 2.97088C9.49154 2.97088 11.9167 5.41889 11.9167 8.43866C11.9167 11.4584 9.49154 13.9064 6.5 13.9064C3.50846 13.9064 1.08333 11.4584 1.08333 8.43866C1.08333 7.62349 1.2597 6.8514 1.5755 6.15787C1.70044 5.88349 1.58137 5.55883 1.30956 5.43271C1.03774 5.30659 0.716109 5.42678 0.591169 5.70116C0.211459 6.53503 0 7.46267 0 8.43866C0 12.0624 2.91015 15 6.5 15C10.0899 15 13 12.0624 13 8.43866C13 4.81494 10.0899 1.87733 6.5 1.87733V2.97088Z" fill="#667085"/>
+                          <path d="M6.5 4.5743V0.273912C6.5 0.0421223 6.23219 -0.0844998 6.05578 0.0638882L3.49967 2.21408C3.36974 2.32338 3.36974 2.52483 3.49967 2.63413L6.05578 4.78432C6.23218 4.93271 6.5 4.80609 6.5 4.5743Z" fill="#667085"/>
+                        </svg>
+                          
+                      </span>
+                      <div class="cancel-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
+                          <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M11.25 11.25L6.75 6.75" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                          
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- uploaded -->
+
+                  <div class="attachment-list uploaded">
+                    <div  class="left">
+                      <span class="icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.507 6.44587L7.14617 11.8067C6.48942 12.4634 5.59869 12.8324 4.66992 12.8324C3.74114 12.8324 2.85041 12.4634 2.19367 11.8067C1.53692 11.15 1.16797 10.2592 1.16797 9.33045C1.16797 8.40168 1.53692 7.51094 2.19367 6.8542L7.5545 1.49337C7.99233 1.05554 8.58615 0.80957 9.20533 0.80957C9.82451 0.80957 10.4183 1.05554 10.8562 1.49337C11.294 1.9312 11.54 2.52502 11.54 3.1442C11.54 3.76338 11.294 4.35721 10.8562 4.79503L5.4895 10.1559C5.27058 10.3748 4.97367 10.4978 4.66408 10.4978C4.35449 10.4978 4.05758 10.3748 3.83867 10.1559C3.61975 9.93695 3.49677 9.64004 3.49677 9.33045C3.49677 9.02086 3.61975 8.72395 3.83867 8.50503L8.79116 3.55837" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                          
+                      </span>
+                      <span class="name">istiak_tushar.pdf</span>
+                    </div>
+                    <div class="right">
+                      <div class="cancel-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
+                          <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M11.25 11.25L6.75 6.75" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                          
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="upload-attachment">
+                    <input type="file" name="" id="emailAttachment" hidden>
+                    <label for="emailAttachment">
+                      <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.2929 7.36678L8.16621 13.4934C7.41565 14.244 6.39767 14.6657 5.33621 14.6657C4.27475 14.6657 3.25677 14.244 2.50621 13.4934C1.75565 12.7429 1.33398 11.7249 1.33398 10.6634C1.33398 9.60199 1.75565 8.584 2.50621 7.83344L8.63288 1.70678C9.13325 1.2064 9.81191 0.925293 10.5195 0.925293C11.2272 0.925293 11.9058 1.2064 12.4062 1.70678C12.9066 2.20715 13.1877 2.8858 13.1877 3.59344C13.1877 4.30108 12.9066 4.97973 12.4062 5.48011L6.27288 11.6068C6.02269 11.857 5.68336 11.9975 5.32954 11.9975C4.97572 11.9975 4.6364 11.857 4.38621 11.6068C4.13602 11.3566 3.99547 11.0173 3.99547 10.6634C3.99547 10.3096 4.13602 9.9703 4.38621 9.72011L10.0462 4.06678" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg> 
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="modal-cancel-btn" data-bs-dismiss="modal">cancel</button>
+              <button type="button" class="modal-close-btn">Disqualify</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- send emaill modal  -->
 
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
