@@ -171,6 +171,59 @@
         gap: size(20);
       }
 
+      .resumebox {
+        @include border(solid,1,$headerborder);
+        margin: size(14) size(18);
+        @include radius(10);
+
+        @include breakpoint(mobile576) {
+          margin: size(25) size(30);
+
+        }
+
+        &-header {
+          @include flex-between;
+          @include border-single(bottom,solid,1,$headerborder);
+          padding: size(16) size(20);
+
+          .header-left {
+          
+            .title {
+              color: $headingText;
+              @include font($primaryFont,14,medium,normal,20);
+
+            }
+          }
+          .header-right {
+            @include flex-center-vert;
+            gap: size(10);
+            
+            span {
+             @include border(solid,1,$headerborder);
+             @include square(30);
+             @include flex-center;
+             @include radius(7);
+             @include transitionsbackground;
+              @include hover {
+                background: darken($white,10%);
+              }
+
+            }
+
+          }
+        }
+
+        &-body {
+
+          object {
+           @include w100;
+           background: transparent;
+           min-height: 100vh;
+           border: none;
+          }
+        }
+      }
+
       .hiring-pipeline {
         padding: size(14) size(18);
 
