@@ -285,6 +285,16 @@
                     }
                   }
                 }
+
+                &.border-l-yellow {
+                  border-left-color: $orange;
+                }
+                &.border-l-primary {
+                  border-left-color: $primary;
+                }
+                &.border-l-danger {
+                  border-left-color: $danger;
+                }
               }
 
             }
