@@ -1411,4 +1411,243 @@
       }
     }
   }
+
+  .reportcontent {
+  
+    &-header {
+      border-color: $lightDark;
+  
+      .titlebox {
+        .title {
+          color: $white;
+        }
+      }
+  
+      .inputdate {
+        .inputlabel {
+          color: $white;
+        }
+  
+        .inputfield {
+          @include setBgColor(transparent, $headingText);
+          border-color: $lightDark;
+          @include radius(8);
+          font-size: size(12);
+          font-weight: 400;
+          padding: size(4) size(8);
+          height: size(38);
+          @include transitionsall;
+          max-width: 80%;
+          position: relative;
+          z-index: 100;
+          cursor: pointer;
+          @include transitionsall;
+
+          &:focus {
+            border-color: $primary;
+          }
+
+          &::placeholder {
+            color: $textSecondary;
+          }
+        }
+  
+        .icon {
+          position: absolute;
+          top: 50%;
+          right: size(20);
+          @include translateY(-50%);
+          @include square(20);
+          @include flex-center;
+          overflow: hidden;
+          z-index: 0;
+  
+          svg {
+            @include wh100;
+          }
+        }
+  
+        .error {
+          position: absolute;
+          top: 102%;
+          left: 18%;
+          @include w100;
+          display: none;
+  
+          &-message {
+            color: $danger;
+            font-size: size(11);
+            font-weight: 500;
+          }
+        }
+  
+        &.errorfield {
+          .error {
+            display: block;
+          }
+        }
+      }
+  
+      .selectinput {
+        position: relative;
+  
+        .inputlabel {
+          color: $white;
+        }
+  
+        .nice-select {
+          @include setBgColor(transparent, $textSecondary);
+          border-color: $lightDark;
+  
+          .nice-select-dropdown {
+            background: transparent;
+          }
+  
+          &:focus {
+            border-color: $primary !important;
+            background: transparent;
+          }
+  
+          &::after {
+            top: 30%;
+            transform: rotate(0) translateY(50%) !important;
+          }
+  
+          &.open {
+            &::after {
+              transform: rotateX(180deg) !important;
+            }
+          }
+        }
+  
+        .error {
+          position: absolute;
+          top: 102%;
+          left: 32%;
+          @include w100;
+          display: none;
+  
+          &-message {
+            color: $danger;
+            font-size: size(11);
+            font-weight: 500;
+          }
+        }
+  
+        &.errorfield {
+          .error {
+            display: block;
+          }
+        }
+      }
+  
+      .btn-generate {
+        @include setBgColor($primary, $white);
+        @include radius(8);
+        @include flex-center;
+        font-size: size(12);
+        font-weight: 600;
+        padding: size(12) size(30);
+        text-align: center;
+        @include transitionsall;
+  
+        @include hover {
+          @include setBgColor(darken($primary, 10%), $white);
+        }
+      }
+    }
+    
+    .dataTables_wrapper {
+      .dataTables_info {
+        background: $darkPrimary;
+        border-color: $lightDark;
+        color: $white;
+      }
+  
+      .dt-buttons {
+        background: $darkPrimary;
+        border-color: $lightDark;
+  
+        .dt-button {
+          color: $textPrimary;
+          border-color: $textPrimary;
+  
+          span {
+            color: inherit;
+            font: inherit;
+          }
+        }
+      }
+  
+      .table {
+        thead {
+          background: $darkPrimary;
+  
+          tr {
+            th {
+              border-color: $lightDark;
+              color: $white;
+            }
+          }
+        }
+        
+        tbody {
+          background: $darkPrimary;
+  
+          tr {
+            td {
+              border-color: $lightDark;
+              color: $white;
+            }
+          }
+  
+          .emptytable {
+            background: $darkPrimary;
+  
+            .emptydata {
+              .text {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+  
+      .table.dataTable.no-footer {
+        border-bottom: 0;
+      }
+  
+      .bottom {
+        margin-top: size(30);
+  
+        .dataTables_length {
+          label {
+            color: $white;
+            font-size: size(12);
+          }
+        }
+
+        .dataTables_length select {
+          background: $darkPrimary;
+          color: $white;
+        }
+      }
+  
+      .dataTables_paginate {
+        .previous,
+        .next {
+          color: $white;
+    
+          &:hover:not(.disabled) {
+            background: $primary;
+            color: $white !important;
+          }
+
+          &.disabled {
+            color: $textSecondary !important;
+          }
+        }
+      }
+    }
+  }
 }

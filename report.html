@@ -17,12 +17,10 @@
   <!-- DATA TABLE  -->
   <link rel="stylesheet" href="assets/css/datatable/datatable.css">
   <link rel="stylesheet" href="assets/css/datatable/buttons.dataTables.min.css">
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="assets/css/style.min.css" />
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
-
-  
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/css/style.min.css" />  
 </head>
 
 <body>
@@ -909,95 +907,409 @@
 
     <!-- REPORT-CONTENT START -->
     <section class="reportcontent">
-      <table id="tablereport" class="table table-responsive w-100">
-        <thead>
-          <tr>
-            <th>Job list</th>
-            <th>Date posted</th>
-            <th>Job status</th>
-            <th>Total Applicant</th>
-            <th>Salary (Range)</th>
-            <th>Hired</th>
-          </tr>
-        </thead>
+      <div class="reportcontent-header">
+        <div class="row align-items-center">
+          <div class="col-lg-2">
+            <div class="titlebox">
+              <h4 class="title">Generate Report</h4>
+            </div>
+          </div>
 
-        <tbody>
-          <!-- EMPTY-DATA -->
-          <!-- <tr>
-            <td colspan="6">
-              <div class="emptydata">
-                <p class="emptydata-text">Select department and date to show data</p>
+          <div class="col-lg-10">
+            <div class="row g-3">
+              <div class="col-lg-4">
+                <!-- ADD CLASS errorfield for validation -->
+                <div class="d-flex align-items-center gap-3 selectinput">
+                  <label for="department" class="inputlabel">Department</label>
+                  <select id="department">
+                    <option value="daily">Select department</option>
+                    <option value="design">Design</option>
+                    <option value="development">Development</option>
+                  </select>
+                  <div class="error">
+                    <p class="error-message">This field is required</p>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr> -->
 
-          <tr>
-            <td>Junior Product Designer</td>
-            <td>21 November, 2022</td>
-            <td>
-              <span class="jobstatus active">Active</span>
-            </td>
-            <td>27</td>
-            <td>25000 - 30000 bdt</td>
-            <td>27</td>
-          </tr>
+              <div class="col-lg-3">
+                <!-- ADD CLASS errorfield for validation -->
+                <div class="d-flex align-items-center gap-2 inputdate">
+                  <label for="fromdate" class="inputlabel"> From </label>
+                  
+                  <!-- icon -->
+                  <div class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.25 3.125H3.75C3.40482 3.125 3.125 3.40482 3.125 3.75V16.25C3.125 16.5952 3.40482 16.875 3.75 16.875H16.25C16.5952 16.875 16.875 16.5952 16.875 16.25V3.75C16.875 3.40482 16.5952 3.125 16.25 3.125Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.75 1.875V4.375" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.25 1.875V4.375" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M3.125 6.875H16.875" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                      
+                  <input type="text" id="fromdate" class="inputfield" placeholder="Select a date" autocomplete="off">
+                  <div class="error">
+                    <p class="error-message">Date is required</p>
+                  </div>
+                </div>
+              </div>
 
-          <tr>
-            <td>Senior Product Designer</td>
-            <td>22 November, 2022</td>
-            <td>
-              <span class="jobstatus holdon">On Hold</span>
-            </td>
-            <td>2</td>
-            <td>40000 bdt</td>
-            <td>2</td>
-          </tr>
+              <div class="col-lg-3">
+                <!-- ADD CLASS errorfield for validation -->
+                <div class="d-flex align-items-center gap-3 inputdate">
+                  <label for="todate" class="inputlabel"> To </label>
+                  
+                  <!-- icon -->
+                  <div class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.25 3.125H3.75C3.40482 3.125 3.125 3.40482 3.125 3.75V16.25C3.125 16.5952 3.40482 16.875 3.75 16.875H16.25C16.5952 16.875 16.875 16.5952 16.875 16.25V3.75C16.875 3.40482 16.5952 3.125 16.25 3.125Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.75 1.875V4.375" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.25 1.875V4.375" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M3.125 6.875H16.875" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                      
+                  <input type="text" id="todate" class="inputfield" placeholder="Select a date" autocomplete="off">
+                  
+                  <div class="error">
+                    <p class="error-message">Date is required</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-2">
+                <button type="button" class="btn-generate">Generate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <tr>
-            <td>Junior Frontend Developer</td>
-            <td>23 November, 2022</td>
-            <td>
-              <span class="jobstatus closed">Closed</span>
-            </td>
-            <td>3</td>
-            <td>35000 - 40000 bdt</td>
-            <td>3</td>
-          </tr>
+      <div class="reportcontent-body">
+        <table id="tablereport" class="table table-responsive w-100">
+          <thead>
+            <tr>
+              <th>Job list</th>
+              <th>Date posted</th>
+              <th>Job status</th>
+              <th>Total Applicant</th>
+              <th>Salary (Range)</th>
+              <th>Hired</th>
+            </tr>
+          </thead>  
 
-          <tr>
-            <td>Junior Product Designer</td>
-            <td>24 November, 2022</td>
-            <td>
-              <span class="jobstatus active">Active</span>
-            </td>
-            <td>7</td>
-            <td>25000 - 30000 bdt</td>
-            <td>7</td>
-          </tr>
+          <tbody>
+            <tr class="emptytable">
+              <td></td>
+              <td></td>
+              <td>
+                <div class="emptydata">
+                  <p class="text">
+                    Select department and date to show data
+                  </p>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
 
-          <tr>
-            <td>Senior Product Designer</td>
-            <td>25 November, 2022</td>
-            <td>
-              <span class="jobstatus holdon">On Hold</span>
-            </td>
-            <td>12</td>
-            <td>40000 bdt</td>
-            <td>12</td>
-          </tr>
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
 
-          <tr>
-            <td>Junior Frontend Developer</td>
-            <td>26 November, 2022</td>
-            <td>
-              <span class="jobstatus closed">Closed</span>
-            </td>
-            <td>6</td>
-            <td>35000 - 40000 bdt</td>
-            <td>6</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+  
+            <tr>
+              <td>Senior Product Designer</td>
+              <td>22 November, 2022</td>
+              <td>
+                <span class="jobstatus holdon">
+                  <span class="icon"></span>
+                  <span class="text">On Hold</span>
+                </span>
+              </td>
+              <td>2</td>
+              <td>40000 bdt</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Junior Product Designer</td>
+              <td>21 November, 2022</td>
+              <td>
+                <span class="jobstatus active">
+                  <span class="icon"></span>
+                  <span class="text">Active</span>
+                </span>
+              </td>
+              <td>27</td>
+              <td>25000 - 30000 bdt</td>
+              <td>27</td>
+            </tr>
+  
+            <tr>
+              <td>Junior Frontend Developer</td>
+              <td>23 November, 2022</td>
+              <td>
+                <span class="jobstatus closed">
+                  <span class="icon"></span>
+                  <span class="text">Closed</span>
+                </span>
+              </td>
+              <td>3</td>
+              <td>35000 - 40000 bdt</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
     <!-- REPORT-CONTENT EBD -->
 
@@ -1014,6 +1326,8 @@
   <script src="assets/js/contentloader/contentloader.js"></script>
   <!-- nice select -->
   <script src="assets/js/nice-select/nice-select2.js"></script>
+  <!-- REPORT SELECT -->
+  <script src="assets/js/nice-select/reportselect.js"></script>
   <script src="assets/js/jquery/jquery.min.js" ></script>
   <script src="assets/js/datatable/jquery.dataTables.min.js"></script>
   <script src="assets/js/datatable/dataTables.buttons.min.js"></script>
@@ -1024,6 +1338,8 @@
   <script src="assets/js/datatable/buttons.html5.min.js"></script>
   <!-- REPORT-TABLE JS -->
   <script src="assets/js/tables/report-table.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="assets/js/report.js"></script>
 </body>
 
 </html>

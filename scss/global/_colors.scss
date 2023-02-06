@@ -10,6 +10,7 @@ $blue: hsl(214, 100%, 57%); //#2684FF
 // BACKGROUND-COLORS
 $success: hsl(152, 82%, 39%); //#12B76A
 $successlight:hsla(144, 54%, 52%, 0.1); //rgba(65, 198, 118, 0.1);
+$successstatusbg: hsl(152, 100%, 93%); //#DBFFEE
 $danger: hsl(4, 86%, 58%); //#F04438
 $offcanvasbg:hsl(214, 100%, 99%); //#F8FBFF
 $primaryLight:hsl(226, 100%, 94%); //#E1E8FF
@@ -19,6 +20,8 @@ $electriccyan:hsl(187, 54%, 52%); //#41B6C6
 $electriccyanlight: hsla(187, 54%, 52%, 0.102); // rgba(65, 182, 198, 0.1);
 $orange:hsl(14, 100%, 67%); //#FF8058
 $orangeLight:hsla(14, 100%, 67%, 0.1); //rgba(255, 128, 88, 0.1)
+$holdstatusbg: hsl(0, 0%, 93%); //#EDEDED
+$inactivestatusbg: hsl(3, 100%, 96%); //#FFEBEA
 
 // TEXT-COLORS
 $darkText:hsl(220, 43%, 11%); //#101828
