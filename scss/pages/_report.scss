@@ -1,0 +1,14 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.reportcontent {
+  .table {
+    thead {
+      background: red;
+    }
+    
+    tbody {
+      background: $white;
+    }
+  }
+}
