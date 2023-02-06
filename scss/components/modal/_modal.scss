@@ -443,7 +443,56 @@
   }
 }
 .sendemail-modal {
+  .modal {
 
+    &-header {
+      @include border-single(bottom, solid, 1, $headerborder);
+      margin: 0 5%;
+
+      .modal-title {
+        color: $headingText;
+        @include font($primaryFont, 16, medium, normal, 25);
+      }
+
+    }
+
+    &-footer {
+      gap: size(10);
+      margin: 0 5%;
+      .modal-discard-btn {
+        padding: size(10) size(30);
+        @include border(solid, 1, $headerborder);
+        @include radius(7);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        @include hover {
+          @include setBgColor(darken($white, 5%), $textPrimary);
+        }
+      }
+
+      .modal-save-btn {
+        padding: size(10) size(30);
+        @include setBgColor($success, $white);
+        @include radius(7);
+        @include border(solid, 1, $success);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        
+        @include hover {
+          @include setBgColor(darken($success, 10%), $white);
+        }
+
+      }
+    }
+  }
   .custom-email {
     @include border(solid,1,$headerborder);
     @include radius(10);
@@ -451,30 +500,111 @@
     &-fromto {
       @include border-single(bottom,solid,1,$headerborder);
       padding: size(20) size(14);
+      @include flex-column;
+      gap: size(8);
+      @include font($primaryFont,12,normal,normal,16);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont,14,normal,normal,16);
+
+      }
     }
     &-subject {
       @include border-single(bottom,solid,1,$headerborder);
       padding: size(12) size(14);
       @include flex-between;
+      align-items: center;
 
+      .left {
+        display: flex;
+        align-items: center;
+        gap: size(8);
+        flex: 1;
+
+        
+      }
+
+      .right {
+         .dropdown {
+
+          &-menu {
+              padding: size(12);
+              border: size(1) solid $headerborder;
+              box-shadow: $box-shadow-1;
+              @include radius(8);
+          }
+
+          &-item {
+              padding: size(8) size(10);
+              @include transitionsall;
+              @include font($primaryFont, 13, normal, normal, 18);
+              @include radius(6);
+              user-select: none;
+              color: $textPrimary;
+              @include w100;
+
+              @include hover {
+                  background: $headerborder;
+              }
+
+          }
+      }
+      }
     }
     &-writting {
 
       .attachment-list {
         @include flex-between;
         @include border(solid,1,$headerborder);
-        margin: size(3) size(14);
+        margin: size(3) size(8);
         padding: size(10);
         @include radius(8);
-
+        @include font($primaryFont, 14, normal, normal, 20);
 
         .right {
           @include flex;
           align-items: center;
           gap: size(8);
+
+          .progressbar {
+
+          }
+          .cancel-icon {
+            cursor: pointer;
+            svg {
+              path {
+                @include transitionsall;
+              }
+              @include hover {
+                path {
+                  stroke: $danger;
+                }
+              }
+            }
+          }
+          .failed-text {
+            color: $danger;
+            @include font($primaryFont, 10, normal, normal, 16);
+
+
+          }
+        }
+
+        &.uploading {
+
+          .left {
+            .name {
+              color: #D0D5DD;
+            }
+          }
         }
       }
     }
+
+    .upload-attachment {
+      padding: size(10) size(14);
+    }
+
+
   }
 }
 // modal darkmode 

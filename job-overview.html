@@ -22,6 +22,12 @@
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
 
   <style>
+     .girlLookAtThatBody{
+        overflow-y:inherit !important;
+      }
+  </style>
+
+  <style>
     
   </style>
   
@@ -4159,7 +4165,7 @@
 
     <!-- send emaill modal  -->
     <div class="sendemail-modal">
-      <div class="modal fade show" id="sendEmailModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" style="display: block;">
+      <div class="modal fade" id="sendEmailModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
@@ -4173,7 +4179,7 @@
                 </span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body girlLookAtThatBody">
               <div class="custom-email">
 
                 <div class="custom-email-fromto">
@@ -4183,14 +4189,25 @@
                 <div class="custom-email-subject">
                   <div class="left">
                     <span>Subject :</span>
-                    <input type="text" placeholder="Your subject" class="border">
+                    <input type="text" placeholder="Your subject" class="subjectinput">
                   </div>
                   <div class="right">
-                    <span>Insert Template </span>
+                    <div class="dropdown">
+                    
+                      <span class="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Insert template
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1" >
+                        <li><a class="dropdown-item" href="#">Bulk Rejection</a></li>
+                        <li><a class="dropdown-item" href="#">Reschedule</a></li>
+                        <li><a class="dropdown-item" href="#">Hired</a></li>
+                      </ul>
+                    </div>
+
                   </div>
                 </div>
                 <div class="custom-email-writting">
-                  <input type="text" name="" id="" placeholder="Write a message ">
+                  <textarea type="text" name="" id="" placeholder="Write a message " class="emailinput"></textarea>
                   <!-- uploading time  -->
                   <div class="attachment-list uploading">
                     <div class="left">
@@ -4204,11 +4221,11 @@
                     </div>
                     <div class="right">
 
-                      <div class="progressbar">
-                        <progress value="70" max="100">75%</progress>
-                      </div>
+                    <div class="progress-wrapper mt-1">
+                      <progress value="70" max="100"></progress>
+                    </div>
 
-                      <div class="cancel-icon">
+                      <div class="cancel-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="remove">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
                           <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
@@ -4232,14 +4249,14 @@
                     </div>
                     <div class="right">
                       <span class="failed-text">Upload failed</span>
-                      <span class="refresh-icon">
+                      <span class="refresh-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="refresh">
                         <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 2.97088C9.49154 2.97088 11.9167 5.41889 11.9167 8.43866C11.9167 11.4584 9.49154 13.9064 6.5 13.9064C3.50846 13.9064 1.08333 11.4584 1.08333 8.43866C1.08333 7.62349 1.2597 6.8514 1.5755 6.15787C1.70044 5.88349 1.58137 5.55883 1.30956 5.43271C1.03774 5.30659 0.716109 5.42678 0.591169 5.70116C0.211459 6.53503 0 7.46267 0 8.43866C0 12.0624 2.91015 15 6.5 15C10.0899 15 13 12.0624 13 8.43866C13 4.81494 10.0899 1.87733 6.5 1.87733V2.97088Z" fill="#667085"/>
                           <path d="M6.5 4.5743V0.273912C6.5 0.0421223 6.23219 -0.0844998 6.05578 0.0638882L3.49967 2.21408C3.36974 2.32338 3.36974 2.52483 3.49967 2.63413L6.05578 4.78432C6.23218 4.93271 6.5 4.80609 6.5 4.5743Z" fill="#667085"/>
                         </svg>
                           
                       </span>
-                      <div class="cancel-icon">
+                      <div class="cancel-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="remove">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
                           <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
@@ -4263,7 +4280,7 @@
                       <span class="name">istiak_tushar.pdf</span>
                     </div>
                     <div class="right">
-                      <div class="cancel-icon">
+                      <div class="cancel-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="remove">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="#667085" stroke-miterlimit="10"/>
                           <path d="M11.25 6.75L6.75 11.25" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
@@ -4277,7 +4294,7 @@
 
                   <div class="upload-attachment">
                     <input type="file" name="" id="emailAttachment" hidden>
-                    <label for="emailAttachment">
+                    <label for="emailAttachment" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="upload attachment">
                       <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.2929 7.36678L8.16621 13.4934C7.41565 14.244 6.39767 14.6657 5.33621 14.6657C4.27475 14.6657 3.25677 14.244 2.50621 13.4934C1.75565 12.7429 1.33398 11.7249 1.33398 10.6634C1.33398 9.60199 1.75565 8.584 2.50621 7.83344L8.63288 1.70678C9.13325 1.2064 9.81191 0.925293 10.5195 0.925293C11.2272 0.925293 11.9058 1.2064 12.4062 1.70678C12.9066 2.20715 13.1877 2.8858 13.1877 3.59344C13.1877 4.30108 12.9066 4.97973 12.4062 5.48011L6.27288 11.6068C6.02269 11.857 5.68336 11.9975 5.32954 11.9975C4.97572 11.9975 4.6364 11.857 4.38621 11.6068C4.13602 11.3566 3.99547 11.0173 3.99547 10.6634C3.99547 10.3096 4.13602 9.9703 4.38621 9.72011L10.0462 4.06678" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg> 
@@ -4289,14 +4306,15 @@
              
             </div>
             <div class="modal-footer">
-              <button type="button" class="modal-cancel-btn" data-bs-dismiss="modal">cancel</button>
-              <button type="button" class="modal-close-btn">Disqualify</button>
+              <button type="button" class="modal-discard-btn" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="modal-save-btn">Send</button>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- send emaill modal  -->
+    
 
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
