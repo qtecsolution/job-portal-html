@@ -19,12 +19,14 @@
   <!-- CHOSEN CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
   <!-- TIME PICKER -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"></head>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" />
+  <!-- DATE PICKER  -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css" />
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
 
-
+</head>
 
   <style>
     #DataTables_Table_0_filter {
@@ -4319,7 +4321,7 @@
 
     <!-- create event modal  -->
     <div class="create-event-modal">
-      <div class="modal fade " id="createEventModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" >
+      <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true"  >
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -4376,25 +4378,23 @@
 
                 <div class="col-3">
                   <div class="inputbox ">
-                    <input type="date" id="email" class="inputfield" placeholder="Enter your email" autocomplete="off" required>
+                    <input type="text" id="date" class="inputfield datepicker" placeholder="Enter date" autocomplete="off" required>
                     <div class="error">
-                      <p class="error-message"> Email is required</p>
+                      <p class="error-message"> date is required</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-5">
-
-                  
-                  <div class="time-wrapper d-flex gap-1 ">
-                    <div class="inputbox w-50 ">
+                <div class="  col-5">
+                  <div class="time-wrapper">
+                    <div class="inputbox ">
                       <input type="text" id="email" class="inputfield timepicker" placeholder="start time" autocomplete="off" required>
                       <div class="error">
                         <p class="error-message"> Starttime  is required</p>
                       </div>
                     </div>
   
-                    <div class="inputbox w-50 ">
+                    <div class="inputbox">
                       <input type="text" id="email" class="inputfield timepicker" placeholder="End time" autocomplete="off" required>
                       <div class="error">
                         <p class="error-message"> Email is required</p>
@@ -4523,7 +4523,7 @@
               </div>
               <!-- invitation box    -->
 
-              <div class="row g-2 my-2">
+              <div class="row g-2 my-2 align-items-center">
 
                 <div class="col-1 d-flex align-items-start justify-content-center">
                   <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="invitation">
@@ -4531,8 +4531,6 @@
                       <path d="M1 3H17V14.3333C17 14.5101 16.9298 14.6797 16.8047 14.8047C16.6797 14.9298 16.5101 15 16.3333 15H1.66667C1.48986 15 1.32029 14.9298 1.19526 14.8047C1.07024 14.6797 1 14.5101 1 14.3333V3Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 3L9 10L1 3" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                      
-                      
                   </span>
                 </div>
 
@@ -4552,13 +4550,38 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="modal-discard-btn" data-bs-dismiss="modal">Discard</button>
-              <button type="button" class="modal-save-btn">Send</button>
+              <button type="button" class="modal-save-btn" data-bs-toggle="modal" data-bs-target="#modal2">Next</button>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- create event modal  -->
+
+    <!-- Modal 2 -->
+
+    <div class="preview-event-modal">
+      <div class="modal fade" id="modal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">New event for Istiak Tushar</h3>
+              <h3 class="modal-step">STEP 2 OF 2</h3>
+            </div>
+            <div class="modal-body">
+              This is Modal 2.
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="modal-discard-btn" data-bs-toggle="modal" data-bs-target="#createEventModal">preview</button>
+              <button type="button" class="modal-save-btn bg-primary" data-bs-toggle="modal" data-bs-target="#modal2">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
     
 
   <!-- BOOTSTRAP JS -->
@@ -4579,6 +4602,8 @@
 
     <!-- Time picker  -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <!-- date picker  -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script>
     $(document).ready(function () {
       var table = $('.dataTable').DataTable({
@@ -4622,6 +4647,8 @@
             scrollbar: true,
             zindex: 9999999
         });
+
+     $('.datepicker').datepicker()   
 
     });
 

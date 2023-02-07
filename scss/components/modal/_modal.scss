@@ -608,7 +608,8 @@
   }
 }
 
-.create-event-modal {
+.create-event-modal,
+.preview-event-modal {
   .modal {
 
     &-header {
@@ -633,6 +634,78 @@
 
 
     }
+
+    &-body {
+
+      .time-wrapper {
+         @include flex;
+         align-items: center;
+         gap: size(10);
+         flex-wrap: wrap;
+          .inputbox {
+            width: 44%;
+          }
+      }
+
+      .location {
+        @include flex;
+        align-items: center;
+        gap: size(4);
+        span {
+          color: $primary;
+          @include font($primaryFont,14,normal,normal,4);
+          display: inline-block;
+          margin-top: size(1);
+        }
+      } 
+
+      .send-invitation {
+        @include border(solid,1,$headerborder);
+        @include flex-center-vert;
+        gap: size(10);
+        padding: size(14);
+        @include radius(8);
+      }
+    }
+
+    &-footer {
+      gap: size(10);
+      margin: 0 5%;
+      .modal-discard-btn {
+        padding: size(10) size(30);
+        @include border(solid, 1, $headerborder);
+        @include radius(7);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        @include hover {
+          @include setBgColor(darken($white, 5%), $textPrimary);
+        }
+      }
+
+      .modal-save-btn {
+        padding: size(10) size(30);
+        @include setBgColor($success, $white);
+        @include radius(7);
+        @include border(solid, 1, $success);
+        @include transitionsall;
+        @include font($primaryFont, 12, normal, normal, 17);
+        @include breakpoint(mobile576) {
+         @include font($primaryFont, 14, normal, normal, 17);
+
+        }
+        
+        @include hover {
+          @include setBgColor(darken($success, 10%), $white);
+        }
+
+      }
+    }
+
+
   }
 }
 
