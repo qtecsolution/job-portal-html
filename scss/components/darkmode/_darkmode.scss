@@ -1650,4 +1650,44 @@
       }
     }
   }
+
+  .templateheader {
+    background: $darkPrimary;
+    border-color: $lightDark;
+  
+    .btn-back {
+      @include flex-center-vert;
+  
+      .icon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+      }
+  
+      .text {
+        color: $textPrimary;
+        font-size: size(16);
+  
+        @include breakpoint(mobile768) {
+          font-size: size(18);
+        }
+      }
+  
+      @include hover {
+        .icon {  
+          svg {
+            @include wh100;
+    
+            path {
+              stroke: $darkText;
+            }
+          }
+        }
+  
+        .text {
+          color: $darkText;
+        }
+      }
+    }
+  }
 }
