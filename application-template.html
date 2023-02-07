@@ -11,21 +11,324 @@
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
   <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
   <link rel="stylesheet" href="assets/css/style.min.css" />
 </head>
 <body>
   <!-- HEADER-SECTION START -->
-  <header class="templateheader">
-    <button class="btn-back">
+  <header class="templateheader sticky-top">
+    <a href="job-template.html" class="btn-back">
       <span class="icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15 18L9 12L15 6" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
       <span class="text">Back</span>
-    </button>
+    </a>
   </header>
   <!-- HEADER-SECTION END -->
-  
+
+  <!-- APPLICATION-DETAILS START -->
+  <main class="templatemain">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-md-auto">
+        <div class="templatemain-content">
+          <div class="templatemain-top">
+            <div class="row">
+              <div class="col-md-9 mx-auto">
+                <div class="details gap-4">
+                  <figure class="logo">
+                    <img src="assets/images/company/qtec-logo.svg" alt="company-logo">
+                  </figure>
+
+                  <h4 class="details-title">Senior Product Designer</h4>
+
+                  <ul class="detailslist">
+                    <li class="detailslist-item">
+                      <span class="icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#blockicon)">
+                            <path d="M1.41699 12.041L8.50033 15.5827L15.5837 12.041M1.41699 8.49935L8.50033 12.041L15.5837 8.49935M8.50033 1.41602L1.41699 4.95768L8.50033 8.49935L15.5837 4.95768L8.50033 1.41602Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="blockicon">
+                              <rect width="17" height="17" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span class="text">02</span>
+                    </li>
+
+                    <li class="detailslist-item">
+                      <span class="icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clockicon)">
+                            <path d="M8.50033 15.5827C12.4123 15.5827 15.5837 12.4114 15.5837 8.49935C15.5837 4.58733 12.4123 1.41602 8.50033 1.41602C4.58831 1.41602 1.41699 4.58733 1.41699 8.49935C1.41699 12.4114 4.58831 15.5827 8.50033 15.5827Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.5 4.25V8.5L11.3333 9.91667" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clockicon">
+                              <rect width="17" height="17" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span class="text">full time</span>
+                    </li>
+
+                    <li class="detailslist-item">
+                      <span class="icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="pricicon" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="17" height="17">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.58301 1.58398H17.4185V17.4181H1.58301V1.58398Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#pricicon)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66467 15.8928C9.13175 16.3488 9.88384 16.3432 10.3478 15.8769L10.9193 15.3069C11.3627 14.8644 11.9754 14.6118 12.6 14.6118H13.4155C14.0757 14.6118 14.6125 14.0751 14.6125 13.4156V12.601C14.6125 11.9669 14.8579 11.3708 15.306 10.9219L15.876 10.3511C16.1079 10.1183 16.2322 9.81672 16.2314 9.49689C16.2306 9.17785 16.1048 8.87781 15.8775 8.65139L15.3068 8.07981C14.8579 7.62777 14.6125 7.03243 14.6125 6.39831V5.58527C14.6125 4.92502 14.0757 4.38827 13.4155 4.38827H12.6016C11.9675 4.38827 11.3714 4.14206 10.9225 3.69635L10.3509 3.12397C9.87513 2.65293 9.11592 2.65531 8.65121 3.12318L8.082 3.69397C7.62759 4.14285 7.03146 4.38827 6.39971 4.38827H5.58509C4.92563 4.38906 4.38888 4.92581 4.38888 5.58527V6.39672C4.38888 7.03085 4.14267 7.62697 3.69617 8.07664L3.13409 8.63952C3.12855 8.64585 3.123 8.6506 3.11746 8.65614C2.65275 9.12402 2.65513 9.88322 3.123 10.3479L3.69459 10.9195C4.14267 11.3692 4.38888 11.9653 4.38888 12.5994V13.4156C4.38888 14.0751 4.92484 14.6118 5.58509 14.6118H6.39813C7.03304 14.6126 7.62917 14.8588 8.07804 15.3061L8.64884 15.8753C8.65359 15.8809 8.65913 15.8864 8.66467 15.8928ZM9.49866 17.4184C8.89145 17.4184 8.28425 17.1888 7.81954 16.7281C7.8132 16.7217 7.80687 16.7154 7.80054 16.7083L7.23845 16.147C7.01441 15.9245 6.71516 15.801 6.39691 15.8002H5.58466C4.2697 15.8002 3.20095 14.7307 3.20095 13.4165V12.6003C3.20095 12.2821 3.07666 11.9836 2.85341 11.7588L2.2842 11.1904C1.35954 10.2705 1.34845 8.77262 2.2565 7.83846C2.26362 7.83133 2.27075 7.82421 2.27787 7.81708L2.8542 7.23917C3.07666 7.01512 3.20095 6.71508 3.20095 6.39762V5.58617C3.20095 4.272 4.2697 3.20246 5.58387 3.20167H6.39929C6.71675 3.20167 7.016 3.07737 7.2432 2.85333L7.80925 2.28571C8.7347 1.35392 10.2476 1.34917 11.181 2.277L11.7597 2.85571C11.9837 3.07817 12.283 3.20167 12.6012 3.20167H13.415C14.73 3.20167 15.7995 4.27121 15.7995 5.58617V6.39921C15.7995 6.71667 15.923 7.01671 16.1471 7.24233L16.7155 7.81154C17.166 8.25883 17.4161 8.85654 17.4185 9.49383C17.4209 10.1311 17.1747 10.7304 16.7258 11.1825L16.1455 11.7612C15.923 11.9852 15.7995 12.2837 15.7995 12.6019V13.4165C15.7995 14.7307 14.73 15.8002 13.4158 15.8002H12.5996C12.2861 15.8002 11.9797 15.9269 11.7573 16.1478L11.1889 16.7162C10.7242 17.1841 10.1114 17.4184 9.49866 17.4184Z" fill="#667085"/>
+                          </g>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46562 12.1303C7.31362 12.1303 7.16162 12.0725 7.04604 11.9561C6.81408 11.7242 6.81408 11.3489 7.04604 11.117L11.1152 7.04702C11.3472 6.81506 11.7232 6.81506 11.9552 7.04702C12.1871 7.27897 12.1871 7.65502 11.9552 7.88697L7.88521 11.9561C7.76962 12.0725 7.61762 12.1303 7.46562 12.1303Z" fill="#667085"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4812 12.2708C11.0434 12.2708 10.6855 11.917 10.6855 11.4792C10.6855 11.0414 11.0363 10.6875 11.474 10.6875H11.4812C11.919 10.6875 12.2728 11.0414 12.2728 11.4792C12.2728 11.917 11.919 12.2708 11.4812 12.2708Z" fill="#667085"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.52316 8.31185C7.08537 8.31185 6.72754 7.95797 6.72754 7.52018C6.72754 7.08239 7.07825 6.72852 7.51604 6.72852H7.52316C7.96096 6.72852 8.31483 7.08239 8.31483 7.52018C8.31483 7.95797 7.96096 8.31185 7.52316 8.31185Z" fill="#667085"/>
+                        </svg>
+                      </span>
+                      <span class="text">35k-45k</span>
+                    </li>
+
+                    <li class="detailslist-item">
+                      <span class="icon">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.1875 6.875C8.46375 6.875 7.875 7.46375 7.875 8.18825C7.875 8.912 8.46375 9.5 9.1875 9.5C9.91125 9.5 10.5 8.912 10.5 8.18825C10.5 7.46375 9.91125 6.875 9.1875 6.875M9.1875 10.625C7.8435 10.625 6.75 9.53225 6.75 8.18825C6.75 6.8435 7.8435 5.75 9.1875 5.75C10.5315 5.75 11.625 6.8435 11.625 8.18825C11.625 9.53225 10.5315 10.625 9.1875 10.625" fill="#667085"/>
+                          <mask id="locicon" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="2" width="13" height="15">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2H15.3746V16.625H3V2Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#locicon)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.1875 3.125C6.396 3.125 4.125 5.41775 4.125 8.23475C4.125 11.819 8.343 15.311 9.1875 15.497C10.032 15.3103 14.25 11.8183 14.25 8.23475C14.25 5.41775 11.979 3.125 9.1875 3.125V3.125ZM9.1875 16.625C7.842 16.625 3 12.461 3 8.23475C3 4.79675 5.77575 2 9.1875 2C12.5992 2 15.375 4.79675 15.375 8.23475C15.375 12.461 10.533 16.625 9.1875 16.625V16.625Z" fill="#667085"/>
+                          </g>
+                        </svg>
+                      </span>
+                      <span class="text">Nikunja 2 , Dhaka , Bangladesh</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="templatemain-down">
+            <div class="row">
+              <div class="col-lg-9 mx-auto">
+                <div class="myapplicationform">
+                  <div class="row g-4">
+                    <div class="col-12 mx-auto">
+                      <div class="accordion" id="accordionApplication">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading-1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                              Basic Info
+                            </button>
+                          </h2>
+
+                          <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div class="col-md-6">
+                                  <div class="inputbox">
+                                    <label for="application-fullname" class="inputlabel">
+                                      Full Name*
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="application-fullname"
+                                      placeholder="Enter your full name"
+                                      class="inputfield"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="application-email" class="inputlabel">
+                                      Email*
+                                    </label>
+                                    <input
+                                      type="email"
+                                      id="application-email"
+                                      class="inputfield"
+                                      placeholder="Enter your email address"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="mobile_code" class="inputlabel">
+                                      Phone*
+                                    </label>
+                                    <input
+                                      type="tel"
+                                      id="mobile_code"
+                                      class="inputfield"
+                                      placeholder="Enter your phone number"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="portfoliolink" class="inputlabel">
+                                      Portfolio link
+                                    </label>
+                                    <input
+                                      type="email"
+                                      id="portfoliolink"
+                                      class="inputfield"
+                                      placeholder="Enter your portfolio link"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="inputbox">
+                                    <label class="inputlabel">
+                                      Gender*
+                                    </label>
+                                    
+                                    <div class="genderbox">
+                                      <div class="gendersingle">
+                                        <input type="radio" name="gender" id="male" hidden>
+                                        <label for="male" class="radiolabel">Male</label>
+                                      </div>
+
+                                      <div class="gendersingle">
+                                        <input type="radio" name="gender" id="female" hidden>
+                                        <label for="female" class="radiolabel">Female</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="presentaddress" class="inputlabel">
+                                      Present Address
+                                    </label>
+                                    
+                                    <textarea id="presentaddress" class="inputfield" autocomplete="off" rows="5"></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="permanentaddress" class="inputlabel">
+                                      Present Address
+                                    </label>
+
+                                    <textarea id="permanentaddress" class="inputfield" autocomplete="off" rows="5"></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="inputbox">
+                                    <label for="attachment" class="inputlabel">
+                                      Attachment (CV)
+                                    </label>
+
+                                    <div class="drop-zone">
+                                      <span class="drop-zone__prompt">
+                                        Drag & drop file or browse file Max size 5Mb
+                                      </span>
+                                      <input type="file" name="myFile" class="drop-zone__input" hidden>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading-3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="col-12">
+                      <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-submit">Submit Application</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center">
+            <figure class="logo">
+              <img src="assets/images/logo/logo.svg" alt="site-logo">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT-ICON -->
+    <figure class="righticon">
+      <svg width="125" height="158" viewBox="0 0 125 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M130.761 141H26.3163L12.9996 0H117.444L130.761 141Z" fill="#EAECF0"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53687 154.219C2.65329 156.34 4.4069 158 6.53085 158H38.7741C41.0694 158 42.8939 156.073 42.7681 153.781L40.7611 117.219C40.6353 114.927 42.4598 113 44.7551 113H90.7723C93.0683 113 94.893 111.072 94.7662 108.779L91.0598 41.7791C90.9426 39.659 89.1893 38 87.066 38H34.2271C31.9312 38 30.1064 39.9285 30.2332 42.2209L33.6386 103.779C33.7654 106.072 31.9406 108 29.6447 108H4.22533C1.93002 108 0.10553 109.927 0.231339 112.219L2.53687 154.219Z" fill="#EA7462"/>
+      </svg>
+    </figure>
+
+    <!-- LEFT-ICON -->
+    <figure class="lefticon">
+      <svg width="117" height="158" viewBox="0 0 117 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-13.7607 17H90.6837L104 158H-0.444076L-13.7607 17Z" fill="#EAECF0"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M114.463 3.78076C114.347 1.65999 112.593 0 110.469 0H78.2259C75.9306 0 74.1061 1.9274 74.2319 4.21925L76.2389 40.7808C76.3647 43.0726 74.5402 45 72.2449 45H26.2277C23.9317 45 22.107 46.9285 22.2338 49.2209L25.9402 116.221C26.0574 118.341 27.8107 120 29.934 120H82.7729C85.0688 120 86.8936 118.072 86.7668 115.779L83.3614 54.2209C83.2346 51.9285 85.0594 50 87.3553 50H112.775C115.07 50 116.894 48.0726 116.769 45.7808L114.463 3.78076Z" fill="#93DCDA"/>
+      </svg>
+    </figure>
+  </main>
+  <!-- APPLICATION-DETAILS END -->
+
+  <!-- BOOTSTRAP JS -->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- JQUERY -->
+  <script src="assets/js/jquery/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+  <script>
+    $("#mobile_code").intlTelInput({
+      initialCountry: "bd",
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+    });
+  </script>
+  <script src="assets/js/dragdrop.js"></script>
 </body>
 </html>
