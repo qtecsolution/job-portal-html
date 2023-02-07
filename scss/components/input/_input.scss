@@ -271,6 +271,17 @@
     }
   }
 
+  .event-textarea {
+    background: $bodybg;
+    @include w100;
+    padding: size(12);
+    @include radius(8);
+    @include hideScrollbar;
+    min-height: size(270);
+
+    
+  }
+
 
   
   .darkmode {

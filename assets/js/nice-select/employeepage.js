@@ -8,4 +8,5 @@ const instance = NiceSelect.bind(selectDepartment, {
 const instance2 = NiceSelect.bind(selectRole, {
   searchable: false,
   placeholder: 'select role'
-})
+});
+

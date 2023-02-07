@@ -16,16 +16,13 @@
   <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
   <!-- DATA TABLE  -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <!-- CHOSEN CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css" />
-
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
 
-  <style>
-     .girlLookAtThatBody{
-        overflow-y:inherit !important;
-      }
-  </style>
+
 
   <style>
     
@@ -3367,7 +3364,7 @@
         </div>
         <div class="header-right">
           <div class="right-buttons">
-            <button class="btn-event">
+            <button class="btn-event" data-bs-toggle="modal" data-bs-target="#createEventModal">
               <span class="icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M11.375 2.1875H2.625C2.38338 2.1875 2.1875 2.38338 2.1875 2.625V11.375C2.1875 11.6166 2.38338 11.8125 2.625 11.8125H11.375C11.6166 11.8125 11.8125 11.6166 11.8125 11.375V2.625C11.8125 2.38338 11.6166 2.1875 11.375 2.1875Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
@@ -4314,6 +4311,216 @@
       </div>
     </div>
     <!-- send emaill modal  -->
+
+    <!-- create event modal  -->
+    <div class="create-event-modal">
+      <div class="modal fade " id="createEventModal" tabindex="-1" aria-labelledby="closeModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="title-title">New event for Istiak Tushar</h3>
+              <h3 class="modal-step">STEP 1 OF 2</h3>
+            </div>
+            <div class="modal-body ">
+              <!-- event name  -->
+              <div class="row g-2 my-2 align-items-center ">
+
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="event name">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.5 11.0625C0.5 10.7518 0.75184 10.5 1.0625 10.5H8.9375C9.24816 10.5 9.5 10.7518 9.5 11.0625C9.5 11.3732 9.24816 11.625 8.9375 11.625H1.0625C0.75184 11.625 0.5 11.3732 0.5 11.0625Z"
+                        fill="#667085" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.5 7.6875C0.5 7.37684 0.75184 7.125 1.0625 7.125H13.4375C13.7482 7.125 14 7.37684 14 7.6875C14 7.99816 13.7482 8.25 13.4375 8.25H1.0625C0.75184 8.25 0.5 7.99816 0.5 7.6875Z"
+                        fill="#667085" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.5 4.3125C0.5 4.00184 0.75184 3.75 1.0625 3.75H13.4375C13.7482 3.75 14 4.00184 14 4.3125C14 4.62316 13.7482 4.875 13.4375 4.875H1.0625C0.75184 4.875 0.5 4.62316 0.5 4.3125Z"
+                        fill="#667085" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.5 0.9375C0.5 0.62684 0.75184 0.375 1.0625 0.375H13.4375C13.7482 0.375 14 0.62684 14 0.9375C14 1.24816 13.7482 1.5 13.4375 1.5H1.0625C0.75184 1.5 0.5 1.24816 0.5 0.9375Z"
+                        fill="#667085" />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="col-11">
+                  <div class="inputbox ">
+              
+                    <input type="text" id="event" class="inputfield" placeholder="enter event name " autocomplete="off" required>
+                    <div class="error">
+                      <p class="error-message"> event name is required</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- event time  -->
+              <div class="row g-2 my-2 align-items-center">
+
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="event time">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 16.875C13.5992 16.875 17.125 13.3492 17.125 9C17.125 4.65076 13.5992 1.125 9.25 1.125C4.90076 1.125 1.375 4.65076 1.375 9C1.375 13.3492 4.90076 16.875 9.25 16.875ZM18.25 9C18.25 13.9706 14.2206 18 9.25 18C4.27944 18 0.25 13.9706 0.25 9C0.25 4.02944 4.27944 0 9.25 0C14.2206 0 18.25 4.02944 18.25 9Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.6875 3.375C8.99816 3.375 9.25 3.62684 9.25 3.9375V9.79857L12.9041 11.8866C13.1738 12.0407 13.2675 12.3843 13.1134 12.6541C12.9593 12.9238 12.6157 13.0175 12.3459 12.8634L8.40842 10.6134C8.23316 10.5132 8.125 10.3269 8.125 10.125V3.9375C8.125 3.62684 8.37684 3.375 8.6875 3.375Z" fill="#667085"/>
+                      </svg>
+                      
+                  </span>
+                </div>
+
+                <div class="col-11">
+                  <div class="inputbox ">
+              
+                    <input type="email" id="email" class="inputfield" placeholder="Enter your email" autocomplete="off" required>
+                    <div class="error">
+                      <p class="error-message"> Email is required</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- meeting location  -->
+              <div class="row g-2 my-2 align-items-center">
+
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="event location">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 19H15" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 11C10.6569 11 12 9.65685 12 8C12 6.34315 10.6569 5 9 5C7.34315 5 6 6.34315 6 8C6 9.65685 7.34315 11 9 11Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M16 7.92308C16 14.1538 9 19 9 19C9 19 2 14.1538 2 7.92308C2 6.08696 2.7375 4.32605 4.05025 3.02772C5.36301 1.72939 7.14348 1 9 1C10.8565 1 12.637 1.72939 13.9497 3.02772C15.2625 4.32605 16 6.08696 16 7.92308V7.92308Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="col-11">
+                  <div class="inputbox w-100">
+              
+                    <select id="select-meeting" class="w-100">
+                      <option value="zoom">zoom</option>
+                      <option value="google meet" selected>Google meet</option>
+                    </select>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <!-- meeting link  -->
+              <div class="row g-2 my-2">
+
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                  
+                </div>
+
+                <div class="col-11">
+                  <div class="inputbox ">
+              
+                    <input type="email" id="email" class="inputfield" placeholder="enter meeting link " autocomplete="off" required>
+                    <div class="error">
+                      <p class="error-message"> Meeting link is required</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- applicant list   -->
+              <div class="row g-2 my-2 align-items-center">
+
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Meeting persons">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.125 15.75C17.125 15.75 18.25 15.75 18.25 14.625C18.25 13.5 17.125 10.125 12.625 10.125C8.125 10.125 7 13.5 7 14.625C7 15.75 8.125 15.75 8.125 15.75H17.125ZM8.15014 14.625H17.0999C17.1038 14.6245 17.1092 14.6238 17.1158 14.6227C17.1189 14.6222 17.122 14.6217 17.125 14.6211C17.1234 14.324 16.9373 13.4628 16.2708 12.6853C15.6475 11.958 14.557 11.25 12.625 11.25C10.693 11.25 9.60251 11.958 8.97916 12.6853C8.31273 13.4628 8.12664 14.324 8.12501 14.6211C8.128 14.6217 8.13105 14.6222 8.13417 14.6227C8.14079 14.6238 8.14624 14.6245 8.15014 14.625Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.625 7.875C13.8676 7.875 14.875 6.86764 14.875 5.625C14.875 4.38236 13.8676 3.375 12.625 3.375C11.3824 3.375 10.375 4.38236 10.375 5.625C10.375 6.86764 11.3824 7.875 12.625 7.875ZM16 5.625C16 7.48896 14.489 9 12.625 9C10.761 9 9.25 7.48896 9.25 5.625C9.25 3.76104 10.761 2.25 12.625 2.25C14.489 2.25 16 3.76104 16 5.625Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.05292 10.44C7.63915 10.3076 7.17948 10.2114 6.66957 10.1622C6.41719 10.1378 6.15252 10.125 5.875 10.125C1.375 10.125 0.25 13.5 0.25 14.625C0.25 15.375 0.625 15.75 1.375 15.75H6.11841C5.96001 15.4304 5.875 15.0515 5.875 14.625C5.875 13.4884 6.2994 12.3278 7.10104 11.3582C7.37493 11.027 7.69285 10.718 8.05292 10.44ZM5.78505 11.2505C3.90905 11.2721 2.84277 11.9694 2.22916 12.6853C1.55978 13.4662 1.375 14.3317 1.375 14.625H4.75C4.75 13.449 5.11287 12.2778 5.78505 11.2505Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.9375 6.1875C1.9375 4.32354 3.44854 2.8125 5.3125 2.8125C7.17646 2.8125 8.6875 4.32354 8.6875 6.1875C8.6875 8.05146 7.17646 9.5625 5.3125 9.5625C3.44854 9.5625 1.9375 8.05146 1.9375 6.1875ZM5.3125 3.9375C4.06986 3.9375 3.0625 4.94486 3.0625 6.1875C3.0625 7.43014 4.06986 8.4375 5.3125 8.4375C6.55514 8.4375 7.5625 7.43014 7.5625 6.1875C7.5625 4.94486 6.55514 3.9375 5.3125 3.9375Z" fill="#667085"/>
+                    </svg>
+                      
+                  </span>
+                </div>
+
+                <div class="col-11">
+                  <div class="inputbox">
+                   <select id="meeting-users" multiple>
+                    <option selected>Qtec Career</option>
+                    <option selected>Istiak Tushar (Applicant)</option>
+                    <option>Jisan (Frontend)</option>
+                    <option> Sayeed (Business)</option>
+                    <option>Babor (Laravel )</option>
+                    <option> Rumon (Laravel )</option>
+                    </select>
+                </div>
+                </div>
+
+              </div>
+
+              <!-- writting box  -->
+
+              <div class="row g-2 my-2">
+
+                <div class="col-1 d-flex align-items-start justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="event text">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 11.0625C0.5 10.7518 0.75184 10.5 1.0625 10.5H8.9375C9.24816 10.5 9.5 10.7518 9.5 11.0625C9.5 11.3732 9.24816 11.625 8.9375 11.625H1.0625C0.75184 11.625 0.5 11.3732 0.5 11.0625Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 7.6875C0.5 7.37684 0.75184 7.125 1.0625 7.125H13.4375C13.7482 7.125 14 7.37684 14 7.6875C14 7.99816 13.7482 8.25 13.4375 8.25H1.0625C0.75184 8.25 0.5 7.99816 0.5 7.6875Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 4.3125C0.5 4.00184 0.75184 3.75 1.0625 3.75H13.4375C13.7482 3.75 14 4.00184 14 4.3125C14 4.62316 13.7482 4.875 13.4375 4.875H1.0625C0.75184 4.875 0.5 4.62316 0.5 4.3125Z" fill="#667085"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 0.9375C0.5 0.62684 0.75184 0.375 1.0625 0.375H13.4375C13.7482 0.375 14 0.62684 14 0.9375C14 1.24816 13.7482 1.5 13.4375 1.5H1.0625C0.75184 1.5 0.5 1.24816 0.5 0.9375Z" fill="#667085"/>
+                    </svg>
+                      
+                  </span>
+                </div>
+
+                <div class="col-11">
+                  <textarea name="" class="event-textarea" cols="30" rows="10">Hi Istiak Tushar,
+                                      
+                  Thanks for a great conversation! We really enjoyed learning more about your work experience and how you see your career progressing. We’re excited to invite you to the first interview in our process!
+                  In this 60-minute interview you will talk about values with our team. They will chat with you about what drives you, what you find important, how you approach teamwork and what you value in work and in life. 
+                  
+                  I’m looking forward to hear from you.
+                  
+                  Best,
+                  Sayed Uddin
+                  Designation
+                   Qtec Solution Limited
+                  
+                  </textarea>
+
+                </div>
+              </div>
+              <!-- invitation box    -->
+
+              <div class="row g-2 my-2">
+
+                <div class="col-1 d-flex align-items-start justify-content-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="invitation">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 3H17V14.3333C17 14.5101 16.9298 14.6797 16.8047 14.8047C16.6797 14.9298 16.5101 15 16.3333 15H1.66667C1.48986 15 1.32029 14.9298 1.19526 14.8047C1.07024 14.6797 1 14.5101 1 14.3333V3Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M17 3L9 10L1 3" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                      
+                      
+                  </span>
+                </div>
+
+                <div class="col-5">
+                  <div class="send-invitation">
+                    <label for="send-invite">Send Invitation</label>
+                    <div class="check-box">
+                      <input type="checkbox" id="send-invite">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="modal-discard-btn" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="modal-save-btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- create event modal  -->
     
 
   <!-- BOOTSTRAP JS -->
@@ -4329,6 +4536,8 @@
   <script src="assets/js/nice-select/jobstatus.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <!-- CHOSEN FOR MULTIPLE CUSTOM SELECT  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script> 
   <script>
     $(document).ready( function () {
       var table = $('.dataTable').DataTable({
@@ -4353,7 +4562,9 @@
 
       $('#myInputTextField').keyup(function(){
         table.search($(this).val()).draw() ;
-})
+}) 
+
+$('#meeting-users').chosen();
 } );
 
 
