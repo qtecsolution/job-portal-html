@@ -2,6 +2,7 @@
 @use "../partials" as *; 
 
 .addemployee {
+    overflow-x: scroll;
     &-header {
         @include border-single(bottom, solid, 1, $headerborder);
         padding-bottom: size(20);
@@ -46,7 +47,7 @@
        
         padding: size(20);
         padding-bottom: size(100);
-        overflow-y: scroll;
+        
     }
 }
 

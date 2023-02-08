@@ -82,26 +82,23 @@
 
 } 
 
-#example_filter {
-    display: none !important;
-   
-}
 
-#example {
-    width: 100% !important;
+// hide search 
+.dataTables_filter {
+    display: none;
 }
 
 .table-wrapper {
     @include flex-column;
     margin-top: size(16);
-
     @include breakpoint(tab992) {
         margin-top: size(24);
     }
 
     .table-search {
         position: relative;
-       
+        background-color: green;
+        width: 100%;
 
         .search__icon {
             position: absolute;
@@ -378,17 +375,15 @@
     }
 }
 
-  
+
 
 .darkmode {
     .table-wrapper {
 
         .table-search {
-          
 
-            .search__icon {
-               
-            }
+
+            .search__icon {}
 
             input {
                 background: $shade-1;
@@ -439,14 +434,16 @@
 
             td {
                 border-color: rgba(248, 250, 252, .08);
-                color:darken($white,20%);
+                color: darken($white, 20%);
             }
 
             tr {
                 td {
                     border-color: rgba(248, 250, 252, .08);
+
                     &:first-child {
                         border-color: rgba(248, 250, 252, .08);
+
                         &::before {
                             display: none !important;
                         }
@@ -468,46 +465,48 @@
                             padding: size(10);
                             cursor: pointer;
                         }
-        
+
                         &-menu {
                             border-color: $headingText;
-                                background: $lightDark;
-                          
-        
+                            background: $lightDark;
+
+
                             .dropdown-items {
                                 .item {
                                     color: $white;
+
                                     @include hover {
                                         background: #0b1120;
                                     }
                                 }
-        
+
                             }
                         }
                     }
                 }
 
                 &.checked {
-                    background-color:$lightDark;
+                    background-color: $lightDark;
                 }
             }
         }
 
-  
 
-    // datatable length 
-    .dataTables_length {
-        padding-top: size(10);
-        color: $white;
-        @include font($primaryFont,12,normal,normal,12);
-        select {
-            padding: size(6) size(10);
-            @include radius(8);
-            @include font($primaryFont,12,normal,normal,12);
-            border-color: $headingText;
-            color: darken($white,29%);
 
+        // datatable length 
+        .dataTables_length {
+            padding-top: size(10);
+            color: $white;
+            @include font($primaryFont, 12, normal, normal, 12);
+
+            select {
+                padding: size(6) size(10);
+                @include radius(8);
+                @include font($primaryFont, 12, normal, normal, 12);
+                border-color: $headingText;
+                color: darken($white, 29%);
+
+            }
         }
-    }
     }
 }
