@@ -121,15 +121,22 @@
                   <div class="row g-4">
                     <div class="col-12 mx-auto">
                       <div class="accordion" id="accordionApplication">
+                        <!-- BASIC-INFO -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="heading-1">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-                              Basic Info
+                              <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5 7.5L10 12.5L15 7.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
+
+                              <span class="text">Basic Info</span>
                             </button>
                           </h2>
 
                           <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionApplication">
-                            <div class="accordion-body">
+                            <div class="accordion-body px-0">
                               <div class="row g-3">
                                 <div class="col-md-6">
                                   <div class="inputbox">
@@ -199,12 +206,12 @@
                                     
                                     <div class="genderbox">
                                       <div class="gendersingle">
-                                        <input type="radio" name="gender" id="male" hidden>
+                                        <input type="radio" name="gender" id="male" class="radiogender" hidden checked>
                                         <label for="male" class="radiolabel">Male</label>
                                       </div>
 
                                       <div class="gendersingle">
-                                        <input type="radio" name="gender" id="female" hidden>
+                                        <input type="radio" name="gender" id="female" class="radiogender" hidden>
                                         <label for="female" class="radiolabel">Female</label>
                                       </div>
                                     </div>
@@ -224,7 +231,7 @@
                                 <div class="col-lg-6 col-12">
                                   <div class="inputbox">
                                     <label for="permanentaddress" class="inputlabel">
-                                      Present Address
+                                      Permanent Address
                                     </label>
 
                                     <textarea id="permanentaddress" class="inputfield" autocomplete="off" rows="5"></textarea>
@@ -238,8 +245,20 @@
                                     </label>
 
                                     <div class="drop-zone">
+                                      <span class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M9.33333 1H21.25V3.125H9.33333C8.13672 3.125 7.16667 4.07639 7.16667 5.25V30.75C7.16667 31.9236 8.13672 32.875 9.33333 32.875H26.6667C27.8633 32.875 28.8333 31.9236 28.8333 30.75V10.5625H31V30.75C31 33.0972 29.0599 35 26.6667 35H9.33333C6.9401 35 5 33.0972 5 30.75V5.25C5 2.90279 6.9401 1 9.33333 1Z" fill="#667085"/>
+                                          <path d="M21.25 7.375V1L31 10.5625H24.5C22.7051 10.5625 21.25 9.13541 21.25 7.375Z" fill="#667085"/>
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13 23.1C13 22.6029 13.3731 22.2 13.8333 22.2H17.1667C17.6269 22.2 18 22.6029 18 23.1C18 23.5971 17.6269 24 17.1667 24H13.8333C13.3731 24 13 23.5971 13 23.1Z" fill="#667085"/>
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13 19.5C13 19.0029 13.3731 18.6 13.8333 18.6H22.1667C22.6269 18.6 23 19.0029 23 19.5C23 19.9971 22.6269 20.4 22.1667 20.4H13.8333C13.3731 20.4 13 19.9971 13 19.5Z" fill="#667085"/>
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13 15.9C13 15.4029 13.3731 15 13.8333 15H22.1667C22.6269 15 23 15.4029 23 15.9C23 16.3971 22.6269 16.8 22.1667 16.8H13.8333C13.3731 16.8 13 16.3971 13 15.9Z" fill="#667085"/>
+                                        </svg>
+                                      </span>
+
                                       <span class="drop-zone__prompt">
-                                        Drag & drop file or browse file Max size 5Mb
+                                        <span class="text">
+                                          Drag & drop file or <span>browse file</span> <br> Max size 5Mb
+                                        </span>
                                       </span>
                                       <input type="file" name="myFile" class="drop-zone__input" hidden>
                                     </div>
@@ -250,34 +269,289 @@
                           </div>
                         </div>
                         
+                        <!-- PROFESSIONAL-INFO -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="heading-2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-                              Accordion Item #2
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                              <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5 7.5L10 12.5L15 7.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
+                              <span class="text">Professional Info</span>
                             </button>
                           </h2>
-                          <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionApplication">
-                            <div class="accordion-body">
-                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                          <div id="collapse-2" class="accordion-collapse collapse show" aria-labelledby="heading-2" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body px-0">
+                              <div class="row g-3">
+                                <div class="col-md-6">
+                                  <div class="inputbox">
+                                    <label for="currentorganization" class="inputlabel">
+                                      Current Organization
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="currentorganization"
+                                      placeholder="Enter your current organization name"
+                                      class="inputfield"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="jobposition" class="inputlabel">
+                                      Current Job Position
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="jobposition"
+                                      class="inputfield"
+                                      placeholder="Enter your current job position"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="experienceinyear" class="inputlabel">
+                                      Experience in years
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="experienceinyear"
+                                      class="inputfield"
+                                      placeholder="Number of experiences"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="noticeperiod" class="inputlabel">
+                                      Notice period
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="noticeperiod"
+                                      class="inputfield"
+                                      placeholder="Notice period time"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="currentsalary" class="inputlabel">
+                                      Current Salary
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="currentsalary"
+                                      class="inputfield"
+                                      placeholder="Current Salary"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="expectedsalary" class="inputlabel">
+                                      Expected Salary
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="expectedsalary"
+                                      class="inputfield"
+                                      placeholder="Expected Salary"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="inputbox">
+                                    <label for="skillsets" class="inputlabel">
+                                      Skill Sets
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="skillsets"
+                                      class="inputfield"
+                                      placeholder=""
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="inputbox">
+                                    <label for="additionalinfo" class="inputlabel">
+                                      Additional Info
+                                    </label>
+                                    
+                                    <textarea id="additionalinfo" class="inputfield" autocomplete="off" rows="5"></textarea>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
 
+                        <!-- EDUCATIONAL-INFO -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="heading-3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-                              Accordion Item #3
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                              <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5 7.5L10 12.5L15 7.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
+                              <span class="text">Educational Info</span>
                             </button>
                           </h2>
-                          <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionApplication">
-                            <div class="accordion-body">
-                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                          <div id="collapse-3" class="accordion-collapse collapse show" aria-labelledby="heading-3" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body px-0">
+                              <div class="row g-3">
+                                <div class="col-md-6">
+                                  <div class="inputbox">
+                                    <label for="versityname" class="inputlabel">
+                                      University Name
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="versityname"
+                                      placeholder="Enter your university name"
+                                      class="inputfield"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="mydegree" class="inputlabel">
+                                      Degree
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="mydegree"
+                                      class="inputfield"
+                                      placeholder="Enter your degree"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="passingyear" class="inputlabel">
+                                      Passing Year
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="passingyear"
+                                      class="inputfield"
+                                      placeholder="Enter your passing year"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- SOCIAL-LINKS -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading-4">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                              <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5 7.5L10 12.5L15 7.5" stroke="#2F3643" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
+                              <span class="text">Social Links</span>
+                            </button>
+                          </h2>
+
+                          <div id="collapse-4" class="accordion-collapse collapse show" aria-labelledby="heading-4" data-bs-parent="#accordionApplication">
+                            <div class="accordion-body px-0">
+                              <div class="row g-3">
+                                <div class="col-md-6">
+                                  <div class="inputbox">
+                                    <label for="linkedinprofile" class="inputlabel">
+                                      LinkedIn Profile
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="linkedinprofile"
+                                      placeholder="Enter your LinkedIn profile link"
+                                      class="inputfield"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="githubprofile" class="inputlabel">
+                                      GitHub Profile
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="githubprofile"
+                                      class="inputfield"
+                                      placeholder="Enter your Github profile link"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="behanceprofile" class="inputlabel">
+                                      Behance Profile
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="behanceprofile"
+                                      class="inputfield"
+                                      placeholder="Enter your Behance profile link"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                  <div class="inputbox">
+                                    <label for="pinterestprofile" class="inputlabel">
+                                      Pinterest Profile
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="pinterestprofile"
+                                      class="inputfield"
+                                      placeholder="Enter your Pinterest profile link"
+                                      autocomplete="off"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
     
+                    <!-- SUBMIT-INFO -->
                     <div class="col-12">
                       <div class="d-flex justify-content-end">
                         <button type="button" class="btn-submit">Submit Application</button>
@@ -330,5 +604,7 @@
     });
   </script>
   <script src="assets/js/dragdrop.js"></script>
+  <!-- GENERATE-TAGS -->
+  <script src="assets/js/tags/tags.js"></script>
 </body>
 </html>
