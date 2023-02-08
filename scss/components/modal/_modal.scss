@@ -637,6 +637,9 @@
 
     &-body {
 
+     
+
+      // create event modal 
       .time-wrapper {
          @include flex;
          align-items: center;
@@ -665,7 +668,210 @@
         gap: size(10);
         padding: size(14);
         @include radius(8);
+      } 
+
+      // preview event modal 
+
+      .logo {
+        @include flex-center;
+        padding: size(40) size(0);
+        .company-logo {
+         max-width: size(200);
+        height: auto;
+          img {
+            @include wh100;
+            object-fit: contain;
+          }
+        }
       }
+      .preview__card {
+        @include border(solid,1,$tableBorder);
+        padding: size(10);
+        @include radius(30);
+        @include flex-column;
+        gap: size(20);
+        margin: size(0) size(10);
+        @include breakpoint(mobile576) {
+          padding: size(22);
+          margin: size(0) size(30);
+          
+        }
+
+        &-info {
+          
+          @include flex-between;
+          align-items: flex-start;
+          
+          .left {
+            @include flex-column;
+            gap: size(10);
+          }
+
+          .right {
+            .date-box {
+              @include flex-column;
+              @include border(solid,1,$headerborder);
+              @include radius(20);
+              overflow: hidden;
+              .month {
+                display: block;
+                @include w100;
+                @include setBgColor(#CD0000,$white);
+                padding: size(10) size(34);
+                @include font($primaryFont,14,normal,normal,18);
+                text-align: center;
+              }
+              .date {
+                padding:size(10) size(34);
+                display: block;
+                font-size: 30px;
+                color: $headingText;
+                @include font($primaryFont,34,medium,normal,41);
+              }
+            }
+          }
+
+          .invited {
+            color: $success;
+            @include font($primaryFont,14,normal,normal,18);
+          }
+          .event-title {
+            color: $headingText;
+            @include font($primaryFont,24,medium,normal,30);
+
+            @include breakpoint(tab992) {
+              @include font($primaryFont,34,medium,normal,40);
+            }
+          }
+
+          .event-des {
+            color: $textPrimary;
+            @include font($primaryFont,12,medium,normal,17);
+
+            @include breakpoint(mobile576) {
+              @include font($primaryFont,14,medium,normal,17);
+
+            }
+
+          }
+
+          .preview-info {
+            padding-top: size(10);
+            @include flex-column;
+            gap: size(24);
+          }
+
+          .timebox ,
+          .locationbox ,
+          .personsbox {
+            @include flex;
+            gap: size(10);
+            div {
+              @include flex-column;
+              gap: size(10);
+             .region {
+              color: $textSecondary;
+             }
+
+            }
+          }
+
+
+        } 
+
+        &-buttons {
+          @include flex-column;
+          gap: size(10);
+          .accept-button {
+            @include setBgColor($headingText,$white);
+            padding: size(12) size(0);
+            @include radius(50);
+            @include transitionsall;
+
+           @include hover {
+            @include setBgColor(darken($headingText,10%),$white);
+           }
+
+          }
+          .decline-button {
+            @include setBgColor($headerborder,$textPrimary);
+            padding: size(12) size(0);
+            @include radius(50);
+            @include transitionsall;
+
+           @include hover {
+            @include setBgColor(darken($headerborder,10%),$textPrimary);
+           }
+          }
+        }
+
+        &-text {
+          p {
+            @include font($primaryFont,12,normal,normal,20);
+          }
+          
+        }
+
+        .follow-text {
+          text-align: center;
+          padding: size(20) size(0);
+          color: $textSecondary;
+          @include font($primaryFont,14,normal,normal,20);
+        }
+
+
+      }
+      .footer-logo {
+        padding: size(30) size(0);
+        @include flex-center;
+      
+        .footer.logo {
+          max-width: size(200);
+          overflow: hidden;
+          height: auto;
+          img {
+
+            @include wh100;
+            object-fit: contain;
+          }
+        }
+      }
+      .social-box {
+        @include flex-column;
+        gap: size(20);
+        .title {
+          color: $textPrimary;
+          font-size: size(12);
+          font-weight: 500; 
+          text-align: center;
+          padding-right: size(16)
+        }
+  
+        .social-list {
+          @include list-horizontal;
+          justify-content: center;
+          gap: size(12);
+  
+          &-link {
+            background: $headerborder;
+            @include square(38);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+  
+            .icon {
+              @include square(14);
+              @include flex-center;
+              overflow: hidden;
+  
+              svg {
+                @include wh100;
+              }
+            }
+          }
+        }
+      }
+
     }
 
     &-footer {
