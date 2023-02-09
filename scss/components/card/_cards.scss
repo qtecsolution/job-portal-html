@@ -627,6 +627,36 @@
                     }
                 }
             }
+            .assignee-boxes {
+
+                .assignee-box {
+                    span {
+                        @include font($primaryFont, 12, normal, normal, 16);
+                        color: darken($white,10%);
+                    }
+                }
+            } 
+    
+            .notes {
+                
+                .note {
+                  border-color: $headingText;
+                  
+                  &-info {
+                    h3 {
+                     color: darken($white,5%);
+                        span {
+                            color: darken($white,0%);
+                        }
+                    }
+    
+                    .des {
+                        color: darken($white,0%);
+                    }
+                  }
+    
+                }
+            }
         }
 
     }

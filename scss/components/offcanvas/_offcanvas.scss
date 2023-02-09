@@ -133,7 +133,10 @@
           gap: size(20);
           flex-wrap: wrap;
 
-          .title {}
+          .title {
+            color:$textPrimary;
+            @include font($textPrimary,12,medium,normal,16);
+          }
 
           .stars {
             @include flex;
@@ -585,40 +588,42 @@
 
   .applicant-offcanvas {
     .offcanvas {
+
+      &-header {
+        .header-left {
   
+          .title-icon {  
+            .title {
+              color:darken($white,30%);
+            }
+  
+          }
+        }
+  
+      
+      }
       
       &-body {
        
   
         .resumebox {
-          @include border(solid,1,$headerborder);
-          margin: size(14) size(18);
-          @include radius(10);
-  
-          @include breakpoint(mobile576) {
-            margin: size(25) size(30);
-  
-          }
+         border-color: $headingText;
   
           &-header {
             @include flex-between;
-            @include border-single(bottom,solid,1,$headerborder);
-            padding: size(16) size(20);
+            border-color: $headingText;
   
             .header-left {
             
               .title {
-                color: $headingText;
-                @include font($primaryFont,14,medium,normal,20);
+                color: darken($white,20%);
   
               }
             }
             .header-right {
-              @include flex-center-vert;
-              gap: size(10);
               
               span {
-               @include border(solid,1,$headerborder);
+               border-color: $headingText;
                @include square(30);
                @include flex-center;
                @include radius(7);
@@ -644,35 +649,16 @@
         }
   
         .hiring-pipeline {
-          padding: size(14) size(18);
-  
-          @include breakpoint(mobile576) {
-            padding: size(25) size(30);
-  
-          }
+         
   
           .stages {
             padding-bottom: size(10);
   
             .stageMenu {
-              @include list-horizontal;
-              flex-wrap: nowrap;
-              overflow-x: scroll;
-              white-space: nowrap;
-              gap: size(8);
-  
-              &::-webkit-scrollbar {
-                display: none;
-              }
-  
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-  
+
               &-item {
-                padding: size(8) size(12);
-                @include radius(6);
-                background: #E8F2FF;
-  
+                background: $textgray;
+                color: darken($white,10%);
                 &.active {
                   background: $primary;
                   color: $white;
@@ -686,47 +672,24 @@
         }
   
         .eventlist {
-          padding: size(14) size(18);
-          @include flex-column;
-          gap: size(20);
-          @include breakpoint(mobile576) {
-            padding: size(25) size(30);
-  
-          }
-  
+
           &-title {
-            color: $black;
-            @include font ($primaryFont, 14, medium, normal, 12);
-  
+            color: $white;
           }
   
           .events {
   
             .events-wrapper {
-              @include flex-column;
-              gap: size(20);
               .event {
-                @include flex-column;
-                gap: size(18);
-  
                 &-header {
-                  color: $textPrimary;
-                  @include font ($primaryFont, 12, normal, normal, 20);
-  
+                  color: darken($white,10%);
                 }
   
                 &-body {
-                  @include border(solid, 1, $headerborder);
-                  border-left: size(10) solid $blue;
-                  padding-block: size(18);
-                  @include radius(10);
-                  @include transitionsall;
-  
+                  @include border(solid, 1, $headingText);
+                  border-left: size(10) solid $blue; 
                   .innerbox {
-                    @include flex-column;
-                    gap: size(14);
-                    padding-left: size(16);
-  
+
                     .delete-icon {
                       svg {
                        
@@ -740,44 +703,17 @@
                     }
                     &-header {
   
-                      color: $headingText;
-                      @include font($primaryFont, 12, normal, normal, 16);
-  
-                      @include breakpoint(mobile576) {
-                        @include font($primaryFont, 14, normal, normal, 16);
-  
-                      }
+                      color: darken($white,20%);
+                     
                     }
-  
-                    &-info {
-                      @include flex;
-                      gap: size(8);
-  
-                      .innerthumb {
-                        @include square(36);
-                        overflow: hidden;
-                        @include circle;
-  
-                        img {
-                          @include wh100;
-                          object-fit: cover;
-                        }
-                      }
-                    }
-  
                     &-detail {
-                      @include flex-column;
-                      gap: size(3);
-  
+
                       .boldline {
-                        color: $headingText;
-                        @include font($primaryFont, 14, medium, normal, 16);
-  
+                        color: darken($white,5%);
                       }
   
                       .info {
-                        @include font($primaryFont, 10, normal, normal, 16);
-                        color: $textPrimary;
+                        color: darken($white,15%);
                       }
                     }
                   }
@@ -802,17 +738,10 @@
           }
   
           .noevent {
-            padding: size(200) size(50);
-            text-align: center;
   
             &-text {
-              @include font ($primaryFont, 12, normal, normal, 20);
-  
-              @include breakpoint(mobile576) {
-                @include font ($primaryFont, 14, normal, normal, 20);
-  
-              }
-  
+
+              color: darken($white,10%);
               a {
                 color: $primary;
               }

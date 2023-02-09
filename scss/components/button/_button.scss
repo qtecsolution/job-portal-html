@@ -254,8 +254,12 @@ button,
   align-items: center;
   gap: size(6);
   color: $textPrimary;
-  @include font($primaryFont, 14, medium, normal, 12);
+  @include font($primaryFont, 12, medium, normal, 18);
   @include transitionsall;
+
+  .text {
+    margin-top: size(3);
+  }
   @include hover {
     @include setBgColor($bodybg, $textPrimary);
   }
@@ -321,6 +325,21 @@ button,
 
     @include hover {
       @include setBgColor($darkPrimary, darken($white, 20%));
+    }
+  } 
+  .btn-event ,
+  .btn-sendemail {
+    border-color: $headingText;
+    color: darken($white,20%);
+    .icon {
+      svg {
+        path {
+          stroke :darken($white,20%);
+        }
+      }
+    }
+    @include hover {
+      @include setBgColor($shade-1,$white);
     }
   }
 }

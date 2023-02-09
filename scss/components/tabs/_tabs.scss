@@ -298,4 +298,53 @@
             }
         }
     }
+
+    .applicant-tab {
+        .nav {
+
+            &-tabs {
+                background-color: $headingText !important;
+                border-color: $headingText;
+            }
+            &-item {
+                .nav-link {
+                  padding: size(16);
+                }
+            }
+            &-link {
+                color: $textSecondary;
+                @include hover {
+                    &:not(.active) {
+                      border-color: transparent;
+    
+                    }
+                }
+                &.active {
+                    color: $white;
+                    @include border-single(bottom,solid,3,$primary);
+                    background-color: transparent;
+                    .count {
+                        @include setBgColor($primaryLight,$primary);
+    
+                    }
+                }
+    
+                .count {
+                    height: size(18);
+                    width: size(28);
+                    @include radius(100);
+                    @include setBgColor($headerborder,$textSecondary);
+                    display: inline-block;
+                    @include font($primaryFont,12,medium,normal,20);
+    
+                }
+            }
+            .gap {
+                width: size(2);
+                height: size(32);
+                background: $checkborder;
+                margin: 0 size(20);
+            }
+        }
+    }
 }
