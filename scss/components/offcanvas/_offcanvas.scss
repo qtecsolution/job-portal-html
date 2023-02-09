@@ -583,6 +583,248 @@
     }
   }
 
+  .applicant-offcanvas {
+    .offcanvas {
+  
+      
+      &-body {
+       
+  
+        .resumebox {
+          @include border(solid,1,$headerborder);
+          margin: size(14) size(18);
+          @include radius(10);
+  
+          @include breakpoint(mobile576) {
+            margin: size(25) size(30);
+  
+          }
+  
+          &-header {
+            @include flex-between;
+            @include border-single(bottom,solid,1,$headerborder);
+            padding: size(16) size(20);
+  
+            .header-left {
+            
+              .title {
+                color: $headingText;
+                @include font($primaryFont,14,medium,normal,20);
+  
+              }
+            }
+            .header-right {
+              @include flex-center-vert;
+              gap: size(10);
+              
+              span {
+               @include border(solid,1,$headerborder);
+               @include square(30);
+               @include flex-center;
+               @include radius(7);
+               @include transitionsbackground;
+                @include hover {
+                  background: darken($white,10%);
+                }
+  
+              }
+  
+            }
+          }
+  
+          &-body {
+  
+            object {
+             @include w100;
+             background: transparent;
+             min-height: 100vh;
+             border: none;
+            }
+          }
+        }
+  
+        .hiring-pipeline {
+          padding: size(14) size(18);
+  
+          @include breakpoint(mobile576) {
+            padding: size(25) size(30);
+  
+          }
+  
+          .stages {
+            padding-bottom: size(10);
+  
+            .stageMenu {
+              @include list-horizontal;
+              flex-wrap: nowrap;
+              overflow-x: scroll;
+              white-space: nowrap;
+              gap: size(8);
+  
+              &::-webkit-scrollbar {
+                display: none;
+              }
+  
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+  
+              &-item {
+                padding: size(8) size(12);
+                @include radius(6);
+                background: #E8F2FF;
+  
+                &.active {
+                  background: $primary;
+                  color: $white;
+                }
+              }
+  
+              .arrow-icon {}
+  
+            }
+          }
+        }
+  
+        .eventlist {
+          padding: size(14) size(18);
+          @include flex-column;
+          gap: size(20);
+          @include breakpoint(mobile576) {
+            padding: size(25) size(30);
+  
+          }
+  
+          &-title {
+            color: $black;
+            @include font ($primaryFont, 14, medium, normal, 12);
+  
+          }
+  
+          .events {
+  
+            .events-wrapper {
+              @include flex-column;
+              gap: size(20);
+              .event {
+                @include flex-column;
+                gap: size(18);
+  
+                &-header {
+                  color: $textPrimary;
+                  @include font ($primaryFont, 12, normal, normal, 20);
+  
+                }
+  
+                &-body {
+                  @include border(solid, 1, $headerborder);
+                  border-left: size(10) solid $blue;
+                  padding-block: size(18);
+                  @include radius(10);
+                  @include transitionsall;
+  
+                  .innerbox {
+                    @include flex-column;
+                    gap: size(14);
+                    padding-left: size(16);
+  
+                    .delete-icon {
+                      svg {
+                       
+                        @include hover {
+                          path {
+                            @include transitionsall;
+                            stroke :$danger;
+                          }
+                        }
+                      }
+                    }
+                    &-header {
+  
+                      color: $headingText;
+                      @include font($primaryFont, 12, normal, normal, 16);
+  
+                      @include breakpoint(mobile576) {
+                        @include font($primaryFont, 14, normal, normal, 16);
+  
+                      }
+                    }
+  
+                    &-info {
+                      @include flex;
+                      gap: size(8);
+  
+                      .innerthumb {
+                        @include square(36);
+                        overflow: hidden;
+                        @include circle;
+  
+                        img {
+                          @include wh100;
+                          object-fit: cover;
+                        }
+                      }
+                    }
+  
+                    &-detail {
+                      @include flex-column;
+                      gap: size(3);
+  
+                      .boldline {
+                        color: $headingText;
+                        @include font($primaryFont, 14, medium, normal, 16);
+  
+                      }
+  
+                      .info {
+                        @include font($primaryFont, 10, normal, normal, 16);
+                        color: $textPrimary;
+                      }
+                    }
+                  }
+  
+                  &.border-l-yellow {
+                    border-left-color: $orange;
+                  }
+                  &.border-l-primary {
+                    border-left-color: $primary;
+                  }
+                  &.border-l-danger {
+                    border-left-color: $danger;
+                  } 
+  
+                  @include hover {
+                    transform: translateY(size(-8));
+                  }
+                }
+  
+              }
+            }
+          }
+  
+          .noevent {
+            padding: size(200) size(50);
+            text-align: center;
+  
+            &-text {
+              @include font ($primaryFont, 12, normal, normal, 20);
+  
+              @include breakpoint(mobile576) {
+                @include font ($primaryFont, 14, normal, normal, 20);
+  
+              }
+  
+              a {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+  
+  
+    }
+  }
+
 
 
 

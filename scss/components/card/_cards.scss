@@ -598,10 +598,14 @@
     }
 
     .offcanvas__info-card {
-        @include border(solid, 1, $headerborder);
-
+       border-color: $headingText;
+        &-header {
+            border-color: $headingText;
+            .title {
+                color: darken($white,10%);
+            }
+        }
         &-body {
-
             .info-box {
                 .label {
                     color: darken($white, 30%);
@@ -610,21 +614,15 @@
                 }
 
                 .text {
-                    color: darken($white, 10%);
+                    color: darken($white, 20%);
                     @include font($primaryFont, 14, normal, normal, 17);
 
                 }
 
                 .skills {
-                    @include flex;
-                    flex-wrap: wrap;
-                    gap: size(8);
-
                     .skill {
-                        padding: size(4) size(10);
-                        @include radius(100);
-                        background: #E4F7FF;
-                        @include font($primaryFont, 12, medium, normal, 16);
+                        background: $textgray;
+                        color: darken($white,30%);
 
                     }
                 }

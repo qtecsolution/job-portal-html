@@ -3,6 +3,7 @@
 
 .addemployee {
     overflow-x: scroll;
+    @include hideScrollbar;
     &-header {
         @include border-single(bottom, solid, 1, $headerborder);
         padding-bottom: size(20);
