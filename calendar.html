@@ -10,6 +10,7 @@
   <title>Hire Me - Job Portal</title>
   <!-- FAVICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
+  <!-- FULL CALENDAR-CSS -->
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
   <!-- LOADER CSS -->
@@ -908,12 +909,17 @@
   </main>
   <!-- MAIN-SECTION END -->
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <!-- ADD-TASK MODAL START -->
+  <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
         <div class="modal-body">
           modal test
@@ -925,6 +931,7 @@
       </div>
     </div>
   </div>
+  <!-- ADD-TASK MODAL END -->
 
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -935,7 +942,7 @@
   <!-- content loader  -->
   <script src="assets/js/contentloader/contentloader.js"></script>
   <!-- FULL-CALENDAR (CDN) -->
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
+  <script src="assets/js/fullcalendar/fullcalendar.min.js"></script>
   <!-- CALENDAR SCRIPT -->
   <script src="assets/js/calendar/calendar.js"></script>
 </body>
