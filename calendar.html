@@ -10,7 +10,8 @@
   <title>Hire Me - Job Portal</title>
   <!-- FAVICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
-  <!-- FULL CALENDAR-CSS -->
+  <!-- NICE SELECT 2 CSS -->
+  <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
   <!-- LOADER CSS -->
@@ -910,8 +911,8 @@
   <!-- MAIN-SECTION END -->
 
   <!-- ADD-TASK MODAL START -->
-  <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+  <div class="modal fade taskmodal" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
@@ -922,11 +923,88 @@
           </button>
         </div>
         <div class="modal-body">
-          modal test
+          <div class="addtasks">
+            <div class="row g-3 align-items-center">
+              <div class="col-3">
+                <label for="title" class="tasklabel">Title*</label>
+              </div>
+              
+              <div class="col-9">
+                <input type="text" id="title" class="taskfield" placeholder="Add a title">
+              </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-3">
+                <label class="tasklabel">Time</label>
+              </div>
+
+              <div class="col-9">
+                <div class="row g-3 align-items-center">
+                  <div class="col-lg-6">
+                    <select id="dateselect">
+                      <option value="">Thu Feb 16, 2023</option>
+                      <option value="">Fri Feb 17, 2023</option>
+                      <option value="">Sat Feb 18, 2023</option>
+                      <option value="">Sun Feb 19, 2023</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3">
+                    <select id="timeselect">
+                      <option value="">6:15 pm</option>
+                      <option value="">7:45 pm</option>
+                      <option value="">8:30 pm</option>
+                      <option value="">9:00 pm</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3">
+                    <select id="select-time">
+                      <option value="">7:15 pm</option>
+                      <option value="">8:15 pm</option>
+                      <option value="">9:35 pm</option>
+                      <option value="">10:45 pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-3">
+                <label for="taskdescriptions" class="tasklabel">Description</label>
+              </div>
+              
+              <div class="col-9">
+                <textarea id="taskdescriptions" class="taskfield" rows="5"></textarea>
+              </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-3">
+                <span class="tasklabel">Google Meet</span>
+              </div>
+              
+              <div class="col-9">
+                <a href="#" class="btnlink">Add meet link</a>
+              </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-3">
+                <label for="guest" class="tasklabel">Add Guest</label>
+              </div>
+              
+              <div class="col-9">
+                <input type="text" id="guest" class="taskfield" placeholder="Add guest">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn-discard" data-bs-dismiss="modal">Discard</button>
+          <button type="button" class="btn btn-save">Save</button>
         </div>
       </div>
     </div>
@@ -945,6 +1023,10 @@
   <script src="assets/js/fullcalendar/fullcalendar.min.js"></script>
   <!-- CALENDAR SCRIPT -->
   <script src="assets/js/calendar/calendar.js"></script>
+  <!-- nice select -->
+  <script src="assets/js/nice-select/nice-select2.js"></script>
+  <!-- CUSTOM SELECT -->
+  <script src="assets/js/nice-select/modalselect.js"></script>
 </body>
 
 </html>
