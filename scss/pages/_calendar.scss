@@ -2,6 +2,113 @@
 @use "../partials" as *;
 
 
+.dashboard-calendar {
+  padding-bottom: size(48);
+
+  .fc-media-screen {
+    .fc-header-toolbar {
+      background: $white;
+      @include border-single(bottom, solid, 1, $headerborder);
+      justify-content: flex-start;
+      gap: size(20);
+      padding: size(16) size(16) size(0);
+    
+      .fc-toolbar-chunk {
+        &:first-child {
+          .fc-button-group {
+            gap: size(5);
+            padding-left: size(16);
+    
+            button {
+              @include square(34);
+              border: 0;
+              @include circle;
+              @include flex-center;
+              background: $headerborder;
+    
+              span {
+                color: $textPrimary;
+              }
+    
+              &:focus {
+                outline: none;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+    
+        .fc-toolbar-title {
+          color: $headingText;
+          font-size: size(16);
+          font-weight: 500;
+        }
+    
+        &:last-child {
+          margin-left: auto;
+
+          .fc-button-group {    
+            gap: size(4);
+
+            button {
+              border: 0;
+              @include radius(0);
+              @include border-single(bottom, solid, 3, transparent);
+              @include setBgColor($white, $textSecondary);
+              font-size: size(16);
+              font-weight: 500;
+              @include flex-center;
+              height: size(48);
+              padding: size(8) size(16);
+              @include transitionsall;
+
+              &:hover:not(.fc-button-active):not(.fc-addtask-button) {
+                border-color: $success;
+                color: $headingText;
+              }
+
+              &.fc-button-active {
+                border-color: $success;
+                color: $headingText;
+              }
+
+              &.fc-addtask-button {
+                @include border(solid, 1, $checkborder);
+                @include radius(8);
+                height: size(40);
+                font-size: size(15);
+                margin-left: size(16);
+                margin-top: size(-4);
+
+                @include setBgColor($white, $textPrimary);
+                @include hover {
+                  @include setBgColor($textPrimary, $white);
+                  border-color: $textPrimary;
+                }
+              }
+    
+              &:focus {
+                outline: none;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-top: size(-14);
+        }
+      }
+    }
+    
+    .fc-view-harness {
+    }
+  }
+}
+
+
+
 .taskmodal {
 
   .modal-content {
