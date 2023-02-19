@@ -182,6 +182,7 @@
     &-footer {
         @include flex-between;
         padding-top: size(10);
+        gap: size(6);
         .footerleft {
             @include flex;
             align-items: flex-start;
@@ -224,6 +225,12 @@
 
 
     }
+
+    &.created-card {
+        @include breakpoint(tab992) {
+            width: auto;
+        }
+    } 
 
     @include hover {
         transform: translateY(size(-8));
@@ -869,4 +876,5 @@
 		}
 	}
 }
+
 
