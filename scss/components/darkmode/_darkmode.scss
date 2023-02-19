@@ -1856,7 +1856,7 @@
   
     .fc-listDay-view {
       .fc-list-table {
-        tbody {
+        tbody {          
           .fc-list-day-text {
             color: $primary;
             font-size: size(20);
@@ -1945,6 +1945,20 @@
     .fc-daygrid-day,
     .fc-timegrid-slot {
       background: $darkPrimary !important;
+    }
+
+    table {
+      thead {
+        th {
+          background: $darkPrimary;
+        }
+      }
+
+      tbody {
+        td {
+          background: $darkPrimary;
+        }
+      }
     }
   }
   
