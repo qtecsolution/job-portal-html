@@ -1,7 +1,6 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-
 .dashboard-calendar {
   padding-bottom: size(48);
 
@@ -63,12 +62,12 @@
               @include transitionsall;
 
               &:hover:not(.fc-button-active):not(.fc-addtask-button) {
-                border-color: $success;
+                border-color: $primary;
                 color: $headingText;
               }
 
               &.fc-button-active {
-                border-color: $success;
+                border-color: $primary;
                 color: $headingText;
               }
 
@@ -103,11 +102,229 @@
     }
     
     .fc-view-harness {
+      .fc-timegrid-event-harness-inset .fc-timegrid-event {
+        background: $white;
+        border: 0;
+        @include border-single(left, solid, 3, $borderleft);
+        @include radius(4);
+        box-shadow: $box-shadow-1;
+        padding: size(2) size(8);
+
+        .fc-event-title {
+          color: $black;
+          font-size: size(14);
+          font-weight: 500;
+        }
+
+        .fc-event-time {
+          color: $textPrimary;
+          font-size: size(12);
+          font-weight: 500;
+        }
+      }
+
+      .fc-event-draggable {
+        background: $blue;
+        box-shadow: $box-shadow-1;
+
+        .fc-daygrid-event-dot {
+          border-color: $white;
+          box-shadow: $box-shadow-1;
+        }
+
+        .fc-event-time,
+        .fc-event-title {
+          color: $white;
+        }
+      }
+
+      .fc-col-header-cell-cushion {
+        color: $headingText;
+        font-weight: 600;
+      }
+
+      .fc-popover {
+        background: #eee;
+        box-shadow: $box-shadow-1;
+        border: 0;
+        @include radius(4);
+        
+        .fc-popover-header {
+          background: $white;
+          padding: size(8) size(8);
+
+          .fc-popover-title {
+            color: $black;
+            font-size: size(12);
+          }
+        }
+
+        .fc-popover-body {
+          .fc-daygrid-event-harness {
+
+            .fc-daygrid-event-dot {
+              border-color: $blue;
+            }
+
+            .fc-event-draggable {
+              background: $white;
+              box-shadow: $box-shadow-1;
+              border: 0;
+              @include border-single(left, solid, 3, transparent);
+              @include radius(4);
+              // padding-left: size(4);
+
+              .fc-event-time,
+              .fc-event-title {
+                color: $black;
+              }
+            }
+
+            &:nth-child(1) {
+              .fc-event-draggable {
+                border-color: $yellowcolor;
+              }
+            }
+
+            &:nth-child(2) {
+              .fc-event-draggable {
+                border-color: $blue;
+              }
+            }
+            
+            &:nth-child(3) {
+              .fc-event-draggable {
+                border-color: $violatecolor;
+              }
+            }
+            
+            &:nth-child(4) {
+              .fc-event-draggable {
+                border-color: $lightgreencolor;
+              }
+            }
+            
+            &:nth-child(5) {
+              .fc-event-draggable {
+                border-color: $orange;
+              }
+            }
+            
+            &:nth-child(6) {
+              .fc-event-draggable {
+                border-color: $electriccyan;
+              }
+            }
+          }
+        }
+      }
     }
   }
+
+  .fc-listDay-view {
+    .fc-list-table {
+      tbody {
+        .fc-list-day-text {
+          color: $primary;
+          font-size: size(20);
+          font-weight: 600;
+
+          @include hover {
+            text-decoration: none;
+          }
+        }
+
+        .fc-event {
+          .fc-list-event-time {
+            color: $textPrimary;
+            font-size: size(14);
+            font-weight: 500;
+          }
+
+          .fc-list-event-dot {
+            border-color: $yellowcolor !important;
+            box-shadow: $box-shadow-1;
+          }
+
+          .fc-list-event-title {
+            color: $headingText;
+            font-size: size(14);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .fc-multiMonthYear-view {
+    border: 0;
+    gap: size(14);
+
+    .fc-multimonth-month {
+      // background: transparent;
+      background: $white;
+      box-shadow: $box-shadow-1;
+      width: 49% !important;
+      margin: auto;
+
+      .fc-multimonth-header {
+        background: $white;
+
+        .fc-multimonth-title {
+          color: $textPrimary;
+          font-size: size(14);
+          font-weight: 600;
+        }
+
+        .fc-multimonth-header-table {
+          thead {
+            th {
+              border: 0;
+
+              .fc-col-header-cell-cushion {
+                color: $headingText;
+                font-size: size(12);
+                font-weight: 600;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .fc-daygrid-day-frame {
+        @include flex-center-column;
+        text-align: center;
+
+        .fc-daygrid-day-top {
+          .fc-daygrid-day-number {
+            color: $headingText;
+            font-size: size(12);
+            font-weight: 500;
+
+            @include hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .fc-multimonth-daygrid-table {
+        tr {
+          td {
+            border: 0;
+            background: transparent;
+          }
+        } 
+      }
+    }
+  }
+
+  .fc-daygrid-day,
+  .fc-timegrid-slot {
+    background: transparent !important;
+  }
 }
-
-
 
 .taskmodal {
 
