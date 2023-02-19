@@ -9,9 +9,15 @@
     box-shadow: $box-shadow-1;
     @include w100;
     @include transitionsall;
+
     @include breakpoint(mobile768) {
         width: auto;
     }
+
+    @include breakpoint(tab992) {
+        width: calc(100% / 3 - size(14));
+    }
+
     &-header {
         @include flex-between;
         gap: size(40);
@@ -85,6 +91,10 @@
                     @include breakpoint(mobile414) {
                        @include font($primaryFont, 11, medium, normal, 18);
                         
+                    }
+
+                    span {
+                        font-size: size(9);
                     }
                 }
             }
