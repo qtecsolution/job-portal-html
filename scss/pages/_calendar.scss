@@ -141,6 +141,10 @@
       .fc-col-header-cell-cushion {
         color: $headingText;
         font-weight: 600;
+
+        @include hover {
+          text-decoration: none;
+        }
       }
 
       .fc-popover {
@@ -286,6 +290,10 @@
                 font-size: size(12);
                 font-weight: 600;
                 text-align: center;
+
+                @include hover {
+                  text-decoration: none;
+                }
               }
             }
           }
