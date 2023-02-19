@@ -79,6 +79,15 @@ document.addEventListener('DOMContentLoaded', function() {
         end: '2023-02-16T17:30:00'
       },
       {
+        title: 'Meeting',
+        start: '2023-02-19T10:30:00',
+        end: '2023-02-19T11:30:00'
+      },
+      {
+        title: 'Lunch',
+        start: '2023-02-19T12:00:00'
+      },
+      {
         title: 'Lunch',
         start: '2023-02-12T12:00:00'
       },
@@ -89,6 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         title: 'Happy Hour',
         start: '2023-02-12T17:30:00'
+      },
+      {
+        title: 'Happy Hour',
+        start: '2023-02-19T13:30:00'
       },
       {
         title: 'Dinner',
