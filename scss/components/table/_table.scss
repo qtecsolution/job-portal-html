@@ -190,12 +190,40 @@
         background: $white;
         border-radius: size(0) size(0) size(10) size(10);
         border-bottom: none !important;
-
+     
         tr {
-            td {
+            th {
                 @include border-single(bottom, solid, 1, $tableBorder);
                 padding: size(15) size(8);
                 white-space: nowrap;
+                color: $headingText;
+
+                @include font($primaryFont,13,medium,normal,20); 
+
+                &:first-child {
+                    padding: size(15) size(15);
+                    @include border-single(left, solid, 1, $tableBorder);
+
+                    &::before {
+                        display: none !important;
+                    }
+
+                    &::after {
+                        display: none !important;
+                    }
+
+                }
+
+            }
+            td {
+                @include border-single(bottom, solid, 1, $tableBorder);
+                padding: size(10) size(6);
+                @include breakpoint(mobile576) {
+                padding: size(12) size(8);
+
+                }
+                white-space: nowrap;
+                @include font($primaryFont,13,normal,normal,20);
 
                 &:first-child {
                     padding: size(15) size(15);
