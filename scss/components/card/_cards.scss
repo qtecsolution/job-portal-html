@@ -7,15 +7,17 @@
     @include radius(10);
     padding: size(25);
     box-shadow: $box-shadow-1;
-    @include w100;
+    // @include w100;
     @include transitionsall;
+    flex: 1;
+    
 
     @include breakpoint(mobile768) {
-        width: auto;
+        // width: auto;
     }
 
     @include breakpoint(tab992) {
-        width: calc(100% / 3 - size(14));
+        // width: calc(100% / 3 - size(14));
     }
 
     &-header {
@@ -61,8 +63,11 @@
                 @include font($primaryFont, 16, medium, normal, 20);
                 max-width: size(250);
                 overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+                // text-overflow: ellipsis;
+                // white-space: nowrap;
+                @include line-clamp;
+                min-height: size(40);
+
 
                 @include breakpoint(mobile414) {
                     @include font($primaryFont, 18, medium, normal, 20);

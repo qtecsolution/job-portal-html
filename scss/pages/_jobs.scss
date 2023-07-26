@@ -22,7 +22,8 @@
     &-body {
         .jobcards {
             @include flex-column;
-            gap: size(20);
+            gap: size(20); 
+          
             &-header {
                 .active-title {
                     color: $darkText;
@@ -41,12 +42,17 @@
             }
         }
         .cards {
-            @include flex;
+            // @include flex;
+            // gap: size(14);
+            // flex-wrap: wrap;
+            // justify-content: center; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: size(14);
-            flex-wrap: wrap;
-            justify-content: center;
-            @include breakpoint(tab992) {
+            @include breakpoint(desktop1400) {
                 justify-content: flex-start;
+                background-color: red;
+                grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
             }
             
         }
