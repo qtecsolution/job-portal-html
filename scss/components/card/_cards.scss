@@ -22,7 +22,7 @@
 
     &-header {
         @include flex-between;
-        gap: size(40);
+        gap: size(10);
         @include border-single(bottom, solid, 1, $headerborder);
         padding-bottom: size(16);
 
@@ -60,22 +60,22 @@
 
             .jobname {
                 color: $headingText;
-                @include font($primaryFont, 16, medium, normal, 20);
+                @include font($primaryFont, 16, medium, normal, 22);
                 max-width: size(250);
                 overflow: hidden;
                 // text-overflow: ellipsis;
                 // white-space: nowrap;
                 @include line-clamp;
-                min-height: size(40);
+                min-height: size(50);
 
 
                 @include breakpoint(mobile414) {
-                    @include font($primaryFont, 18, medium, normal, 20);
+                    @include font($primaryFont, 18, medium, normal, 24);
 
                 }
 
                 @include breakpoint(tab992) {
-                    @include font($primaryFont, 20, medium, normal, 20);
+                    @include font($primaryFont, 18, medium, normal, 24);
                 }
 
             }
