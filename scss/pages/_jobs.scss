@@ -51,7 +51,6 @@
             gap: size(14);
             @include breakpoint(desktop1400) {
                 justify-content: flex-start;
-                background-color: red;
                 grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
             }
             
