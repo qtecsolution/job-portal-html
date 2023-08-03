@@ -113,10 +113,13 @@
     width: size(116);
     &-dropdown {
       box-shadow: $box-shadow-1;
-    }
+    } 
     .option {
       color: $textPrimary;
     }
+  } 
+  .nice-select:after {
+    border-color: $white !important;
   }
 }
 
