@@ -966,8 +966,6 @@
                           <path d="M0.999962 8.92175C1.27069 8.92175 1.49016 8.70228 1.49016 8.43155C1.49016 8.16083 1.27069 7.94136 0.999962 7.94136C0.729234 7.94136 0.509766 8.16083 0.509766 8.43155C0.509766 8.70228 0.729234 8.92175 0.999962 8.92175Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                           
-                          
-                          
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Email Applicant</a></li>
@@ -1603,6 +1601,14 @@
   <script src="assets/js/jquery/jquery.min.js" ></script>
   <script type="text/javascript" charset="utf8" src="assets/js/datatable/datatable.js"></script>
   <script>
+     document.getElementById('dropdownMenuButton1').addEventListener('show.bs.dropdown', function () {
+        document.getElementById('dropdownMenuButton1').classList.add('btn-opened');
+    });
+
+
+    document.getElementById('dropdownMenuButton1').addEventListener('hide.bs.dropdown', function () {
+        document.getElementById('dropdownMenuButton1').classList.remove('btn-opened');
+    }); 
     $(document).ready( function () {
       var table = $('.dataTable').DataTable({
           info: false,

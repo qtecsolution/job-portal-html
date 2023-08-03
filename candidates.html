@@ -1220,6 +1220,15 @@
   <script src="assets/js/jquery/jquery.min.js" ></script>
   <script type="text/javascript" charset="utf8" src="assets/js/datatable/datatable.js"></script>
   <script>
+       document.getElementById('dropdownMenuButton1').addEventListener('show.bs.dropdown', function () {
+        document.getElementById('dropdownMenuButton1').classList.add('btn-opened');
+    });
+
+
+    document.getElementById('dropdownMenuButton1').addEventListener('hide.bs.dropdown', function () {
+        document.getElementById('dropdownMenuButton1').classList.remove('btn-opened');
+    }); 
+
     $(document).ready( function () {
       var table = $('.dataTable').DataTable({
           info: false,
