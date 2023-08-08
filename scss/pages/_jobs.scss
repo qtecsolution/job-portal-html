@@ -49,9 +49,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: size(14);
+            @include breakpoint(mobile576) {
+                grid-template-columns: repeat(auto-fit, minmax(300px,330px)); 
+            }
             @include breakpoint(desktop1400) {
                 justify-content: flex-start;
-                grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
+                grid-template-columns: repeat(auto-fit, minmax(360px, 360px)); 
             }
             
         }
