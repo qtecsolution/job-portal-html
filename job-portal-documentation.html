@@ -20,9 +20,7 @@
   <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  
-  <!-- NEW CUSTOM CSS -->
-  <link rel="stylesheet" href="./assets/css/job-portal-documentation.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -35,7 +33,7 @@
         <div class="">
           <!-- Close Sidebar, Visible only on mobile screens -->
           <div class="pos-absolute pos-top-right d-lg-none">
-            <a class="d-inline-block text-danger m-3" href="javascript:void(0)" data-toggle="layout"
+            <a id="hide" class="d-inline-block text-danger m-3" href="#" data-toggle="layout"
               data-action="sidebar_close">
               <i class="fa fa-times"></i>
             </a>
@@ -370,16 +368,23 @@
       <!-- Main Container -->
       <main id="main-container">
         <!-- Toggle Sidebar -->
-        <div class="pos-fixed pos-ontop-content d-print-none">
+        
+        <!-- <div id="show" class="pos-fixed pos-ontop-content d-print-none">
           <button type="button" class="btn btn-secondary pos-absolute pos-top-left m-1 m-lg-3" data-toggle="layout"
             data-action="sidebar_toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div> -->
+
+        <div id="show" class="d-xxl-none d-xl-none d-lg-none  d-md-block d-sm-block ">
+          <button type="button">
             <i class="fa fa-bars"></i>
           </button>
         </div>
         <!-- END Toggle Sidebar -->
 
         <!-- codeshaper Links -->
-        <div class="content d-print-none">
+        <!-- <div class="content d-print-none">
           <div class="row text-center py-5">
             <div class="col-6 col-md-3 py-3 invisible" data-toggle="appear" data-class="animated fadeInDown">
               <a class="item item-danger" href="https://codeshaper.net/" target="_blank">
@@ -425,18 +430,7 @@
               </a>
             </div>
           </div>
-
-          <div class="row">
-            <div class="alert alert-primary push review-promo-box">
-              <p class="mb-0">
-                <strong><i class="far fa-thumbs-up"></i></strong> Thank you for purchasing Acculance. If you have any
-                questions that are beyond the scope of this help file, please feel free to inform us. We will be
-                thankful
-                to you if you can leave an inspirelational review for us.
-              </p>
-            </div>
-          </div>
-        </div>
+        </div> -->
         <!-- END codeshaper Links -->
 
         <!-- Page Content -->
@@ -4096,8 +4090,12 @@
   <!-- END Page Container -->
 
   <!-- Docs JS -->
-  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <script src="./assets/js/job-portal-scroll/scroll.js"></script>
 </body>
 
