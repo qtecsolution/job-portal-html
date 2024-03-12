@@ -13530,7 +13530,7 @@ a {
 }
 
 .content {
-  max-width: 860px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -13584,7 +13584,7 @@ a {
   max-height: calc(100% - 4px);
   overflow-y: auto;
   position: relative;
-  background: #8e8f92;
+  background: #fff;
   padding: 30px;
 }
 
@@ -13643,7 +13643,7 @@ a {
   min-height: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #fff;
+  color: #000;
   line-height: 1rem;
 }
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link:active {
