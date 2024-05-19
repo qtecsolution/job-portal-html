@@ -12,16 +12,12 @@
   <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml" />
 
   <!-- BOOTSTRAP CSS -->
-  <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
-
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="./css/style.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
-  <link rel="stylesheet" href="./css/nice-select/nice-select2.css">
+  <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/custome.css">
 
 </head>
 
@@ -36,7 +32,7 @@
       <div class="sidebar-content">
         <div class="sidebar-brand">
           <a href="#" class="">Acculance <span>Docs</span></a>
-          <div id="close-sidebar">
+          <div class="close-sidebar" style="cursor: pointer;">
             <i class="fas fa-times"></i>
           </div>
         </div>
@@ -47,21 +43,39 @@
           <ul class="nav_main">
             <li class="nav-main-heading">Overview</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block ">
+              <a class="nav-main-link" href="#section-about" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-address-card  "></i>
+                <span class="nav-main-link-name">About Acculance</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-about" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-address-card  "></i>
                 <span class="nav-main-link-name">About Acculance</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block ">
+              <a class="nav-main-link" href="#section-changelog" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-list  "></i>
+                <span class="nav-main-link-name">Changelog</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-changelog" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-list  "></i>
                 <span class="nav-main-link-name">Changelog</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block ">
+              <a class="nav-main-link" href="#section-updating" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-arrow-up  "></i>
+                <span class="nav-main-link-name">Updating</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-updating" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-arrow-up  "></i>
                 <span class="nav-main-link-name">Updating</span>
@@ -70,14 +84,26 @@
 
             <li class="nav-main-heading">Installation</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#section-server-requirements" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-list-ol  "></i>
+                <span class="nav-main-link-name">Server Requirements</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-server-requirements" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-list-ol  "></i>
                 <span class="nav-main-link-name">Server Requirements</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#section-installation" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-cogs  "></i>
+                <span class="nav-main-link-name">Installation</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-installation" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-cogs  "></i>
                 <span class="nav-main-link-name">Installation</span>
@@ -86,189 +112,352 @@
 
             <li class="nav-main-heading">Backend Guide</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#dashboard-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-tachometer-alt  "></i>
+                <span class="nav-main-link-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#dashboard-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-tachometer-alt  "></i>
                 <span class="nav-main-link-name">Dashboard</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#setup-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-cogs  "></i>
+                <span class="nav-main-link-name">Setup</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#setup-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-cogs  "></i>
                 <span class="nav-main-link-name">Setup</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#products-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-boxes  "></i>
+                <span class="nav-main-link-name">Products</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#products-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-boxes  "></i>
                 <span class="nav-main-link-name">Products</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#clients-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-users  "></i>
+                <span class="nav-main-link-name">Clients</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#clients-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-users  "></i>
                 <span class="nav-main-link-name">Clients</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#suppliers-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-people-carry  "></i>
+                <span class="nav-main-link-name">Suppliers</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#suppliers-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-people-carry  "></i>
                 <span class="nav-main-link-name">Suppliers</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#employees-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-users-cog  "></i>
+                <span class="nav-main-link-name">Employees</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#employees-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-users-cog  "></i>
                 <span class="nav-main-link-name">Employees</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#accounts-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-list-alt  "></i>
+                <span class="nav-main-link-name">Accounts</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#accounts-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-list-alt  "></i>
                 <span class="nav-main-link-name">Accounts</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#balance-transfers-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-exchange-alt  "></i>
+                <span class="nav-main-link-name">Balance Transfers</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#balance-transfers-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-exchange-alt  "></i>
                 <span class="nav-main-link-name">Balance Transfers</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#expenses-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-calculator  "></i>
+                <span class="nav-main-link-name">Expenses</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#expenses-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-calculator  "></i>
                 <span class="nav-main-link-name">Expenses</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#purchases-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-shopping-basket  "></i>
+                <span class="nav-main-link-name">Purchases</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#purchases-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-shopping-basket  "></i>
                 <span class="nav-main-link-name">Purchases</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#purchase-returns-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-undo-alt  "></i>
+                <span class="nav-main-link-name">Purchase Returns</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#purchase-returns-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-undo-alt  "></i>
                 <span class="nav-main-link-name">Purchase Returns</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#quotations-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-th-list  "></i>
+                <span class="nav-main-link-name">Quotations</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#quotations-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-th-list  "></i>
                 <span class="nav-main-link-name">Quotations</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#invoices-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-file-alt  "></i>
+                <span class="nav-main-link-name">Invoices</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#invoices-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-file-alt  "></i>
                 <span class="nav-main-link-name">Invoices</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#invoice-returns-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-undo-alt  "></i>
+                <span class="nav-main-link-name">Invoice Returns</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#invoice-returns-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-undo-alt  "></i>
                 <span class="nav-main-link-name">Invoice Returns</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#invoice-payments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-money-bill  "></i>
+                <span class="nav-main-link-name">Invoice Payments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#invoice-payments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-money-bill  "></i>
                 <span class="nav-main-link-name">Invoice Payments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#non-invoice-payments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-money-bill-wave-alt  "></i>
+                <span class="nav-main-link-name">Non Invoice Payments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#non-invoice-payments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-money-bill-wave-alt  "></i>
                 <span class="nav-main-link-name">Non Invoice Payments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#purchase-payments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-money-bill-alt  "></i>
+                <span class="nav-main-link-name">Purchase Payments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#purchase-payments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-money-bill-alt  "></i>
                 <span class="nav-main-link-name">Purchase Payments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#non-purchase-payments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-money-check  "></i>
+                <span class="nav-main-link-name">Non Purchase Payments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#non-purchase-payments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-money-check  "></i>
                 <span class="nav-main-link-name">Non Purchase Payments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#loan-authorities-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-building  "></i>
+                <span class="nav-main-link-name">Loan Authorities</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#loan-authorities-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-building  "></i>
                 <span class="nav-main-link-name">Loan Authorities</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#loans-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-piggy-bank  "></i>
+                <span class="nav-main-link-name">Loans</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#loans-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-piggy-bank  "></i>
                 <span class="nav-main-link-name">Loans</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#loan-payments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-receipt  "></i>
+                <span class="nav-main-link-name">Loan Payments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#loan-payments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-receipt  "></i>
                 <span class="nav-main-link-name">Loan Payments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#assets-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-couch  "></i>
+                <span class="nav-main-link-name">Assets</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#assets-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-couch  "></i>
                 <span class="nav-main-link-name">Assets</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#payroll-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-clipboard-list  "></i>
+                <span class="nav-main-link-name">Payroll</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#payroll-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-clipboard-list  "></i>
                 <span class="nav-main-link-name">Payroll</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#inventory-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-warehouse  "></i>
+                <span class="nav-main-link-name">Inventory</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#inventory-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-warehouse  "></i>
                 <span class="nav-main-link-name">Inventory</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#inventory-adjustments-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-sliders-h  "></i>
+                <span class="nav-main-link-name">Inventory Adjustments</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#inventory-adjustments-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-sliders-h  "></i>
                 <span class="nav-main-link-name">Inventory Adjustments</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
               <a class="nav-main-link" href="#profile-section" data-toggle="scroll-to" data-offset="50">
-                <i class="nav-main-link-icon fas fa-user  "></i>
+                <i class="nav-main-link-icon fas fa-user"></i>
                 <span class="nav-main-link-name">Profile</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
+              <a class="nav-main-link" href="#profile-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-user"></i>
+                <span class="nav-main-link-name">Profile</span>
+              </a>
+            </li>
+
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#backup-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-download  "></i>
+                <span class="nav-main-link-name">Database Backup</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#backup-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-download  "></i>
                 <span class="nav-main-link-name">Database Backup</span>
@@ -277,42 +466,78 @@
 
             <li class="nav-main-heading">Reports</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#balance-sheet-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-file-alt   "></i>
+                <span class="nav-main-link-name">Balance Sheet</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#balance-sheet-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-file-alt   "></i>
                 <span class="nav-main-link-name">Balance Sheet</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#summary-report-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-clipboard-list  "></i>
+                <span class="nav-main-link-name">Summary Report</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#summary-report-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-clipboard-list  "></i>
                 <span class="nav-main-link-name">Summary Report</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#profit-loss-report-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-chart-line  "></i>
+                <span class="nav-main-link-name">Profit/Loss Report</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#profit-loss-report-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-chart-line  "></i>
                 <span class="nav-main-link-name">Profit/Loss Report</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#expense-report-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-chart-pie  "></i>
+                <span class="nav-main-link-name">Expense Report</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#expense-report-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-chart-pie  "></i>
                 <span class="nav-main-link-name">Expense Report</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#item-report-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-chart-bar  "></i>
+                <span class="nav-main-link-name">Item Report</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#item-report-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-chart-bar  "></i>
                 <span class="nav-main-link-name">Item Report</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#inventory-report-section" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fas fa-chart-bar  "></i>
+                <span class="nav-main-link-name">Inventory Report</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#inventory-report-section" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fas fa-chart-bar  "></i>
                 <span class="nav-main-link-name">Inventory Report</span>
@@ -321,14 +546,26 @@
 
             <li class="nav-main-heading">More</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#section-credits" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-link  "></i>
+                <span class="nav-main-link-name">Credits</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-credits" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-link  "></i>
                 <span class="nav-main-link-name">Credits</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#section-support" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon far fa-handshake  "></i>
+                <span class="nav-main-link-name">Support</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-support" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon far fa-handshake  "></i>
                 <span class="nav-main-link-name">Support</span>
@@ -337,14 +574,26 @@
 
             <li class="nav-main-heading">Codeshaper</li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a class="nav-main-link" href="#section-thankyou" data-toggle="scroll-to" data-offset="50">
+                <i class="nav-main-link-icon fa fa-heart text-danger"></i>
+                <span class="nav-main-link-name">Thank you</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a class="nav-main-link" href="#section-thankyou" data-toggle="scroll-to" data-offset="50">
                 <i class="nav-main-link-icon fa fa-heart text-danger"></i>
                 <span class="nav-main-link-name">Thank you</span>
               </a>
             </li>
 
-            <li class="nav-main-item">
+            <li class="nav-main-item d-none d-sm-block">
+              <a target="__blank" class="nav-main-link" href="#">
+                <i class="nav-main-link-icon fa fa-globe  "></i>
+                <span class="nav-main-link-name">codeshaper.net</span>
+              </a>
+            </li>
+            <li class="nav-main-item close-sidebar d-block d-sm-none">
               <a target="__blank" class="nav-main-link" href="#">
                 <i class="nav-main-link-icon fa fa-globe  "></i>
                 <span class="nav-main-link-name">codeshaper.net</span>
@@ -4196,13 +4445,10 @@
           <!-- END Footer -->
         </div>
       </div>
-
     </main>
 
     <!-- page-content" -->
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
   <!-- jquery cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -15916,7 +15916,7 @@ a {
 }
 
 .nav-main-link.active {
-  color: #6366f1 !important;
+  color: #4d70ff !important;
 }
 
 .page-wrapper.toggled .sidebar-wrapper {
@@ -16031,7 +16031,7 @@ p {
 }
 
 .sidebar-wrapper .sidebar-brand a span {
-  color: #6366f1;
+  color: #4d70ff;
 }
 
 .sidebar-wrapper .sidebar-brand>a {
@@ -16090,7 +16090,7 @@ p {
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link:active {
-  color: #6366f1;
+  color: #4d70ff;
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-icon {
@@ -16099,7 +16099,7 @@ p {
   margin-right: 0.625rem;
   min-width: 1rem;
   text-align: center;
-  color: #6366f1;
+  color: #4d70ff;
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-name {
@@ -16107,7 +16107,7 @@ p {
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-name:hover {
-  color: #6366f1;
+  color: #4d70ff;
 }
 
 .page-wrapper .page-content {
@@ -16136,7 +16136,7 @@ p {
 }
 
 .page-wrapper #page-container #sidebar a:active {
-  color: #6366f1;
+  color: #4d70ff;
 }
 
 .page-wrapper #page-container #sidebar .side_header h1 {
@@ -16292,7 +16292,7 @@ p {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  background-color: #6366f1;
+  background-color: #4d70ff;
 }
 
 .nav-link {
