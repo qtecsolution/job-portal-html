@@ -1,13 +1,14 @@
-/*!
+/*
  * Item: Hire Me
  * Version: 1.0
  * Author: Qtec Solution Limited
  * URL: https://qtecsolution.net
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body, html {
+body,
+html {
   font-family: "Rubik", sans-serif !important;
 }
 
@@ -192,7 +193,8 @@ p {
   font-size: 16px;
   line-height: 1.5;
   color: #2b2b2b;
-  max-width: 800px;
+  text-align: justify;
+  /* max-width: 800px; */
 }
 
 .table .thead-light th {

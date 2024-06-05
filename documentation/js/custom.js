@@ -1,35 +1,36 @@
-
 function openMenu() {
-    document.getElementById("myMenu").style.width = "300px";
-    document.querySelector('.content').style.marginLeft = "350px";
+  const menu = document.getElementById("myMenu");
+  menu.style.width = "300px";
+  menu.style.display = "block";
 }
 
 function closeMenu() {
-    document.getElementById("myMenu").style.width = "0";
-    document.querySelector('.content').style.marginLeft = "10px";
+  const menu = document.getElementById("myMenu");
+  menu.style.width = "0";
+  menu.style.display = "none";
 }
 
 function conditionalCloseMenu() {
-    if (window.innerWidth <= 990) {
-        closeMenu();
-    }
+  if (window.innerWidth <= 990) {
+    closeMenu();
+  }
 }
 
 function setInitialMenuState() {
-    if (window.innerWidth > 990) {
-        openMenu();
-    } else {
-        closeMenu();
-    }
+  if (window.innerWidth > 990) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
 }
 
 // Set initial menu state on page load
-window.addEventListener('load', setInitialMenuState);
+window.addEventListener("load", setInitialMenuState);
 
 // Add event listener to each link in the menu to close the menu when clicked
-document.querySelectorAll('#myMenu a').forEach(function (link) {
-    link.addEventListener('click', conditionalCloseMenu);
+document.querySelectorAll("#myMenu a").forEach(function (link) {
+  link.addEventListener("click", conditionalCloseMenu);
 });
 
 // Update menu state on window resize
-window.addEventListener('resize', setInitialMenuState);
+window.addEventListener("resize", setInitialMenuState);

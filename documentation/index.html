@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hire Me - Technical Documentation</title>
-	
+
 	<!-- CSS  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -108,37 +108,37 @@
 			</li>
 
 			<li class="nav-main-heading">Employee Module</li>
-			
+
 			<li onclick="conditionalCloseMenu()" class="nav-main-item">
 				<a class="nav-main-link" href="#employees" data-toggle="scroll-to" data-offset="50">
 					<i class="nav-main-link-icon fa fa-users"></i>
 					<span class="nav-main-link-name">Employees</span>
 				</a>
 			</li>
-			
+
 			<li onclick="conditionalCloseMenu()" class="nav-main-item">
 				<a class="nav-main-link" href="#add-employee" data-toggle="scroll-to" data-offset="50">
 					<i class="nav-main-link-icon fa fa-plus"></i>
 					<span class="nav-main-link-name">Add Employee</span>
 				</a>
 			</li>
-			
+
 			<li onclick="conditionalCloseMenu()" class="nav-main-item">
 				<a class="nav-main-link" href="#edit-employee" data-toggle="scroll-to" data-offset="50">
 					<i class="nav-main-link-icon fa fa-edit"></i>
 					<span class="nav-main-link-name">Edit Employee</span>
 				</a>
 			</li>
-			
+
 			<li class="nav-main-heading">Report Module</li>
-			
+
 			<li onclick="conditionalCloseMenu()" class="nav-main-item">
 				<a class="nav-main-link" href="#report" data-toggle="scroll-to" data-offset="50">
 					<i class="nav-main-link-icon fa fa-chart-simple"></i>
 					<span class="nav-main-link-name">Report</span>
 				</a>
 			</li>
-			
+
 			<li class="nav-main-heading">Settings Module</li>
 
 			<li onclick="conditionalCloseMenu()" class="nav-main-item">
@@ -233,9 +233,9 @@
 
 	<button class="openbtn" onclick="openMenu()">☰</button>
 
-	<div class="content">
-		<div class="container-fluid">
-			<div class="main">
+	<div class="content container mx-auto">
+		<div class="">
+			<div class="main" style="max-width: 900px; margin: 0 auto;">
 				<!-- Main Container -->
 				<main id="main-container">
 					<!-- Page Content -->
@@ -247,7 +247,12 @@
 							<h4 class="tag-line">Hiring Management Solution for every business.</h4>
 
 							<p class="mt-3">
-								Introducing <strong>Hire Me</strong>, an innovative and comprehensive Hiring Management Platform built with Laravel, designed to streamline and enhance the entire hiring process for companies of all sizes. This all-in-one solution integrates every step of recruitment, from creating job posts to onboarding new employees, into a single, user-friendly interface. By leveraging advanced technology and user-centric design, it reduces time-to-hire, enhances team collaboration, and improves the candidate experience while maintaining compliance and data security throughout the hiring process.
+								Introducing <strong>Hire Me</strong>, an innovative and comprehensive Hiring Management Platform built
+								with Laravel, designed to streamline and enhance the entire hiring process for companies of all sizes.
+								This all-in-one solution integrates every step of recruitment, from creating job posts to onboarding new
+								employees, into a single, user-friendly interface. By leveraging advanced technology and user-centric
+								design, it reduces time-to-hire, enhances team collaboration, and improves the candidate experience
+								while maintaining compliance and data security throughout the hiring process.
 							</p>
 						</section>
 						<!-- END About Section -->
@@ -257,11 +262,13 @@
 							<h2 class="section-header">Server Requirements</h2>
 							<p>
 								The Laravel framework has a few system requirements. All of these requirements are
-								satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
+								satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as
+								your local Laravel development environment.
 							</p>
 
 							<p>
-								However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
+								However, if you are not using Homestead, you will need to make sure your server meets the following
+								requirements:
 							</p>
 							<ul>
 								<li>
@@ -290,8 +297,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="https://www.php.net/manual/en/mbstring.installation.php"
-										target="__blank">
+									<a href="https://www.php.net/manual/en/mbstring.installation.php" target="__blank">
 										Mbstring PHP Extension
 									</a>
 								</li>
@@ -314,7 +320,9 @@
 
 							<div class="alert alert-info push">
 								<p class="mb-0">
-									<strong>Note:</strong> By default, most of the popular hosting provider has all of the above requirements. If you are having any issue to install thea application feel free to inform us we will try to assist you with the installation:
+									<strong>Note:</strong> By default, most of the popular hosting provider has all of the above
+									requirements. If you are having any issue to install thea application feel free to inform us we will
+									try to assist you with the installation:
 								</p>
 							</div>
 						</section>
@@ -324,13 +332,16 @@
 						<section class="scrollSection" id="section-installation">
 							<h2 class="section-header">Installation</h2>
 							<p>
-								The installation process of the <strong>Hire Me</strong> is super easy and similar like other PHP and laravel based systems. Please follow the following steps to install the system on your server.
+								The installation process of the <strong>Hire Me</strong> is super easy and similar like other PHP and
+								laravel based systems. Please follow the following steps to install the system on your server.
 							</p>
 
 							<div class="alert alert-primary push">
 								<p class="mb-0">
 									<strong>Note:</strong> In this section, we will guide you through the cPanel
-									(Hosting) installation process. If you prefer to install the system on your cloud server or if you are considering using FileZilla or any other installation method, please feel free to inform us, we will provide the necessary assistance to facilitate your chosen installation method.
+									(Hosting) installation process. If you prefer to install the system on your cloud server or if you are
+									considering using FileZilla or any other installation method, please feel free to inform us, we will
+									provide the necessary assistance to facilitate your chosen installation method.
 								</p>
 							</div>
 
@@ -338,15 +349,13 @@
 								<div class="col-md-2 mb-3">
 									<div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
 										aria-orientation="vertical">
-										<button class="nav-link active" id="STEP-1-tab" data-bs-toggle="pill"
-											data-bs-target="#STEP-1" type="button" role="tab" aria-controls="STEP-1"
-											aria-selected="true">
+										<button class="nav-link active" id="STEP-1-tab" data-bs-toggle="pill" data-bs-target="#STEP-1"
+											type="button" role="tab" aria-controls="STEP-1" aria-selected="true">
 											STEP-1
 										</button>
 
-										<button class="nav-link" id="STEP-2-tab" data-bs-toggle="pill"
-											data-bs-target="#STEP-2" type="button" role="tab" aria-controls="STEP-2"
-											aria-selected="false">
+										<button class="nav-link" id="STEP-2-tab" data-bs-toggle="pill" data-bs-target="#STEP-2"
+											type="button" role="tab" aria-controls="STEP-2" aria-selected="false">
 											STEP-2
 										</button>
 									</div>
@@ -354,10 +363,11 @@
 								<!-- /.col-md-4 -->
 								<div class="col-md-10">
 									<div class="tab-content" id="v-pills-tabContent">
-										<div class="tab-pane fade show active" id="STEP-1" role="tabpanel"
-											aria-labelledby="STEP-1-tab" tabindex="0">
+										<div class="tab-pane fade show active" id="STEP-1" role="tabpanel" aria-labelledby="STEP-1-tab"
+											tabindex="0">
 											<p class="mb-4 ">
-												To start, unzip the downloaded source code from Codecanyon and look for the "HireMe-v1.0.1" folder. Inside this folder, you'll find the
+												To start, unzip the downloaded source code from Codecanyon and look for the "HireMe-v1.0.1"
+												folder. Inside this folder, you'll find the
 												<span class="fw-bold">
 													HireMe.zip
 												</span>
@@ -372,7 +382,11 @@
 
 							<div class="alert alert-primary push">
 								<p class="mb-0">
-									<strong>Note:</strong> We understand that the installation process may pose challenges, especially for non-technical users. If you encounter any difficulties during installation, please don't hesitate to reach out to our support team via our support portal. We are here to assist you and ensure you successfully install and configure the software to meet your needs. Your satisfaction is our priority, and we are happy to provide the necessary guidance and support.
+									<strong>Note:</strong> We understand that the installation process may pose challenges, especially for
+									non-technical users. If you encounter any difficulties during installation, please don't hesitate to
+									reach out to our support team via our support portal. We are here to assist you and ensure you
+									successfully install and configure the software to meet your needs. Your satisfaction is our priority,
+									and we are happy to provide the necessary guidance and support.
 								</p>
 							</div>
 						</section>
@@ -382,43 +396,51 @@
 						<section class="scrollSection" id="dashboard">
 							<h2 class="section-header">Dashboard</h2>
 							<p>
-								From the dashboard page, you can access a comprehensive overview of key statistics, including Hiring Pipeline, Job Summery, My Tasks, and Employees Information. This centralized view allows you to monitor and manage all critical aspects of your hiring and operational processes efficiently.
+								From the dashboard page, you can access a comprehensive overview of key statistics, including Hiring
+								Pipeline, Job Summery, My Tasks, and Employees Information. This centralized view allows you to monitor
+								and manage all critical aspects of your hiring and operational processes efficiently.
 							</p>
 							<img src="media/dashboard.png" width="60%" alt="" class="img-fluid">
 
 							<h4 class="mt-5">Hiring Pipeline</h4>
 							<p>
-								In this section, you will find detailed information about each job post, including the total number of applications, new applications, total hired employees, and total disqualified employees. Additionally, you can sort this information by department.
+								In this section, you will find detailed information about each job post, including the total number of
+								applications, new applications, total hired employees, and total disqualified employees. Additionally,
+								you can sort this information by department.
 							</p>
 							<img src="media/dashboard.hiring-pipeline.png" width="60%" alt="" class="img-fluid">
 
 							<h4 class="mt-5">Job Summary</h4>
 							<p>
-								In this section, you can view job status with a pie chart, including total published job posts, total draft job posts, and total closed job posts.
+								In this section, you can view job status with a pie chart, including total published job posts, total
+								draft job posts, and total closed job posts.
 							</p>
 							<img src="media/dashboard.job-summary.png" width="60%" alt="" class="img-fluid">
 
 							<h4 class="mt-5">My Tasks</h4>
 							<p>
-								In this section, you can view today's tasks and completed tasks, including details on click on the specified task such as task title, task description, date, start time, end time, and meeting link. You can also add new tasks by clicking on the "Add Task" button.
+								In this section, you can view today's tasks and completed tasks, including details on click on the
+								specified task such as task title, task description, date, start time, end time, and meeting link. You
+								can also add new tasks by clicking on the "Add Task" button.
 
-								<div class="mb-2">
-									<img src="media/dashboard.today-tasks.png" alt="" class="img-fluid my-2" width="60%">
-									<p class="fw-bold">Ref: Today's Tasks</p>
-								</div>
-								<div class="mb-2">
-									<img src="media/dashboard.completed-tasks.png" alt="" class="img-fluid my-2" width="60%">
-									<p class="fw-bold">Ref: Completed Tasks</p>
-								</div>
-								<div class="mb-2">
-									<img src="media/dashboard.add-task.png" alt="" class="img-fluid my-2" width="60%">
-									<p class="fw-bold">Ref: Add Task</p>
-								</div>
+							<div class="mb-2">
+								<img src="media/dashboard.today-tasks.png" alt="" class="img-fluid my-2" width="60%">
+								<p class="fw-bold">Ref: Today's Tasks</p>
+							</div>
+							<div class="mb-2">
+								<img src="media/dashboard.completed-tasks.png" alt="" class="img-fluid my-2" width="60%">
+								<p class="fw-bold">Ref: Completed Tasks</p>
+							</div>
+							<div class="mb-2">
+								<img src="media/dashboard.add-task.png" alt="" class="img-fluid my-2" width="60%">
+								<p class="fw-bold">Ref: Add Task</p>
+							</div>
 							</p>
 
 							<h4>Employees</h4>
 							<p>
-								In this section, you can view departments with total employees of each department. Additionally, if you want to view all employees, you can click on the "View All" button.
+								In this section, you can view departments with total employees of each department. Additionally, if you
+								want to view all employees, you can click on the "View All" button.
 							</p>
 							<img src="media/dashboard.employee.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -428,7 +450,14 @@
 						<section class="scrollSection" id="calendar">
 							<h2 class="section-header">Calendar</h2>
 							<p>
-								From the calendar page, you can easily access and manage all tasks organized by date and time. This allows for a clear and structured view of your schedule. You can add new tasks by clicking on the "Add Task" button, making it simple to keep your calendar up-to-date with new responsibilities. The calendar page offers multiple viewing options, allowing you to see tasks by day, week, month, and year, providing flexibility to focus on short-term or long-term planning. Additionally, the Schedule tab provides a comprehensive overview of all scheduled tasks and events, ensuring you never miss an important deadline or meeting. This centralized scheduling system helps streamline your workflow and enhances productivity by keeping all your tasks and appointments organized in one place.
+								From the calendar page, you can easily access and manage all tasks organized by date and time. This
+								allows for a clear and structured view of your schedule. You can add new tasks by clicking on the "Add
+								Task" button, making it simple to keep your calendar up-to-date with new responsibilities. The calendar
+								page offers multiple viewing options, allowing you to see tasks by day, week, month, and year, providing
+								flexibility to focus on short-term or long-term planning. Additionally, the Schedule tab provides a
+								comprehensive overview of all scheduled tasks and events, ensuring you never miss an important deadline
+								or meeting. This centralized scheduling system helps streamline your workflow and enhances productivity
+								by keeping all your tasks and appointments organized in one place.
 
 								<img src="media/calendar.png" alt="" class="img-fluid rounded mt-2" width="60%">
 							</p>
@@ -439,7 +468,13 @@
 						<section class="scrollSection" id="create-task">
 							<h2 class="section-header">Create Task</h2>
 							<p>
-								The task management feature is a crucial component of our system for effectively managing schedules. To add a task, navigate to the calendar page where you'll find the "Add Task" button located in the top right corner. Clicking this button will open a modal window, allowing you to add a task by filling out a form with the task title, description, date, start time, end time, and meeting link. Additionally, you can invite guests to the meeting, ensuring that all relevant participants are notified and involved. This streamlined process makes it easy to keep your schedule organized and ensures that all tasks are clearly defined and accessible.
+								The task management feature is a crucial component of our system for effectively managing schedules. To
+								add a task, navigate to the calendar page where you'll find the "Add Task" button located in the top
+								right corner. Clicking this button will open a modal window, allowing you to add a task by filling out a
+								form with the task title, description, date, start time, end time, and meeting link. Additionally, you
+								can invite guests to the meeting, ensuring that all relevant participants are notified and involved.
+								This streamlined process makes it easy to keep your schedule organized and ensures that all tasks are
+								clearly defined and accessible.
 
 								<img src="media/dashboard.add-task.png" alt="" class="img-fluid rounded mt-2" width="60%">
 							</p>
@@ -450,7 +485,12 @@
 						<section class="scrollSection" id="job">
 							<h2 class="section-header">Jobs</h2>
 							<p>
-								On the Jobs page, you can view all job posts, including detailed information such as the total number of applications, new applications, total hired employees, total disqualified employees, job title, job location, job type, salary, and related details. This page features two tabs that allow you to view job posts by job type: Active and Inactive, making it easy to manage and track the status of all job postings. You can get a three dot menu on each job card to access additional options, such as "Edit Job", "Close Job", "Duplicate Job", "Live Preview", and "Copy the Job Post Link".
+								On the Jobs page, you can view all job posts, including detailed information such as the total number of
+								applications, new applications, total hired employees, total disqualified employees, job title, job
+								location, job type, salary, and related details. This page features two tabs that allow you to view job
+								posts by job type: Active and Inactive, making it easy to manage and track the status of all job
+								postings. You can get a three dot menu on each job card to access additional options, such as "Edit
+								Job", "Close Job", "Duplicate Job", "Live Preview", and "Copy the Job Post Link".
 
 								<img src="media/jobs.view.png" alt="" class="img-fluid rounded mt-2" width="60%">
 							</p>
@@ -461,14 +501,16 @@
 						<section class="scrollSection" id="create-job">
 							<h2 class="section-header">Create Job</h2>
 							<p>
-								You can create a new job post by clicking on the "Create New Job" button located in the Jobs page top right corner. In our system, the job creation process is divided into four sections to ensure a comprehensive and detailed job post. These sections are:
+								You can create a new job post by clicking on the "Create New Job" button located in the Jobs page top
+								right corner. In our system, the job creation process is divided into four sections to ensure a
+								comprehensive and detailed job post. These sections are:
 
-								<ol>
-									<li>Job Details</li>
-									<li>Application Form</li>
-									<li>Hiring Stages</li>
-									<li>Task Assessment</li>
-								</ol>
+							<ol>
+								<li>Job Details</li>
+								<li>Application Form</li>
+								<li>Hiring Stages</li>
+								<li>Task Assessment</li>
+							</ol>
 							</p>
 
 							<table class="table table-bordered">
@@ -485,20 +527,28 @@
 												<li>Banner image: A banner image for the job post (recommended size: 835x361 px)</li>
 												<li>Job title: Enter the job title.</li>
 												<li>Job description: Enter the job description.</li>
-												<li>Department: You can select department from the dropdown. To create a new department, <a href="">click here</a>.</li>
-												<li>Hiring manager: You can select hiring manager from the dropdown. To create a new hiring manager, <a href="">click here</a>.</li>
-												<li>Assign employeees: You can select employeees from the dropdown. Employees are responsible to manage the job. To create a new employeee, <a href="">click here</a>.</li>
+												<li>Department: You can select department from the dropdown. To create a new department, <a
+														href="">click here</a>.</li>
+												<li>Hiring manager: You can select hiring manager from the dropdown. To create a new hiring
+													manager, <a href="">click here</a>.</li>
+												<li>Assign employeees: You can select employeees from the dropdown. Employees are responsible to
+													manage the job. To create a new employeee, <a href="">click here</a>.</li>
 												<li>Recruitment period: Select a date that where to candidates can apply for the job.</li>
-												<li>Experience level: You can select experience level from the dropdown. To create a new experience level, <a href="">click here</a>.</li>
-												<li>Job type: You can select job type from the dropdown. To create a new job type, <a href="">click here</a>.</li>
+												<li>Experience level: You can select experience level from the dropdown. To create a new
+													experience level, <a href="">click here</a>.</li>
+												<li>Job type: You can select job type from the dropdown. To create a new job type, <a
+														href="">click here</a>.</li>
 												<li>Number of vacancies: Enter the total number of vacancies</li>
-												<li>Employment type: You can select employment type from the dropdown. To create a new employment type, <a href="">click here</a></li>
+												<li>Employment type: You can select employment type from the dropdown. To create a new
+													employment type, <a href="">click here</a></li>
 												<li>Base salary currency: You can select base salary currency from the dropdown.</li>
-												<li>Salary type: You can select salary type from the dropdown.Example: Hourly, Daily, Weekly, or Monthly.</li>
+												<li>Salary type: You can select salary type from the dropdown.Example: Hourly, Daily, Weekly, or
+													Monthly.</li>
 												<li>Salary (Fixed or Range): Enter the salary. Example: 1000 or 1000-2000</li>
 												<li>Country: You can select country from the dropdown.</li>
 												<li>City: You can select city from the dropdown.</li>
-												<li>Skill sets: You can select skill sets from the dropdown. To create a new skill set, <a href="">click here</a></li>
+												<li>Skill sets: You can select skill sets from the dropdown. To create a new skill set, <a
+														href="">click here</a></li>
 												<li>Office time: Enter office time. Example: SUN - THU: 8:00 AM to 6:00 PM</li>
 											</ol>
 
@@ -517,7 +567,12 @@
 								<tbody>
 									<tr>
 										<td>
-											In this section, you can dynamically create a form based on the job post. On the right side, you'll find all available field types that you can drag and drop to the left side. After adding fields, you can update the field title and placeholder text to suit your needs. Additionally, you can preview the form live to see exactly how it will appear to candidates. This ensures that the application form is tailored specifically to the job requirements and provides a user-friendly experience for applicants. <br>
+											In this section, you can dynamically create a form based on the job post. On the right side,
+											you'll find all available field types that you can drag and drop to the left side. After adding
+											fields, you can update the field title and placeholder text to suit your needs. Additionally, you
+											can preview the form live to see exactly how it will appear to candidates. This ensures that the
+											application form is tailored specifically to the job requirements and provides a user-friendly
+											experience for applicants. <br>
 
 											<img src="media/jobs.form-create.png" alt="" class="img-fluid rounded mt-2" width="60%">
 										</td>
@@ -534,11 +589,18 @@
 								<tbody>
 									<tr>
 										<td>
-											In this section, you can customize and select the hiring stages based on the specific requirements of the job post. Hiring stages are a crucial part of the recruitment process, as they help in systematically tracking the progress and status of each candidate throughout their journey. The structured sequence of hiring stages ensures that every applicant is evaluated consistently and fairly.
+											In this section, you can customize and select the hiring stages based on the specific requirements
+											of the job post. Hiring stages are a crucial part of the recruitment process, as they help in
+											systematically tracking the progress and status of each candidate throughout their journey. The
+											structured sequence of hiring stages ensures that every applicant is evaluated consistently and
+											fairly.
 
 											<br><br>
 
-											To add a new hiring stage, simply click on the "Add Hiring Stage" button. This functionality allows you to tailor the hiring process to better fit the unique needs of your organization or specific job roles. Each stage can be defined with clear criteria and objectives, facilitating a smooth and efficient selection process. <br>
+											To add a new hiring stage, simply click on the "Add Hiring Stage" button. This functionality
+											allows you to tailor the hiring process to better fit the unique needs of your organization or
+											specific job roles. Each stage can be defined with clear criteria and objectives, facilitating a
+											smooth and efficient selection process. <br>
 
 											<img src="media/jobs.hiring-stages.png" alt="" class="img-fluid rounded mt-2" width="60%">
 										</td>
@@ -555,7 +617,8 @@
 								<tbody>
 									<tr>
 										<td>
-											In this section, you can add a task assessment based on the job post by fillup the form with the following details.
+											In this section, you can add a task assessment based on the job post by fillup the form with the
+											following details.
 
 											<ol>
 												<li>Task link: Enter the task link.</li>
@@ -569,7 +632,9 @@
 							</table>
 
 							<p>
-								After completing the above steps, you can click on the "Save" button to save the job post. After that you will be redirected to a page that confirm the job post has been created. Additionally, you will get options to share the job post on social media. <br>
+								After completing the above steps, you can click on the "Save" button to save the job post. After that
+								you will be redirected to a page that confirm the job post has been created. Additionally, you will get
+								options to share the job post on social media. <br>
 
 								<img src="media/jobs.created.png" alt="" class="img-fluid rounded mt-2" width="60%">
 							</p>
@@ -580,9 +645,12 @@
 						<section class="scrollSection" id="edit-job">
 							<h2 class="section-header">Edit Job</h2>
 							<p>
-								To edit the job post details, click on the "Edit" button located in the three-dot menu on the job cards found on the jobs page. This will redirect you to a page where you can update the job post details. <br>
+								To edit the job post details, click on the "Edit" button located in the three-dot menu on the job cards
+								found on the jobs page. This will redirect you to a page where you can update the job post details. <br>
 
-								The job edit process is similar to the job creation process. For guidance on creating a job post and understanding the type of details required, please refer to the <a href="#create-job">Create Job</a> section.
+								The job edit process is similar to the job creation process. For guidance on creating a job post and
+								understanding the type of details required, please refer to the <a href="#create-job">Create Job</a>
+								section.
 							</p>
 						</section>
 						<!-- End Edit Job Section -->
@@ -591,41 +659,51 @@
 						<section class="scrollSection" id="manage-job">
 							<h2 class="section-header">Manage Job</h2>
 							<p>
-								To manage the job post, click on the Job Post Card located on the jobs page. This will redirect you to a page where you can manage the job post.
+								To manage the job post, click on the Job Post Card located on the jobs page. This will redirect you to a
+								page where you can manage the job post.
 								<br><br>
-								On the job management page, you will find several tabs that allow you to manage various aspects of the job post. These tabs include:
-								<ol>
-									<li>Overview</li>
-									<li>Applicants</li>
-									<li>Hiring Stages</li>
-								</ol>
+								On the job management page, you will find several tabs that allow you to manage various aspects of the
+								job post. These tabs include:
+							<ol>
+								<li>Overview</li>
+								<li>Applicants</li>
+								<li>Hiring Stages</li>
+							</ol>
 							</p>
 
 							<p class="mt-5">
-								In the <strong>"Overview"</strong> tab, you can view the applications along with their current application stage. This tab provides an overview of the current status of the applications, allowing you to monitor the progress of each candidate.
+								In the <strong>"Overview"</strong> tab, you can view the applications along with their current
+								application stage. This tab provides an overview of the current status of the applications, allowing you
+								to monitor the progress of each candidate.
 							</p>
 							<img src="media/jobs.overview.png" alt="" class="img-fluid rounded mt-2" width="60%">
 
 							<p class="mt-5">
-								In the <strong>"Applicants"</strong> tab, you can view detailed information about each applicant. This includes their current application stage, name, contact email, team review, application date, job assignee, and action buttons for the following actions:
-								<ol>
-									<li>Send an email to the applicant</li>
-									<li>Create an event</li>
-									<li>Move the applicant to the next stage</li>
-									<li>Mark the applicant as Hired</li>
-									<li>Mark the applicant as Disqualified</li>
-									<li>Delete the applicant's data</li>
-								</ol>
+								In the <strong>"Applicants"</strong> tab, you can view detailed information about each applicant. This
+								includes their current application stage, name, contact email, team review, application date, job
+								assignee, and action buttons for the following actions:
+							<ol>
+								<li>Send an email to the applicant</li>
+								<li>Create an event</li>
+								<li>Move the applicant to the next stage</li>
+								<li>Mark the applicant as Hired</li>
+								<li>Mark the applicant as Disqualified</li>
+								<li>Delete the applicant's data</li>
+							</ol>
 							</p>
 							<img src="media/jobs.applicants.png" alt="" class="img-fluid rounded mt-2" width="60%">
 
 							<p class="mt-5">
-								Additionally, you can view each applicants details by clicking on the name of the applicant. This will appear a new tab with detailed information about the applicant.
+								Additionally, you can view each applicants details by clicking on the name of the applicant. This will
+								appear a new tab with detailed information about the applicant.
 							</p>
 							<img src="media/jobs.applicant.details.png" alt="" class="img-fluid rounded mt-2" width="60%">
 
 							<p class="mt-5">
-								In the <strong>"Hiring Stages"</strong> tab, you can view applications sorted by their stage. Each stage is represented by a separate tab, displaying the applicant's name, contact email, team review, application date, and job assignee. This allows for easy tracking and management of applicants through each stage of the hiring process.
+								In the <strong>"Hiring Stages"</strong> tab, you can view applications sorted by their stage. Each stage
+								is represented by a separate tab, displaying the applicant's name, contact email, team review,
+								application date, and job assignee. This allows for easy tracking and management of applicants through
+								each stage of the hiring process.
 							</p>
 						</section>
 						<!-- End Manage Job Section -->
@@ -634,22 +712,24 @@
 						<section class="scrollSection" id="candidates">
 							<h2 class="section-header">Candidates</h2>
 							<p>
-								On this page, you can view detailed information about each applicant for all job posts within the company. You can sort data by name, contact email, team review, application date, hiring stage, and the job applied for (Job Name). The detailed information for each applicant includes:
-								<ol>
-									<li>Current application stage</li>
-									<li>Name</li>
-									<li>Contact email</li>
-									<li>Team review</li>
-									<li>Application date</li>
-									<li>Applied For (Job Name)</li>
-								</ol>
+								On this page, you can view detailed information about each applicant for all job posts within the
+								company. You can sort data by name, contact email, team review, application date, hiring stage, and the
+								job applied for (Job Name). The detailed information for each applicant includes:
+							<ol>
+								<li>Current application stage</li>
+								<li>Name</li>
+								<li>Contact email</li>
+								<li>Team review</li>
+								<li>Application date</li>
+								<li>Applied For (Job Name)</li>
+							</ol>
 
-								Additionally, you have action buttons available for the following actions:
-								<ol>
-									<li>Send an email to the applicant</li>
-									<li>Create an event</li>
-									<li>Delete the applicant's data</li>
-								</ol>
+							Additionally, you have action buttons available for the following actions:
+							<ol>
+								<li>Send an email to the applicant</li>
+								<li>Create an event</li>
+								<li>Delete the applicant's data</li>
+							</ol>
 							</p>
 
 							<div class="mb-3">
@@ -668,43 +748,45 @@
 						<section class="scrollSection" id="employees">
 							<h2 class="section-header">Employees</h2>
 							<p>
-								On this page, you can view detailed information about each employee. The detailed information for each employee includes:
-								<ol>
-									<li>Employee ID</li>
-									<li>Name</li>
-									<li>Phone</li>
-									<li>Department</li>
-									<li>Job Title</li>
-									<li>Role</li>
-								</ol>
-								
-								Additionally, you will have options available in the three-dot menu for each employee, including:
-								<ol>
-									<li>Send Invitation Email</li>
-									<li>Edit Employee</li>
-									<li>Delete Employee</li>
-								</ol>
+								On this page, you can view detailed information about each employee. The detailed information for each
+								employee includes:
+							<ol>
+								<li>Employee ID</li>
+								<li>Name</li>
+								<li>Phone</li>
+								<li>Department</li>
+								<li>Job Title</li>
+								<li>Role</li>
+							</ol>
+
+							Additionally, you will have options available in the three-dot menu for each employee, including:
+							<ol>
+								<li>Send Invitation Email</li>
+								<li>Edit Employee</li>
+								<li>Delete Employee</li>
+							</ol>
 							</p>
 							<img src="media/employees.png" width="60%" alt="" class="img-fluid">
 						</section>
 						<!-- End Employees Section -->
-						
+
 						<!-- Add Employee Section -->
 						<section class="scrollSection" id="add-employee">
 							<h2 class="section-header">Add Employee</h2>
 							<p>
-								To add an employee, click on the "Add Employee" button located at the top right corner of the employees page. This will open a modal window where you can add an employee with the following details:
-								<ol>
-									<li>Employee Photo (optional)</li>
-									<li>Full Name (required)</li>
-									<li>Email (required)</li>
-									<li>Employee ID (required)</li>
-									<li>Department (required)</li>
-									<li>Job Title (required)</li>
-									<li>Contact (required)</li>
-									<li>Employee Role (required)</li>
-									<li>Permissions (required)</li>
-								</ol>
+								To add an employee, click on the "Add Employee" button located at the top right corner of the employees
+								page. This will open a modal window where you can add an employee with the following details:
+							<ol>
+								<li>Employee Photo (optional)</li>
+								<li>Full Name (required)</li>
+								<li>Email (required)</li>
+								<li>Employee ID (required)</li>
+								<li>Department (required)</li>
+								<li>Job Title (required)</li>
+								<li>Contact (required)</li>
+								<li>Employee Role (required)</li>
+								<li>Permissions (required)</li>
+							</ol>
 							</p>
 							<img src="media/employees.add.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -714,17 +796,18 @@
 						<section class="scrollSection" id="edit-employee">
 							<h2 class="section-header">Edit Employee</h2>
 							<p>
-								To edit an employee's details, click on the "Edit" button located in the employee's row on the employees page. This will open a modal window where you can edit the details of an employee, including:
-								<ol>
-									<li>Employee Photo (optional)</li>
-									<li>Full Name (required)</li>
-									<li>Email (required)</li>
-									<li>Employee ID (required)</li>
-									<li>Department (required)</li>
-									<li>Job Title (required)</li>
-									<li>Contact (required)</li>
-									<li>Employee Role (required)</li>
-								</ol>
+								To edit an employee's details, click on the "Edit" button located in the employee's row on the employees
+								page. This will open a modal window where you can edit the details of an employee, including:
+							<ol>
+								<li>Employee Photo (optional)</li>
+								<li>Full Name (required)</li>
+								<li>Email (required)</li>
+								<li>Employee ID (required)</li>
+								<li>Department (required)</li>
+								<li>Job Title (required)</li>
+								<li>Contact (required)</li>
+								<li>Employee Role (required)</li>
+							</ol>
 							</p>
 							<img src="media/employees.edit.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -735,14 +818,14 @@
 							<h2 class="section-header">Report</h2>
 							<p>
 								On this page, you can view detailed reports for each job post. The information available includes:
-								<ol>
-									<li>Date Posted</li>
-									<li>Job Status</li>
-									<li>Total Applications</li>
-									<li>Salary Range</li>
-									<li>Total Hired Employees</li>
-								</ol>
-								You can sort and filter this information by department and date range to better analyze the hiring data.
+							<ol>
+								<li>Date Posted</li>
+								<li>Job Status</li>
+								<li>Total Applications</li>
+								<li>Salary Range</li>
+								<li>Total Hired Employees</li>
+							</ol>
+							You can sort and filter this information by department and date range to better analyze the hiring data.
 							</p>
 							<img src="media/reports.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -752,28 +835,35 @@
 						<section class="scrollSection" id="settings">
 							<h2 class="section-header">Settings</h2>
 							<p>
-								On this page, you can view and manage settings through two different tabs: <strong>Company</strong> and <strong>Job</strong>.
+								On this page, you can view and manage settings through two different tabs: <strong>Company</strong> and
+								<strong>Job</strong>.
 							</p>
 
 							<p class="p mt-5">
-								In the <strong>Company</strong> tab, you can update various company details, including the name, website URL, mobile number, industry, country, state, city, company address, number of employees, and information about the company. You can also upload the company logo and add social media accounts such as Facebook, Twitter/X, Instagram, and LinkedIn.
+								In the <strong>Company</strong> tab, you can update various company details, including the name, website
+								URL, mobile number, industry, country, state, city, company address, number of employees, and
+								information about the company. You can also upload the company logo and add social media accounts such
+								as Facebook, Twitter/X, Instagram, and LinkedIn.
 							</p>
 							<img src="media/settings.company.png" width="60%" alt="" class="img-fluid rounded">
-							
+
 							<p class="mt-5">
-								In the <strong>Job</strong> tab, you can manage job recruitment-related details. This includes departments, job stages, job types, skills, email templates, and employee types.
+								In the <strong>Job</strong> tab, you can manage job recruitment-related details. This includes
+								departments, job stages, job types, skills, email templates, and employee types.
 							</p>
 							<img src="media/settings.job.png" width="60%" alt="" class="img-fluid rounded">
 						</section>
-						
+
 						<!-- Company Section -->
 						<section class="scrollSection" id="company-settings">
 							<h2 class="section-header">Company</h2>
 							<p>
-								On this "Company" tab, you can view and manage various company details. We have divided this tab into four sections to help you better understand the purpose of each section.
+								On this "Company" tab, you can view and manage various company details. We have divided this tab into
+								four sections to help you better understand the purpose of each section.
 							</p>
 							<ol>
-								<li><strong>Job Details:</strong> In this section, you can view and update the following company details:
+								<li><strong>Job Details:</strong> In this section, you can view and update the following company
+									details:
 									<ol type="i">
 										<li>Company Name</li>
 										<li>Website URL</li>
@@ -788,11 +878,14 @@
 									</ol>
 								</li>
 								<li><strong>Company Assets:</strong> Here, you can view and update the company logo.</li>
-								<li><strong>Manage Team:</strong> In this section, you can view and manage the employees of the company.</li>
-								<li><strong>Social Media:</strong> This section allows you to view and update the company's social media accounts.</li>
+								<li><strong>Manage Team:</strong> In this section, you can view and manage the employees of the company.
+								</li>
+								<li><strong>Social Media:</strong> This section allows you to view and update the company's social media
+									accounts.</li>
 							</ol>
 							<p>
-								Each section is designed to provide a comprehensive view and easy management of specific company aspects, ensuring all necessary information is accessible and up-to-date.
+								Each section is designed to provide a comprehensive view and easy management of specific company
+								aspects, ensuring all necessary information is accessible and up-to-date.
 							</p>
 						</section>
 						<!-- End Company Section -->
@@ -801,9 +894,11 @@
 						<section class="scrollSection" id="departments">
 							<h2 class="section-header">Departments</h2>
 							<p>
-								To manage departments, navigate to the settings page under the Job tab. Here, you will find a section labeled "Departments" where you can view, edit, add, and delete departments.
+								To manage departments, navigate to the settings page under the Job tab. Here, you will find a section
+								labeled "Departments" where you can view, edit, add, and delete departments.
 							</p>
-							<img src="media/settings.departments.png" width="60%" alt="Departments settings screenshot" class="img-fluid">
+							<img src="media/settings.departments.png" width="60%" alt="Departments settings screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Departments Section -->
 
@@ -811,23 +906,28 @@
 						<section class="scrollSection" id="add-department">
 							<h2 class="section-header">Add a Department</h2>
 							<p>
-								To add a department, click on the "Add Department" button located in the Departments section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add a department, click on the "Add Department" button located in the Departments section of the
+								settings page under the Job tab. This will open a modal window where you can provide the following
+								details:
 							</p>
 							<ol type="i">
 								<li>Name (required)</li>
 								<li>Details (optional)</li>
 							</ol>
-							<img src="media/settings.departments.add.png" width="60%" alt="Add Department modal window screenshot" class="img-fluid">
+							<img src="media/settings.departments.add.png" width="60%" alt="Add Department modal window screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Add Department Section -->
-						
+
 						<!-- Job Stages Section -->
 						<section class="scrollSection" id="job-stages">
 							<h2 class="section-header">Job Stages</h2>
 							<p>
-								To manage job stages, navigate to the settings page under the Job tab. In the "Job Stages" section, you can view, edit, add, and delete job stages, sorted by department.
+								To manage job stages, navigate to the settings page under the Job tab. In the "Job Stages" section, you
+								can view, edit, add, and delete job stages, sorted by department.
 							</p>
-							<img src="media/settings.job-stages.png" width="60%" alt="Job Stages settings screenshot" class="img-fluid">
+							<img src="media/settings.job-stages.png" width="60%" alt="Job Stages settings screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Job Stages Section -->
 
@@ -835,22 +935,26 @@
 						<section class="scrollSection" id="add-job-stage">
 							<h2 class="section-header">Add a Job Stage</h2>
 							<p>
-								To add a job stage, click on the "Add Job Stage" button located in the Job Stages section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add a job stage, click on the "Add Job Stage" button located in the Job Stages section of the
+								settings page under the Job tab. This will open a modal window where you can provide the following
+								details:
 							</p>
 							<ol type="i">
 								<li>Department (required)</li>
 								<li>Name (required)</li>
 								<li>Color Code (optional)</li>
 							</ol>
-							<img src="media/settings.job-stages.add.png" width="60%" alt="Add Job Stage modal window screenshot" class="img-fluid">
+							<img src="media/settings.job-stages.add.png" width="60%" alt="Add Job Stage modal window screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Add Job Stage Section -->
-						
+
 						<!-- Job Types Section -->
 						<section class="scrollSection" id="job-types">
 							<h2 class="section-header">Job Types</h2>
 							<p>
-								To manage job types, navigate to the settings page under the Job tab. In the "Job Types" section, you can view, edit, add, and delete job types.
+								To manage job types, navigate to the settings page under the Job tab. In the "Job Types" section, you
+								can view, edit, add, and delete job types.
 							</p>
 							<img src="media/settings.job-types.png" width="60%" alt="Job Types settings screenshot" class="img-fluid">
 						</section>
@@ -860,21 +964,24 @@
 						<section class="scrollSection" id="add-job-types">
 							<h2 class="section-header">Add a Job Type</h2>
 							<p>
-								To add a job type, click on the "Add Job Type" button located in the Job Types section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add a job type, click on the "Add Job Type" button located in the Job Types section of the settings
+								page under the Job tab. This will open a modal window where you can provide the following details:
 							</p>
 							<ol type="i">
 								<li>Name (required)</li>
 								<li>Details (optional)</li>
 							</ol>
-							<img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot" class="img-fluid">
+							<img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Add Job Type Section -->
-						
+
 						<!-- Job Skills Section -->
 						<section class="scrollSection" id="job-skills">
 							<h2 class="section-header">Job Skills</h2>
 							<p>
-								To manage job skills you should go to the settings pages Job tab where you will get a section with the name of Job Skills where from you can view, edit, add and delete job skills.
+								To manage job skills you should go to the settings pages Job tab where you will get a section with the
+								name of Job Skills where from you can view, edit, add and delete job skills.
 							</p>
 							<img src="media/settings.job-skills.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -884,23 +991,28 @@
 						<section class="scrollSection" id="add-job-skill">
 							<h2 class="section-header">Add Job Skill</h2>
 							<p>
-								To add a job skill, click on the "Add a Job Skill" button located in the Job Skills section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add a job skill, click on the "Add a Job Skill" button located in the Job Skills section of the
+								settings page under the Job tab. This will open a modal window where you can provide the following
+								details:
 							</p>
 							<ol type="i">
 								<li>Name (required)</li>
 								<li>Details (optional)</li>
 							</ol>
-							<img src="media/settings.job-skills.add.png" width="60%" alt="Add Job Type modal window screenshot" class="img-fluid">
+							<img src="media/settings.job-skills.add.png" width="60%" alt="Add Job Type modal window screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Add Job Type Section -->
-						
+
 						<!-- Email Templates Section -->
 						<section class="scrollSection" id="email-templates">
 							<h2 class="section-header">Email Templates</h2>
 							<p>
-								To manage email templates, navigate to the settings page under the Job tab. In the "Email Templates" section, you can view, edit, add, and delete email templates.
+								To manage email templates, navigate to the settings page under the Job tab. In the "Email Templates"
+								section, you can view, edit, add, and delete email templates.
 							</p>
-							<img src="media/settings.email-templates.png" width="60%" alt="Email Templates settings screenshot" class="img-fluid">
+							<img src="media/settings.email-templates.png" width="60%" alt="Email Templates settings screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Email Templates Section -->
 
@@ -908,22 +1020,26 @@
 						<section class="scrollSection" id="add-email-template">
 							<h2 class="section-header">Add Email Template</h2>
 							<p>
-								To add an email template, click on the "Add New Template" button located in the Email Templates section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add an email template, click on the "Add New Template" button located in the Email Templates section
+								of the settings page under the Job tab. This will open a modal window where you can provide the
+								following details:
 							</p>
 							<ol type="i">
 								<li>Template Name (required)</li>
 								<li>Email Subject (required)</li>
 								<li>Email Message (required)</li>
 							</ol>
-							<img src="media/settings.email-templates.add.png" width="60%" alt="Add Email Template modal window screenshot" class="img-fluid">
+							<img src="media/settings.email-templates.add.png" width="60%"
+								alt="Add Email Template modal window screenshot" class="img-fluid">
 						</section>
 						<!-- End Add Email Template Section -->
-						
+
 						<!-- Employee Types Section -->
 						<section class="scrollSection" id="employee-types">
 							<h2 class="section-header">Employee Types</h2>
 							<p>
-								To manage employee types you should go to the settings pages Job tab where you will get a section with the name of Employee Types where from you can view, edit, add and delete employee types.
+								To manage employee types you should go to the settings pages Job tab where you will get a section with
+								the name of Employee Types where from you can view, edit, add and delete employee types.
 							</p>
 							<img src="media/settings.employee-types.png" width="60%" alt="" class="img-fluid">
 						</section>
@@ -933,13 +1049,16 @@
 						<section class="scrollSection" id="add-employee-type">
 							<h2 class="section-header">Add an Employee Type</h2>
 							<p>
-								To add a employee type, click on the "Add Employee Type" button located in the Employee Types section of the settings page under the Job tab. This will open a modal window where you can provide the following details:
+								To add a employee type, click on the "Add Employee Type" button located in the Employee Types section of
+								the settings page under the Job tab. This will open a modal window where you can provide the following
+								details:
 							</p>
 							<ol type="i">
 								<li>Name (required)</li>
 								<li>Details (optional)</li>
 							</ol>
-							<img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot" class="img-fluid">
+							<img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot"
+								class="img-fluid">
 						</section>
 						<!-- End Add Employee Type Section -->
 
@@ -1122,11 +1241,17 @@
 						<section class="scrollSection" id="section-support">
 							<h2 class="section-header">Support</h2>
 							<p>
-								We extend our heartfelt gratitude for choosing our product. Your feedback holds immense value to us, and we kindly request you to consider leaving an inspiring <a href="https://help.market.envato.com/hc/en-us/articles/203269490-Giving-Feedback-On-Items" target="_blank">review</a>. Whether you require assistance, fixes, or have feature requests, please don't hesitate to reach out to us through our dedicated <a href="https://qtecsolution.net" target="_blank">support portal</a>. Your satisfaction remains our priority.
+								We extend our heartfelt gratitude for choosing our product. Your feedback holds immense value to us, and
+								we kindly request you to consider leaving an inspiring <a
+									href="https://help.market.envato.com/hc/en-us/articles/203269490-Giving-Feedback-On-Items"
+									target="_blank">review</a>. Whether you require assistance, fixes, or have feature requests, please
+								don't hesitate to reach out to us through our dedicated <a href="https://qtecsolution.net"
+									target="_blank">support portal</a>. Your satisfaction remains our priority.
 							</p>
 							<div class="alert alert-primary push">
 								<p class="mb-0">
-									<strong>Note:</strong> We are available for freelance work. If you need any kind of modification in the system, please let us know, and we will try our best to assist you.
+									<strong>Note:</strong> We are available for freelance work. If you need any kind of modification in
+									the system, please let us know, and we will try our best to assist you.
 								</p>
 							</div>
 						</section>
@@ -1137,7 +1262,9 @@
 							<div class="thank-u">
 								<h2 class="section-header">Thank You!</h2>
 								<p>
-									Your kind support in purchasing our product is highly appreciated! We send our best wishes for the success of your business and all your future endeavors. For more information about our offerings, please feel free to visit <a target="_blank" href="https://qtecsolution.net/">our website</a>.
+									Your kind support in purchasing our product is highly appreciated! We send our best wishes for the
+									success of your business and all your future endeavors. For more information about our offerings,
+									please feel free to visit <a target="_blank" href="https://qtecsolution.net/">our website</a>.
 								</p>
 							</div>
 						</section>
