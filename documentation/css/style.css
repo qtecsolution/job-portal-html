@@ -55,6 +55,7 @@ ul {
 
 .menu a:hover {
   color: #6366f1;
+  text-decoration: none;
 }
 
 .menu .closebtn {
@@ -299,6 +300,10 @@ p {
   list-style: none;
   list-style-position: outside;
   padding-left: 0;
+}
+
+.nav_main {
+  padding-right: 32px;
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-heading {
