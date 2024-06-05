@@ -482,3 +482,9 @@ p {
 #close-sidebar {
   transition: all 0.3s ease;
 }
+
+#myMenu {
+  width: 300px;
+  display: block;
+  transition: .4s all ease-in-out;
+}

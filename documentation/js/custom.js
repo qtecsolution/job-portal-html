@@ -1,13 +1,13 @@
 function openMenu() {
   const menu = document.getElementById("myMenu");
-  menu.style.width = "300px";
-  menu.style.display = "block";
+  // menu.style.width = "300px";
+  menu.style.left = "0";
+  // menu.style.display = "block";
 }
 
 function closeMenu() {
   const menu = document.getElementById("myMenu");
-  menu.style.width = "0";
-  menu.style.display = "none";
+  menu.style.left = "-100%";
 }
 
 function conditionalCloseMenu() {
@@ -18,7 +18,7 @@ function conditionalCloseMenu() {
 
 function setInitialMenuState() {
   if (window.innerWidth > 990) {
-    openMenu();
+    // openMenu();
   } else {
     closeMenu();
   }
