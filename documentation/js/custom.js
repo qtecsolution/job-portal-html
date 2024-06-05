@@ -1,13 +1,17 @@
 function openMenu() {
   const menu = document.getElementById("myMenu");
-  // menu.style.width = "300px";
   menu.style.left = "0";
+  // menu.style.width = "300px";
+  // const mainContainer = document.querySelector("#main-container");
+  // mainContainer.classList.add("marginLeft");
   // menu.style.display = "block";
 }
 
 function closeMenu() {
   const menu = document.getElementById("myMenu");
   menu.style.left = "-100%";
+  // const mainContainer = document.querySelector("#main-container");
+  // mainContainer.classList.remove("marginLeft");
 }
 
 function conditionalCloseMenu() {
