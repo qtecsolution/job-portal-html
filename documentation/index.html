@@ -7,8 +7,8 @@
 	<title>Hire Me - Technical Documentation</title>
 
 	<!-- CSS  -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/css/uikit.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<link rel="stylesheet" href="./js/lightboxed/lightboxed.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -372,12 +372,12 @@
 												HireMe.zip
 											</span>
 										</p>
-										<div>
-											<a class="uk-inline" href="./media/i-1.jpg" data-caption="Caption 1">
-												<img src="./media/i-1.jpg" alt="" class="img-fluid mb-5">
-											</a>
-										</div>
-										<!-- <img src="https://i.postimg.cc/CK97xX5V/i-1.jpg" class="img-fluid mb-5"> -->
+										<!-- <a class="uk-inline" href="./media/i-1.jpg" data-caption="Caption 1">
+											<img src="./media/i-1.jpg" alt="" class="img-fluid mb-5">
+										</a> -->
+
+										<img class="lightboxed img-fluid mb-5" rel="group1" src="./media/i-1.jpg"
+											data-link="./media/i-1.jpg" alt="Image Alt" data-caption="Image Caption" />
 									</div>
 								</div>
 							</div>
@@ -404,11 +404,12 @@
 							Pipeline, Job Summery, My Tasks, and Employees Information. This centralized view allows you to monitor
 							and manage all critical aspects of your hiring and operational processes efficiently.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/dashboard.png" data-caption="Caption 1">
-								<img src="media/dashboard.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+
+						<!-- <a class="uk-inline" href="media/dashboard.png" data-caption="Caption 2">
+							<img src="media/dashboard.png" alt="" class="img-fluid mb-5">
+						</a> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.png"
+							data-link="media/dashboard.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<h4 class="mt-5">Hiring Pipeline</h4>
 						<p>
@@ -416,11 +417,9 @@
 							applications, new applications, total hired employees, and total disqualified employees. Additionally,
 							you can sort this information by department.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/dashboard.hiring-pipeline.png" data-caption="Caption 1">
-								<img src="media/dashboard.hiring-pipeline.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.hiring-pipeline.png"
+							data-link="media/dashboard.hiring-pipeline.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<h4 class="mt-5">Job Summary</h4>
 						<p>
@@ -428,13 +427,13 @@
 							draft job posts, and total closed job posts.
 						</p>
 
-						<div>
-							<a class="uk-inline" href="media/dashboard.job-summary.png" data-caption="Caption 1">
-								<img src="media/dashboard.job-summary.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
 
-						<!-- <img src="media/dashboard.job-summary.png" width="60%" alt="" class="img-fluid"> -->
+						<!-- <a class="uk-inline" href="media/dashboard.job-summary.png" data-caption="Caption 4">
+							<img src="media/dashboard.job-summary.png" alt="" class="img-fluid mb-5">
+						</a> -->
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.job-summary.png"
+							data-link="media/dashboard.job-summary.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<h4 class="mt-5">My Tasks</h4>
 						<p>
@@ -443,30 +442,19 @@
 							can also add new tasks by clicking on the "Add Task" button.
 
 						<div class="mb-2">
-							<div>
-								<a class="uk-inline" href="media/dashboard.today-tasks.png" data-caption="Caption 1">
-									<img src="media/dashboard.today-tasks.png" alt="" class="img-fluid mb-5">
-								</a>
-							</div>
-							<!-- <img src="media/dashboard.today-tasks.png" alt="" class="img-fluid my-2" width="60%"> -->
+							<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.today-tasks.png"
+								data-link="media/dashboard.today-tasks.png" alt="Image Alt" data-caption="Image Caption" />
+
 							<p class="fw-bold">Ref: Today's Tasks</p>
 						</div>
 						<div class="mb-2">
-							<div>
-								<a class="uk-inline" href="media/dashboard.completed-tasks.png" data-caption="Caption 1">
-									<img src="media/dashboard.completed-tasks.png" alt="" class="img-fluid mb-5">
-								</a>
-							</div>
-							<!-- <img src="media/dashboard.completed-tasks.png" alt="" class="img-fluid my-2" width="60%"> -->
+							<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.completed-tasks.png"
+								data-link="media/dashboard.completed-tasks.png" alt="Image Alt" data-caption="Image Caption" />
 							<p class="fw-bold">Ref: Completed Tasks</p>
 						</div>
 						<div class="mb-2">
-							<div>
-								<a class="uk-inline" href="media/dashboard.add-task.png" data-caption="Caption 1">
-									<img src="media/dashboard.add-task.png" alt="" class="img-fluid mb-5">
-								</a>
-							</div>
-							<!-- <img src="media/dashboard.add-task.png" alt="" class="img-fluid my-2" width="60%"> -->
+							<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.add-task.png"
+								data-link="media/dashboard.add-task.png" alt="Image Alt" data-caption="Image Caption" />
 							<p class="fw-bold">Ref: Add Task</p>
 						</div>
 						</p>
@@ -476,12 +464,8 @@
 							In this section, you can view departments with total employees of each department. Additionally, if you
 							want to view all employees, you can click on the "View All" button.
 						</p>
-						<!-- <img src="media/dashboard.employee.png" width="60%" alt="" class="img-fluid"> -->
-						<div>
-							<a class="uk-inline" href="media/dashboard.employee.png" data-caption="Caption 1">
-								<img src="media/dashboard.employee.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.employee.png"
+							data-link="media/dashboard.employee.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Admin Dashboard Section -->
 
@@ -497,14 +481,10 @@
 							comprehensive overview of all scheduled tasks and events, ensuring you never miss an important deadline
 							or meeting. This centralized scheduling system helps streamline your workflow and enhances productivity
 							by keeping all your tasks and appointments organized in one place.
-
 						</p>
-						<!-- <img src="media/calendar.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
-						<div>
-							<a class="uk-inline" href="media/calendar.png" data-caption="Caption 1">
-								<img src="media/calendar.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/calendar.png" data-link="media/calendar.png"
+							alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Calendar Section -->
 
@@ -521,12 +501,8 @@
 							clearly defined and accessible.
 
 						</p>
-						<!-- <img src="media/dashboard.add-task.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
-						<div>
-							<a class="uk-inline" href="media/dashboard.add-task.png" data-caption="Caption 1">
-								<img src="media/dashboard.add-task.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/dashboard.add-task.png"
+							data-link="media/dashboard.add-task.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Create Task Section -->
 
@@ -542,12 +518,8 @@
 							Job", "Close Job", "Duplicate Job", "Live Preview", and "Copy the Job Post Link".
 
 						</p>
-						<!-- <img src="media/jobs.view.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
-						<div>
-							<a class="uk-inline" href="media/jobs.view.png" data-caption="Caption 1">
-								<img src="media/jobs.view.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.view.png"
+							data-link="media/jobs.view.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Job Section -->
 
@@ -558,6 +530,7 @@
 							You can create a new job post by clicking on the "Create New Job" button located in the Jobs page top
 							right corner. In our system, the job creation process is divided into four sections to ensure a
 							comprehensive and detailed job post. These sections are:
+						</p>
 
 						<ol>
 							<li>Job Details</li>
@@ -565,7 +538,6 @@
 							<li>Hiring Stages</li>
 							<li>Task Assessment</li>
 						</ol>
-						</p>
 
 						<table class="table table-bordered">
 							<thead class="thead-light">
@@ -605,13 +577,8 @@
 													href="">click here</a></li>
 											<li>Office time: Enter office time. Example: SUN - THU: 8:00 AM to 6:00 PM</li>
 										</ol>
-
-										<!-- <img src="media/jobs.details.png" width="60%" alt="" class="img-fluid"> -->
-										<div>
-											<a class="uk-inline" href="media/jobs.details.png" data-caption="Caption 1">
-												<img src="media/jobs.details.png" alt="" class="img-fluid mb-5">
-											</a>
-										</div>
+										<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.details.png"
+											data-link="media/jobs.details.png" alt="Image Alt" data-caption="Image Caption" />
 									</td>
 								</tr>
 							</tbody>
@@ -632,12 +599,8 @@
 										can preview the form live to see exactly how it will appear to candidates. This ensures that the
 										application form is tailored specifically to the job requirements and provides a user-friendly
 										experience for applicants. <br>
-										<div>
-											<a class="uk-inline" href="media/jobs.form-create.png" data-caption="Caption 1">
-												<img src="media/jobs.form-create.png" alt="" class="img-fluid mb-5">
-											</a>
-										</div>
-										<!-- <img src="media/jobs.form-create.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+										<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.form-create.png"
+											data-link="media/jobs.form-create.png" alt="Image Alt" data-caption="Image Caption" />
 									</td>
 								</tr>
 							</tbody>
@@ -664,12 +627,8 @@
 										allows you to tailor the hiring process to better fit the unique needs of your organization or
 										specific job roles. Each stage can be defined with clear criteria and objectives, facilitating a
 										smooth and efficient selection process. <br>
-										<div>
-											<a class="uk-inline" href="media/jobs.hiring-stages.png" data-caption="Caption 1">
-												<img src="media/jobs.hiring-stages.png" alt="" class="img-fluid mb-5">
-											</a>
-										</div>
-										<!-- <img src="media/jobs.hiring-stages.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+										<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.hiring-stages.png"
+											data-link="media/jobs.hiring-stages.png" alt="Image Alt" data-caption="Image Caption" />
 									</td>
 								</tr>
 							</tbody>
@@ -691,12 +650,8 @@
 											<li>Task link: Enter the task link.</li>
 											<li>Submission stage: Select submission stage from the dropdown.</li>
 										</ol>
-										<div>
-											<a class="uk-inline" href="media/jobs.task.png" data-caption="Caption 1">
-												<img src="media/jobs.task.png" alt="" class="img-fluid mb-5">
-											</a>
-										</div>
-										<!-- <img src="media/jobs.task.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+										<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.task.png"
+											data-link="media/jobs.task.png" alt="Image Alt" data-caption="Image Caption" />
 									</td>
 								</tr>
 							</tbody>
@@ -708,12 +663,8 @@
 							options to share the job post on social media. <br>
 
 						</p>
-						<div>
-							<a class="uk-inline" href="media/jobs.created.png" data-caption="Caption 1">
-								<img src="media/jobs.created.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/jobs.created.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.created.png"
+							data-link="media/jobs.created.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Create Job Section -->
 
@@ -752,12 +703,9 @@
 							application stage. This tab provides an overview of the current status of the applications, allowing you
 							to monitor the progress of each candidate.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/jobs.overview.png" data-caption="Caption 1">
-								<img src="media/jobs.overview.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/jobs.overview.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.overview.png"
+							data-link="media/jobs.overview.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<p class="mt-5">
 							In the <strong>"Applicants"</strong> tab, you can view detailed information about each applicant. This
@@ -772,23 +720,16 @@
 							<li>Delete the applicant's data</li>
 						</ol>
 						</p>
-						<div>
-							<a class="uk-inline" href="media/jobs.applicants.png" data-caption="Caption 1">
-								<img src="media/jobs.applicants.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/jobs.applicants.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.applicants.png"
+							data-link="media/jobs.applicants.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<p class="mt-5">
 							Additionally, you can view each applicants details by clicking on the name of the applicant. This will
 							appear a new tab with detailed information about the applicant.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/jobs.applicant.details.png" data-caption="Caption 1">
-								<img src="media/jobs.applicant.details.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/jobs.applicant.details.png" alt="" class="img-fluid rounded mt-2" width="60%"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/jobs.applicant.details.png"
+							data-link="media/jobs.applicant.details.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<p class="mt-5">
 							In the <strong>"Hiring Stages"</strong> tab, you can view applications sorted by their stage. Each stage
@@ -824,22 +765,14 @@
 						</p>
 
 						<div class="mb-3">
-							<!-- <img src="media/candidates.png" width="60%" alt="" class="img-fluid"> -->
-							<div>
-								<a class="uk-inline" href="media/candidates.png" data-caption="Caption 1">
-									<img src="media/candidates.png" alt="" class="img-fluid mb-5">
-								</a>
-							</div>
+							<img class="lightboxed img-fluid mb-5" rel="group1" src="media/candidates.png"
+								data-link="media/candidates.png" alt="Image Alt" data-caption="Image Caption" />
 							<div class="fw-bold">Ref: Candidates</div>
 						</div>
 
 						<div class="mb-3">
-							<div>
-								<a class="uk-inline" href="media/candidates.details.png" data-caption="Caption 1">
-									<img src="media/candidates.details.png" alt="" class="img-fluid mb-5">
-								</a>
-							</div>
-							<!-- <img src="media/candidates.details.png" width="60%" alt="" class="img-fluid"> -->
+							<img class="lightboxed img-fluid mb-5" rel="group1" src="media/candidates.details.png"
+								data-link="media/candidates.details.png" alt="Image Alt" data-caption="Image Caption" />
 							<div class="fw-bold">Ref: Candidate Details</div>
 						</div>
 					</section>
@@ -867,12 +800,8 @@
 							<li>Delete Employee</li>
 						</ol>
 						</p>
-						<div>
-							<a class="uk-inline" href="media/employees.png" data-caption="Caption 1">
-								<img src="media/employees.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/employees.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/employees.png"
+							data-link="media/employees.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Employees Section -->
 
@@ -894,12 +823,8 @@
 							<li>Permissions (required)</li>
 						</ol>
 						</p>
-						<div>
-							<a class="uk-inline" href="media/employees.add.png" data-caption="Caption 1">
-								<img src="media/employees.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/employees.add.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/employees.add.png"
+							data-link="media/employees.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Employee Section -->
 
@@ -920,12 +845,8 @@
 							<li>Employee Role (required)</li>
 						</ol>
 						</p>
-						<div>
-							<a class="uk-inline" href="media/employees.edit.png" data-caption="Caption 1">
-								<img src="media/employees.edit.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/employees.edit.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/employees.edit.png"
+							data-link="media/employees.edit.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Edit Employee Section -->
 
@@ -943,12 +864,8 @@
 						</ol>
 						You can sort and filter this information by department and date range to better analyze the hiring data.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/reports.png" data-caption="Caption 1">
-								<img src="media/reports.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/reports.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/reports.png" data-link="media/reports.png"
+							alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Report Section -->
 
@@ -966,23 +883,15 @@
 							information about the company. You can also upload the company logo and add social media accounts such
 							as Facebook, Twitter/X, Instagram, and LinkedIn.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.company.png" data-caption="Caption 1">
-								<img src="media/settings.company.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.company.png" width="60%" alt="" class="img-fluid rounded"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.company.png"
+							data-link="media/settings.company.png" alt="Image Alt" data-caption="Image Caption" />
 
 						<p class="mt-5">
 							In the <strong>Job</strong> tab, you can manage job recruitment-related details. This includes
 							departments, job stages, job types, skills, email templates, and employee types.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.job.png" data-caption="Caption 1">
-								<img src="media/settings.job.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job.png" width="60%" alt="" class="img-fluid rounded"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job.png"
+							data-link="media/settings.job.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 
 					<!-- Company Section -->
@@ -1028,13 +937,8 @@
 							To manage departments, navigate to the settings page under the Job tab. Here, you will find a section
 							labeled "Departments" where you can view, edit, add, and delete departments.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.departments.png" data-caption="Caption 1">
-								<img src="media/settings.departments.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.departments.png" width="60%" alt="Departments settings screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.departments.png"
+							data-link="media/settings.departments.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Departments Section -->
 
@@ -1050,13 +954,9 @@
 							<li>Name (required)</li>
 							<li>Details (optional)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.departments.add.png" data-caption="Caption 1">
-								<img src="media/settings.departments.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.departments.add.png" width="60%" alt="Add Department modal window screenshot"
-								class="img-fluid"> -->
+
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.departments.add.png"
+							data-link="media/settings.departments.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Department Section -->
 
@@ -1067,13 +967,8 @@
 							To manage job stages, navigate to the settings page under the Job tab. In the "Job Stages" section, you
 							can view, edit, add, and delete job stages, sorted by department.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.job-stages.png" data-caption="Caption 1">
-								<img src="media/settings.job-stages.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-stages.png" width="60%" alt="Job Stages settings screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-stages.png"
+							data-link="media/settings.job-stages.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Job Stages Section -->
 
@@ -1090,13 +985,8 @@
 							<li>Name (required)</li>
 							<li>Color Code (optional)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.job-stages.add.png" data-caption="Caption 1">
-								<img src="media/settings.job-stages.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-stages.add.png" width="60%" alt="Add Job Stage modal window screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-stages.add.png"
+							data-link="media/settings.job-stages.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Job Stage Section -->
 
@@ -1107,12 +997,8 @@
 							To manage job types, navigate to the settings page under the Job tab. In the "Job Types" section, you
 							can view, edit, add, and delete job types.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.job-types.png" data-caption="Caption 1">
-								<img src="media/settings.job-types.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-types.png" width="60%" alt="Job Types settings screenshot" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-types.png"
+							data-link="media/settings.job-types.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Job Types Section -->
 
@@ -1127,13 +1013,8 @@
 							<li>Name (required)</li>
 							<li>Details (optional)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.job-types.add.png" data-caption="Caption 1">
-								<img src="media/settings.job-types.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-types.add.png"
+							data-link="media/settings.job-types.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Job Type Section -->
 
@@ -1144,12 +1025,8 @@
 							To manage job skills you should go to the settings pages Job tab where you will get a section with the
 							name of Job Skills where from you can view, edit, add and delete job skills.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.job-skills.png" data-caption="Caption 1">
-								<img src="media/settings.job-skills.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-skills.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-skills.png"
+							data-link="media/settings.job-skills.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Job Skills Section -->
 
@@ -1165,13 +1042,8 @@
 							<li>Name (required)</li>
 							<li>Details (optional)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.job-skills.add.png" data-caption="Caption 1">
-								<img src="media/settings.job-skills.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-skills.add.png" width="60%" alt="Add Job Type modal window screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-skills.add.png"
+							data-link="media/settings.job-skills.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Job Type Section -->
 
@@ -1182,13 +1054,8 @@
 							To manage email templates, navigate to the settings page under the Job tab. In the "Email Templates"
 							section, you can view, edit, add, and delete email templates.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.email-templates.png" data-caption="Caption 1">
-								<img src="media/settings.email-templates.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.email-templates.png" width="60%" alt="Email Templates settings screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.email-templates.png"
+							data-link="media/settings.email-templates.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Email Templates Section -->
 
@@ -1205,13 +1072,8 @@
 							<li>Email Subject (required)</li>
 							<li>Email Message (required)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.email-templates.add.png" data-caption="Caption 1">
-								<img src="media/settings.email-templates.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.email-templates.add.png" width="60%"
-								alt="Add Email Template modal window screenshot" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.email-templates.add.png"
+							data-link="media/settings.email-templates.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Email Template Section -->
 
@@ -1222,12 +1084,8 @@
 							To manage employee types you should go to the settings pages Job tab where you will get a section with
 							the name of Employee Types where from you can view, edit, add and delete employee types.
 						</p>
-						<div>
-							<a class="uk-inline" href="media/settings.employee-types.png" data-caption="Caption 1">
-								<img src="media/settings.employee-types.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.employee-types.png" width="60%" alt="" class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.employee-types.png"
+							data-link="media/settings.employee-types.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Employee Types Section -->
 
@@ -1243,13 +1101,8 @@
 							<li>Name (required)</li>
 							<li>Details (optional)</li>
 						</ol>
-						<div>
-							<a class="uk-inline" href="media/settings.job-types.add.png" data-caption="Caption 1">
-								<img src="media/settings.job-types.add.png" alt="" class="img-fluid mb-5">
-							</a>
-						</div>
-						<!-- <img src="media/settings.job-types.add.png" width="60%" alt="Add Job Type modal window screenshot"
-								class="img-fluid"> -->
+						<img class="lightboxed img-fluid mb-5" rel="group1" src="media/settings.job-types.add.png"
+							data-link="media/settings.job-types.add.png" alt="Image Alt" data-caption="Image Caption" />
 					</section>
 					<!-- End Add Employee Type Section -->
 
@@ -1479,13 +1332,12 @@
 		</div>
 
 	</div>
-
-	<!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="./js/lightboxed/lightboxed.js"></script>
+	<script src="./js/lightbox.js"></script>
 </body>
 
 </html>
