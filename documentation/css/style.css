@@ -6,6 +6,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 
 body,
 html {
@@ -95,9 +96,10 @@ ul {
   line-height: 1rem;
 }
 
-.nav-main-item .nav-main-link:active {
+/* .nav-main-item .nav-main-link:active {
   color: #6366f1;
-}
+  background: #000;
+} */
 
 .nav-main-item .nav-main-link .nav-main-link-icon {
   flex: 0 0 auto;
@@ -112,9 +114,9 @@ ul {
   transition: all ease 0.5s;
 }
 
-.nav-main-item .nav-main-link .nav-main-link-name:hover {
+/* .nav-main-item .nav-main-link .nav-main-link-name:hover {
   color: #6366f1;
-}
+} */
 
 .content {
   margin-left: 350px;
@@ -128,7 +130,7 @@ ul {
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
 
 body {
   margin: 0;
@@ -149,8 +151,18 @@ a {
   margin: 0 auto;
 }
 
+.nav-main-link {
+  padding-left: 10px !important;
+}
+
 .nav-main-link.active {
-  color: #6366f1 !important;
+  color: #fff !important;
+  background: #6366f1;
+  border-radius: 5px;
+}
+
+.nav-main-link.active .nav-main-link-icon {
+  color: #fff !important;
 }
 
 .page-wrapper.toggled .sidebar-wrapper {
@@ -328,9 +340,9 @@ p {
   line-height: 1rem;
 }
 
-.page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link:active {
+/* .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link:active {
   color: #6366f1;
-}
+} */
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-icon {
   flex: 0 0 auto;
@@ -342,12 +354,12 @@ p {
 }
 
 .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-name {
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
 }
 
-.page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-name:hover {
+/* .page-wrapper #sidebar .nav_main .nav-main-item .nav-main-link .nav-main-link-name:hover {
   color: #6366f1;
-}
+} */
 
 .page-wrapper .page-content {
   display: inline-block;
@@ -493,4 +505,30 @@ p {
   width: 300px;
   display: block;
   transition: .4s all ease-in-out;
+}
+
+/* .nav-main-item:hover {
+  background: #000;
+} */
+
+@media screen and (min-width: 1024px) {
+  .main {
+    margin-left: 300px !important;
+  }
+
+  .closebtn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    margin-left: 375px !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main {
+    margin-left: 440px !important;
+  }
 }

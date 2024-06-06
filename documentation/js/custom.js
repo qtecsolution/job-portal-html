@@ -21,7 +21,7 @@ function conditionalCloseMenu() {
 }
 
 function setInitialMenuState() {
-  if (window.innerWidth > 990) {
+  if (window.innerWidth > 1023) {
     // openMenu();
   } else {
     closeMenu();
