@@ -13,6 +13,11 @@ html {
   font-family: "Rubik", sans-serif !important;
 }
 
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .hire-me {
   margin-left: 32px;
 }
@@ -110,9 +115,9 @@ ul {
   color: #6366f1;
 }
 
-.nav-main-item .nav-main-link .nav-main-link-name {
-  transition: all ease 0.5s;
-}
+/* .nav-main-item .nav-main-link .nav-main-link-name {
+  transition: all ease 0.2s;
+} */
 
 /* .nav-main-item .nav-main-link .nav-main-link-name:hover {
   color: #6366f1;
