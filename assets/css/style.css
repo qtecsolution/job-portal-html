@@ -14206,6 +14206,7 @@ p {
     max-width: 28.5rem;
   }
 }
+
 .job-overview-section {
   background-image: url("../../landing-page/assets/images/Job-Overview-bg.webp");
   background-size: cover;
@@ -14265,6 +14266,48 @@ p {
   border-radius: 1rem;
 }
 
+.feature-section {
+  background-image: url("../../landing-page/assets/images/feature-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 3.75rem 0;
+}
+@media screen and (min-width: 36rem) {
+  .feature-section {
+    padding: 11.625rem 0;
+  }
+}
+.feature-section .feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+@media screen and (min-width: 36rem) {
+  .feature-section .feature-content {
+    gap: 3.75rem;
+  }
+}
+.feature-section .feature-content .title {
+  color: var(--Text-0, #101828);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  max-width: 62.25rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 36rem) {
+  .feature-section .feature-content .title {
+    font-size: 2.25rem;
+    line-height: 50px;
+  }
+}
+.feature-section .feature-content .title span {
+  color: #4c6fff;
+}
 .container {
   width: 100%;
   padding-left: 1rem;

@@ -372,8 +372,8 @@
         }
       }
     }
-    .job-posting-right {
-    }
+    // .job-posting-right {
+    // }
   }
 }
 
@@ -437,6 +437,45 @@
           @include radius(16);
         }
       }
+    }
+  }
+}
+// feature section
+.feature-section {
+  background-image: url("../../landing-page/assets/images/feature-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(186) 0;
+  }
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: size(30);
+    @include breakpoint(mobile576) {
+      gap: size(60);
+    }
+    .title {
+      color: var(--Text-0, #101828);
+      text-align: center;
+      font-family: Inter;
+      font-size: size(20);
+      @include breakpoint(mobile576) {
+        font-size: size(36);
+        line-height: 50px;
+      }
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: -0.72px;
+      max-width: size(996);
+      margin: 0 auto;
+      span {
+        color: #4c6fff;
+      }
+    }
+    .feature-img {
     }
   }
 }
