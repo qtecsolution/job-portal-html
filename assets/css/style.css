@@ -14075,6 +14075,9 @@ p {
     padding: 11.625rem 0;
   }
 }
+.why-choose-us-section .why-choose-us-content {
+  overflow-x: hidden;
+}
 .why-choose-us-section .why-choose-us-content .why-choose-us-left {
   height: 100%;
   display: flex;
@@ -14118,12 +14121,6 @@ p {
   line-height: 167%; /* 30.06px */
   letter-spacing: -0.36px;
   margin-bottom: 0;
-  max-width: 100%;
-}
-@media screen and (min-width: 62rem) {
-  .why-choose-us-section .why-choose-us-content .why-choose-us-left .description {
-    max-width: 25.8125rem;
-  }
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-right .why-choose-us-card {
   border-radius: 24px;
@@ -14171,6 +14168,9 @@ p {
   .job-posting-section {
     padding: 11.625rem 0;
   }
+}
+.job-posting-section .job-posting-content {
+  overflow-x: hidden;
 }
 .job-posting-section .job-posting-content .job-posting-left {
   height: 100%;
@@ -14223,6 +14223,9 @@ p {
   .job-overview-section {
     padding: 11.625rem 0;
   }
+}
+.job-overview-section .job-overview-content {
+  overflow-x: hidden;
 }
 .job-overview-section .job-overview-content .job-overview-left {
   height: 100%;

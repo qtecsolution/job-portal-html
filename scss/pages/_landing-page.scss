@@ -230,6 +230,8 @@
     padding: size(186) 0;
   }
   .why-choose-us-content {
+    overflow-x: hidden;
+
     .why-choose-us-left {
       height: 100%;
       display: flex;
@@ -273,10 +275,10 @@
         line-height: 167%; /* 30.06px */
         letter-spacing: -0.36px;
         margin-bottom: 0;
-        max-width: 100%;
-        @include breakpoint(tab992) {
-          max-width: size(413);
-        }
+        // max-width: 100%;
+        // @include breakpoint(tab992) {
+        //   max-width: size(413);
+        // }
       }
     }
 
@@ -337,6 +339,7 @@
     padding: size(186) 0;
   }
   .job-posting-content {
+    overflow-x: hidden;
     .job-posting-left {
       height: 100%;
       display: flex;
@@ -389,6 +392,7 @@
     padding: size(186) 0;
   }
   .job-overview-content {
+    overflow-x: hidden;
     .job-overview-left {
       height: 100%;
       display: flex;
