@@ -14014,7 +14014,6 @@ p {
   color: #fff;
   text-align: center;
   font-family: "Epilogue", sans-serif;
-  font-style: normal;
   font-weight: 900;
   line-height: 130%;
   text-transform: capitalize;
@@ -14038,10 +14037,8 @@ p {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 28px; /* 164.706% */
   margin-bottom: 0;
 }
@@ -14091,7 +14088,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   background: rgba(243, 76, 74, 0.1);
   color: #f34c4a;
   font-family: "Epilogue", sans-serif;
@@ -14102,9 +14099,8 @@ p {
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-left .title {
   color: var(--First-text-color, #101828);
-  font-family: Inter;
-  font-size: 36px;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 2.25rem;
   font-weight: 600;
   line-height: 140%; /* 50.4px */
   text-transform: capitalize;
@@ -14114,12 +14110,10 @@ p {
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-left .description {
   color: var(--2nd-text-color, #2f3643);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
   line-height: 167%; /* 30.06px */
-  letter-spacing: -0.36px;
+  letter-spacing: 0size 36;
   margin-bottom: 0;
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-right .why-choose-us-card {
@@ -14138,9 +14132,8 @@ p {
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-right .why-choose-us-card .title {
   color: var(--First-text-color, #101828);
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 1.0625rem;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
@@ -14151,11 +14144,9 @@ p {
   }
 }
 .why-choose-us-section .why-choose-us-content .why-choose-us-right .why-choose-us-card .description {
-  color: #2f3643; /* Inter/Regular/18 */
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
+  color: #2f3643; /* $primaryFont/Regular/18 */
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
   line-height: 28px; /* 155.556% */
   margin-bottom: 0;
 }
@@ -14180,9 +14171,8 @@ p {
 }
 .job-posting-section .job-posting-content .job-posting-left .title {
   color: var(--First-text-color, #101828);
-  font-family: Inter;
-  font-size: 36px;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 2.25rem;
   font-weight: 600;
   line-height: 140%; /* 50.4px */
   text-transform: capitalize;
@@ -14192,12 +14182,10 @@ p {
 }
 .job-posting-section .job-posting-content .job-posting-left .description {
   color: var(--2nd-text-color, #2f3643);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
   line-height: 167%; /* 30.06px */
-  letter-spacing: -0.36px;
+  letter-spacing: 0size 36;
   margin-bottom: 0;
   max-width: 100%;
 }
@@ -14236,11 +14224,10 @@ p {
 }
 .job-overview-section .job-overview-content .job-overview-left .title {
   color: var(--First-text-color, #101828);
-  font-family: Inter;
-  font-size: 36px;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 2.25rem;
   font-weight: 600;
-  line-height: 140%; /* 50.4px */
+  line-height: 140%;
   text-transform: capitalize;
 }
 .job-overview-section .job-overview-content .job-overview-left .title span {
@@ -14248,12 +14235,10 @@ p {
 }
 .job-overview-section .job-overview-content .job-overview-left .description {
   color: var(--2nd-text-color, #2f3643);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 167%; /* 30.06px */
-  letter-spacing: -0.36px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  line-height: 167%;
+  letter-spacing: 0size 36;
   margin-bottom: 0;
 }
 .job-overview-section .job-overview-content .job-overview-right .job-overview-img {
@@ -14289,11 +14274,10 @@ p {
   }
 }
 .feature-section .feature-content .title {
-  color: var(--Text-0, #101828);
+  color: #101828;
   text-align: center;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 600;
   letter-spacing: -0.72px;
   max-width: 62.25rem;
@@ -14302,12 +14286,55 @@ p {
 @media screen and (min-width: 36rem) {
   .feature-section .feature-content .title {
     font-size: 2.25rem;
-    line-height: 50px;
+    line-height: 3.125rem;
   }
 }
 .feature-section .feature-content .title span {
   color: #4c6fff;
 }
+
+.recruiting-section {
+  padding: 1.875rem 0;
+}
+@media screen and (min-width: 36rem) {
+  .recruiting-section {
+    padding: 5rem 0;
+  }
+}
+.recruiting-section .recruiting-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.recruiting-section .recruiting-content .title {
+  color: #101828;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  max-width: 62.25rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 36rem) {
+  .recruiting-section .recruiting-content .title {
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+  }
+}
+.recruiting-section .recruiting-content .title span {
+  color: #4c6fff;
+}
+.recruiting-section .recruiting-content .description {
+  color: #2f3643;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 167%;
+  max-width: 48.1875rem;
+  margin: 0 auto;
+}
+
 .container {
   width: 100%;
   padding-left: 1rem;

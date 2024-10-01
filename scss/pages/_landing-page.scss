@@ -179,7 +179,7 @@
       color: #fff;
       text-align: center;
       font-family: $secondaryFont;
-      font-style: normal;
+
       font-weight: 900;
       line-height: 130%;
       text-transform: capitalize;
@@ -193,10 +193,9 @@
       text-align: center;
       leading-trim: both;
       text-edge: cap;
-      font-family: Inter;
+      font-family: $primaryFont;
       font-size: 17px;
-      font-style: normal;
-      font-weight: 400;
+
       line-height: 28px; /* 164.706% */
       margin-bottom: 0;
     }
@@ -245,7 +244,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        border-radius: 50px;
+        border-radius: size(50);
         background: rgba(243, 76, 74, 0.1);
         color: #f34c4a;
         font-family: $secondaryFont;
@@ -256,9 +255,9 @@
       }
       .title {
         color: var(--First-text-color, #101828);
-        font-family: Inter;
-        font-size: 36px;
-        font-style: normal;
+        font-family: $primaryFont;
+        font-size: size(36);
+
         font-weight: 600;
         line-height: 140%; /* 50.4px */
         text-transform: capitalize;
@@ -268,12 +267,11 @@
       }
       .description {
         color: var(--2nd-text-color, #2f3643);
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
+        font-family: $primaryFont;
+        font-size: size(18);
+
         line-height: 167%; /* 30.06px */
-        letter-spacing: -0.36px;
+        letter-spacing: -0size (36);
         margin-bottom: 0;
         // max-width: 100%;
         // @include breakpoint(tab992) {
@@ -300,22 +298,21 @@
         }
         .title {
           color: var(--First-text-color, #101828);
-          font-family: Inter;
+          font-family: $primaryFont;
           font-size: size(17);
           @include breakpoint(desktop1200) {
             font-size: size(24);
           }
-          font-style: normal;
+
           font-weight: 600;
           line-height: normal;
           text-transform: capitalize;
         }
         .description {
-          color: #2f3643; /* Inter/Regular/18 */
-          font-family: Inter;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
+          color: #2f3643; /* $primaryFont/Regular/18 */
+          font-family: $primaryFont;
+          font-size: size(18);
+
           line-height: 28px; /* 155.556% */
           margin-bottom: 0;
         }
@@ -347,9 +344,9 @@
       justify-content: center;
       .title {
         color: var(--First-text-color, #101828);
-        font-family: Inter;
-        font-size: 36px;
-        font-style: normal;
+        font-family: $primaryFont;
+        font-size: size(36);
+
         font-weight: 600;
         line-height: 140%; /* 50.4px */
         text-transform: capitalize;
@@ -359,12 +356,11 @@
       }
       .description {
         color: var(--2nd-text-color, #2f3643);
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
+        font-family: $primaryFont;
+        font-size: size(18);
+
         line-height: 167%; /* 30.06px */
-        letter-spacing: -0.36px;
+        letter-spacing: -0size (36);
         margin-bottom: 0;
         max-width: 100%;
         @include breakpoint(tab992) {
@@ -400,11 +396,11 @@
       justify-content: center;
       .title {
         color: var(--First-text-color, #101828);
-        font-family: Inter;
-        font-size: 36px;
-        font-style: normal;
+        font-family: $primaryFont;
+        font-size: size(36);
+
         font-weight: 600;
-        line-height: 140%; /* 50.4px */
+        line-height: 140%;
         text-transform: capitalize;
         span {
           color: #4c6fff;
@@ -412,12 +408,11 @@
       }
       .description {
         color: var(--2nd-text-color, #2f3643);
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 167%; /* 30.06px */
-        letter-spacing: -0.36px;
+        font-family: $primaryFont;
+        font-size: size(18);
+
+        line-height: 167%;
+        letter-spacing: -0size (36);
         margin-bottom: 0;
       }
     }
@@ -458,15 +453,14 @@
       gap: size(60);
     }
     .title {
-      color: var(--Text-0, #101828);
+      color: #101828;
       text-align: center;
-      font-family: Inter;
+      font-family: $primaryFont;
       font-size: size(20);
       @include breakpoint(mobile576) {
         font-size: size(36);
-        line-height: 50px;
+        line-height: size(50);
       }
-      font-style: normal;
       font-weight: 600;
       letter-spacing: -0.72px;
       max-width: size(996);
@@ -475,7 +469,46 @@
         color: #4c6fff;
       }
     }
-    .feature-img {
+    // .feature-img {
+    // }
+  }
+}
+
+.recruiting-section {
+  padding: size(30) 0;
+  @include breakpoint(mobile576) {
+    padding: size(80) 0;
+  }
+  .recruiting-content {
+    display: flex;
+    flex-direction: column;
+    gap: size(24);
+
+    .title {
+      color: #101828;
+      text-align: center;
+      font-family: $primaryFont;
+      font-size: size(20);
+      @include breakpoint(mobile576) {
+        font-size: size(36);
+        line-height: size(50);
+      }
+      font-weight: 600;
+      letter-spacing: -0.72px;
+      max-width: size(996);
+      margin: 0 auto;
+      span {
+        color: #4c6fff;
+      }
+    }
+    .description {
+      color: #2f3643;
+      text-align: center;
+      font-family: $primaryFont;
+      font-size: size(16);
+      line-height: 167%;
+      max-width: size(771);
+      margin: 0 auto;
     }
   }
 }
