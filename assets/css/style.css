@@ -13841,6 +13841,156 @@ p {
   transition: all 0.3s ease;
 }
 
+.header-section {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+}
+.header-section .innerNav-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.header-section .innerNav-section .logo {
+  width: 5.625rem;
+  flex-shrink: 0;
+}
+@media screen and (min-width: 36rem) {
+  .header-section .innerNav-section .logo {
+    width: 7.75rem;
+    height: 2.25rem;
+  }
+}
+.header-section .innerNav-section .mobile-menu-btn {
+  background: #e6eaf3;
+  border: 1px solid #2f3643;
+  border-radius: 6249.9375rem;
+  border-radius: 6249.9375rem;
+  height: 1.625rem;
+  width: 1.625rem;
+}
+.header-section .innerNav-section .mobile-menu-btn svg {
+  margin-top: -0.1875rem;
+}
+.header-section .innerNav-section .offcanvas {
+  max-width: 18.75rem;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-header {
+  background-color: hsl(0, 0%, 100%);
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body .mobile-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body .mobile-lists .nav-list {
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #e6eaf3;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body .mobile-lists .nav-list .nav-link {
+  color: #2f3643;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body .mobile-lists .nav-list.active {
+  background: #4c6fff;
+}
+.header-section .innerNav-section .offcanvas .offcanvas-body .mobile-lists .nav-list.active .nav-link {
+  color: hsl(0, 0%, 100%);
+}
+.header-section .innerNav-section .navigation-inner .nav-lists {
+  gap: 1.25rem;
+}
+@media screen and (min-width: 75rem) {
+  .header-section .innerNav-section .navigation-inner .nav-lists {
+    gap: 2.5rem;
+  }
+}
+.header-section .innerNav-section .navigation-inner .nav-lists .nav-list .nav-link {
+  color: #2f3643;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+  transition: all ease 0.35s;
+}
+.header-section .innerNav-section .navigation-inner .nav-lists .nav-list .nav-link:not([disabled]):hover {
+  color: #4c6fff;
+}
+.header-section .innerNav-section .navigation-inner .nav-lists .nav-list .active {
+  color: #4c6fff;
+}
+.header-section .innerNav-section .nav-btns {
+  gap: 0.625rem;
+  align-items: center;
+}
+@media screen and (min-width: 75rem) {
+  .header-section .innerNav-section .nav-btns {
+    gap: 1.25rem;
+  }
+}
+.header-section .innerNav-section .nav-btns .nav-btn .nav-signIn,
+.header-section .innerNav-section .nav-btns .nav-btn .nav-getStarted {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4375rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
+  color: #2f3643;
+  text-transform: uppercase;
+  transition: all ease 0.35s;
+}
+@media screen and (min-width: 36rem) {
+  .header-section .innerNav-section .nav-btns .nav-btn .nav-signIn,
+  .header-section .innerNav-section .nav-btns .nav-btn .nav-getStarted {
+    font-size: 1rem;
+    padding: 0.625rem 0.8125rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .header-section .innerNav-section .nav-btns .nav-btn .nav-signIn,
+  .header-section .innerNav-section .nav-btns .nav-btn .nav-getStarted {
+    padding: 1.125rem 1.625rem;
+  }
+}
+.header-section .innerNav-section .nav-btns .nav-btn .nav-signIn:hover,
+.header-section .innerNav-section .nav-btns .nav-btn .nav-getStarted:hover {
+  background: #4c6fff;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  letter-spacing: -0.09px;
+}
+.header-section .innerNav-section .nav-btns .nav-btn .active {
+  background: #4c6fff;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  letter-spacing: -0.09px;
+}
+.header-section .innerNav-section .nav-btns .nav-btn .active:hover {
+  background: #273d97;
+}
+
 .container {
   width: 100%;
   padding-left: 1rem;

@@ -1,0 +1,149 @@
+@use "../global" as *;
+@use "../partials" as *;
+.header-section {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: $white;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  .innerNav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: size(16) size(0);
+    .logo {
+      width: size(90);
+      // height: size(36);
+      @include breakpoint(mobile576) {
+        width: size(124);
+        height: size(36);
+      }
+      flex-shrink: 0;
+    }
+
+    .mobile-menu-btn {
+      // padding: size(5);
+      background: #e6eaf3;
+      border: 1px solid #2f3643;
+      @include radius(99999);
+      height: size(26);
+      width: size(26);
+      svg {
+        margin-top: size(-3);
+      }
+    }
+    .offcanvas {
+      max-width: size(300);
+      .offcanvas-header {
+        background-color: $white;
+      }
+      .offcanvas-body {
+        border: none;
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        .mobile-lists {
+          display: flex;
+          flex-direction: column;
+          gap: size(10);
+          .nav-list {
+            padding: size(10);
+            @include radius(8);
+            background: #e6eaf3;
+            .nav-link {
+              color: #2f3643;
+              leading-trim: both;
+              text-edge: cap;
+              font-family: $primaryFont;
+              font-size: size(14);
+              font-weight: 500;
+              letter-spacing: 0.14px;
+              text-transform: uppercase;
+            }
+            &.active {
+              background: #4c6fff;
+
+              .nav-link {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .navigation-inner {
+      .nav-lists {
+        gap: size(20);
+        @include breakpoint(desktop1200) {
+          gap: size(40);
+        }
+        .nav-list {
+          .nav-link {
+            color: #2f3643;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 500;
+            letter-spacing: 0.14px;
+            text-transform: uppercase;
+            transition: all ease 0.35s;
+            @include hover {
+              color: #4c6fff;
+            }
+          }
+          .active {
+            color: #4c6fff;
+          }
+        }
+      }
+    }
+
+    .nav-btns {
+      gap: size(10);
+      @include breakpoint(desktop1200) {
+        gap: size(20);
+      }
+      align-items: center;
+
+      .nav-btn {
+        .nav-signIn,
+        .nav-getStarted {
+          display: inline-flex;
+          align-items: center;
+          padding: size(7) size(8);
+          font-size: size(14);
+          @include breakpoint(mobile576) {
+            font-size: size(16);
+            padding: size(10) size(13);
+          }
+          @include breakpoint(desktop1200) {
+            padding: size(18) size(26);
+          }
+          @include radius(8);
+          font-family: $primaryFont;
+          color: #2f3643;
+
+          text-transform: uppercase;
+          transition: all ease 0.35s;
+          &:hover {
+            background: #4c6fff;
+            color: $white;
+            font-weight: 600;
+            letter-spacing: -0.09px;
+          }
+        }
+        .active {
+          background: #4c6fff;
+          color: $white;
+          font-weight: 600;
+          letter-spacing: -0.09px;
+
+          &:hover {
+            background: #273d97;
+          }
+        }
+      }
+    }
+  }
+}
