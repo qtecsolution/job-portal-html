@@ -198,6 +198,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 28px; /* 164.706% */
+      margin-bottom: 0;
     }
 
     .hero-img {
@@ -214,6 +215,161 @@
       img {
         @include radius(16);
       }
+    }
+  }
+}
+
+// WHY CHOOSE US SECTION
+.why-choose-us-section {
+  background-image: url("../../landing-page/assets/images/WHY-CHOOSE-US.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(186) 0;
+  }
+  .why-choose-us-content {
+    .why-choose-us-left {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      gap: size(24);
+      .sub-title {
+        display: inline-flex;
+        padding: size(10) size(16) size(6) size(16);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        background: rgba(243, 76, 74, 0.1);
+        color: #f34c4a;
+        font-family: $secondaryFont;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        text-transform: capitalize;
+      }
+      .title {
+        color: var(--First-text-color, #101828);
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 50.4px */
+        text-transform: capitalize;
+        span {
+          color: #4c6fff;
+        }
+      }
+      .description {
+        color: var(--2nd-text-color, #2f3643);
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167%; /* 30.06px */
+        letter-spacing: -0.36px;
+        margin-bottom: 0;
+        max-width: 100%;
+        @include breakpoint(tab992) {
+          max-width: size(413);
+        }
+      }
+    }
+
+    .why-choose-us-right {
+      .why-choose-us-card {
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.04);
+        padding: size(32) size(24);
+        display: flex;
+        flex-direction: column;
+        gap: size(36);
+        .icon {
+          svg {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+          }
+        }
+        .title {
+          color: var(--First-text-color, #101828);
+          font-family: Inter;
+          font-size: size(17);
+          @include breakpoint(desktop1200) {
+            font-size: size(24);
+          }
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: capitalize;
+        }
+        .description {
+          color: #2f3643; /* Inter/Regular/18 */
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 155.556% */
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+// job-posting-section
+.job-posting-section {
+  background: linear-gradient(
+    -65deg,
+    rgba(18, 183, 106, 0.15) 4.06%,
+    rgba(255, 173, 30, 0.15) 21.56%,
+    rgba(255, 95, 143, 0.15) 36.45%,
+    rgba(211, 252, 255, 0.15) 51.81%,
+    rgba(178, 231, 231, 0.15) 76.02%,
+    rgba(105, 65, 198, 0.15) 97.15%
+  );
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(186) 0;
+  }
+  .job-posting-content {
+    .job-posting-left {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        color: var(--First-text-color, #101828);
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 50.4px */
+        text-transform: capitalize;
+        span {
+          color: #4c6fff;
+        }
+      }
+      .description {
+        color: var(--2nd-text-color, #2f3643);
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167%; /* 30.06px */
+        letter-spacing: -0.36px;
+        margin-bottom: 0;
+        max-width: 100%;
+        @include breakpoint(tab992) {
+          max-width: size(456);
+        }
+      }
+    }
+    .job-posting-right {
     }
   }
 }
