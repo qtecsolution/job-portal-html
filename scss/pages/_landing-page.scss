@@ -373,3 +373,66 @@
     }
   }
 }
+
+// job-overview
+.job-overview-section {
+  background-image: url("../../landing-page/assets/images/Job-Overview-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(186) 0;
+  }
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(186) 0;
+  }
+  .job-overview-content {
+    .job-overview-left {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        color: var(--First-text-color, #101828);
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 50.4px */
+        text-transform: capitalize;
+        span {
+          color: #4c6fff;
+        }
+      }
+      .description {
+        color: var(--2nd-text-color, #2f3643);
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167%; /* 30.06px */
+        letter-spacing: -0.36px;
+        margin-bottom: 0;
+      }
+    }
+
+    .job-overview-right {
+      .job-overview-img {
+        border-radius: 24px;
+        background: linear-gradient(
+          303deg,
+          rgba(246, 39, 101, 0.12) 2.07%,
+          rgba(255, 95, 143, 0.12) 36.82%,
+          rgba(115, 142, 252, 0.12) 76.01%,
+          rgba(76, 111, 255, 0.12) 95.86%
+        );
+        padding: size(10);
+        img {
+          @include radius(16);
+        }
+      }
+    }
+  }
+}
