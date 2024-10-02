@@ -7,7 +7,7 @@
   top: 0;
   z-index: 10;
   background: $white;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px size(20) 0px rgba(0, 0, 0, 0.04);
   .innerNav-section {
     display: flex;
     justify-content: space-between;
@@ -54,8 +54,6 @@
             background: #e6eaf3;
             .nav-link {
               color: #2f3643;
-              leading-trim: both;
-              text-edge: cap;
               font-family: $primaryFont;
               font-size: size(14);
               font-weight: 500;
@@ -82,8 +80,6 @@
         .nav-list {
           .nav-link {
             color: #2f3643;
-            leading-trim: both;
-            text-edge: cap;
             font-family: $primaryFont;
             font-size: size(14);
             font-weight: 500;
@@ -173,7 +169,7 @@
       }
 
       @include breakpoint(mobile768) {
-        font-size: 64px;
+        font-size: size(64);
       }
 
       color: #fff;
@@ -191,12 +187,9 @@
       margin: 0 auto;
       color: #fff;
       text-align: center;
-      leading-trim: both;
-      text-edge: cap;
       font-family: $primaryFont;
-      font-size: 17px;
-
-      line-height: 28px; /* 164.706% */
+      font-size: size(17);
+      line-height: size(28);
       margin-bottom: 0;
     }
 
@@ -205,8 +198,8 @@
       align-items: center;
       justify-content: center;
       padding: size(15);
-      gap: 1rem;
-      border-radius: 24px;
+      gap: size(16);
+      @include radius(24);
       border: 1.2px solid #fff;
       background: rgba(255, 255, 255, 0.24);
       box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.06);
@@ -243,18 +236,18 @@
         padding: size(10) size(16) size(6) size(16);
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: size(10);
         border-radius: size(50);
         background: rgba(243, 76, 74, 0.1);
         color: #f34c4a;
         font-family: $secondaryFont;
-        font-size: 20px;
+        font-size: size(20);
         font-weight: 600;
-        line-height: 28px;
+        line-height: size(28);
         text-transform: capitalize;
       }
       .title {
-        color: var(--First-text-color, #101828);
+        color: #101828;
         font-family: $primaryFont;
         font-size: size(36);
 
@@ -266,11 +259,10 @@
         }
       }
       .description {
-        color: var(--2nd-text-color, #2f3643);
+        color: #2f3643;
         font-family: $primaryFont;
         font-size: size(18);
-
-        line-height: 167%; /* 30.06px */
+        line-height: 167%;
         letter-spacing: -0size (36);
         margin-bottom: 0;
         // max-width: 100%;
@@ -282,8 +274,8 @@
 
     .why-choose-us-right {
       .why-choose-us-card {
-        border-radius: 24px;
-        background: #fff;
+        @include radius(24);
+        background: $white;
         box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.04);
         padding: size(32) size(24);
         display: flex;
@@ -291,29 +283,26 @@
         gap: size(36);
         .icon {
           svg {
-            width: 48px;
-            height: 48px;
+            width: size(48);
+            height: size(48);
             flex-shrink: 0;
           }
         }
         .title {
-          color: var(--First-text-color, #101828);
+          color: #101828;
           font-family: $primaryFont;
           font-size: size(17);
           @include breakpoint(desktop1200) {
             font-size: size(24);
           }
-
           font-weight: 600;
-          line-height: normal;
           text-transform: capitalize;
         }
         .description {
-          color: #2f3643; /* $primaryFont/Regular/18 */
+          color: #2f3643;
           font-family: $primaryFont;
           font-size: size(18);
-
-          line-height: 28px; /* 155.556% */
+          line-height: size(28);
           margin-bottom: 0;
         }
       }
@@ -343,23 +332,21 @@
       flex-direction: column;
       justify-content: center;
       .title {
-        color: var(--First-text-color, #101828);
+        color: #101828;
         font-family: $primaryFont;
         font-size: size(36);
-
         font-weight: 600;
-        line-height: 140%; /* 50.4px */
+        line-height: 140%;
         text-transform: capitalize;
         span {
           color: #4c6fff;
         }
       }
       .description {
-        color: var(--2nd-text-color, #2f3643);
+        color: #2f3643;
         font-family: $primaryFont;
         font-size: size(18);
-
-        line-height: 167%; /* 30.06px */
+        line-height: 167%;
         letter-spacing: -0size (36);
         margin-bottom: 0;
         max-width: 100%;
@@ -395,7 +382,7 @@
       flex-direction: column;
       justify-content: center;
       .title {
-        color: var(--First-text-color, #101828);
+        color: #101828;
         font-family: $primaryFont;
         font-size: size(36);
 
@@ -407,19 +394,18 @@
         }
       }
       .description {
-        color: var(--2nd-text-color, #2f3643);
+        color: #2f3643;
         font-family: $primaryFont;
         font-size: size(18);
-
         line-height: 167%;
-        letter-spacing: -0size (36);
+        letter-spacing: -0.36px;
         margin-bottom: 0;
       }
     }
 
     .job-overview-right {
       .job-overview-img {
-        border-radius: 24px;
+        @include radius(24);
         background: linear-gradient(
           303deg,
           rgba(246, 39, 101, 0.12) 2.07%,
@@ -531,23 +517,22 @@
         padding: size(10) size(20);
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        border-radius: 50px;
+        gap: size(10);
+        @include radius(50);
         background: rgba(255, 194, 36, 0.12);
         color: #ffc224;
         font-family: $secondaryFont;
-        font-size: 20px;
+        font-size: size(20);
         font-weight: 600;
         text-transform: capitalize;
       }
       .title {
-        color: var(--First-text-color, #101828);
+        color: #101828;
         text-align: center;
-        font-family: Inter;
-        font-size: 36px;
-        font-style: normal;
+        font-family: $primaryFont;
+        font-size: size(36);
         font-weight: 600;
-        line-height: 140%; /* 50.4px */
+        line-height: 140%;
         letter-spacing: -0.72px;
         text-transform: capitalize;
         span {
@@ -555,13 +540,13 @@
         }
       }
       .description {
-        color: var(--2nd-text-color, #2f3643);
+        color: #2f3643;
         text-align: center;
-        font-family: Inter;
+        font-family: $primaryFont;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: 167%; /* 30.06px */
+        line-height: 167%;
         letter-spacing: -0.36px;
         max-width: size(639);
         margin: 0 auto;
@@ -578,21 +563,18 @@
         }
       }
       .title {
-        color: var(--Text-0, #101828);
-        font-family: Inter;
-        font-size: 36px;
-        font-style: normal;
+        color: #101828;
+        font-family: $primaryFont;
+        font-size: size(36);
         font-weight: 600;
-        line-height: 24px; /* 66.667% */
+        line-height: size(24);
         letter-spacing: -0.72px;
       }
       .description {
         color: #2f3643;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 27px; /* 168.75% */
+        font-family: $primaryFont;
+        font-size: size(16);
+        line-height: size(27);
         width: 100%;
       }
     }
@@ -624,7 +606,7 @@
       background: rgba(69, 198, 70, 0.12);
     }
     .title {
-      color: var(--First-text-color, #101828);
+      color: #101828;
       font-family: $primaryFont;
       font-size: size(20);
       @include breakpoint(mobile576) {
@@ -653,7 +635,7 @@
       width: size(100);
       @include radius(8);
       background: #4c6fff;
-      color: #fff;
+      color: $white;
       text-align: center;
       font-family: $primaryFont;
       font-size: size(16);
@@ -721,7 +703,7 @@
       }
       line-height: 132%;
       font-weight: 600;
-      letter-spacing: -1.28px;
+      letter-spacing: -1size (28);
       max-width: size(696);
       margin: 0 auto;
     }
@@ -740,6 +722,65 @@
       line-height: size(25);
       letter-spacing: -0.09px;
       text-transform: uppercase;
+    }
+  }
+}
+
+// footer-section
+.footer-section {
+  background-image: url("../../landing-page/assets/images/footer-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: size(60) 0;
+  @include breakpoint(mobile576) {
+    padding: size(117) size(0) size(60) size(0);
+  }
+  .footer-content {
+    // .footer-logo{
+    //   img{
+    //     width: size(90);
+    //     height: size(36);
+    //   }
+    // }
+
+    .footer-description {
+      color: #e9eeff;
+      font-family: $primaryFont;
+      font-size: size(16);
+      line-height: 167%;
+      max-width: size(511);
+      margin-bottom: 0;
+    }
+
+    .footer-title {
+      color: #e9eeff;
+      font-family: $secondaryFont;
+      font-size: size(20);
+      font-weight: 600;
+    }
+    .footer-list {
+      .footer-link {
+        color: #e9eeff;
+        font-family: $primaryFont;
+        font-size: size(17);
+      }
+    }
+    .social-link {
+      svg {
+        width: size(30);
+        height: size(30);
+      }
+    }
+    .copyright-inner {
+      margin-top: size(80);
+      .copyright-text {
+        color: #e9eeff;
+        font-family: $secondaryFont;
+        font-size: size(14);
+        line-height: size(18);
+        margin-bottom: 0;
+      }
     }
   }
 }
