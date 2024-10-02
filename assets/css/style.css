@@ -14344,6 +14344,9 @@ p {
     padding: 11.625rem 0;
   }
 }
+.our-core-features-section .our-core-features-content {
+  overflow-x: hidden;
+}
 .our-core-features-section .our-core-features-content .our-core-features-header {
   display: flex;
   flex-direction: column;

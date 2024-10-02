@@ -520,6 +520,7 @@
     padding: size(186) 0;
   }
   .our-core-features-content {
+    overflow-x: hidden;
     .our-core-features-header {
       display: flex;
       flex-direction: column;
