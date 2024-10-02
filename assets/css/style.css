@@ -14290,11 +14290,11 @@ p {
 }
 
 .recruiting-section {
-  padding: 1.875rem 0;
+  padding-top: 1.875rem;
 }
 @media screen and (min-width: 36rem) {
   .recruiting-section {
-    padding: 5rem 0;
+    padding-top: 5rem;
   }
 }
 .recruiting-section .recruiting-content {
@@ -14510,6 +14510,14 @@ p {
   height: 1.375rem;
 }
 
+.get-started-section {
+  padding-bottom: 3.75rem;
+}
+@media screen and (min-width: 36rem) {
+  .get-started-section {
+    padding-bottom: 8.75rem;
+  }
+}
 .get-started-section .get-started-content {
   background-image: url("../../landing-page/assets/images/get-started-bg.webp");
   background-size: cover;
@@ -14612,6 +14620,140 @@ p {
   font-size: 0.875rem;
   line-height: 1.125rem;
   margin-bottom: 0;
+}
+
+.testimonial-section {
+  padding: 3.75rem 0;
+}
+@media screen and (min-width: 36rem) {
+  .testimonial-section {
+    padding: 7.3125rem 0rem;
+  }
+}
+.testimonial-section .testimonial-content .testimonial-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.testimonial-section .testimonial-content .testimonial-header .sub-title {
+  display: inline-flex;
+  padding: 0.625rem 1.25rem 0.375rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: rgba(105, 65, 198, 0.1);
+  color: #6941c6;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  text-transform: capitalize;
+}
+.testimonial-section .testimonial-content .testimonial-header .title {
+  color: var(--First-text-color, #101828);
+  text-align: center;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 50.4px */
+  letter-spacing: -0.72px;
+  text-transform: capitalize;
+}
+.testimonial-section .testimonial-content .testimonial-header .title span {
+  color: #4c6fff;
+}
+.testimonial-section .testimonial-content .testimonial-header .description {
+  color: var(--2nd-text-color, #2f3643);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 167%; /* 30.06px */
+  letter-spacing: -0.36px;
+  max-width: 39.9375rem;
+  margin: 0 auto;
+}
+.testimonial-section .testimonial-content .swiper {
+  padding: 3.75rem 0;
+  background: #f6f6f9;
+}
+.testimonial-section .testimonial-content .testimonial-card {
+  border-radius: 40px;
+  border: 1px solid rgba(239, 239, 239, 0);
+  background: #fff;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.testimonial-section .testimonial-content .testimonial-card .icon svg {
+  width: 3.875rem;
+  height: 3.875rem;
+}
+.testimonial-section .testimonial-content .testimonial-card .testimonial-description {
+  color: #2f3643;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 167%;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  width: 100%;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-img {
+  width: 116px;
+  height: 116px;
+  flex-shrink: 0;
+  border-radius: 624999.9375rem;
+  border-radius: 624999.9375rem;
+  border: 1px solid #4c6fff;
+  padding: 4px;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-img img {
+  width: 100%;
+  border-radius: 624999.9375rem;
+  border-radius: 624999.9375rem;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-name {
+  color: var(--First-text-color, #101828);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 160% */
+  text-transform: capitalize;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-designation {
+  color: var(--2nd-text-color, #2f3643);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-rating svg {
+  width: 1rem;
+  height: 1rem;
+}
+.testimonial-section .testimonial-content .testimonial-card .client-rating svg path {
+  fill: #f9a826;
+}
+.testimonial-section .testimonial-content .bg-stroke {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 87.5rem) {
+  .testimonial-section .testimonial-content .bg-stroke {
+    top: -37px;
+    right: -73px;
+  }
 }
 
 .container {
