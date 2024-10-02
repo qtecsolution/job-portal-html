@@ -14335,6 +14335,90 @@ p {
   margin: 0 auto;
 }
 
+.our-core-features-section {
+  background: #f5f7ff;
+  padding: 3.75rem 0;
+}
+@media screen and (min-width: 36rem) {
+  .our-core-features-section {
+    padding: 11.625rem 0;
+  }
+}
+.our-core-features-section .our-core-features-content .our-core-features-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.our-core-features-section .our-core-features-content .our-core-features-header .sub-title {
+  display: inline-flex;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: rgba(255, 194, 36, 0.12);
+  color: #ffc224;
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.our-core-features-section .our-core-features-content .our-core-features-header .title {
+  color: var(--First-text-color, #101828);
+  text-align: center;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 50.4px */
+  letter-spacing: -0.72px;
+  text-transform: capitalize;
+}
+.our-core-features-section .our-core-features-content .our-core-features-header .title span {
+  color: #4c6fff;
+}
+.our-core-features-section .our-core-features-content .our-core-features-header .description {
+  color: var(--2nd-text-color, #2f3643);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 167%; /* 30.06px */
+  letter-spacing: -0.36px;
+  max-width: 39.9375rem;
+  margin: 0 auto;
+}
+.our-core-features-section .our-core-features-content .our-core-features-card {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 36rem) {
+  .our-core-features-section .our-core-features-content .our-core-features-card {
+    margin-top: 6.25rem;
+  }
+}
+.our-core-features-section .our-core-features-content .our-core-features-card .our-core-features-img img {
+  width: 100%;
+}
+.our-core-features-section .our-core-features-content .our-core-features-card .title {
+  color: var(--Text-0, #101828);
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 66.667% */
+  letter-spacing: -0.72px;
+}
+.our-core-features-section .our-core-features-content .our-core-features-card .description {
+  color: #2f3643;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+  width: 100%;
+}
+
 .container {
   width: 100%;
   padding-left: 1rem;
