@@ -11,11 +11,11 @@
   <!-- FAVICON -->
   <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml" />
   <!-- BOOTSTRAP CSS -->
-  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
+  <!-- SWIPER CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <div class="container">
       <div class="innerNav-section">
         <div class="d-flex align-items-center gap-3">
-          <button class="d-block d-lg-none mobile-menu-btn" type="button" data-bs-toggle="offcanvas"
+          <button class="d-block d-lg-none mobile-menu-btn p-0 " type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
               viewBox="0 0 16 16">
@@ -33,10 +33,10 @@
             </svg>
           </button>
 
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          <div class="offcanvas offcanvas-start px-3" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header d-flex justify-content-end">
-              <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close">
+              <button type="button" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
@@ -535,7 +535,7 @@
             <h1 class="title">
               Our latest <span>job</span> offers
             </h1>
-            <button class="see-all-btn">
+            <button class="see-all-btn border-0">
               T
             </button>
           </div>
@@ -627,7 +627,7 @@
           </p>
         </div>
         <div>
-          <div class="swiper mySwiper">
+          <div class="swiper testimonialSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-card">
@@ -990,31 +990,11 @@
   <!-- FOOTER SECTION END -->
 
   <!-- BOOTSTRAP JS -->
-  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- DARK-MODE -->
-  <script src="../assets/js/darkmode/darkmode.js"></script>
-  <!-- content loader  -->
-  <script src="../assets/js/contentloader/contentloader.js"></script>
-
+  <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        }
-      },
-    });
-  </script>
+  <!-- CUSTOM JS -->
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
