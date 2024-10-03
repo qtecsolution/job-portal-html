@@ -133,9 +133,9 @@
         padding: size(32);
       }
 
-      @include breakpoint(tab992) {
-        width: 80%;
-      }
+      // @include breakpoint(tab992) {
+      //   width: 80%;
+      // }
 
       @include breakpoint(desktop1400) {
         width: size(500);

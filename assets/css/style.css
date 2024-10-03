@@ -9733,11 +9733,6 @@ button:focus,
     padding: 2rem;
   }
 }
-@media screen and (min-width: 62rem) {
-  .authentications .right-content .authentic {
-    width: 80%;
-  }
-}
 @media screen and (min-width: 87.5rem) {
   .authentications .right-content .authentic {
     width: 31.25rem;
